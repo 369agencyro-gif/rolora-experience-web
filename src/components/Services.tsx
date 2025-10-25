@@ -3,6 +3,8 @@ import { useState } from "react";
 import facialImage from "@/assets/service-facial.jpg";
 import massageImage from "@/assets/service-massage.jpg";
 import bodyImage from "@/assets/service-body.jpg";
+import categoryFacialImage from "@/assets/category-facial.jpg";
+import categoryPremiumImage from "@/assets/category-premium.jpg";
 
 const mainFacials = [
   {
@@ -67,7 +69,7 @@ const additionalServices = [
 ];
 
 const Services = () => {
-  const [activeCategory, setActiveCategory] = useState<"facial" | "premium">("facial");
+  const [activeCategory, setActiveCategory] = useState<"facial" | "premium" | null>(null);
 
   return (
     <section id="services" className="py-20 md:py-32 bg-muted/20">
@@ -81,35 +83,73 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Category Selector */}
-        <div className="max-w-md mx-auto mb-12">
-          <div className="flex gap-3 p-2 bg-card border border-border rounded-2xl">
+        {/* Category Selector - Image Cards */}
+        {!activeCategory && (
+          <div className="max-w-5xl mx-auto mb-12 animate-fade-in">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Facial Category */}
+              <button
+                onClick={() => setActiveCategory("facial")}
+                className="group relative h-80 rounded-3xl overflow-hidden border-2 border-border hover:border-accent transition-smooth"
+              >
+                <img 
+                  src={categoryFacialImage}
+                  alt="Facial Treatments"
+                  className="w-full h-full object-cover transition-smooth group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-smooth group-hover:from-black/70" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
+                  <div className="text-5xl mb-4 transform transition-smooth group-hover:scale-110">✨</div>
+                  <h3 className="text-3xl font-display font-semibold mb-3 transform transition-smooth group-hover:translate-y-[-4px]">
+                    Facial
+                  </h3>
+                  <p className="text-sm opacity-90 text-center max-w-xs">
+                    Signature facials crafted to sculpt and illuminate
+                  </p>
+                </div>
+              </button>
+
+              {/* Premium Category */}
+              <button
+                onClick={() => setActiveCategory("premium")}
+                className="group relative h-80 rounded-3xl overflow-hidden border-2 border-border hover:border-accent transition-smooth"
+              >
+                <img 
+                  src={categoryPremiumImage}
+                  alt="Premium Experiences"
+                  className="w-full h-full object-cover transition-smooth group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-smooth group-hover:from-black/70" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
+                  <div className="text-5xl mb-4 transform transition-smooth group-hover:scale-110">💎</div>
+                  <h3 className="text-3xl font-display font-semibold mb-3 transform transition-smooth group-hover:translate-y-[-4px]">
+                    Premium
+                  </h3>
+                  <p className="text-sm opacity-90 text-center max-w-xs">
+                    Exclusive enhancements and body rituals
+                  </p>
+                </div>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Back Button */}
+        {activeCategory && (
+          <div className="max-w-6xl mx-auto mb-8">
             <button
-              onClick={() => setActiveCategory("facial")}
-              className={`flex-1 py-4 px-6 rounded-xl font-semibold transition-smooth ${
-                activeCategory === "facial"
-                  ? "bg-accent text-accent-foreground shadow-md"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
+              onClick={() => setActiveCategory(null)}
+              className="text-muted-foreground hover:text-foreground transition-smooth flex items-center gap-2 group"
             >
-              Facial
-            </button>
-            <button
-              onClick={() => setActiveCategory("premium")}
-              className={`flex-1 py-4 px-6 rounded-xl font-semibold transition-smooth ${
-                activeCategory === "premium"
-                  ? "bg-accent text-accent-foreground shadow-md"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Premium
+              <span className="transform transition-smooth group-hover:translate-x-[-4px]">←</span>
+              Back to categories
             </button>
           </div>
-        </div>
+        )}
 
         {/* Services Grid */}
         <div className="max-w-6xl mx-auto">
-          {activeCategory === "facial" ? (
+          {activeCategory === "facial" && (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
               {mainFacials.map((service, index) => (
                 <Link
@@ -148,7 +188,9 @@ const Services = () => {
                 </Link>
               ))}
             </div>
-          ) : (
+          )}
+          
+          {activeCategory === "premium" && (
             <div className="grid md:grid-cols-2 gap-6 animate-fade-in">
               {additionalServices.map((service, index) => (
                 <Link
