@@ -26,16 +26,16 @@ All colors MUST be HSL.
     --muted: 30 15% 92%;
     --muted-foreground: 30 8% 45%;
 
-    --accent: 25 50% 70%;
-    --accent-foreground: 30 12% 20%;
-    --accent-rgb: 211, 149, 113;
+    --accent: 31 43% 60%;
+    --accent-foreground: 36 33% 97%;
+    --accent-rgb: 196, 154, 108;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 30 15% 88%;
     --input: 30 15% 88%;
-    --ring: 25 50% 70%;
+    --ring: 31 43% 60%;
 
     --radius: 0.75rem;
     
@@ -43,12 +43,12 @@ All colors MUST be HSL.
     --cream: 36 33% 97%;
     --warm-beige: 28 20% 88%;
     --taupe: 30 12% 25%;
-    --rose-gold: 25 50% 70%;
+    --rose-gold: 31 43% 60%;
     --soft-gray: 30 8% 45%;
     
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(36 33% 97%) 0%, hsl(28 20% 92%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(25 50% 75%) 0%, hsl(20 45% 68%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(31 43% 65%) 0%, hsl(28 40% 55%) 100%);
     
     /* Shadows */
     --shadow-soft: 0 2px 20px -2px hsl(30 8% 20% / 0.08);
@@ -96,16 +96,16 @@ All colors MUST be HSL.
     --muted: 30 12% 20%;
     --muted-foreground: 30 8% 65%;
 
-    --accent: 25 50% 65%;
-    --accent-foreground: 36 33% 95%;
-    --accent-rgb: 203, 139, 103;
+    --accent: 31 43% 55%;
+    --accent-foreground: 36 33% 97%;
+    --accent-rgb: 181, 141, 98;
 
     --destructive: 0 70% 45%;
     --destructive-foreground: 36 33% 95%;
 
     --border: 30 12% 20%;
     --input: 30 12% 20%;
-    --ring: 25 50% 65%;
+    --ring: 31 43% 55%;
   }
 }
 
