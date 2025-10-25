@@ -5,8 +5,8 @@ const SignatureExperience = () => {
     <section className="py-20 bg-gradient-to-b from-background to-muted/20">
       <div className="container px-6">
         <div className="max-w-5xl mx-auto text-center animate-fade-in">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-6">
-            <Sparkles className="w-8 h-8 text-accent" />
+          <div className="text-6xl mb-6">
+            🪞
           </div>
           
           <h2 className="text-3xl md:text-5xl font-display font-semibold mb-6">
