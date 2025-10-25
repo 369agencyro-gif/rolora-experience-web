@@ -180,27 +180,27 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden pb-6 animate-fade-in">
-            <div className="space-y-4">
-              <Link to="/" className="block py-2 text-foreground hover:text-accent transition-smooth">
+          <div className="lg:hidden pb-20 animate-fade-in max-h-[70vh] overflow-y-auto">
+            <div className="space-y-2">
+              <Link to="/" className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth">
                 Home
               </Link>
               <button 
                 onClick={() => scrollToSection('about')}
-                className="block w-full text-left py-2 text-foreground hover:text-accent transition-smooth"
+                className="block w-full text-left py-1.5 text-sm text-foreground hover:text-accent transition-smooth"
               >
                 About
               </button>
               
-              <div className="space-y-2">
-                <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+              <div className="space-y-1.5">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">
                   Facial Services
                 </p>
                 {facialServices.map((service, idx) => (
                   <Link
                     key={idx}
                     to={service.path}
-                    className="block pl-4 py-2 text-sm text-foreground hover:text-accent transition-smooth"
+                    className="block pl-3 py-1 text-xs text-foreground hover:text-accent transition-smooth"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {service.name}
@@ -208,15 +208,15 @@ const Navigation = () => {
                 ))}
               </div>
 
-              <div className="space-y-2">
-                <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+              <div className="space-y-1.5">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">
                   Additional Services
                 </p>
                 {additionalServices.map((service, idx) => (
                   <Link
                     key={idx}
                     to={service.path}
-                    className="block pl-4 py-2 text-sm text-foreground hover:text-accent transition-smooth"
+                    className="block pl-3 py-1 text-xs text-foreground hover:text-accent transition-smooth"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {service.name}
@@ -226,23 +226,26 @@ const Navigation = () => {
 
               <button 
                 onClick={() => scrollToSection('gallery')}
-                className="block w-full text-left py-2 text-foreground hover:text-accent transition-smooth"
+                className="block w-full text-left py-1.5 text-sm text-foreground hover:text-accent transition-smooth"
               >
                 Gallery
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left py-2 text-foreground hover:text-accent transition-smooth"
+                className="block w-full text-left py-1.5 text-sm text-foreground hover:text-accent transition-smooth"
               >
                 Contact
               </button>
               
-              <Button 
-                onClick={() => scrollToSection('contact')} 
-                className="w-full mt-4"
-              >
-                Book Now
-              </Button>
+              <div className="pt-3 pb-2">
+                <Button 
+                  onClick={() => scrollToSection('contact')} 
+                  className="w-full"
+                  size="sm"
+                >
+                  Book Now
+                </Button>
+              </div>
             </div>
           </div>
         )}
