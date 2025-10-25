@@ -15,9 +15,9 @@ const Index = () => {
       <main className="min-h-screen">
         <Hero />
         <SignatureExperience />
-        <WhyRolora />
         <About />
         <Services />
+        <WhyRolora />
         <Gallery />
         <Contact />
         <Footer />
