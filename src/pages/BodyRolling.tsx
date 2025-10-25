@@ -19,104 +19,117 @@ const BodyRolling = () => {
       <section className="py-20 md:py-32">
         <div className="container px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in">
-              <span className="text-6xl mb-4 block">🌀</span>
-              <h1 className="text-4xl md:text-6xl font-display font-semibold mb-6">
+            <div className="text-center mb-16 animate-fade-in">
+              <div className="inline-block mb-6">
+                <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-display font-semibold mb-6 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Rolora Flow™
               </h1>
-              <p className="text-2xl text-muted-foreground mb-4">(Body Rolling)</p>
-              <p className="text-2xl text-foreground italic mb-8">
+              <p className="text-xl md:text-2xl text-muted-foreground/80 mb-6 tracking-wide">(Body Rolling)</p>
+              <p className="text-3xl md:text-4xl text-foreground italic font-light tracking-wider">
                 Detox. Sculpt. Energize.
               </p>
             </div>
 
-            <div className="mb-12 animate-fade-in rounded-2xl overflow-hidden shadow-elegant">
+            <div className="mb-16 animate-fade-in rounded-3xl overflow-hidden shadow-elegant ring-1 ring-border/50">
               <img 
                 src={bodyImage} 
                 alt="Rolora Flow body rolling treatment"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
 
-            <div className="max-w-4xl mx-auto mb-12 animate-fade-in">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-display font-semibold mb-4">The Experience</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+            <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">The Experience</h2>
+                <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                   Discover the power of sculpting lymphatic massage with advanced rolling technology paired with built-in red light therapy. 
                   This full-body ritual stimulates circulation, promotes lymphatic drainage, and reduces water retention — leaving you feeling lighter, sculpted, and renewed.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                <div className="p-6 rounded-xl bg-secondary/30 border border-border">
-                  <h3 className="text-xl font-semibold mb-3">Benefits</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>Promotes lymphatic drainage</span>
+              <div className="grid md:grid-cols-2 gap-8 mb-16">
+                <div className="p-8 rounded-3xl bg-gradient-to-br from-secondary/40 via-secondary/30 to-secondary/20 backdrop-blur-sm border border-border/50 shadow-elegant hover:shadow-2xl transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-2 h-2 rounded-full bg-accent ring-4 ring-accent/20"></div>
+                    <h3 className="text-2xl font-display font-semibold">Benefits</h3>
+                  </div>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-3 group">
+                      <span className="text-accent mt-1 group-hover:scale-125 transition-transform">•</span>
+                      <span className="leading-relaxed">Promotes lymphatic drainage</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>Reduces water retention</span>
+                    <li className="flex items-start gap-3 group">
+                      <span className="text-accent mt-1 group-hover:scale-125 transition-transform">•</span>
+                      <span className="leading-relaxed">Reduces water retention</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>Stimulates circulation</span>
+                    <li className="flex items-start gap-3 group">
+                      <span className="text-accent mt-1 group-hover:scale-125 transition-transform">•</span>
+                      <span className="leading-relaxed">Stimulates circulation</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>Body sculpting and contouring</span>
+                    <li className="flex items-start gap-3 group">
+                      <span className="text-accent mt-1 group-hover:scale-125 transition-transform">•</span>
+                      <span className="leading-relaxed">Body sculpting and contouring</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="p-6 rounded-xl bg-secondary/30 border border-border">
-                  <h3 className="text-xl font-semibold mb-3">Technology</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>Advanced rolling technology</span>
+                <div className="p-8 rounded-3xl bg-gradient-to-br from-secondary/40 via-secondary/30 to-secondary/20 backdrop-blur-sm border border-border/50 shadow-elegant hover:shadow-2xl transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-2 h-2 rounded-full bg-accent ring-4 ring-accent/20"></div>
+                    <h3 className="text-2xl font-display font-semibold">Technology</h3>
+                  </div>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-3 group">
+                      <span className="text-accent mt-1 group-hover:scale-125 transition-transform">•</span>
+                      <span className="leading-relaxed">Advanced rolling technology</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>Built-in red light therapy</span>
+                    <li className="flex items-start gap-3 group">
+                      <span className="text-accent mt-1 group-hover:scale-125 transition-transform">•</span>
+                      <span className="leading-relaxed">Built-in red light therapy</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>Targeted lymphatic massage</span>
+                    <li className="flex items-start gap-3 group">
+                      <span className="text-accent mt-1 group-hover:scale-125 transition-transform">•</span>
+                      <span className="leading-relaxed">Targeted lymphatic massage</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>Full-body treatment</span>
+                    <li className="flex items-start gap-3 group">
+                      <span className="text-accent mt-1 group-hover:scale-125 transition-transform">•</span>
+                      <span className="leading-relaxed">Full-body treatment</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-2xl font-display font-semibold mb-6 text-center">Packages & Pricing</h3>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="text-center mb-10">
+                  <div className="inline-block mb-4">
+                    <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-display font-semibold bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">Packages & Pricing</h3>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
                   {bodyRollingPackages.map((pkg, idx) => (
                     <div 
                       key={idx} 
-                      className="flex items-start justify-between p-6 rounded-xl bg-card border border-border hover:shadow-soft transition-smooth"
+                      className="group flex items-start justify-between p-8 rounded-2xl bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm border border-border/50 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
                     >
                       <div className="flex-1">
-                        <h4 className="text-lg font-semibold mb-1">{pkg.name}</h4>
-                        {pkg.duration && <p className="text-sm text-muted-foreground mb-1">{pkg.duration}</p>}
-                        <p className="text-sm text-muted-foreground">{pkg.description}</p>
+                        <h4 className="text-xl font-display font-semibold mb-2 group-hover:text-accent transition-colors">{pkg.name}</h4>
+                        {pkg.duration && <p className="text-sm text-accent/80 mb-2 font-medium">{pkg.duration}</p>}
+                        <p className="text-sm text-muted-foreground leading-relaxed">{pkg.description}</p>
                       </div>
-                      <span className="text-accent font-semibold text-xl ml-4">{pkg.price}</span>
+                      <span className="text-accent font-display font-semibold text-2xl ml-6">{pkg.price}</span>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="text-center py-8 animate-fade-in">
+            <div className="text-center py-12 animate-fade-in">
               <Button 
                 size="lg" 
-                className="px-12 py-6 text-lg shadow-elegant"
+                className="px-16 py-7 text-lg shadow-elegant hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Book Rolora Flow
