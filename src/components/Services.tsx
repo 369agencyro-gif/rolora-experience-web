@@ -103,9 +103,13 @@ const Services = () => {
                   <h3 className="text-4xl md:text-5xl font-display font-semibold mb-4 transform transition-smooth group-hover:translate-y-[-4px]">
                     Facial
                   </h3>
-                  <p className="text-base md:text-lg opacity-90 text-center max-w-sm">
+                  <p className="text-base md:text-lg opacity-90 text-center max-w-sm mb-6">
                     Signature facials crafted to sculpt and illuminate
                   </p>
+                  <div className="flex items-center gap-2 text-sm font-medium opacity-80 group-hover:opacity-100 transition-smooth">
+                    <span>Click to explore</span>
+                    <span className="transform transition-smooth group-hover:translate-x-1">→</span>
+                  </div>
                 </div>
               </button>
 
@@ -125,9 +129,13 @@ const Services = () => {
                   <h3 className="text-4xl md:text-5xl font-display font-semibold mb-4 transform transition-smooth group-hover:translate-y-[-4px]">
                     Premium
                   </h3>
-                  <p className="text-base md:text-lg opacity-90 text-center max-w-sm">
+                  <p className="text-base md:text-lg opacity-90 text-center max-w-sm mb-6">
                     Exclusive enhancements and body rituals
                   </p>
+                  <div className="flex items-center gap-2 text-sm font-medium opacity-80 group-hover:opacity-100 transition-smooth">
+                    <span>Click to explore</span>
+                    <span className="transform transition-smooth group-hover:translate-x-1">→</span>
+                  </div>
                 </div>
               </button>
             </div>
