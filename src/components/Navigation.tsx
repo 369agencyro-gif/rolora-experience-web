@@ -182,15 +182,16 @@ const Navigation = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden pb-4 animate-fade-in">
             <div className="space-y-2">
-              <Link to="/" className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth">
+              <Link to="/" className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
                 Home
               </Link>
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="block w-full text-left py-1.5 text-sm text-foreground hover:text-accent transition-smooth"
+              <Link 
+                to="/about"
+                className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 About
-              </button>
+              </Link>
               
               <div className="space-y-1.5">
                 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">
