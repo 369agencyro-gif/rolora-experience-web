@@ -31,7 +31,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="text-base px-8 py-6 shadow-elegant transition-elegant hover:scale-105"
+              className="text-base px-8 py-6 shadow-elegant transition-elegant hover:scale-105 animate-glow"
               onClick={scrollToBooking}
             >
               Book Your Experience
