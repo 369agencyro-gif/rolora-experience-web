@@ -54,17 +54,18 @@ const Navigation = () => {
 
             {/* Services Mega Menu */}
             <div 
-              className="relative"
+              className="relative group"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 text-foreground hover:text-accent transition-smooth">
+              <button className="flex items-center gap-1 text-foreground hover:text-accent transition-smooth py-2">
                 Services
                 <ChevronDown className="w-4 h-4" />
               </button>
 
               {servicesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-card rounded-2xl shadow-elegant border border-border p-8 animate-fade-in">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
+                  <div className="w-[800px] bg-card rounded-2xl shadow-elegant border border-border p-8 animate-fade-in">
                   <div className="grid grid-cols-3 gap-8">
                     {/* Facial Services */}
                     <div>
@@ -141,6 +142,7 @@ const Navigation = () => {
                       </Button>
                     </div>
                   </div>
+                </div>
                 </div>
               )}
             </div>
