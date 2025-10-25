@@ -9,163 +9,233 @@ import { Clock, Sparkles, Zap, Award } from "lucide-react";
 const ExpressSculpt = () => {
   return (
     <ServiceLayout>
-      <section className="py-20 md:py-32">
-        <div className="container px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in">
-              <span className="text-6xl mb-4 block">⚡</span>
-              <h1 className="text-4xl md:text-6xl font-display font-semibold mb-4">
+      {/* Hero Section with Overlay */}
+      <section className="relative">
+        <div className="relative h-[70vh] min-h-[600px] overflow-hidden">
+          <img 
+            src={massageImage} 
+            alt="Express Sculpt luxury treatment"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
+          
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-6 animate-fade-in">
+              <div className="mb-6">
+                <span className="text-7xl md:text-8xl block mb-2">⚡</span>
+                <div className="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+              </div>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold mb-6 tracking-tight">
                 Express Sculpt
               </h1>
-              <p className="text-2xl md:text-3xl text-accent font-medium mb-6">$145</p>
-              <p className="text-xl text-foreground italic mb-8">
+              <p className="text-3xl md:text-4xl text-accent font-medium mb-6">$145</p>
+              <p className="text-xl md:text-2xl text-foreground/90 italic font-light max-w-2xl mx-auto">
                 Glow + go.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="mb-12 animate-fade-in rounded-2xl overflow-hidden shadow-elegant">
-              <img 
-                src={massageImage} 
-                alt="Express Sculpt treatment"
-                className="w-full h-[500px] object-cover"
-              />
+      <section className="py-20 md:py-32">
+        <div className="container px-6">
+          <div className="max-w-6xl mx-auto">
+
+            {/* Signature Divider */}
+            <div className="flex items-center justify-center mb-16 animate-fade-in">
+              <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent"></div>
+              <span className="px-6 text-accent text-sm uppercase tracking-widest">Quick Transformation</span>
+              <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent"></div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 mb-12 animate-fade-in">
-              <div>
-                <h2 className="text-2xl font-display font-semibold mb-4">The Experience</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  A targeted mini facial that refreshes, hydrates, and contours in under 40 minutes.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Perfect pre-event or as a midweek pick-me-up when you need instant radiance without the time commitment.
-                </p>
+            <div className="grid md:grid-cols-2 gap-16 mb-20 animate-fade-in">
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl font-display font-semibold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                    The Experience
+                  </h2>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                    A targeted mini facial that refreshes, hydrates, and contours in under 40 minutes.
+                  </p>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    Perfect pre-event or as a midweek pick-me-up when you need instant radiance without the time commitment.
+                  </p>
+                </div>
+                <div className="pt-6 border-t border-border/50">
+                  <p className="text-sm text-muted-foreground italic">
+                    "Quick, effective, and absolutely radiant results."
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <h2 className="text-2xl font-display font-semibold mb-4">What to Expect</h2>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Quick 40-minute treatment</span>
+              <div className="bg-muted/20 rounded-3xl p-8 border border-border/50">
+                <h2 className="text-3xl font-display font-semibold mb-6">What to Expect</h2>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Quick 40-minute treatment</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Refreshing cleanse and exfoliation</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Refreshing cleanse and exfoliation</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Hydration boost</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Hydration boost</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Facial contouring massage</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Facial contouring massage</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Instant glow and refresh</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Instant glow and refresh</span>
                   </li>
                 </ul>
               </div>
             </div>
 
             {/* Visual Results Section */}
-            <div className="mb-12 animate-fade-in">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="rounded-2xl overflow-hidden shadow-elegant">
-                  <img src={glowingSkin} alt="Instant glow results" className="w-full h-[300px] object-cover" />
+            <div className="mb-20 animate-fade-in">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="group relative rounded-3xl overflow-hidden shadow-elegant hover:shadow-2xl transition-all duration-500">
+                  <img src={glowingSkin} alt="Instant glow results" className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-elegant">
-                  <img src={facialRoom} alt="Quick express treatment" className="w-full h-[300px] object-cover" />
+                <div className="group relative rounded-3xl overflow-hidden shadow-elegant hover:shadow-2xl transition-all duration-500">
+                  <img src={facialRoom} alt="Quick express treatment" className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             </div>
 
             {/* Benefits Section */}
-            <div className="bg-muted/30 rounded-2xl p-8 md:p-12 mb-12 animate-fade-in">
-              <h2 className="text-3xl font-display font-semibold text-center mb-8">Express Benefits</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Clock className="w-8 h-8 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Time-Efficient</h3>
-                    <p className="text-muted-foreground">Get professional results in just 40 minutes—perfect for busy schedules.</p>
-                  </div>
+            <div className="relative mb-20 animate-fade-in">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 rounded-3xl"></div>
+              <div className="relative bg-card/50 backdrop-blur-sm rounded-3xl p-10 md:p-16 border border-border/50 shadow-elegant">
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl md:text-5xl font-display font-semibold mb-4">Express Benefits</h2>
+                  <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                    Maximum results in minimum time
+                  </p>
                 </div>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Sparkles className="w-8 h-8 text-accent" />
+                <div className="grid md:grid-cols-2 gap-10">
+                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <Clock className="w-9 h-9 text-accent" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-xl mb-3">Time-Efficient</h3>
+                      <p className="text-muted-foreground leading-relaxed">Get professional results in just 40 minutes—perfect for busy schedules.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Instant Radiance</h3>
-                    <p className="text-muted-foreground">Walk out with a visible glow that lasts, ready for any occasion.</p>
+                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <Sparkles className="w-9 h-9 text-accent" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-xl mb-3">Instant Radiance</h3>
+                      <p className="text-muted-foreground leading-relaxed">Walk out with a visible glow that lasts, ready for any occasion.</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Zap className="w-8 h-8 text-accent" />
+                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <Zap className="w-9 h-9 text-accent" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-xl mb-3">Deep Hydration</h3>
+                      <p className="text-muted-foreground leading-relaxed">Intensive moisture infusion plumps and revitalizes tired skin quickly.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Deep Hydration</h3>
-                    <p className="text-muted-foreground">Intensive moisture infusion plumps and revitalizes tired skin quickly.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Award className="w-8 h-8 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Contoured Definition</h3>
-                    <p className="text-muted-foreground">Targeted massage techniques enhance facial contours for a lifted look.</p>
+                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <Award className="w-9 h-9 text-accent" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-xl mb-3">Contoured Definition</h3>
+                      <p className="text-muted-foreground leading-relaxed">Targeted massage techniques enhance facial contours for a lifted look.</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Perfect For Section */}
-            <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 mb-12 animate-fade-in">
-              <h2 className="text-3xl font-display font-semibold text-center mb-6">Perfect For</h2>
-              <div className="max-w-3xl mx-auto">
-                <ul className="space-y-4 text-lg">
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">⚡</span>
-                    <span>Pre-event glow when you're short on time</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">⚡</span>
-                    <span>Midweek skin refresh and pick-me-up</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">⚡</span>
-                    <span>Busy professionals who need quick results</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">⚡</span>
-                    <span>First-time facial clients wanting a gentle introduction</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">⚡</span>
-                    <span>Maintenance between longer treatments</span>
-                  </li>
-                </ul>
+            <div className="relative mb-20 animate-fade-in">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent rounded-3xl opacity-90"></div>
+              <div className="relative text-primary-foreground rounded-3xl p-10 md:p-16">
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl md:text-5xl font-display font-semibold mb-4">Perfect For</h2>
+                  <div className="flex items-center justify-center gap-4 mt-6">
+                    <div className="h-px w-16 bg-primary-foreground/30"></div>
+                    <span className="text-primary-foreground/60">✦</span>
+                    <div className="h-px w-16 bg-primary-foreground/30"></div>
+                  </div>
+                </div>
+                <div className="max-w-4xl mx-auto">
+                  <ul className="grid md:grid-cols-2 gap-6">
+                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
+                      <span className="text-3xl flex-shrink-0">⚡</span>
+                      <span className="text-lg leading-relaxed">Pre-event glow when you're short on time</span>
+                    </li>
+                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
+                      <span className="text-3xl flex-shrink-0">⚡</span>
+                      <span className="text-lg leading-relaxed">Midweek skin refresh and pick-me-up</span>
+                    </li>
+                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
+                      <span className="text-3xl flex-shrink-0">⚡</span>
+                      <span className="text-lg leading-relaxed">Busy professionals who need quick results</span>
+                    </li>
+                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
+                      <span className="text-3xl flex-shrink-0">⚡</span>
+                      <span className="text-lg leading-relaxed">First-time facial clients wanting a gentle introduction</span>
+                    </li>
+                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors md:col-span-2 max-w-2xl mx-auto">
+                      <span className="text-3xl flex-shrink-0">⚡</span>
+                      <span className="text-lg leading-relaxed">Maintenance between longer treatments</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
             {/* CTA */}
-            <div className="text-center py-8 animate-fade-in">
-              <h2 className="text-3xl font-display font-semibold mb-4">Ready for Your Quick Glow?</h2>
-              <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                Experience instant radiance in under an hour. Book your Express Sculpt today.
-              </p>
-              <Button 
-                size="lg" 
-                className="px-12 py-6 text-lg shadow-elegant"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Book Express Sculpt
-              </Button>
+            <div className="text-center py-16 animate-fade-in">
+              <div className="max-w-4xl mx-auto space-y-8">
+                <div className="space-y-4">
+                  <h2 className="text-4xl md:text-6xl font-display font-semibold leading-tight">
+                    Ready for Your<br />Quick Glow?
+                  </h2>
+                  <div className="flex items-center justify-center gap-4">
+                    <div className="h-px w-12 bg-gradient-to-r from-transparent to-accent"></div>
+                    <span className="text-accent text-2xl">✦</span>
+                    <div className="h-px w-12 bg-gradient-to-l from-transparent to-accent"></div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground text-xl leading-relaxed max-w-2xl mx-auto">
+                  Experience instant radiance in under an hour. Book your Express Sculpt today.
+                </p>
+                <div className="pt-6">
+                  <Button 
+                    size="lg" 
+                    className="px-16 py-8 text-xl shadow-elegant hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    Book Express Sculpt
+                  </Button>
+                </div>
+                <p className="text-sm text-muted-foreground/60 italic">
+                  Perfect for your busy schedule
+                </p>
+              </div>
             </div>
           </div>
         </div>

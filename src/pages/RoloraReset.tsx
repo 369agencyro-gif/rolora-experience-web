@@ -9,163 +9,214 @@ import { Sparkles, RefreshCw, Award, Droplets } from "lucide-react";
 const RoloraReset = () => {
   return (
     <ServiceLayout>
-      <section className="py-20 md:py-32">
-        <div className="container px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in">
-              <span className="text-6xl mb-4 block">🧪</span>
-              <h1 className="text-4xl md:text-6xl font-display font-semibold mb-4">
+      {/* Hero Section with Overlay */}
+      <section className="relative">
+        <div className="relative h-[70vh] min-h-[600px] overflow-hidden">
+          <img 
+            src={bodyImage} 
+            alt="Rolora Reset luxury chemical peel"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
+          
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-6 animate-fade-in">
+              <div className="mb-6">
+                <span className="text-7xl md:text-8xl block mb-2">🧪</span>
+                <div className="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+              </div>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold mb-4 tracking-tight">
                 Rolora Reset
               </h1>
-              <p className="text-xl text-muted-foreground mb-4">(Chemical Peel)</p>
-              <p className="text-2xl md:text-3xl text-accent font-medium mb-6">$245</p>
-              <p className="text-xl text-foreground italic mb-8">
+              <p className="text-xl md:text-2xl text-muted-foreground/80 mb-4 italic">(Chemical Peel)</p>
+              <p className="text-3xl md:text-4xl text-accent font-medium mb-6">$245</p>
+              <p className="text-xl md:text-2xl text-foreground/90 italic font-light max-w-2xl mx-auto">
                 Peel. Reveal. Reset.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="mb-12 animate-fade-in rounded-2xl overflow-hidden shadow-elegant">
-              <img 
-                src={bodyImage} 
-                alt="Rolora Reset chemical peel treatment"
-                className="w-full h-[500px] object-cover"
-              />
+      <section className="py-20 md:py-32">
+        <div className="container px-6">
+          <div className="max-w-6xl mx-auto">
+
+            {/* Signature Divider */}
+            <div className="flex items-center justify-center mb-16 animate-fade-in">
+              <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent"></div>
+              <span className="px-6 text-accent text-sm uppercase tracking-widest">Skin Resurfacing</span>
+              <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent"></div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 mb-12 animate-fade-in">
-              <div>
-                <h2 className="text-2xl font-display font-semibold mb-4">The Experience</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  A luxury chemical peel facial that resurfaces texture, refines tone, and reveals clear, radiant skin.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Perfect for dullness, discoloration, and uneven texture with low-downtime for maximum results.
-                </p>
+            <div className="grid md:grid-cols-2 gap-16 mb-20 animate-fade-in">
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl font-display font-semibold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                    The Experience
+                  </h2>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                    A luxury chemical peel facial that resurfaces texture, refines tone, and reveals clear, radiant skin.
+                  </p>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    Perfect for dullness, discoloration, and uneven texture with low-downtime for maximum results.
+                  </p>
+                </div>
+                <div className="pt-6 border-t border-border/50">
+                  <p className="text-sm text-muted-foreground italic">
+                    "A complete skin renewal experience."
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <h2 className="text-2xl font-display font-semibold mb-4">What to Expect</h2>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Professional chemical peel application</span>
+              <div className="bg-muted/20 rounded-3xl p-8 border border-border/50">
+                <h2 className="text-3xl font-display font-semibold mb-6">What to Expect</h2>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Professional chemical peel application</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Texture resurfacing and refinement</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Texture resurfacing and refinement</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Tone correction and brightening</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Tone correction and brightening</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Low-downtime recovery</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Low-downtime recovery</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Clear, radiant complexion</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Clear, radiant complexion</span>
                   </li>
                 </ul>
               </div>
             </div>
 
             {/* Visual Results Section */}
-            <div className="mb-12 animate-fade-in">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="rounded-2xl overflow-hidden shadow-elegant">
-                  <img src={glowingSkin} alt="Clear radiant skin results" className="w-full h-[300px] object-cover" />
+            <div className="mb-20 animate-fade-in">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="group relative rounded-3xl overflow-hidden shadow-elegant hover:shadow-2xl transition-all duration-500">
+                  <img src={glowingSkin} alt="Clear radiant skin results" className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-elegant">
-                  <img src={skincareProducts} alt="Professional chemical peel treatment" className="w-full h-[300px] object-cover" />
+                <div className="group relative rounded-3xl overflow-hidden shadow-elegant hover:shadow-2xl transition-all duration-500">
+                  <img src={skincareProducts} alt="Professional chemical peel treatment" className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             </div>
 
             {/* Benefits Section */}
-            <div className="bg-muted/30 rounded-2xl p-8 md:p-12 mb-12 animate-fade-in">
-              <h2 className="text-3xl font-display font-semibold text-center mb-8">Resurfacing Benefits</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <RefreshCw className="w-8 h-8 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Skin Renewal</h3>
-                    <p className="text-muted-foreground">Chemical peels reveal fresh, new skin layers for a completely renewed complexion.</p>
-                  </div>
+            <div className="relative mb-20 animate-fade-in">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 rounded-3xl"></div>
+              <div className="relative bg-card/50 backdrop-blur-sm rounded-3xl p-10 md:p-16 border border-border/50 shadow-elegant">
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl md:text-5xl font-display font-semibold mb-4">Resurfacing Benefits</h2>
+                  <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                    Reveal your freshest, most radiant skin
+                  </p>
                 </div>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Sparkles className="w-8 h-8 text-accent" />
+                <div className="grid md:grid-cols-2 gap-10">
+                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <RefreshCw className="w-9 h-9 text-accent" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-xl mb-3">Skin Renewal</h3>
+                      <p className="text-muted-foreground leading-relaxed">Chemical peels reveal fresh, new skin layers for a completely renewed complexion.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Brightness Boost</h3>
-                    <p className="text-muted-foreground">Fade discoloration and dark spots while revealing your skin's natural luminosity.</p>
+                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <Sparkles className="w-9 h-9 text-accent" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-xl mb-3">Brightness Boost</h3>
+                      <p className="text-muted-foreground leading-relaxed">Fade discoloration and dark spots while revealing your skin's natural luminosity.</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Award className="w-8 h-8 text-accent" />
+                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <Award className="w-9 h-9 text-accent" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-xl mb-3">Texture Refinement</h3>
+                      <p className="text-muted-foreground leading-relaxed">Smooth rough texture, minimize pores, and eliminate surface imperfections.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Texture Refinement</h3>
-                    <p className="text-muted-foreground">Smooth rough texture, minimize pores, and eliminate surface imperfections.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Droplets className="w-8 h-8 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Low Downtime</h3>
-                    <p className="text-muted-foreground">Get dramatic results without extensive recovery—gentle yet effective.</p>
+                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <Droplets className="w-9 h-9 text-accent" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-xl mb-3">Low Downtime</h3>
+                      <p className="text-muted-foreground leading-relaxed">Get dramatic results without extensive recovery—gentle yet effective.</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Treatment Journey */}
-            <div className="mb-12 animate-fade-in">
-              <h2 className="text-3xl font-display font-semibold text-center mb-12">The Reset Process</h2>
+            <div className="mb-20 animate-fade-in">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6">The Reset Process</h2>
+                <div className="flex items-center justify-center gap-4">
+                  <div className="h-px w-16 bg-gradient-to-r from-transparent to-accent"></div>
+                  <span className="text-accent">✦</span>
+                  <div className="h-px w-16 bg-gradient-to-l from-transparent to-accent"></div>
+                </div>
+              </div>
               
-              <div className="space-y-8">
-                <div className="bg-card border border-border rounded-xl p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-xl">
+              <div className="space-y-10">
+                <div className="bg-card border border-border rounded-3xl p-10 hover:shadow-elegant transition-shadow">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent font-bold text-2xl">
                       1
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-3">Skin Preparation & Analysis</h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <h3 className="text-2xl font-display font-semibold mb-4">Skin Preparation & Analysis</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed">
                         We begin with a thorough consultation to understand your skin concerns and select the perfect peel strength for your needs. Your skin is cleansed and prepped to ensure optimal penetration and results.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-card border border-border rounded-xl p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-xl">
+                <div className="bg-card border border-border rounded-3xl p-10 hover:shadow-elegant transition-shadow">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent font-bold text-2xl">
                       2
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-3">Professional Peel Application</h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <h3 className="text-2xl font-display font-semibold mb-4">Professional Peel Application</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed">
                         A customized chemical solution is expertly applied to target dullness, discoloration, and texture concerns. The peel works to dissolve dead skin cells and trigger your skin's natural renewal process, revealing the fresh, radiant skin beneath.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-card border border-border rounded-xl p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-xl">
+                <div className="bg-card border border-border rounded-3xl p-10 hover:shadow-elegant transition-shadow">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent font-bold text-2xl">
                       3
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-3">Soothing Recovery & Protection</h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <h3 className="text-2xl font-display font-semibold mb-4">Soothing Recovery & Protection</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed">
                         We neutralize and remove the peel, then apply calming, hydrating treatments to support your skin's healing. You'll leave with comprehensive aftercare instructions to maximize results and ensure smooth, comfortable recovery.
                       </p>
                     </div>
@@ -175,47 +226,73 @@ const RoloraReset = () => {
             </div>
 
             {/* Perfect For Section */}
-            <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 mb-12 animate-fade-in">
-              <h2 className="text-3xl font-display font-semibold text-center mb-6">Perfect Reset For</h2>
-              <div className="max-w-3xl mx-auto">
-                <ul className="space-y-4 text-lg">
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">🧪</span>
-                    <span>Dull, lackluster complexion needing revival</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">🧪</span>
-                    <span>Hyperpigmentation and uneven skin tone</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">🧪</span>
-                    <span>Rough texture and enlarged pores</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">🧪</span>
-                    <span>Acne scarring and surface imperfections</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">🧪</span>
-                    <span>Preparing for special occasions or events</span>
-                  </li>
-                </ul>
+            <div className="relative mb-20 animate-fade-in">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent rounded-3xl opacity-90"></div>
+              <div className="relative text-primary-foreground rounded-3xl p-10 md:p-16">
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl md:text-5xl font-display font-semibold mb-4">Perfect Reset For</h2>
+                  <div className="flex items-center justify-center gap-4 mt-6">
+                    <div className="h-px w-16 bg-primary-foreground/30"></div>
+                    <span className="text-primary-foreground/60">✦</span>
+                    <div className="h-px w-16 bg-primary-foreground/30"></div>
+                  </div>
+                </div>
+                <div className="max-w-4xl mx-auto">
+                  <ul className="grid md:grid-cols-2 gap-6">
+                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
+                      <span className="text-3xl flex-shrink-0">🧪</span>
+                      <span className="text-lg leading-relaxed">Dull, lackluster complexion needing revival</span>
+                    </li>
+                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
+                      <span className="text-3xl flex-shrink-0">🧪</span>
+                      <span className="text-lg leading-relaxed">Hyperpigmentation and uneven skin tone</span>
+                    </li>
+                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
+                      <span className="text-3xl flex-shrink-0">🧪</span>
+                      <span className="text-lg leading-relaxed">Rough texture and enlarged pores</span>
+                    </li>
+                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
+                      <span className="text-3xl flex-shrink-0">🧪</span>
+                      <span className="text-lg leading-relaxed">Acne scarring and surface imperfections</span>
+                    </li>
+                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors md:col-span-2 max-w-2xl mx-auto">
+                      <span className="text-3xl flex-shrink-0">🧪</span>
+                      <span className="text-lg leading-relaxed">Preparing for special occasions or events</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
             {/* CTA */}
-            <div className="text-center py-8 animate-fade-in">
-              <h2 className="text-3xl font-display font-semibold mb-4">Reset Your Skin's Story</h2>
-              <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                Transform dull, uneven skin into a clear, radiant canvas. Your reset journey begins now.
-              </p>
-              <Button 
-                size="lg" 
-                className="px-12 py-6 text-lg shadow-elegant"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Book Rolora Reset
-              </Button>
+            <div className="text-center py-16 animate-fade-in">
+              <div className="max-w-4xl mx-auto space-y-8">
+                <div className="space-y-4">
+                  <h2 className="text-4xl md:text-6xl font-display font-semibold leading-tight">
+                    Reset Your<br />Skin's Story
+                  </h2>
+                  <div className="flex items-center justify-center gap-4">
+                    <div className="h-px w-12 bg-gradient-to-r from-transparent to-accent"></div>
+                    <span className="text-accent text-2xl">✦</span>
+                    <div className="h-px w-12 bg-gradient-to-l from-transparent to-accent"></div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground text-xl leading-relaxed max-w-2xl mx-auto">
+                  Transform dull, uneven skin into a clear, radiant canvas. Your reset journey begins now.
+                </p>
+                <div className="pt-6">
+                  <Button 
+                    size="lg" 
+                    className="px-16 py-8 text-xl shadow-elegant hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    Book Rolora Reset
+                  </Button>
+                </div>
+                <p className="text-sm text-muted-foreground/60 italic">
+                  Professional skin resurfacing with remarkable results
+                </p>
+              </div>
             </div>
           </div>
         </div>

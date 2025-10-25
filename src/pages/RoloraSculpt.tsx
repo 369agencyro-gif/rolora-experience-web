@@ -10,61 +10,87 @@ import { Sparkles, Clock, Droplets, Zap } from "lucide-react";
 const RoloraSculpt = () => {
   return (
     <ServiceLayout>
-      <section className="py-20 md:py-32">
-        <div className="container px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in">
-              <span className="text-6xl mb-4 block">💎</span>
-              <h1 className="text-4xl md:text-6xl font-display font-semibold mb-4">
+      {/* Hero Section with Overlay */}
+      <section className="relative">
+        <div className="relative h-[70vh] min-h-[600px] overflow-hidden">
+          <img 
+            src={massageImage} 
+            alt="Rolora Sculpt luxury treatment"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
+          
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-6 animate-fade-in">
+              <div className="mb-6">
+                <span className="text-7xl md:text-8xl block mb-2">💎</span>
+                <div className="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+              </div>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold mb-6 tracking-tight">
                 Rolora Sculpt
               </h1>
-              <p className="text-2xl md:text-3xl text-accent font-medium mb-6">$205</p>
-              <p className="text-xl text-foreground italic mb-8">
+              <p className="text-3xl md:text-4xl text-accent font-medium mb-6">$205</p>
+              <p className="text-xl md:text-2xl text-foreground/90 italic font-light max-w-2xl mx-auto">
                 Get snatched by Rolora.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="mb-12 animate-fade-in rounded-2xl overflow-hidden shadow-elegant">
-              <img 
-                src={massageImage} 
-                alt="Rolora Sculpt treatment"
-                className="w-full h-[500px] object-cover"
-              />
+      <section className="py-20 md:py-32">
+        <div className="container px-6">
+          <div className="max-w-6xl mx-auto">
+
+            {/* Signature Divider */}
+            <div className="flex items-center justify-center mb-16 animate-fade-in">
+              <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent"></div>
+              <span className="px-6 text-accent text-sm uppercase tracking-widest">Facial Sculpting</span>
+              <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent"></div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 mb-12 animate-fade-in">
-              <div>
-                <h2 className="text-2xl font-display font-semibold mb-4">The Experience</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  A lifting and contouring facial designed to sculpt, define, and depuff.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Using lymphatic drainage, gua sha, cryo sculpting and a stem cells infused serum, this ritual enhances definition and awakens natural facial contours.
-                </p>
+            <div className="grid md:grid-cols-2 gap-16 mb-20 animate-fade-in">
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl font-display font-semibold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                    The Experience
+                  </h2>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                    A lifting and contouring facial designed to sculpt, define, and depuff.
+                  </p>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    Using lymphatic drainage, gua sha, cryo sculpting and a stem cells infused serum, this ritual enhances definition and awakens natural facial contours.
+                  </p>
+                </div>
+                <div className="pt-6 border-t border-border/50">
+                  <p className="text-sm text-muted-foreground italic">
+                    "Sculpted, defined, undeniably snatched."
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <h2 className="text-2xl font-display font-semibold mb-4">What to Expect</h2>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Lymphatic drainage massage</span>
+              <div className="bg-muted/20 rounded-3xl p-8 border border-border/50">
+                <h2 className="text-3xl font-display font-semibold mb-6">What to Expect</h2>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Lymphatic drainage massage</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Gua sha facial contouring</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Gua sha facial contouring</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Cryo sculpting techniques</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Cryo sculpting techniques</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Stem cells infused serum</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Stem cells infused serum</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span>Defined, sculpted facial contours</span>
+                  <li className="flex items-start gap-4 group">
+                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
+                    <span className="text-muted-foreground text-lg">Defined, sculpted facial contours</span>
                   </li>
                 </ul>
               </div>
