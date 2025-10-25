@@ -112,14 +112,20 @@ const BodyRolling = () => {
                   {bodyRollingPackages.map((pkg, idx) => (
                     <div 
                       key={idx} 
-                      className="group flex items-start justify-between p-8 rounded-2xl bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm border border-border/50 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                      className="group relative p-8 rounded-3xl bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-sm border border-border/50 hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 overflow-hidden"
                     >
-                      <div className="flex-1">
-                        <h4 className="text-xl font-display font-semibold mb-2 group-hover:text-accent transition-colors">{pkg.name}</h4>
-                        {pkg.duration && <p className="text-sm text-accent/80 mb-2 font-medium">{pkg.duration}</p>}
-                        <p className="text-sm text-muted-foreground leading-relaxed">{pkg.description}</p>
+                      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="relative z-10 flex flex-col h-full">
+                        <h4 className="text-xl md:text-2xl font-display font-semibold mb-3 group-hover:text-accent transition-colors">{pkg.name}</h4>
+                        {pkg.duration && <p className="text-sm text-accent/90 mb-3 font-medium tracking-wide">{pkg.duration}</p>}
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-grow">{pkg.description}</p>
+                        <div className="flex items-center justify-center pt-4 border-t border-border/30">
+                          <div className="relative inline-flex items-center">
+                            <div className="absolute inset-0 bg-accent/10 blur-lg rounded-full"></div>
+                            <span className="relative text-3xl md:text-4xl font-display font-bold bg-gradient-to-br from-accent via-accent to-accent/70 bg-clip-text text-transparent">{pkg.price}</span>
+                          </div>
+                        </div>
                       </div>
-                      <span className="text-accent font-display font-semibold text-2xl ml-6">{pkg.price}</span>
                     </div>
                   ))}
                 </div>
