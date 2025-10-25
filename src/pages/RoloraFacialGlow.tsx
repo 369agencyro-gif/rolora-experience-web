@@ -239,7 +239,7 @@ const RoloraFacialGlow = () => {
                   <h2 className="text-5xl md:text-6xl font-display font-semibold mb-6 tracking-tight">Perfect For</h2>
                   <div className="flex items-center justify-center gap-6 mt-8">
                     <div className="h-px w-24 bg-primary-foreground/40"></div>
-                    <div className="w-3 h-3 rounded-full bg-primary-foreground/60"></div>
+                    <div className="w-2 h-2 rounded-full bg-primary-foreground/60 ring-4 ring-primary-foreground/20"></div>
                     <div className="h-px w-24 bg-primary-foreground/40"></div>
                   </div>
                 </div>
@@ -247,36 +247,36 @@ const RoloraFacialGlow = () => {
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="group relative">
                       <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">✨</span>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
                         <span className="text-xl leading-relaxed font-light">Anyone seeking the signature Rolora glow and luminous skin</span>
                       </div>
                     </div>
                     <div className="group relative">
                       <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">✨</span>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
                         <span className="text-xl leading-relaxed font-light">Dull, tired skin in need of revitalization</span>
                       </div>
                     </div>
                     <div className="group relative">
                       <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">✨</span>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
                         <span className="text-xl leading-relaxed font-light">Uneven texture or fine lines requiring smoothing</span>
                       </div>
                     </div>
                     <div className="group relative">
                       <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">✨</span>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
                         <span className="text-xl leading-relaxed font-light">Pre-event preparation for camera-ready skin</span>
                       </div>
                     </div>
                     <div className="group relative md:col-span-2">
                       <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02] max-w-3xl mx-auto">
-                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">✨</span>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02] max-w-3xl mx-auto">
+                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
                         <span className="text-xl leading-relaxed font-light">Regular maintenance for sustained radiance</span>
                       </div>
                     </div>
