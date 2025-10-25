@@ -20,8 +20,8 @@ const Index = () => {
         <Services />
         <WhyRolora />
         <Gallery />
-        <Contact />
         <Testimonials />
+        <Contact />
         <Footer />
       </main>
     </>
