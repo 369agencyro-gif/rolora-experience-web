@@ -2,16 +2,17 @@ import aboutImage from "@/assets/about-image.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="relative py-20 md:py-28 flex items-center overflow-hidden bg-background">
-      {/* Left side - Image with fade effect */}
-      <div className="absolute inset-y-0 left-0 w-1/2">
+    <section id="about" className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-background via-secondary/10 to-background">
+      {/* Left side - Image with smooth fade effect */}
+      <div className="absolute inset-0 left-0 w-full md:w-3/5">
         <img 
           src={aboutImage} 
           alt="Rolora luxury spa experience" 
           className="w-full h-full object-cover"
         />
-        {/* Gradient overlay that fades to transparent on the right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-background/80 to-background" />
+        {/* Multi-directional gradient overlay for seamless blending */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-background/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/20" />
       </div>
       
       {/* Right side - Text content */}
