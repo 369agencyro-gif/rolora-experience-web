@@ -26,12 +26,12 @@ const RoloraFacialGlow = () => {
                 <span className="text-7xl md:text-8xl block mb-2">✨</span>
                 <div className="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-accent to-transparent"></div>
               </div>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold mb-8 tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold mb-12 tracking-tight">
                 Rolora Facial Glow™
               </h1>
-              <div className="relative inline-flex flex-col items-center mb-8">
-                <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full scale-150"></div>
-                <div className="relative px-12 py-4 rounded-2xl bg-card/10 backdrop-blur-md border-2 border-accent/30">
+              <div className="relative inline-flex flex-col items-center mb-8 py-6 px-4">
+                <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full"></div>
+                <div className="relative px-12 py-5 rounded-2xl bg-card/10 backdrop-blur-md border-2 border-accent/30 shadow-2xl">
                   <p className="text-5xl md:text-6xl font-display font-bold bg-gradient-to-br from-accent via-accent to-accent/60 bg-clip-text text-transparent tracking-tight">$235</p>
                 </div>
               </div>

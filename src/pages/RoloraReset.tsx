@@ -28,10 +28,10 @@ const RoloraReset = () => {
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold mb-4 tracking-tight">
                 Rolora Reset
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground/80 mb-6 italic">(Chemical Peel)</p>
-              <div className="relative inline-flex flex-col items-center mb-8">
-                <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full scale-150"></div>
-                <div className="relative px-12 py-4 rounded-2xl bg-card/10 backdrop-blur-md border-2 border-accent/30">
+              <p className="text-xl md:text-2xl text-muted-foreground/80 mb-8 italic">(Chemical Peel)</p>
+              <div className="relative inline-flex flex-col items-center mb-8 py-6 px-4">
+                <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full"></div>
+                <div className="relative px-12 py-5 rounded-2xl bg-card/10 backdrop-blur-md border-2 border-accent/30 shadow-2xl">
                   <p className="text-5xl md:text-6xl font-display font-bold bg-gradient-to-br from-accent via-accent to-accent/60 bg-clip-text text-transparent tracking-tight">$245</p>
                 </div>
               </div>
