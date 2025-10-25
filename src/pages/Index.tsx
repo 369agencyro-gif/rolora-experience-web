@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
+import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
         <WhyRolora />
         <Gallery />
         <Contact />
+        <Testimonials />
         <Footer />
       </main>
     </>
