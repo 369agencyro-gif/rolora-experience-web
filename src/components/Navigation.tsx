@@ -69,7 +69,7 @@ const Navigation = () => {
                   <div className="grid grid-cols-3 gap-8">
                     {/* Facial Services */}
                     <div>
-                      <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">
+                      <h3 className="text-lg font-semibold text-muted-foreground uppercase tracking-wide mb-4">
                         Facial Rituals
                       </h3>
                       <div className="space-y-3">
@@ -97,7 +97,7 @@ const Navigation = () => {
 
                     {/* Additional Services */}
                     <div>
-                      <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">
+                      <h3 className="text-lg font-semibold text-muted-foreground uppercase tracking-wide mb-4">
                         Premium Experiences
                       </h3>
                       <div className="space-y-3">
