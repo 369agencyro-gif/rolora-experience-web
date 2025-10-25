@@ -45,12 +45,12 @@ const Navigation = () => {
               Home
             </Link>
             
-            <button 
-              onClick={() => scrollToSection('about')}
+            <Link 
+              to="/about"
               className="text-foreground hover:text-accent transition-smooth"
             >
               About
-            </button>
+            </Link>
 
             {/* Services Mega Menu */}
             <div 
