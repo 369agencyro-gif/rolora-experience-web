@@ -2,24 +2,13 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useEffect, useRef, useState } from "react";
 import { Sparkles, Heart, Award, Users, Target, Zap } from "lucide-react";
-import teamPhoto from "@/assets/team-photo.jpg";
 import bodyRollingMachine from "@/assets/body-rolling-machine.jpg";
 import studioInterior from "@/assets/studio-interior.jpg";
 import heroImage from "@/assets/hero-image.jpg";
 
 const About = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isRolling, setIsRolling] = useState(false);
   const rollingRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -65,14 +54,9 @@ const About = () => {
     <>
       <Navigation />
       <main className="min-h-screen">
-        {/* Hero Section with Parallax */}
+        {/* Hero Section */}
         <section className="relative h-[70vh] overflow-hidden">
-          <div 
-            className="absolute inset-0 transition-transform duration-100 ease-out"
-            style={{
-              transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px) scale(1.1)`
-            }}
-          >
+          <div className="absolute inset-0">
             <img 
               src={heroImage}
               alt="Rolora Studio"
@@ -249,39 +233,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Team Section */}
-        <section className="py-32 bg-background">
-          <div className="container px-6">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-20">
-                <h2 className="text-5xl md:text-6xl font-display font-semibold mb-6">
-                  Meet Our Team
-                </h2>
-                <p className="text-xl text-muted-foreground">
-                  Experts dedicated to your transformation
-                </p>
-              </div>
-
-              <div className="relative group">
-                <div className="overflow-hidden rounded-3xl">
-                  <img 
-                    src={teamPhoto}
-                    alt="Rolora Team"
-                    className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-12 text-white">
-                    <p className="text-2xl md:text-3xl font-display leading-relaxed">
-                      Our team of licensed aestheticians brings together decades of experience 
-                      in facial sculpting, skin analysis, and therapeutic body work.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Values Section with Cards */}
         <section className="py-32 bg-gradient-to-b from-secondary/20 to-background">
