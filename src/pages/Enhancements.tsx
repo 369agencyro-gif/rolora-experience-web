@@ -53,11 +53,11 @@ const Enhancements = () => {
 
             <div className="space-y-10 mb-16 animate-fade-in">
               {/* $50 Tier */}
-              <div className="rounded-3xl p-10 bg-gradient-to-br from-secondary/40 via-secondary/30 to-secondary/20 backdrop-blur-sm border border-border/50 shadow-elegant">
-                <div className="flex flex-col items-center mb-10">
+              <div className="rounded-3xl p-10 bg-gradient-to-br from-secondary/40 via-secondary/30 to-secondary/20 backdrop-blur-sm border border-border/50 shadow-elegant overflow-visible">
+                <div className="flex flex-col items-center mb-10 py-4">
                   <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent mb-6"></div>
-                  <div className="relative inline-flex items-center justify-center">
-                    <div className="absolute inset-0 bg-accent/10 blur-2xl rounded-full scale-150"></div>
+                  <div className="relative inline-flex items-center justify-center py-2">
+                    <div className="absolute inset-0 bg-accent/10 blur-xl rounded-full scale-125"></div>
                     <span className="relative text-5xl md:text-6xl font-display font-bold bg-gradient-to-br from-accent via-accent to-accent/60 bg-clip-text text-transparent tracking-tight">$50</span>
                   </div>
                   <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent mt-6"></div>
@@ -74,11 +74,11 @@ const Enhancements = () => {
               </div>
 
               {/* $60 Tier */}
-              <div className="rounded-3xl p-10 bg-gradient-to-br from-secondary/40 via-secondary/30 to-secondary/20 backdrop-blur-sm border border-border/50 shadow-elegant">
-                <div className="flex flex-col items-center mb-10">
+              <div className="rounded-3xl p-10 bg-gradient-to-br from-secondary/40 via-secondary/30 to-secondary/20 backdrop-blur-sm border border-border/50 shadow-elegant overflow-visible">
+                <div className="flex flex-col items-center mb-10 py-4">
                   <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent mb-6"></div>
-                  <div className="relative inline-flex items-center justify-center">
-                    <div className="absolute inset-0 bg-accent/10 blur-2xl rounded-full scale-150"></div>
+                  <div className="relative inline-flex items-center justify-center py-2">
+                    <div className="absolute inset-0 bg-accent/10 blur-xl rounded-full scale-125"></div>
                     <span className="relative text-5xl md:text-6xl font-display font-bold bg-gradient-to-br from-accent via-accent to-accent/60 bg-clip-text text-transparent tracking-tight">$60</span>
                   </div>
                   <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent mt-6"></div>
@@ -94,11 +94,11 @@ const Enhancements = () => {
               </div>
 
               {/* $100 Tier */}
-              <div className="rounded-3xl p-10 bg-gradient-to-br from-secondary/40 via-secondary/30 to-secondary/20 backdrop-blur-sm border border-border/50 shadow-elegant">
-                <div className="flex flex-col items-center mb-10">
+              <div className="rounded-3xl p-10 bg-gradient-to-br from-secondary/40 via-secondary/30 to-secondary/20 backdrop-blur-sm border border-border/50 shadow-elegant overflow-visible">
+                <div className="flex flex-col items-center mb-10 py-4">
                   <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent mb-6"></div>
-                  <div className="relative inline-flex items-center justify-center">
-                    <div className="absolute inset-0 bg-accent/10 blur-2xl rounded-full scale-150"></div>
+                  <div className="relative inline-flex items-center justify-center py-2">
+                    <div className="absolute inset-0 bg-accent/10 blur-xl rounded-full scale-125"></div>
                     <span className="relative text-5xl md:text-6xl font-display font-bold bg-gradient-to-br from-accent via-accent to-accent/60 bg-clip-text text-transparent tracking-tight">$100</span>
                   </div>
                   <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent mt-6"></div>
