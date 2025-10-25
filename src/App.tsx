@@ -11,6 +11,7 @@ import RoloraReset from "./pages/RoloraReset";
 import ExpressSculpt from "./pages/ExpressSculpt";
 import Enhancements from "./pages/Enhancements";
 import BodyRolling from "./pages/BodyRolling";
+import FullGallery from "./pages/FullGallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/services/express-sculpt" element={<ExpressSculpt />} />
           <Route path="/services/enhancements" element={<Enhancements />} />
           <Route path="/services/body-rolling" element={<BodyRolling />} />
+          <Route path="/gallery" element={<FullGallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
