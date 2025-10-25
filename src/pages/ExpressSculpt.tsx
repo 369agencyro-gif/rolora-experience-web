@@ -28,10 +28,10 @@ const ExpressSculpt = () => {
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold mb-12 tracking-tight">
                 Express Sculpt
               </h1>
-              <div className="relative inline-flex flex-col items-center mb-8 py-6 px-4">
+              <div className="relative inline-flex flex-col items-center mb-8 py-6 px-4 overflow-visible isolate z-10">
                 <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full"></div>
-                <div className="relative px-12 py-5 rounded-2xl bg-card/10 backdrop-blur-md border-2 border-accent/30 shadow-2xl">
-                  <p className="text-5xl md:text-6xl font-display font-bold bg-gradient-to-br from-accent via-accent to-accent/60 bg-clip-text text-transparent tracking-tight">$145</p>
+                <div className="relative px-12 py-5 rounded-2xl bg-card/10 backdrop-blur-md border-2 border-accent/30 shadow-2xl overflow-visible">
+                  <p className="text-5xl md:text-6xl leading-[1.15] pt-1 font-display font-bold bg-gradient-to-br from-accent via-accent to-accent/60 bg-clip-text text-transparent tracking-tight">$145</p>
                 </div>
               </div>
               <p className="text-xl md:text-2xl text-foreground/90 italic font-light max-w-2xl mx-auto">
