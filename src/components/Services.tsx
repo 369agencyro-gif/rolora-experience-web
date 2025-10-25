@@ -82,38 +82,77 @@ const Services = () => {
 
         {/* Main Facials */}
         <div className="max-w-7xl mx-auto mb-16">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {mainFacials.map((service, index) => (
+          <div className="grid md:grid-cols-3 gap-6">
+            {mainFacials.slice(0, 3).map((service, index) => (
               <Link
                 key={index}
                 to={service.link}
-                className="group animate-fade-in rounded-2xl overflow-hidden bg-card shadow-soft hover:shadow-elegant transition-elegant border border-border"
+                className="group animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-80 rounded-2xl overflow-hidden shadow-soft hover:shadow-elegant transition-elegant">
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover transition-elegant group-hover:scale-110"
+                    className="w-full h-full object-cover transition-elegant group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent" />
-                  <span className="absolute top-4 left-4 text-4xl">{service.icon}</span>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-start justify-between gap-2 mb-2">
-                    <h3 className="text-lg font-display font-semibold leading-tight">
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
+                  
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                    <span className="text-5xl mb-3">{service.icon}</span>
+                    <h3 className="text-2xl font-display font-semibold text-primary-foreground mb-2">
                       {service.title}
                     </h3>
-                    <span className="text-accent font-semibold whitespace-nowrap">
-                      {service.price}
-                    </span>
+                    <p className="text-primary-foreground/90 italic mb-3">
+                      {service.tagline}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-accent text-xl font-semibold">
+                        {service.price}
+                      </span>
+                      <span className="text-primary-foreground/80 text-sm">
+                        Learn More →
+                      </span>
+                    </div>
                   </div>
-                  <p className="text-sm text-muted-foreground italic">
-                    {service.tagline}
-                  </p>
-                  <Button variant="link" className="mt-3 p-0 h-auto text-accent">
-                    Learn More →
-                  </Button>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-6 max-w-5xl mx-auto">
+            {mainFacials.slice(3).map((service, index) => (
+              <Link
+                key={index}
+                to={service.link}
+                className="group animate-fade-in"
+                style={{ animationDelay: `${(3 + index) * 100}ms` }}
+              >
+                <div className="relative h-64 rounded-2xl overflow-hidden shadow-soft hover:shadow-elegant transition-elegant">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-elegant group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
+                  
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <span className="text-4xl mb-2">{service.icon}</span>
+                    <h3 className="text-xl font-display font-semibold text-primary-foreground mb-1">
+                      {service.title}
+                    </h3>
+                    <p className="text-primary-foreground/90 italic text-sm mb-2">
+                      {service.tagline}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-accent text-lg font-semibold">
+                        {service.price}
+                      </span>
+                      <span className="text-primary-foreground/80 text-sm">
+                        Learn More →
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -127,31 +166,32 @@ const Services = () => {
               <Link
                 key={index}
                 to={service.link}
-                className="group animate-fade-in rounded-2xl overflow-hidden bg-card shadow-soft hover:shadow-elegant transition-elegant border border-border"
+                className="group animate-fade-in rounded-2xl bg-secondary/30 border border-border hover:border-accent/50 transition-elegant overflow-hidden"
                 style={{ animationDelay: `${(mainFacials.length + index) * 100}ms` }}
               >
-                <div className="relative h-56 overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-elegant group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent" />
-                  <span className="absolute top-4 left-4 text-5xl">{service.icon}</span>
-                </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-display font-semibold mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-foreground italic mb-1">
-                    {service.tagline}
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {service.description}
-                  </p>
-                  <Button variant="link" className="p-0 h-auto text-accent">
-                    Explore Options →
-                  </Button>
+                <div className="flex h-48">
+                  <div className="w-2/5 relative overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-elegant group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="w-3/5 p-6 flex flex-col justify-center">
+                    <span className="text-4xl mb-3">{service.icon}</span>
+                    <h3 className="text-xl font-display font-semibold mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground italic text-sm mb-1">
+                      {service.tagline}
+                    </p>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      {service.description}
+                    </p>
+                    <span className="text-accent text-sm font-medium group-hover:translate-x-1 transition-elegant inline-block">
+                      Explore Options →
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}
