@@ -68,89 +68,56 @@ const additionalServices = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 md:py-32">
+    <section id="services" className="py-20 md:py-32 bg-muted/20">
       <div className="container px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6">
-            Rolora Treatment Menu
+            Treatment Menu
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Each service is an invitation to pause, breathe, and reconnect with your essence. 
-            Discover treatments designed not just for results, but for transformation.
+            Each service is an invitation to pause, breathe, and reconnect with your essence.
           </p>
         </div>
 
-        {/* Main Facials */}
-        <div className="max-w-7xl mx-auto mb-16">
-          <div className="grid md:grid-cols-3 gap-6">
-            {mainFacials.slice(0, 3).map((service, index) => (
+        {/* Facial Rituals */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <h3 className="text-sm font-semibold text-accent uppercase tracking-widest text-center mb-8">
+            Facial Rituals
+          </h3>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {mainFacials.map((service, index) => (
               <Link
                 key={index}
                 to={service.link}
-                className="group animate-fade-in"
+                className="group block animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative h-80 rounded-2xl overflow-hidden shadow-soft hover:shadow-elegant transition-elegant">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-elegant group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
+                <div className="bg-card border border-border rounded-2xl overflow-hidden hover:border-accent/50 hover:shadow-elegant transition-smooth">
+                  <div className="relative h-56 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-smooth group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute top-4 right-4 text-4xl">{service.icon}</div>
+                  </div>
                   
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <span className="text-5xl mb-3">{service.icon}</span>
-                    <h3 className="text-2xl font-display font-semibold text-primary-foreground mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-primary-foreground/90 italic mb-3">
-                      {service.tagline}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-accent text-xl font-semibold">
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="font-display font-semibold text-lg leading-tight">
+                        {service.title}
+                      </h3>
+                      <span className="text-accent font-semibold text-lg whitespace-nowrap ml-2">
                         {service.price}
-                      </span>
-                      <span className="text-primary-foreground/80 text-sm">
-                        Learn More →
                       </span>
                     </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 mt-6 max-w-5xl mx-auto">
-            {mainFacials.slice(3).map((service, index) => (
-              <Link
-                key={index}
-                to={service.link}
-                className="group animate-fade-in"
-                style={{ animationDelay: `${(3 + index) * 100}ms` }}
-              >
-                <div className="relative h-64 rounded-2xl overflow-hidden shadow-soft hover:shadow-elegant transition-elegant">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-elegant group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
-                  
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                    <span className="text-4xl mb-2">{service.icon}</span>
-                    <h3 className="text-xl font-display font-semibold text-primary-foreground mb-1">
-                      {service.title}
-                    </h3>
-                    <p className="text-primary-foreground/90 italic text-sm mb-2">
+                    <p className="text-muted-foreground text-sm italic mb-4">
                       {service.tagline}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-accent text-lg font-semibold">
-                        {service.price}
-                      </span>
-                      <span className="text-primary-foreground/80 text-sm">
-                        Learn More →
-                      </span>
+                    <div className="text-accent text-sm font-medium group-hover:translate-x-1 transition-smooth inline-flex items-center gap-1">
+                      Learn More →
                     </div>
                   </div>
                 </div>
@@ -159,58 +126,51 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Additional Services */}
-        <div className="max-w-7xl mx-auto mb-20">
+        {/* Premium Experiences */}
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-sm font-semibold text-accent uppercase tracking-widest text-center mb-8">
+            Premium Experiences
+          </h3>
+          
           <div className="grid md:grid-cols-2 gap-6">
             {additionalServices.map((service, index) => (
               <Link
                 key={index}
                 to={service.link}
-                className="group animate-fade-in rounded-2xl bg-secondary/30 border border-border hover:border-accent/50 transition-elegant overflow-hidden"
+                className="group block animate-fade-in"
                 style={{ animationDelay: `${(mainFacials.length + index) * 100}ms` }}
               >
-                <div className="flex h-48">
-                  <div className="w-2/5 relative overflow-hidden">
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-full object-cover transition-elegant group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="w-3/5 p-6 flex flex-col justify-center">
-                    <span className="text-4xl mb-3">{service.icon}</span>
-                    <h3 className="text-xl font-display font-semibold mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground italic text-sm mb-1">
-                      {service.tagline}
-                    </p>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      {service.description}
-                    </p>
-                    <span className="text-accent text-sm font-medium group-hover:translate-x-1 transition-elegant inline-block">
-                      Explore Options →
-                    </span>
+                <div className="bg-card border border-border rounded-2xl overflow-hidden hover:border-accent/50 hover:shadow-elegant transition-smooth h-full">
+                  <div className="flex flex-col sm:flex-row h-full">
+                    <div className="relative w-full sm:w-2/5 h-48 sm:h-auto overflow-hidden">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-smooth group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/20" />
+                    </div>
+                    
+                    <div className="w-full sm:w-3/5 p-6 flex flex-col justify-center">
+                      <div className="text-4xl mb-3">{service.icon}</div>
+                      <h3 className="font-display font-semibold text-xl mb-2">
+                        {service.title}
+                      </h3>
+                      <p className="text-muted-foreground italic text-sm mb-2">
+                        {service.tagline}
+                      </p>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        {service.description}
+                      </p>
+                      <div className="text-accent text-sm font-medium group-hover:translate-x-1 transition-smooth inline-flex items-center gap-1">
+                        Explore Options →
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>
             ))}
           </div>
-        </div>
-
-
-        {/* Signature Experience */}
-        <div className="max-w-4xl mx-auto text-center animate-fade-in rounded-2xl p-10 bg-gradient-to-br from-secondary/40 to-accent/10 border border-accent/20">
-          <h3 className="text-3xl md:text-4xl font-display font-semibold mb-4">
-            🪞 Rolora Signature Experience
-          </h3>
-          <p className="text-muted-foreground leading-relaxed mb-6 max-w-2xl mx-auto">
-            ROLORA treatments are crafted to sculpt, illuminate, and refine. 
-            Start with your signature facial, layer on targeted Intensifiers, or pair with body rolling for a full-face-and-body ritual.
-          </p>
-          <p className="text-lg font-medium text-accent italic">
-            ✨ Luxury is in the details. Glow is the signature.
-          </p>
         </div>
       </div>
     </section>
