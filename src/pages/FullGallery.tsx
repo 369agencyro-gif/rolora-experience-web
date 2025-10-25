@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import heroImage from "@/assets/hero-image.jpg";
 import aboutImage from "@/assets/about-image.jpg";
 import facialImage from "@/assets/service-facial.jpg";
@@ -49,6 +51,32 @@ type CategoryKey = keyof typeof galleryCategories;
 
 const FullGallery = () => {
   const [activeFilter, setActiveFilter] = useState<CategoryKey>("all");
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
+  const currentGalleryImages = galleryCategories[activeFilter];
+
+  const openLightbox = (index: number) => {
+    setSelectedImageIndex(index);
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+    setSelectedImageIndex(null);
+  };
+
+  const goToPrevious = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((selectedImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length);
+    }
+  };
+
+  const goToNext = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex((selectedImageIndex + 1) % currentGalleryImages.length);
+    }
+  };
 
   const filters: { key: CategoryKey; label: string }[] = [
     { key: "all", label: "All" },
@@ -104,10 +132,11 @@ const FullGallery = () => {
         <section className="py-20 bg-background">
           <div className="container px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-              {galleryCategories[activeFilter].map((image, index) => (
-                <div
+              {currentGalleryImages.map((image, index) => (
+                <button
                   key={index}
-                  className="group relative overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in shadow-soft hover:shadow-elegant transition-elegant"
+                  onClick={() => openLightbox(index)}
+                  className="group relative overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in shadow-soft hover:shadow-elegant transition-elegant cursor-pointer"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <img
@@ -122,11 +151,68 @@ const FullGallery = () => {
                     </p>
                     <p className="text-base">{image.alt}</p>
                   </div>
-                </div>
+                </button>
               ))}
             </div>
           </div>
         </section>
+
+        {/* Lightbox Modal */}
+        <Dialog open={isLightboxOpen} onOpenChange={setIsLightboxOpen}>
+          <DialogContent className="max-w-[95vw] w-full h-[95vh] p-0 bg-black/95 border-none">
+            {selectedImageIndex !== null && (
+              <div className="relative w-full h-full flex items-center justify-center">
+                {/* Close Button */}
+                <button
+                  onClick={closeLightbox}
+                  className="absolute top-4 right-4 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-smooth"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+
+                {/* Previous Button */}
+                <button
+                  onClick={goToPrevious}
+                  className="absolute left-4 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-smooth"
+                >
+                  <ChevronLeft className="w-8 h-8" />
+                </button>
+
+                {/* Image */}
+                <div className="w-full h-full flex flex-col items-center justify-center p-12">
+                  <img
+                    src={currentGalleryImages[selectedImageIndex].src}
+                    alt={currentGalleryImages[selectedImageIndex].alt}
+                    className="max-w-full max-h-[80vh] object-contain"
+                  />
+                  
+                  {/* Image Info */}
+                  <div className="mt-6 text-center">
+                    <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-2">
+                      {currentGalleryImages[selectedImageIndex].category}
+                    </p>
+                    <p className="text-white text-lg">
+                      {currentGalleryImages[selectedImageIndex].alt}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Next Button */}
+                <button
+                  onClick={goToNext}
+                  className="absolute right-4 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-smooth"
+                >
+                  <ChevronRight className="w-8 h-8" />
+                </button>
+
+                {/* Image Counter */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/10 px-4 py-2 rounded-full text-white text-sm">
+                  {selectedImageIndex + 1} / {currentGalleryImages.length}
+                </div>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </main>
       <Footer />
     </>
