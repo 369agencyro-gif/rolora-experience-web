@@ -204,31 +204,60 @@ const RoloraSculpt = () => {
             </div>
 
             {/* Ideal Candidates */}
-            <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 mb-12 animate-fade-in">
-              <h2 className="text-3xl font-display font-semibold text-center mb-6">Get Snatched If You Have</h2>
-              <div className="max-w-3xl mx-auto">
-                <ul className="space-y-4 text-lg">
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">💎</span>
-                    <span>Puffiness or water retention in the face</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">💎</span>
-                    <span>Loss of facial definition or sagging</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">💎</span>
-                    <span>Desire for a natural, lifted appearance</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">💎</span>
-                    <span>Morning puffiness or tired-looking features</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">💎</span>
-                    <span>Special event preparation for defined, camera-ready features</span>
-                  </li>
-                </ul>
+            <div className="relative mb-20 animate-fade-in overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-accent/90 to-primary/95 rounded-3xl"></div>
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-primary-foreground rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-foreground rounded-full blur-3xl"></div>
+              </div>
+              <div className="relative text-primary-foreground rounded-3xl p-12 md:p-20">
+                <div className="text-center mb-16">
+                  <h2 className="text-5xl md:text-6xl font-display font-semibold mb-6 tracking-tight">Get Snatched If You Have</h2>
+                  <div className="flex items-center justify-center gap-6 mt-8">
+                    <div className="h-px w-24 bg-primary-foreground/40"></div>
+                    <div className="w-3 h-3 rounded-full bg-primary-foreground/60"></div>
+                    <div className="h-px w-24 bg-primary-foreground/40"></div>
+                  </div>
+                </div>
+                <div className="max-w-5xl mx-auto">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="group relative">
+                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">💎</span>
+                        <span className="text-xl leading-relaxed font-light">Puffiness or water retention in the face</span>
+                      </div>
+                    </div>
+                    <div className="group relative">
+                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">💎</span>
+                        <span className="text-xl leading-relaxed font-light">Loss of facial definition or sagging</span>
+                      </div>
+                    </div>
+                    <div className="group relative">
+                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">💎</span>
+                        <span className="text-xl leading-relaxed font-light">Desire for a natural, lifted appearance</span>
+                      </div>
+                    </div>
+                    <div className="group relative">
+                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">💎</span>
+                        <span className="text-xl leading-relaxed font-light">Morning puffiness or tired-looking features</span>
+                      </div>
+                    </div>
+                    <div className="group relative md:col-span-2">
+                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02] max-w-3xl mx-auto">
+                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">💎</span>
+                        <span className="text-xl leading-relaxed font-light">Special event preparation for defined, camera-ready features</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 

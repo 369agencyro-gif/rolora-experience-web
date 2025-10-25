@@ -225,40 +225,59 @@ const TimelessLift = () => {
             </div>
 
             {/* Perfect For Section */}
-            <div className="relative mb-20 animate-fade-in">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent rounded-3xl opacity-90"></div>
-              <div className="relative text-primary-foreground rounded-3xl p-10 md:p-16">
-                <div className="text-center mb-12">
-                  <h2 className="text-4xl md:text-5xl font-display font-semibold mb-4">Ideal Candidates</h2>
-                  <div className="flex items-center justify-center gap-4 mt-6">
-                    <div className="h-px w-16 bg-primary-foreground/30"></div>
-                    <span className="text-primary-foreground/60">✦</span>
-                    <div className="h-px w-16 bg-primary-foreground/30"></div>
+            <div className="relative mb-20 animate-fade-in overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-accent/90 to-primary/95 rounded-3xl"></div>
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-primary-foreground rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-foreground rounded-full blur-3xl"></div>
+              </div>
+              <div className="relative text-primary-foreground rounded-3xl p-12 md:p-20">
+                <div className="text-center mb-16">
+                  <h2 className="text-5xl md:text-6xl font-display font-semibold mb-6 tracking-tight">Ideal Candidates</h2>
+                  <div className="flex items-center justify-center gap-6 mt-8">
+                    <div className="h-px w-24 bg-primary-foreground/40"></div>
+                    <div className="w-3 h-3 rounded-full bg-primary-foreground/60"></div>
+                    <div className="h-px w-24 bg-primary-foreground/40"></div>
                   </div>
                 </div>
-                <div className="max-w-4xl mx-auto">
-                  <ul className="grid md:grid-cols-2 gap-6">
-                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
-                      <span className="text-3xl flex-shrink-0">🪄</span>
-                      <span className="text-lg leading-relaxed">Loss of firmness and elasticity</span>
-                    </li>
-                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
-                      <span className="text-3xl flex-shrink-0">🪄</span>
-                      <span className="text-lg leading-relaxed">Fine lines and early signs of aging</span>
-                    </li>
-                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
-                      <span className="text-3xl flex-shrink-0">🪄</span>
-                      <span className="text-lg leading-relaxed">Sagging or drooping facial contours</span>
-                    </li>
-                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors">
-                      <span className="text-3xl flex-shrink-0">🪄</span>
-                      <span className="text-lg leading-relaxed">Desire for non-invasive lifting alternative</span>
-                    </li>
-                    <li className="flex items-start gap-4 bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-primary-foreground/15 transition-colors md:col-span-2 max-w-2xl mx-auto">
-                      <span className="text-3xl flex-shrink-0">🪄</span>
-                      <span className="text-lg leading-relaxed">Preventative anti-aging maintenance</span>
-                    </li>
-                  </ul>
+                <div className="max-w-5xl mx-auto">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="group relative">
+                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">🪄</span>
+                        <span className="text-xl leading-relaxed font-light">Loss of firmness and elasticity</span>
+                      </div>
+                    </div>
+                    <div className="group relative">
+                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">🪄</span>
+                        <span className="text-xl leading-relaxed font-light">Fine lines and early signs of aging</span>
+                      </div>
+                    </div>
+                    <div className="group relative">
+                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">🪄</span>
+                        <span className="text-xl leading-relaxed font-light">Sagging or drooping facial contours</span>
+                      </div>
+                    </div>
+                    <div className="group relative">
+                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
+                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">🪄</span>
+                        <span className="text-xl leading-relaxed font-light">Desire for non-invasive lifting alternative</span>
+                      </div>
+                    </div>
+                    <div className="group relative md:col-span-2">
+                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
+                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-8 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02] max-w-3xl mx-auto">
+                        <span className="text-5xl flex-shrink-0 drop-shadow-lg">🪄</span>
+                        <span className="text-xl leading-relaxed font-light">Preventative anti-aging maintenance</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
