@@ -85,12 +85,12 @@ const Services = () => {
 
         {/* Category Selector - Image Cards */}
         {!activeCategory && (
-          <div className="max-w-5xl mx-auto mb-12 animate-fade-in">
+          <div className="max-w-7xl mx-auto mb-12 animate-fade-in">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Facial Category */}
               <button
                 onClick={() => setActiveCategory("facial")}
-                className="group relative h-80 rounded-3xl overflow-hidden border-2 border-border hover:border-accent transition-smooth"
+                className="group relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden border-2 border-border hover:border-accent transition-smooth"
               >
                 <img 
                   src={categoryFacialImage}
@@ -99,11 +99,11 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-smooth group-hover:from-black/70" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                  <div className="text-5xl mb-4 transform transition-smooth group-hover:scale-110">✨</div>
-                  <h3 className="text-3xl font-display font-semibold mb-3 transform transition-smooth group-hover:translate-y-[-4px]">
+                  <div className="text-6xl mb-6 transform transition-smooth group-hover:scale-110">✨</div>
+                  <h3 className="text-4xl md:text-5xl font-display font-semibold mb-4 transform transition-smooth group-hover:translate-y-[-4px]">
                     Facial
                   </h3>
-                  <p className="text-sm opacity-90 text-center max-w-xs">
+                  <p className="text-base md:text-lg opacity-90 text-center max-w-sm">
                     Signature facials crafted to sculpt and illuminate
                   </p>
                 </div>
@@ -112,7 +112,7 @@ const Services = () => {
               {/* Premium Category */}
               <button
                 onClick={() => setActiveCategory("premium")}
-                className="group relative h-80 rounded-3xl overflow-hidden border-2 border-border hover:border-accent transition-smooth"
+                className="group relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden border-2 border-border hover:border-accent transition-smooth"
               >
                 <img 
                   src={categoryPremiumImage}
@@ -121,11 +121,11 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-smooth group-hover:from-black/70" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                  <div className="text-5xl mb-4 transform transition-smooth group-hover:scale-110">💎</div>
-                  <h3 className="text-3xl font-display font-semibold mb-3 transform transition-smooth group-hover:translate-y-[-4px]">
+                  <div className="text-6xl mb-6 transform transition-smooth group-hover:scale-110">💎</div>
+                  <h3 className="text-4xl md:text-5xl font-display font-semibold mb-4 transform transition-smooth group-hover:translate-y-[-4px]">
                     Premium
                   </h3>
-                  <p className="text-sm opacity-90 text-center max-w-xs">
+                  <p className="text-base md:text-lg opacity-90 text-center max-w-sm">
                     Exclusive enhancements and body rituals
                   </p>
                 </div>
@@ -136,13 +136,13 @@ const Services = () => {
 
         {/* Back Button */}
         {activeCategory && (
-          <div className="max-w-6xl mx-auto mb-8">
+          <div className="max-w-6xl mx-auto mb-8 animate-fade-in">
             <button
               onClick={() => setActiveCategory(null)}
-              className="text-muted-foreground hover:text-foreground transition-smooth flex items-center gap-2 group"
+              className="px-8 py-4 rounded-full bg-card border-2 border-border hover:border-accent text-foreground hover:shadow-elegant transition-smooth flex items-center gap-3 group font-semibold"
             >
-              <span className="transform transition-smooth group-hover:translate-x-[-4px]">←</span>
-              Back to categories
+              <span className="transform transition-smooth group-hover:translate-x-[-4px] text-xl">←</span>
+              <span>Back to Categories</span>
             </button>
           </div>
         )}
