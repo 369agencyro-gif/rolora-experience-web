@@ -34,8 +34,8 @@ const Navigation = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="font-display text-2xl font-semibold">
+          {/* Logo - centered on mobile, left on desktop */}
+          <Link to="/" className="font-display text-2xl font-semibold lg:flex-none absolute left-1/2 -translate-x-1/2 lg:relative lg:left-0 lg:translate-x-0">
             Rolora
           </Link>
 
@@ -180,7 +180,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden pb-20 animate-fade-in max-h-[70vh] overflow-y-auto">
+          <div className="lg:hidden pb-4 animate-fade-in">
             <div className="space-y-2">
               <Link to="/" className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth">
                 Home
