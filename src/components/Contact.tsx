@@ -24,8 +24,9 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32">
-      <div className="container px-6">
+    <section id="contact" className="py-20 md:py-32 bg-gradient-to-br from-secondary/30 via-secondary/20 to-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-t from-accent/5 via-transparent to-transparent pointer-events-none"></div>
+      <div className="container px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6">
