@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useEffect, useRef, useState } from "react";
-import { Sparkles, Heart, Award, Users, Target, Zap } from "lucide-react";
 import bodyRollingMachine from "@/assets/body-rolling-machine.jpg";
 import studioInterior from "@/assets/studio-interior.jpg";
 import heroImage from "@/assets/hero-image.jpg";
@@ -29,22 +28,18 @@ const About = () => {
 
   const values = [
     {
-      icon: Heart,
       title: "Client-Centered Care",
       description: "Every treatment is tailored to your unique skin journey and wellness goals"
     },
     {
-      icon: Award,
       title: "Excellence in Craft",
       description: "Years of training and continuous innovation in facial sculpting techniques"
     },
     {
-      icon: Users,
       title: "Expert Team",
       description: "Licensed aestheticians with specialized training in advanced skin treatments"
     },
     {
-      icon: Target,
       title: "Results-Driven",
       description: "Proven methodologies that deliver visible, lasting transformations"
     }
@@ -67,15 +62,16 @@ const About = () => {
           
           <div className="relative z-10 container px-6 h-full flex items-center justify-center">
             <div className="text-center text-white animate-fade-in">
-              <div className="inline-flex items-center gap-2 mb-6">
-                <Sparkles className="w-8 h-8 text-accent animate-pulse" />
-                <span className="text-accent font-semibold uppercase tracking-widest">Our Story</span>
-                <Sparkles className="w-8 h-8 text-accent animate-pulse" />
+              <div className="flex justify-center mb-6">
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
               </div>
-              <h1 className="text-6xl md:text-8xl font-display font-semibold mb-6">
-                About Rolora
+              <span className="text-white/70 uppercase tracking-[0.3em] text-xs font-light mb-6 block">
+                Our Story
+              </span>
+              <h1 className="text-5xl md:text-7xl font-serif font-light tracking-wider mb-6">
+                About ROLORA SPA
               </h1>
-              <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+              <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-80 font-light tracking-wide">
                 Where ancient beauty wisdom meets cutting-edge technology
               </p>
             </div>
@@ -103,10 +99,13 @@ const About = () => {
                 </div>
 
                 <div className="animate-fade-in" style={{ animationDelay: "400ms" }}>
-                  <h2 className="text-5xl md:text-6xl font-display font-semibold mb-8">
-                    The Rolora Vision
+                  <div className="flex justify-start mb-6">
+                    <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
+                  </div>
+                  <h2 className="text-4xl md:text-5xl font-serif font-light tracking-wider mb-8 text-muted-foreground/90">
+                    The ROLORA SPA Vision
                   </h2>
-                  <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                  <div className="space-y-6 text-base text-muted-foreground/80 leading-relaxed tracking-wide">
                     <p>
                       Founded with a passion for transformative beauty and holistic wellness, 
                       Rolora has become a sanctuary for those seeking more than just a facial—
@@ -117,7 +116,7 @@ const About = () => {
                       body rolling therapy, creating a comprehensive beauty ritual that addresses 
                       both aesthetics and well-being.
                     </p>
-                    <p className="text-accent font-semibold">
+                    <p className="text-muted-foreground/90 font-light italic text-sm">
                       Every treatment is an art. Every client is a masterpiece.
                     </p>
                   </div>
@@ -151,10 +150,13 @@ const About = () => {
           <div className="container px-6 relative z-10">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-20">
-                <h2 className="text-5xl md:text-6xl font-display font-semibold mb-6">
+                <div className="flex justify-center mb-6">
+                  <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-serif font-light tracking-wider mb-4 text-muted-foreground/90">
                   Revolutionary Technology
                 </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                <p className="text-base text-muted-foreground/70 max-w-3xl mx-auto tracking-wide">
                   Experience the power of Rolora Flow™ body rolling therapy
                 </p>
               </div>
@@ -186,46 +188,40 @@ const About = () => {
                 </div>
 
                 <div className="space-y-8">
-                  <div className="flex items-start gap-4 group">
-                    <div className="p-3 rounded-xl bg-accent/10 group-hover:bg-accent/20 transition-smooth">
-                      <Zap className="w-6 h-6 text-accent" />
+                  <div className="group">
+                    <div className="flex justify-start mb-3">
+                      <div className="h-px w-12 bg-gradient-to-r from-transparent to-muted-foreground/30"></div>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-display font-semibold mb-2">
-                        Deep Tissue Release
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Penetrates deep into muscle tissue to release tension and improve circulation
-                      </p>
-                    </div>
+                    <h3 className="text-xl font-serif font-light mb-2 text-muted-foreground/90">
+                      Deep Tissue Release
+                    </h3>
+                    <p className="text-sm text-muted-foreground/70 tracking-wide">
+                      Penetrates deep into muscle tissue to release tension and improve circulation
+                    </p>
                   </div>
 
-                  <div className="flex items-start gap-4 group">
-                    <div className="p-3 rounded-xl bg-accent/10 group-hover:bg-accent/20 transition-smooth">
-                      <Sparkles className="w-6 h-6 text-accent" />
+                  <div className="group">
+                    <div className="flex justify-start mb-3">
+                      <div className="h-px w-12 bg-gradient-to-r from-transparent to-muted-foreground/30"></div>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-display font-semibold mb-2">
-                        Lymphatic Drainage
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Stimulates natural detoxification and reduces inflammation for a sculpted look
-                      </p>
-                    </div>
+                    <h3 className="text-xl font-serif font-light mb-2 text-muted-foreground/90">
+                      Lymphatic Drainage
+                    </h3>
+                    <p className="text-sm text-muted-foreground/70 tracking-wide">
+                      Stimulates natural detoxification and reduces inflammation for a sculpted look
+                    </p>
                   </div>
 
-                  <div className="flex items-start gap-4 group">
-                    <div className="p-3 rounded-xl bg-accent/10 group-hover:bg-accent/20 transition-smooth">
-                      <Heart className="w-6 h-6 text-accent" />
+                  <div className="group">
+                    <div className="flex justify-start mb-3">
+                      <div className="h-px w-12 bg-gradient-to-r from-transparent to-muted-foreground/30"></div>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-display font-semibold mb-2">
-                        Holistic Wellness
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Combines physical therapy with relaxation for complete body rejuvenation
-                      </p>
-                    </div>
+                    <h3 className="text-xl font-serif font-light mb-2 text-muted-foreground/90">
+                      Holistic Wellness
+                    </h3>
+                    <p className="text-sm text-muted-foreground/70 tracking-wide">
+                      Combines physical therapy with relaxation for complete body rejuvenation
+                    </p>
                   </div>
                 </div>
               </div>
@@ -239,46 +235,36 @@ const About = () => {
           <div className="container px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-20">
-                <h2 className="text-5xl md:text-6xl font-display font-semibold mb-6">
+                <div className="flex justify-center mb-6">
+                  <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-serif font-light tracking-wider mb-4 text-muted-foreground/90">
                   Our Values
                 </h2>
-                <p className="text-xl text-muted-foreground">
+                <p className="text-base text-muted-foreground/70 tracking-wide">
                   The principles that guide every treatment
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                {values.map((value, index) => {
-                  const Icon = value.icon;
-                  return (
-                    <div
-                      key={index}
-                      className="group relative p-10 rounded-3xl bg-card border border-border hover:border-accent/50 transition-all duration-500 hover:shadow-glow hover:-translate-y-2"
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-br from-accent/0 to-accent/5 opacity-0 group-hover:opacity-100 transition-smooth rounded-3xl" />
-                      
-                      <div className="relative">
-                        <div className="inline-flex p-4 rounded-2xl bg-accent/10 group-hover:bg-accent/20 transition-smooth mb-6 group-hover:scale-110 transform duration-500">
-                          <Icon className="w-8 h-8 text-accent" />
-                        </div>
-                        
-                        <h3 className="text-3xl font-display font-semibold mb-4">
-                          {value.title}
-                        </h3>
-                        
-                        <p className="text-lg text-muted-foreground leading-relaxed">
-                          {value.description}
-                        </p>
-                      </div>
-
-                      {/* Animated Border */}
-                      <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-smooth pointer-events-none">
-                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-accent/20 via-transparent to-accent/20 animate-pulse" />
-                      </div>
+              <div className="grid md:grid-cols-2 gap-x-12 gap-y-16 max-w-6xl mx-auto">
+                {values.map((value, index) => (
+                  <div
+                    key={index}
+                    className="text-center group"
+                  >
+                    <div className="flex justify-center mb-4">
+                      <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/30 to-transparent"></div>
                     </div>
-                  );
-                })}
+                    
+                    <h3 className="font-serif text-xl font-light mb-3 text-muted-foreground/90 tracking-wide">
+                      {value.title}
+                    </h3>
+                    
+                    <p className="text-sm text-muted-foreground/70 leading-relaxed tracking-wide">
+                      {value.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -292,19 +278,21 @@ const About = () => {
 
           <div className="container px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-5xl md:text-7xl font-display font-semibold mb-8">
+              <div className="flex justify-center mb-6">
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-serif font-light tracking-wider mb-8 text-muted-foreground/90">
                 Ready to Transform?
               </h2>
-              <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+              <p className="text-base text-muted-foreground/70 mb-12 max-w-2xl mx-auto tracking-wide">
                 Experience the Rolora difference. Book your signature treatment today 
                 and discover the art of true beauty.
               </p>
               <button 
                 onClick={() => window.location.href = '/#contact'}
-                className="group px-12 py-6 rounded-full bg-accent text-accent-foreground font-semibold text-lg hover:shadow-glow transition-all duration-500 hover:scale-105 inline-flex items-center gap-3"
+                className="px-10 py-4 rounded-full bg-accent text-accent-foreground font-light text-sm tracking-wider hover:shadow-glow transition-all duration-500 hover:scale-105"
               >
-                <span>Book Your Experience</span>
-                <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                Book Your Experience
               </button>
             </div>
           </div>
