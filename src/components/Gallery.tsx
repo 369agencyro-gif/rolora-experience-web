@@ -62,10 +62,11 @@ const Gallery = () => {
           </Carousel>
 
           <div className="flex justify-center mt-12">
-            <Link to="/gallery">
-              <button className="px-8 py-4 rounded-full bg-accent text-accent-foreground font-semibold hover:shadow-elegant transition-smooth hover:scale-105">
-                View Full Gallery
-              </button>
+            <Link 
+              to="/gallery"
+              className="px-8 py-4 rounded-full bg-accent text-accent-foreground font-semibold hover:shadow-elegant transition-smooth hover:scale-105 inline-block"
+            >
+              View Full Gallery
             </Link>
           </div>
         </div>
