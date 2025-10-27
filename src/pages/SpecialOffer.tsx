@@ -279,6 +279,19 @@ const SpecialOffer = () => {
         {/* Benefits Section */}
         <section className="py-16 px-6">
           <div className="container max-w-2xl mx-auto">
+            <div className="flex justify-center mb-8">
+              <Button
+                size="sm"
+                variant="outline"
+                className="text-xs rounded-full border-accent/30 text-muted-foreground hover:bg-accent/5 hover:text-accent transition-all"
+                asChild
+              >
+                <a href="#book-now">
+                  Reserve My Spot Now
+                </a>
+              </Button>
+            </div>
+            
             <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
               Transform Your Skin
             </h2>
