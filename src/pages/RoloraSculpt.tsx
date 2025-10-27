@@ -22,9 +22,6 @@ const RoloraSculpt = () => {
           
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center px-6 animate-fade-in">
-              <div className="mb-6">
-                <div className="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-accent to-transparent"></div>
-              </div>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold mb-12 tracking-tight">
                 Rolora Sculpt
               </h1>

@@ -21,10 +21,6 @@ const TimelessLift = () => {
           
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center px-6 animate-fade-in">
-              <div className="mb-6">
-                <Sparkles className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-2 text-accent" />
-                <div className="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-accent to-transparent"></div>
-              </div>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold mb-12 tracking-tight">
                 Timeless Lift
               </h1>
