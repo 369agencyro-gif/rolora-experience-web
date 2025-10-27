@@ -152,3 +152,22 @@ All colors MUST be HSL.
     transition: var(--transition-elegant);
   }
 }
+
+/* Ultra subtle long glow for CTA buttons */
+@keyframes soft-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 hsl(var(--accent) / 0.25);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 14px hsl(var(--accent) / 0);
+    transform: scale(1.01);
+  }
+}
+
+@layer utilities {
+  .btn-soft-pulse {
+    animation: soft-pulse 60s ease-in-out infinite;
+  }
+}
+
