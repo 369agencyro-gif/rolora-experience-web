@@ -1,35 +1,27 @@
-import { Sparkles, Droplet, Leaf, Users, Shield, Heart } from "lucide-react";
-
 const features = [
   {
-    icon: Sparkles,
     title: "Expert Artistry",
-    description: "Masters of facial sculpting and skin transformation with precision and care"
+    description: "Masters of facial sculpting and transformation with precision and care"
   },
   {
-    icon: Droplet,
     title: "Premium Products",
-    description: "Only the finest luxury skincare formulations crafted with natural ingredients"
+    description: "Finest luxury skincare formulations crafted with natural ingredients"
   },
   {
-    icon: Leaf,
     title: "Organic Treatments",
-    description: "Natural, sustainable approach to beauty that honors your skin and the earth"
+    description: "Natural, sustainable approach honoring your skin and the earth"
   },
   {
-    icon: Users,
     title: "Personalized Care",
-    description: "Customized treatments designed specifically for your unique skin needs"
+    description: "Customized treatments designed for your unique skin needs"
   },
   {
-    icon: Shield,
     title: "Safe & Certified",
-    description: "Professionally trained aestheticians using advanced, proven techniques"
+    description: "Professionally trained aestheticians using advanced techniques"
   },
   {
-    icon: Heart,
     title: "Holistic Wellness",
-    description: "A complete mind-body approach to beauty and relaxation"
+    description: "Complete mind-body approach to beauty and relaxation"
   }
 ];
 
@@ -38,34 +30,34 @@ const WhyRolora = () => {
     <section className="py-24 bg-background">
       <div className="container px-6">
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <span className="text-muted-foreground uppercase tracking-[0.3em] text-xs font-semibold mb-4 block">
-            The Rolora Difference
-          </span>
+          <div className="flex justify-center mb-4">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
+          </div>
           
-          <h2 className="text-4xl md:text-5xl font-display font-semibold mb-4">
-            Where Art Meets Science
+          <h2 className="text-2xl md:text-3xl font-serif font-light tracking-wider mb-2 text-muted-foreground/90">
+            ROLORA SPA
           </h2>
+          <h3 className="text-xs md:text-sm font-serif font-light tracking-widest mb-6 text-muted-foreground/60">
+            WHERE ART MEETS SCIENCE
+          </h3>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 max-w-6xl mx-auto">
           {features.map((feature, index) => {
-            const Icon = feature.icon;
             return (
               <div
                 key={index}
                 className="text-center group"
               >
-                <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 rounded-full border-2 border-accent/30 flex items-center justify-center group-hover:border-accent transition-smooth">
-                    <Icon className="w-7 h-7 text-accent" strokeWidth={1.5} />
-                  </div>
+                <div className="flex justify-center mb-4">
+                  <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
                 </div>
                 
-                <h3 className="font-display text-xl font-semibold mb-3 text-foreground">
+                <h3 className="font-serif text-base font-light tracking-wider mb-3 text-muted-foreground uppercase">
                   {feature.title}
                 </h3>
                 
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-xs text-muted-foreground/70 leading-relaxed tracking-wide">
                   {feature.description}
                 </p>
               </div>
