@@ -23,7 +23,7 @@ const About = () => {
             </div>
             
             <h2 className="text-2xl md:text-3xl font-serif font-light tracking-wider text-center mb-2 text-muted-foreground/90">
-              The Rolora
+              ROLORA SPA
             </h2>
             <h3 className="text-xl md:text-2xl font-serif font-normal tracking-widest text-center mb-6 text-muted-foreground">
               PHILOSOPHY
@@ -74,7 +74,7 @@ const About = () => {
                 </div>
                 
                 <h2 className="text-3xl xl:text-4xl font-serif font-light tracking-wider mb-2 text-muted-foreground/90">
-                  The Rolora
+                  ROLORA SPA
                 </h2>
                 <h3 className="text-2xl xl:text-3xl font-serif font-normal tracking-widest mb-8 text-muted-foreground">
                   PHILOSOPHY
