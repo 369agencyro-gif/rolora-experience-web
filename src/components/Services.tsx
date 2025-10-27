@@ -100,9 +100,6 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-smooth group-hover:from-black/70" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                  <div className="mb-6 transform transition-smooth group-hover:scale-110">
-                    <Sparkles className="w-16 h-16" />
-                  </div>
                   <h3 className="text-4xl md:text-5xl font-display font-semibold mb-4 transform transition-smooth group-hover:translate-y-[-4px]">
                     Facial
                   </h3>
@@ -128,9 +125,6 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-smooth group-hover:from-black/70" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                  <div className="mb-6 transform transition-smooth group-hover:scale-110">
-                    <Gem className="w-16 h-16" />
-                  </div>
                   <h3 className="text-4xl md:text-5xl font-display font-semibold mb-4 transform transition-smooth group-hover:translate-y-[-4px]">
                     Premium
                   </h3>
