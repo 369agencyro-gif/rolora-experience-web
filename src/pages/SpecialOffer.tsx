@@ -15,10 +15,10 @@ const SpecialOffer = () => {
         {/* Hero Section with Offer */}
         <section className="pt-24 pb-12 px-6">
           <div className="container max-w-2xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-red-500/90 border-2 border-red-600 mb-6 animate-fade-in shadow-lg">
-              <Clock className="w-5 h-5 text-white animate-pulse" />
-              <span className="text-base font-bold text-white">
-                Offer Expires in {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/30 mb-6 animate-fade-in shadow-elegant backdrop-blur-sm">
+              <Clock className="w-5 h-5 text-accent" />
+              <span className="text-sm font-semibold text-foreground">
+                Exclusive Offer Ends: <span className="text-accent font-bold">{timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s</span>
               </span>
             </div>
 
