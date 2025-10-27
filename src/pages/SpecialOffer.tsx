@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import { Check, Sparkles, Clock, MapPin, Gift } from "lucide-react";
 import ServiceLayout from "@/components/ServiceLayout";
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const SpecialOffer = () => {
+  const { ref: includedRef, isVisible: includedVisible } = useScrollAnimation({ threshold: 0.2 });
+
   return (
     <ServiceLayout>
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
@@ -64,7 +67,7 @@ const SpecialOffer = () => {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div ref={includedRef} className="space-y-4">
               {[
                 "60-minute Rolora Facial Glow™ treatment",
                 "Deep cleansing and exfoliation",
@@ -77,7 +80,14 @@ const SpecialOffer = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-4 rounded-2xl bg-background border border-border hover:border-accent/30 transition-smooth"
+                  className={`flex items-start gap-4 p-4 rounded-2xl bg-background border border-border hover:border-accent/30 transition-all duration-500 ${
+                    includedVisible
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-8'
+                  }`}
+                  style={{
+                    transitionDelay: includedVisible ? `${index * 100}ms` : '0ms'
+                  }}
                 >
                   <div className="mt-1 bg-accent/10 rounded-full p-1 flex-shrink-0">
                     <Check className="w-5 h-5 text-accent" />
