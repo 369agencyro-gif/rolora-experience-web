@@ -155,16 +155,26 @@ const SpecialOffer = () => {
         </section>
 
         {/* Why This Offer Section */}
-        <section className="py-16 px-6 bg-muted/20">
-          <div className="container max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+        <section className="relative py-16 overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0">
+            <img 
+              src={facialImage}
+              alt="Rolora Treatment"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/75" />
+          </div>
+          
+          <div className="container max-w-2xl mx-auto text-center relative z-10 px-6">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">
               Why This Special Offer?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg text-white/80 mb-8 leading-relaxed">
               We believe everyone deserves to experience the transformative power of our signature Rolora Facial Glow™. 
               This exclusive offer is our way of welcoming you to discover the Rolora difference at an accessible price.
             </p>
-            <p className="text-lg font-semibold text-foreground mb-8">
+            <p className="text-lg font-semibold text-white mb-8">
               Join thousands of clients who have transformed their skin with Rolora.
             </p>
           </div>
