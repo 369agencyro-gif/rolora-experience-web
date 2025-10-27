@@ -147,19 +147,19 @@ const Navigation = () => {
               )}
             </div>
 
-            <button 
-              onClick={() => scrollToSection('gallery')}
+            <Link 
+              to="/gallery"
               className="text-foreground hover:text-accent transition-smooth"
             >
               Gallery
-            </button>
+            </Link>
 
-            <button 
-              onClick={() => scrollToSection('contact')}
+            <Link 
+              to="/contact"
               className="text-foreground hover:text-accent transition-smooth"
             >
               Contact
-            </button>
+            </Link>
           </div>
 
           {/* Book Now Button */}
@@ -225,18 +225,20 @@ const Navigation = () => {
                 ))}
               </div>
 
-              <button 
-                onClick={() => scrollToSection('gallery')}
-                className="block w-full text-left py-1.5 text-sm text-foreground hover:text-accent transition-smooth"
+              <Link 
+                to="/gallery"
+                className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Gallery
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="block w-full text-left py-1.5 text-sm text-foreground hover:text-accent transition-smooth"
+              </Link>
+              <Link 
+                to="/contact"
+                className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
-              </button>
+              </Link>
               
               <div className="pt-3 pb-2">
                 <Button 
