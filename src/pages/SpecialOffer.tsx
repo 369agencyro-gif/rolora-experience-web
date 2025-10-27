@@ -29,7 +29,9 @@ const SpecialOffer = () => {
             </h1>
 
             <div className="mb-4 animate-fade-in">
-              <span className="text-4xl md:text-5xl font-bold text-accent">$99</span>
+              <span className="text-4xl md:text-5xl font-bold text-accent" style={{
+                textShadow: '0 0 20px rgba(196, 154, 108, 0.6), 0 0 40px rgba(196, 154, 108, 0.4), 0 0 60px rgba(196, 154, 108, 0.2)'
+              }}>$99</span>
               <div className="text-base text-muted-foreground mt-2">
                 (Instead of <span className="line-through">$235</span>)
               </div>
