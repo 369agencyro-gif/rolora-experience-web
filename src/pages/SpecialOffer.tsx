@@ -38,8 +38,8 @@ const SpecialOffer = () => {
             </div>
 
             <div className="flex items-center justify-center gap-2 mb-8">
-              <Clock className="w-4 h-4 text-red-600" />
-              <span className="text-xs text-red-600 font-semibold">First-Time Clients Only • Limited Availability</span>
+              <Clock className="w-3 h-3 text-red-600" />
+              <span className="text-[10px] text-red-600 font-semibold">First-Time Clients Only • Limited Availability</span>
             </div>
 
             {/* CTA Button */}
