@@ -43,12 +43,11 @@ const SpecialOffer = () => {
           </div>
 
           <div className="container max-w-2xl mx-auto text-center relative z-10">
-            <div className="inline-flex flex-col items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/30 mb-6 animate-fade-in shadow-elegant backdrop-blur-sm">
-              <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-accent" />
-                <span className="text-sm font-semibold text-white">Exclusive Offer Ends:</span>
-              </div>
-              <span className="text-accent font-bold text-sm">{timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/30 mb-6 animate-fade-in shadow-elegant backdrop-blur-sm">
+              <Clock className="w-5 h-5 text-accent" />
+              <span className="text-sm font-semibold text-white">
+                Exclusive Offer Ends: <span className="text-accent font-bold">{timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s</span>
+              </span>
             </div>
 
             <h1 className="text-2xl md:text-3xl font-display font-bold mb-6 leading-tight animate-fade-in text-white">
