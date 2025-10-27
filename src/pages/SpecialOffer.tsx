@@ -86,13 +86,13 @@ const SpecialOffer = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className={`flex items-start gap-4 p-4 rounded-2xl bg-background border border-border hover:border-accent/30 transition-all duration-500 ${
+                  className={`flex items-start gap-4 p-4 rounded-2xl bg-background border border-border hover:border-accent/30 transition-all duration-1000 ease-out ${
                     includedVisible
                       ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 translate-y-8'
+                      : 'opacity-0 translate-y-12'
                   }`}
                   style={{
-                    transitionDelay: includedVisible ? `${index * 100}ms` : '0ms'
+                    transitionDelay: includedVisible ? `${index * 200}ms` : '0ms'
                   }}
                 >
                   <div className="mt-1 bg-accent/10 rounded-full p-1 flex-shrink-0">
