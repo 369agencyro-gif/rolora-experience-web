@@ -3,9 +3,11 @@ import { Check, Sparkles, Clock, MapPin, Gift } from "lucide-react";
 import ServiceLayout from "@/components/ServiceLayout";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useCountdownTimer } from "@/hooks/use-countdown-timer";
 
 const SpecialOffer = () => {
   const { ref: includedRef, isVisible: includedVisible } = useScrollAnimation({ threshold: 0.2 });
+  const timeLeft = useCountdownTimer();
 
   return (
     <ServiceLayout>
@@ -15,7 +17,9 @@ const SpecialOffer = () => {
           <div className="container max-w-2xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6 animate-fade-in">
               <Gift className="w-4 h-4 text-accent" />
-              <span className="text-sm font-semibold text-accent">Limited Time Offer</span>
+              <span className="text-sm font-semibold text-accent">
+                Offer Expires in {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+              </span>
             </div>
 
             <h1 className="text-2xl md:text-3xl font-display font-bold mb-6 leading-tight animate-fade-in">
@@ -33,7 +37,7 @@ const SpecialOffer = () => {
 
             <div className="flex items-center justify-center gap-2 text-muted-foreground mb-8">
               <Clock className="w-4 h-4" />
-              <span className="text-xs">Limited Time Only - First-Time Clients</span>
+              <span className="text-xs">First-Time Clients Only • Limited Availability</span>
             </div>
 
             {/* CTA Button */}
