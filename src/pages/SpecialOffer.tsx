@@ -15,15 +15,15 @@ const SpecialOffer = () => {
               <span className="text-sm font-semibold text-accent">Limited Time Offer</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight animate-fade-in">
+            <h1 className="text-3xl md:text-4xl font-display font-bold mb-6 leading-tight animate-fade-in">
               Try Your First<br />
               <span className="text-accent">ROLORA FACIAL GLOW™</span><br />
               For Only
             </h1>
 
             <div className="mb-4 animate-fade-in">
-              <span className="text-6xl md:text-7xl font-bold text-accent">$99</span>
-              <div className="text-xl text-muted-foreground mt-2">
+              <span className="text-5xl md:text-6xl font-bold text-accent">$99</span>
+              <div className="text-lg text-muted-foreground mt-2">
                 (Instead of <span className="line-through">$235</span>)
               </div>
             </div>
@@ -36,7 +36,7 @@ const SpecialOffer = () => {
             {/* CTA Button */}
             <Button
               size="lg"
-              className="w-full max-w-md h-16 text-xl font-bold rounded-full bg-accent hover:bg-accent/90 text-white shadow-elegant hover:shadow-soft hover:scale-105 transition-elegant animate-fade-in"
+              className="w-full max-w-lg h-20 text-2xl font-bold rounded-full bg-accent hover:bg-accent/90 text-white shadow-elegant hover:shadow-soft animate-[scale-in_0.5s_ease-out,pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite] hover:scale-110 transition-all duration-300"
               asChild
             >
               <a href="#book-now">
@@ -44,7 +44,7 @@ const SpecialOffer = () => {
               </a>
             </Button>
 
-            <p className="text-sm text-muted-foreground mt-4 animate-fade-in">
+            <p className="text-xs text-muted-foreground mt-4 animate-fade-in">
               <MapPin className="w-4 h-4 inline mr-1" />
               Available at All Rolora Locations
             </p>
@@ -156,7 +156,7 @@ const SpecialOffer = () => {
 
               <Button
                 size="lg"
-                className="w-full max-w-md h-16 text-xl font-bold rounded-full bg-accent hover:bg-accent/90 text-white shadow-elegant hover:shadow-soft hover:scale-105 transition-elegant mb-6"
+                className="w-full max-w-lg h-20 text-2xl font-bold rounded-full bg-accent hover:bg-accent/90 text-white shadow-elegant hover:shadow-soft animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite] hover:scale-110 transition-all duration-300 mb-6"
                 asChild
               >
                 <Link to="/contact">
