@@ -265,20 +265,20 @@ const SpecialOffer = () => {
             </p>
             
             {/* Star Rating */}
-            <div className="flex flex-col items-center gap-3">
-              <div className="flex items-center gap-1">
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex items-center gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Star 
                     key={i} 
-                    className={`w-6 h-6 ${i < 4 ? 'fill-accent text-accent' : 'fill-accent/50 text-accent/50'}`}
+                    className={`w-4 h-4 ${i < 4 ? 'fill-accent text-accent' : 'fill-accent/50 text-accent/50'}`}
                   />
                 ))}
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-3xl font-display font-bold text-accent">4.95</span>
-                <span className="text-white/70 text-sm">out of 5 stars</span>
+                <span className="text-xl font-display font-bold text-accent">4.95</span>
+                <span className="text-white/70 text-xs">out of 5 stars</span>
               </div>
-              <p className="text-white/60 text-xs tracking-wider uppercase">Based on 2,847+ verified reviews</p>
+              <p className="text-white/60 text-[10px] tracking-wider uppercase">Based on 2,847+ verified reviews</p>
             </div>
           </div>
         </section>
