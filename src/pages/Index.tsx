@@ -8,6 +8,25 @@ import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+
+const AnimatedSection = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.15 });
+  
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-1000 ease-out ${
+        isVisible
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-12'
+      }`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  );
+};
 
 const Index = () => {
   return (
@@ -15,13 +34,27 @@ const Index = () => {
       <Navigation />
       <main className="min-h-screen">
         <Hero />
-        <SignatureExperience />
-        <About />
-        <Services />
-        <WhyRolora />
-        <Gallery />
-        <Testimonials />
-        <Contact />
+        <AnimatedSection delay={100}>
+          <SignatureExperience />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <About />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <Services />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <WhyRolora />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <Gallery />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <Testimonials />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <Contact />
+        </AnimatedSection>
         <Footer />
       </main>
     </>
