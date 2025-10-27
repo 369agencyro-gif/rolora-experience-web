@@ -46,6 +46,14 @@ const Navigation = () => {
             </Link>
             
             <Link 
+              to="/special-offer"
+              className="text-accent font-semibold hover:text-accent/80 transition-smooth flex items-center gap-1"
+            >
+              Special Offer
+              <span className="text-xs bg-accent text-white px-2 py-0.5 rounded-full">New</span>
+            </Link>
+            
+            <Link 
               to="/about"
               className="text-foreground hover:text-accent transition-smooth"
             >
@@ -185,6 +193,16 @@ const Navigation = () => {
               <Link to="/" className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
                 Home
               </Link>
+              
+              <Link 
+                to="/special-offer"
+                className="block py-2 text-sm text-accent font-semibold hover:text-accent/80 transition-smooth flex items-center gap-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Special Offer
+                <span className="text-xs bg-accent text-white px-2 py-0.5 rounded-full">New</span>
+              </Link>
+              
               <Link 
                 to="/about"
                 className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth"

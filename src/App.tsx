@@ -15,6 +15,7 @@ import ExpressSculpt from "./pages/ExpressSculpt";
 import Enhancements from "./pages/Enhancements";
 import BodyRolling from "./pages/BodyRolling";
 import FullGallery from "./pages/FullGallery";
+import SpecialOffer from "./pages/SpecialOffer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/services/enhancements" element={<Enhancements />} />
           <Route path="/services/body-rolling" element={<BodyRolling />} />
           <Route path="/gallery" element={<FullGallery />} />
+          <Route path="/special-offer" element={<SpecialOffer />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
