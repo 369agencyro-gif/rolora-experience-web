@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Sparkles, Gem, Wand2, FlaskConical, Zap, Star, Waves } from "lucide-react";
 import facialImage from "@/assets/service-facial.jpg";
 import massageImage from "@/assets/service-massage.jpg";
 import bodyImage from "@/assets/service-body.jpg";
@@ -8,7 +9,7 @@ import categoryPremiumImage from "@/assets/category-premium.jpg";
 
 const mainFacials = [
   {
-    icon: "✨",
+    Icon: Sparkles,
     title: "ROLORA FACIAL GLOW™",
     price: "$235",
     tagline: "Your signature glow, defined by Rolora.",
@@ -16,7 +17,7 @@ const mainFacials = [
     image: facialImage
   },
   {
-    icon: "💎",
+    Icon: Gem,
     title: "ROLORA SCULPT",
     price: "$205",
     tagline: "Get snatched by Rolora.",
@@ -24,7 +25,7 @@ const mainFacials = [
     image: massageImage
   },
   {
-    icon: "🪄",
+    Icon: Wand2,
     title: "TIMELESS LIFT",
     price: "$245",
     tagline: "Lift. Firm. Defy time.",
@@ -32,7 +33,7 @@ const mainFacials = [
     image: facialImage
   },
   {
-    icon: "🧪",
+    Icon: FlaskConical,
     title: "ROLORA RESET",
     price: "$245",
     tagline: "Peel. Reveal. Reset.",
@@ -40,7 +41,7 @@ const mainFacials = [
     image: bodyImage
   },
   {
-    icon: "⚡",
+    Icon: Zap,
     title: "EXPRESS SCULPT",
     price: "$145",
     tagline: "Glow + go.",
@@ -51,7 +52,7 @@ const mainFacials = [
 
 const additionalServices = [
   {
-    icon: "💫",
+    Icon: Star,
     title: "Enhancements",
     tagline: "Perfect your glow",
     description: "Targeted boosters from $50-$100",
@@ -59,7 +60,7 @@ const additionalServices = [
     image: bodyImage
   },
   {
-    icon: "🌀",
+    Icon: Waves,
     title: "Rolora Flow™",
     tagline: "Body Rolling",
     description: "Starting at $27",
@@ -99,7 +100,9 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-smooth group-hover:from-black/70" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                  <div className="text-6xl mb-6 transform transition-smooth group-hover:scale-110">✨</div>
+                  <div className="mb-6 transform transition-smooth group-hover:scale-110">
+                    <Sparkles className="w-16 h-16" />
+                  </div>
                   <h3 className="text-4xl md:text-5xl font-display font-semibold mb-4 transform transition-smooth group-hover:translate-y-[-4px]">
                     Facial
                   </h3>
@@ -125,7 +128,9 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-smooth group-hover:from-black/70" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                  <div className="text-6xl mb-6 transform transition-smooth group-hover:scale-110">💎</div>
+                  <div className="mb-6 transform transition-smooth group-hover:scale-110">
+                    <Gem className="w-16 h-16" />
+                  </div>
                   <h3 className="text-4xl md:text-5xl font-display font-semibold mb-4 transform transition-smooth group-hover:translate-y-[-4px]">
                     Premium
                   </h3>
@@ -159,22 +164,26 @@ const Services = () => {
         <div className="max-w-6xl mx-auto">
           {activeCategory === "facial" && (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
-              {mainFacials.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.link}
-                  className="group block"
-                >
-                  <div className="bg-card border border-border rounded-2xl overflow-hidden hover:border-accent/50 hover:shadow-elegant transition-smooth h-full">
-                    <div className="relative h-56 overflow-hidden">
-                      <img 
-                        src={service.image} 
-                        alt={service.title}
-                        className="w-full h-full object-cover transition-smooth group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                      <div className="absolute top-4 right-4 text-4xl">{service.icon}</div>
-                    </div>
+              {mainFacials.map((service, index) => {
+                const ServiceIcon = service.Icon;
+                return (
+                  <Link
+                    key={index}
+                    to={service.link}
+                    className="group block"
+                  >
+                    <div className="bg-card border border-border rounded-2xl overflow-hidden hover:border-accent/50 hover:shadow-elegant transition-smooth h-full">
+                      <div className="relative h-56 overflow-hidden">
+                        <img 
+                          src={service.image} 
+                          alt={service.title}
+                          className="w-full h-full object-cover transition-smooth group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        <div className="absolute top-4 right-4">
+                          <ServiceIcon className="w-10 h-10 text-white" />
+                        </div>
+                      </div>
                     
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-3">
@@ -194,34 +203,39 @@ const Services = () => {
                     </div>
                   </div>
                 </Link>
-              ))}
+              );
+              })}
             </div>
           )}
           
           {activeCategory === "premium" && (
             <div className="grid md:grid-cols-2 gap-6 animate-fade-in">
-              {additionalServices.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.link}
-                  className="group block"
-                >
-                  <div className="bg-card border border-border rounded-2xl overflow-hidden hover:border-accent/50 hover:shadow-elegant transition-smooth h-full">
-                    <div className="flex flex-col sm:flex-row h-full">
-                      <div className="relative w-full sm:w-2/5 h-48 sm:h-auto overflow-hidden">
-                        <img 
-                          src={service.image} 
-                          alt={service.title}
-                          className="w-full h-full object-cover transition-smooth group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/20" />
-                      </div>
-                      
-                      <div className="w-full sm:w-3/5 p-6 flex flex-col justify-center">
-                        <div className="text-4xl mb-3">{service.icon}</div>
-                        <h3 className="font-display font-semibold text-xl mb-2">
-                          {service.title}
-                        </h3>
+              {additionalServices.map((service, index) => {
+                const ServiceIcon = service.Icon;
+                return (
+                  <Link
+                    key={index}
+                    to={service.link}
+                    className="group block"
+                  >
+                    <div className="bg-card border border-border rounded-2xl overflow-hidden hover:border-accent/50 hover:shadow-elegant transition-smooth h-full">
+                      <div className="flex flex-col sm:flex-row h-full">
+                        <div className="relative w-full sm:w-2/5 h-48 sm:h-auto overflow-hidden">
+                          <img 
+                            src={service.image} 
+                            alt={service.title}
+                            className="w-full h-full object-cover transition-smooth group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/20" />
+                        </div>
+                        
+                        <div className="w-full sm:w-3/5 p-6 flex flex-col justify-center">
+                          <div className="mb-3">
+                            <ServiceIcon className="w-10 h-10 text-accent" />
+                          </div>
+                          <h3 className="font-display font-semibold text-xl mb-2">
+                            {service.title}
+                          </h3>
                         <p className="text-muted-foreground italic text-sm mb-2">
                           {service.tagline}
                         </p>
@@ -231,11 +245,12 @@ const Services = () => {
                         <div className="text-accent text-sm font-medium group-hover:translate-x-1 transition-smooth inline-flex items-center gap-1">
                           Explore Options →
                         </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
-              ))}
+                  </Link>
+                );
+              })}
             </div>
           )}
         </div>
