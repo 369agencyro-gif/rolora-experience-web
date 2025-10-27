@@ -116,70 +116,6 @@ const SpecialOffer = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 px-6">
-          <div className="container max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
-              Transform Your Skin
-            </h2>
-
-            <div className="grid gap-6">
-              {[
-                {
-                  title: "Instant Glow",
-                  description: "See visible radiance and luminosity immediately after your first treatment"
-                },
-                {
-                  title: "Sculpted Contours",
-                  description: "Experience lifted, defined facial features with our specialized techniques"
-                },
-                {
-                  title: "Deep Hydration",
-                  description: "Restore moisture balance and achieve plump, supple skin"
-                },
-                {
-                  title: "Reduced Fine Lines",
-                  description: "Smooth away signs of aging with our advanced facial massage"
-                }
-              ].map((benefit, index) => (
-                <div
-                  key={index}
-                  className="p-6 rounded-2xl bg-card border border-border hover:border-accent/30 hover:shadow-elegant transition-smooth"
-                >
-                  <h3 className="text-xl font-display font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-muted-foreground">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Why This Offer Section */}
-        <section className="relative py-16 overflow-hidden">
-          {/* Background Image with Overlay */}
-          <div className="absolute inset-0">
-            <img 
-              src={facialImage}
-              alt="Rolora Treatment"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/75" />
-          </div>
-          
-          <div className="container max-w-2xl mx-auto text-center relative z-10 px-6">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">
-              Why This Special Offer?
-            </h2>
-            <p className="text-lg text-white/80 mb-8 leading-relaxed">
-              We believe everyone deserves to experience the transformative power of our signature Rolora Facial Glow™. 
-              This exclusive offer is our way of welcoming you to discover the Rolora difference at an accessible price.
-            </p>
-            <p className="text-lg font-semibold text-white mb-8">
-              Join thousands of clients who have transformed their skin with Rolora.
-            </p>
-          </div>
-        </section>
-
         {/* Reviews Section */}
         <section className="relative py-20 overflow-hidden">
           {/* Background Image with Overlay */}
@@ -189,7 +125,7 @@ const SpecialOffer = () => {
               alt="Rolora Client Reviews"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/80" />
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-950/85 via-yellow-950/80 to-amber-900/85" />
           </div>
 
           <div className="container max-w-4xl mx-auto relative z-10 px-6">
@@ -273,6 +209,70 @@ const SpecialOffer = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-6">
+          <div className="container max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
+              Transform Your Skin
+            </h2>
+
+            <div className="grid gap-6">
+              {[
+                {
+                  title: "Instant Glow",
+                  description: "See visible radiance and luminosity immediately after your first treatment"
+                },
+                {
+                  title: "Sculpted Contours",
+                  description: "Experience lifted, defined facial features with our specialized techniques"
+                },
+                {
+                  title: "Deep Hydration",
+                  description: "Restore moisture balance and achieve plump, supple skin"
+                },
+                {
+                  title: "Reduced Fine Lines",
+                  description: "Smooth away signs of aging with our advanced facial massage"
+                }
+              ].map((benefit, index) => (
+                <div
+                  key={index}
+                  className="p-6 rounded-2xl bg-card border border-border hover:border-accent/30 hover:shadow-elegant transition-smooth"
+                >
+                  <h3 className="text-xl font-display font-semibold mb-2">{benefit.title}</h3>
+                  <p className="text-muted-foreground">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why This Offer Section */}
+        <section className="relative py-16 overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0">
+            <img 
+              src={facialImage}
+              alt="Rolora Treatment"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/75" />
+          </div>
+          
+          <div className="container max-w-2xl mx-auto text-center relative z-10 px-6">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">
+              Why This Special Offer?
+            </h2>
+            <p className="text-lg text-white/80 mb-8 leading-relaxed">
+              We believe everyone deserves to experience the transformative power of our signature Rolora Facial Glow™. 
+              This exclusive offer is our way of welcoming you to discover the Rolora difference at an accessible price.
+            </p>
+            <p className="text-lg font-semibold text-white mb-8">
+              Join thousands of clients who have transformed their skin with Rolora.
+            </p>
           </div>
         </section>
 
