@@ -400,6 +400,34 @@ const SpecialOffer = () => {
           </div>
         </section>
 
+        {/* Video Section */}
+        <section className="py-16 px-6">
+          <div className="container max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                See The Rolora Difference
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Watch how we transform skin with our signature treatment
+              </p>
+            </div>
+
+            <div className="relative aspect-video rounded-3xl overflow-hidden shadow-elegant border border-border bg-muted">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Rolora Facial Glow Treatment"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+
+            <p className="text-center text-sm text-muted-foreground mt-6">
+              Experience the luxury and expertise that makes Rolora special
+            </p>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-16 px-6 bg-card/30">
           <div className="container max-w-2xl mx-auto">
