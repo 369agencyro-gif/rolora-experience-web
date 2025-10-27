@@ -43,18 +43,20 @@ const SpecialOffer = () => {
           </div>
 
           <div className="container max-w-2xl mx-auto text-center relative z-10">
-            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/30 mb-6 animate-fade-in shadow-elegant backdrop-blur-sm">
-              <Clock className="w-5 h-5 text-accent" />
-              <span className="text-sm font-semibold text-white">
-                Exclusive Offer Ends: <span className="text-accent font-bold">{timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s</span>
-              </span>
-            </div>
-
-            <h1 className="text-2xl md:text-3xl font-display font-bold mb-6 leading-tight animate-fade-in text-white">
+            <h1 className="text-2xl md:text-3xl font-display font-bold mb-4 leading-tight animate-fade-in text-white">
               Try Your First<br />
               <span className="text-accent">ROLORA FACIAL GLOW™</span><br />
               For Only
             </h1>
+
+            <div className="flex justify-center mb-6">
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/30 animate-fade-in shadow-elegant backdrop-blur-sm">
+                <Clock className="w-5 h-5 text-accent" />
+                <span className="text-sm font-semibold text-white">
+                  Exclusive Offer Ends: <span className="text-accent font-bold">{timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s</span>
+                </span>
+              </div>
+            </div>
 
             <div className="mb-4 animate-fade-in">
               <span className="text-4xl md:text-5xl font-bold text-accent" style={{
