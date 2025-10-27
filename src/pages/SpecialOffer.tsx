@@ -36,7 +36,7 @@ const SpecialOffer = () => {
             {/* CTA Button */}
             <Button
               size="lg"
-              className="w-full max-w-lg h-16 text-sm md:text-base font-bold rounded-full bg-accent hover:bg-accent/90 text-white shadow-elegant hover:shadow-soft btn-soft-pulse hover:scale-105 transition-all duration-300"
+              className="w-full max-w-lg h-14 text-xs md:text-sm font-bold rounded-full bg-accent hover:bg-accent/90 text-white shadow-elegant hover:shadow-soft btn-soft-pulse hover:scale-105 transition-all duration-300"
               asChild
             >
               <a href="#book-now">
@@ -156,7 +156,7 @@ const SpecialOffer = () => {
 
               <Button
                 size="lg"
-                className="w-full max-w-lg h-16 text-sm md:text-base font-bold rounded-full bg-accent hover:bg-accent/90 text-white shadow-elegant hover:shadow-soft btn-soft-pulse hover:scale-105 transition-all duration-300 mb-6"
+                className="w-full max-w-lg h-14 text-xs md:text-sm font-bold rounded-full bg-accent hover:bg-accent/90 text-white shadow-elegant hover:shadow-soft btn-soft-pulse hover:scale-105 transition-all duration-300 mb-6"
                 asChild
               >
                 <Link to="/contact">

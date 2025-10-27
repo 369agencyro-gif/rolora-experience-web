@@ -153,21 +153,21 @@ All colors MUST be HSL.
   }
 }
 
-/* Ultra subtle long glow for CTA buttons */
+/* Fast visible glow for CTA buttons */
 @keyframes soft-pulse {
   0%, 100% {
-    box-shadow: 0 0 0 0 hsl(var(--accent) / 0.25);
+    box-shadow: 0 0 0 0 hsl(var(--accent) / 0.5);
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 0 14px hsl(var(--accent) / 0);
-    transform: scale(1.01);
+    box-shadow: 0 0 0 25px hsl(var(--accent) / 0);
+    transform: scale(1.02);
   }
 }
 
 @layer utilities {
   .btn-soft-pulse {
-    animation: soft-pulse 60s ease-in-out infinite;
+    animation: soft-pulse 3s ease-in-out infinite;
   }
 }
 
