@@ -1,4 +1,4 @@
-import { Scissors, Lightbulb, Gem } from "lucide-react";
+
 
 const SignatureExperience = () => {
   return (
@@ -29,29 +29,29 @@ const SignatureExperience = () => {
             <div className="h-px w-16 bg-gradient-to-l from-transparent to-muted-foreground/30"></div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mt-12 text-left">
-            <div className="p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-accent/20 shadow-elegant hover:shadow-soft hover:border-accent/40 transition-elegant hover:scale-105">
-              <div className="mb-4">
-                <Scissors className="w-10 h-10 text-accent" />
+          <div className="grid md:grid-cols-3 gap-8 mt-12 text-center">
+            <div className="p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-muted-foreground/10 hover:border-muted-foreground/20 transition-all duration-300">
+              <div className="mb-4 flex justify-center">
+                <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
               </div>
-              <h3 className="font-display font-semibold text-xl mb-3">Sculpt</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">Define and contour your natural beauty with expert techniques</p>
+              <h3 className="font-serif font-light text-lg tracking-wider mb-3 text-muted-foreground">SCULPT</h3>
+              <p className="text-xs text-muted-foreground/70 leading-relaxed tracking-wide">Define and contour your natural beauty with precision techniques</p>
             </div>
             
-            <div className="p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-accent/20 shadow-elegant hover:shadow-soft hover:border-accent/40 transition-elegant hover:scale-105">
-              <div className="mb-4">
-                <Lightbulb className="w-10 h-10 text-accent" />
+            <div className="p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-muted-foreground/10 hover:border-muted-foreground/20 transition-all duration-300">
+              <div className="mb-4 flex justify-center">
+                <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
               </div>
-              <h3 className="font-display font-semibold text-xl mb-3">Illuminate</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">Reveal your inner radiance with transformative treatments</p>
+              <h3 className="font-serif font-light text-lg tracking-wider mb-3 text-muted-foreground">ILLUMINATE</h3>
+              <p className="text-xs text-muted-foreground/70 leading-relaxed tracking-wide">Reveal luminous radiance through transformative treatments</p>
             </div>
             
-            <div className="p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-accent/20 shadow-elegant hover:shadow-soft hover:border-accent/40 transition-elegant hover:scale-105">
-              <div className="mb-4">
-                <Gem className="w-10 h-10 text-accent" />
+            <div className="p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-muted-foreground/10 hover:border-muted-foreground/20 transition-all duration-300">
+              <div className="mb-4 flex justify-center">
+                <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
               </div>
-              <h3 className="font-display font-semibold text-xl mb-3">Refine</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">Perfect your glow with precision and luxury care</p>
+              <h3 className="font-serif font-light text-lg tracking-wider mb-3 text-muted-foreground">REFINE</h3>
+              <p className="text-xs text-muted-foreground/70 leading-relaxed tracking-wide">Perfect your glow with meticulous, luxurious care</p>
             </div>
           </div>
         </div>
