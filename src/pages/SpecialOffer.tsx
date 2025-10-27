@@ -259,6 +259,9 @@ const SpecialOffer = () => {
         {/* Why This Offer Section */}
         <section className="py-16 px-6 bg-gradient-to-br from-amber-950/90 via-yellow-950/85 to-black/90">
           <div className="container max-w-2xl mx-auto text-center">
+            <span className="text-accent uppercase tracking-[0.3em] text-sm font-semibold mb-4 block font-display">
+              ROLORA
+            </span>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">
               Why This Special Offer?
             </h2>
