@@ -2,6 +2,12 @@ import { Link } from "react-router-dom";
 import { Check, Sparkles, Clock, MapPin, Gift, Star, ShieldCheck } from "lucide-react";
 import ServiceLayout from "@/components/ServiceLayout";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useCountdownTimer } from "@/hooks/use-countdown-timer";
 import facialImage from "@/assets/facial-sculpting.jpg";
@@ -321,7 +327,7 @@ const SpecialOffer = () => {
               Common Questions
             </h2>
 
-            <div className="space-y-6">
+            <Accordion type="single" collapsible className="w-full">
               {[
                 {
                   question: "Is this offer for new clients only?",
@@ -340,15 +346,20 @@ const SpecialOffer = () => {
                   answer: "Absolutely! After experiencing your first treatment, you can book additional sessions at regular pricing or explore our packages for better value."
                 }
               ].map((faq, index) => (
-                <div
-                  key={index}
-                  className="p-6 rounded-2xl bg-background border border-border"
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index}`}
+                  className="border border-border rounded-2xl px-6 mb-4 bg-background"
                 >
-                  <h3 className="text-lg font-semibold mb-2">{faq.question}</h3>
-                  <p className="text-muted-foreground">{faq.answer}</p>
-                </div>
+                  <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-6">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
               ))}
-            </div>
+            </Accordion>
           </div>
         </section>
       </div>
