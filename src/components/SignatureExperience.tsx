@@ -21,28 +21,28 @@ const SignatureExperience = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mt-12 text-left">
-            <div className="p-6 rounded-xl bg-card border border-border hover:border-accent/50 transition-smooth">
-              <div className="mb-3">
-                <Scissors className="w-8 h-8 text-accent" />
+            <div className="p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-accent/20 shadow-elegant hover:shadow-soft hover:border-accent/40 transition-elegant hover:scale-105">
+              <div className="mb-4">
+                <Scissors className="w-10 h-10 text-accent" />
               </div>
-              <h3 className="font-display font-semibold text-lg mb-2">Sculpt</h3>
-              <p className="text-sm text-muted-foreground">Define and contour your natural beauty with expert techniques</p>
+              <h3 className="font-display font-semibold text-xl mb-3">Sculpt</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">Define and contour your natural beauty with expert techniques</p>
             </div>
             
-            <div className="p-6 rounded-xl bg-card border border-border hover:border-accent/50 transition-smooth">
-              <div className="mb-3">
-                <Lightbulb className="w-8 h-8 text-accent" />
+            <div className="p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-accent/20 shadow-elegant hover:shadow-soft hover:border-accent/40 transition-elegant hover:scale-105">
+              <div className="mb-4">
+                <Lightbulb className="w-10 h-10 text-accent" />
               </div>
-              <h3 className="font-display font-semibold text-lg mb-2">Illuminate</h3>
-              <p className="text-sm text-muted-foreground">Reveal your inner radiance with transformative treatments</p>
+              <h3 className="font-display font-semibold text-xl mb-3">Illuminate</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">Reveal your inner radiance with transformative treatments</p>
             </div>
             
-            <div className="p-6 rounded-xl bg-card border border-border hover:border-accent/50 transition-smooth">
-              <div className="mb-3">
-                <Gem className="w-8 h-8 text-accent" />
+            <div className="p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-accent/20 shadow-elegant hover:shadow-soft hover:border-accent/40 transition-elegant hover:scale-105">
+              <div className="mb-4">
+                <Gem className="w-10 h-10 text-accent" />
               </div>
-              <h3 className="font-display font-semibold text-lg mb-2">Refine</h3>
-              <p className="text-sm text-muted-foreground">Perfect your glow with precision and luxury care</p>
+              <h3 className="font-display font-semibold text-xl mb-3">Refine</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">Perfect your glow with precision and luxury care</p>
             </div>
           </div>
         </div>
