@@ -413,13 +413,15 @@ const SpecialOffer = () => {
             </div>
 
             <div className="relative aspect-video rounded-3xl overflow-hidden shadow-elegant border border-border bg-muted">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Rolora Facial Glow Treatment"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              <video
+                className="w-full h-full object-cover"
+                controls
+                playsInline
+                poster="/placeholder.svg"
+              >
+                <source src="/videos/rolora-treatment.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
 
             <p className="text-center text-sm text-muted-foreground mt-6">
