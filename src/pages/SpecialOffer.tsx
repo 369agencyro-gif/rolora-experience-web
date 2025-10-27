@@ -8,9 +8,20 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useCountdownTimer } from "@/hooks/use-countdown-timer";
 import facialImage from "@/assets/facial-sculpting.jpg";
+import facialRoom from "@/assets/facial-room.jpg";
+import glowingSkin from "@/assets/glowing-skin.jpg";
+import studioInterior from "@/assets/studio-interior.jpg";
+import skincareProducts from "@/assets/skincare-products.jpg";
 
 const SpecialOffer = () => {
   const { ref: includedRef, isVisible: includedVisible } = useScrollAnimation({ threshold: 0.2 });
@@ -74,6 +85,53 @@ const SpecialOffer = () => {
               <MapPin className="w-3 h-3 inline mr-1" />
               Available at All Rolora Locations
             </p>
+          </div>
+        </section>
+
+        {/* Gallery Carousel Section */}
+        <section className="py-16 px-6">
+          <div className="container max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                Experience the Transformation
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                A glimpse into your Rolora journey
+              </p>
+            </div>
+
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {[
+                  { src: facialRoom, alt: "Luxurious Facial Treatment Room" },
+                  { src: glowingSkin, alt: "Glowing Skin Results" },
+                  { src: studioInterior, alt: "Rolora Studio Interior" },
+                  { src: skincareProducts, alt: "Premium Skincare Products" },
+                  { src: facialImage, alt: "Facial Sculpting Treatment" }
+                ].map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-2">
+                      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden group">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2" />
+              <CarouselNext className="right-2" />
+            </Carousel>
           </div>
         </section>
 
