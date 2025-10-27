@@ -18,32 +18,34 @@ const About = () => {
         {/* Text Content */}
         <div className="px-6 py-12 bg-background">
           <div className="max-w-xl mx-auto animate-fade-in">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="h-px w-8 bg-accent" />
-              <span className="text-accent font-semibold uppercase tracking-widest text-xs">
-                Our Philosophy
-              </span>
+            <div className="flex justify-center mb-4">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
             </div>
             
-            <h2 className="text-3xl font-display font-semibold mb-6 leading-tight">
-              The Rolora Philosophy
+            <h2 className="text-2xl md:text-3xl font-serif font-light tracking-wider text-center mb-2 text-muted-foreground/90">
+              The Rolora
             </h2>
+            <h3 className="text-xl md:text-2xl font-serif font-normal tracking-widest text-center mb-6 text-muted-foreground">
+              PHILOSOPHY
+            </h3>
             
-            <div className="space-y-5 text-base leading-relaxed">
-              <p className="text-foreground/90">
+            <div className="space-y-4 text-sm leading-relaxed">
+              <p className="text-muted-foreground/80 tracking-wide">
                 At Rolora, we believe beauty is a journey of self-discovery and wellness. 
                 Our approach transcends traditional treatments, creating a sanctuary where 
                 science meets artistry, and luxury embraces authenticity.
               </p>
-              <p className="text-foreground/90">
+              <p className="text-muted-foreground/80 tracking-wide">
                 Each experience is thoughtfully crafted to honor your unique essence, 
                 combining cutting-edge techniques with timeless rituals. We celebrate 
                 natural radiance, nurture inner balance, and cultivate lasting transformation.
               </p>
-              <div className="pt-4 border-t border-accent/20">
-                <p className="text-accent font-semibold text-lg italic">
-                  Experience the art of refined beauty. Embrace the Rolora lifestyle.
+              <div className="pt-4 flex flex-col items-center gap-2">
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/30 to-transparent"></div>
+                <p className="text-muted-foreground/90 font-light text-xs italic tracking-wider text-center">
+                  Experience the art of refined beauty
                 </p>
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/30 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -67,30 +69,34 @@ const About = () => {
           <div className="container px-6">
             <div className="ml-auto max-w-2xl pl-16 py-20">
               <div className="animate-fade-in">
-                <div className="inline-flex items-center gap-2 mb-6">
-                  <span className="text-accent font-semibold uppercase tracking-widest text-sm">
-                    Our Philosophy
-                  </span>
+                <div className="flex justify-start mb-6">
+                  <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
                 </div>
                 
-                <h2 className="text-5xl xl:text-7xl font-display font-semibold mb-8 text-balance">
-                  The Rolora Philosophy
+                <h2 className="text-3xl xl:text-4xl font-serif font-light tracking-wider mb-2 text-muted-foreground/90">
+                  The Rolora
                 </h2>
+                <h3 className="text-2xl xl:text-3xl font-serif font-normal tracking-widest mb-8 text-muted-foreground">
+                  PHILOSOPHY
+                </h3>
                 
-                <div className="space-y-6 text-lg leading-relaxed">
-                  <p className="text-foreground/90">
+                <div className="space-y-5 text-base leading-relaxed">
+                  <p className="text-muted-foreground/80 tracking-wide">
                     At Rolora, we believe beauty is a journey of self-discovery and wellness. 
                     Our approach transcends traditional treatments, creating a sanctuary where 
                     science meets artistry, and luxury embraces authenticity.
                   </p>
-                  <p className="text-foreground/90">
+                  <p className="text-muted-foreground/80 tracking-wide">
                     Each experience is thoughtfully crafted to honor your unique essence, 
                     combining cutting-edge techniques with timeless rituals. We celebrate 
                     natural radiance, nurture inner balance, and cultivate lasting transformation.
                   </p>
-                  <p className="text-accent font-semibold text-xl italic">
-                    Experience the art of refined beauty. Embrace the Rolora lifestyle.
-                  </p>
+                  <div className="pt-4 flex items-center gap-3">
+                    <div className="h-px w-12 bg-gradient-to-r from-transparent to-muted-foreground/30"></div>
+                    <p className="text-muted-foreground/90 font-light text-sm italic tracking-wider">
+                      Experience the art of refined beauty
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
