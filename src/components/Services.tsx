@@ -98,7 +98,7 @@ const Services = () => {
                   alt="Facial Treatments"
                   className="w-full h-full object-cover transition-smooth group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-smooth group-hover:from-black/70" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20 transition-smooth group-hover:from-black/85" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
                   <h3 className="text-4xl md:text-5xl font-display font-semibold mb-4 transform transition-smooth group-hover:translate-y-[-4px]">
                     Facial
@@ -123,7 +123,7 @@ const Services = () => {
                   alt="Premium Experiences"
                   className="w-full h-full object-cover transition-smooth group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-smooth group-hover:from-black/70" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20 transition-smooth group-hover:from-black/85" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
                   <h3 className="text-4xl md:text-5xl font-display font-semibold mb-4 transform transition-smooth group-hover:translate-y-[-4px]">
                     Premium
