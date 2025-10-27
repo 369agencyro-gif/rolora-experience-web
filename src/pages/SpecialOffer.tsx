@@ -281,13 +281,12 @@ const SpecialOffer = () => {
           <div className="container max-w-2xl mx-auto">
             <div className="flex justify-center mb-8">
               <Button
-                size="sm"
-                variant="outline"
-                className="text-xs rounded-full border-accent/30 text-muted-foreground hover:bg-accent/5 hover:text-accent transition-all"
+                size="lg"
+                className="rounded-full bg-accent hover:bg-accent/90 text-white shadow-elegant hover:shadow-soft hover:scale-105 transition-all duration-300"
                 asChild
               >
                 <a href="#book-now">
-                  Reserve My Spot Now
+                  Reserve My Spot Now →
                 </a>
               </Button>
             </div>
