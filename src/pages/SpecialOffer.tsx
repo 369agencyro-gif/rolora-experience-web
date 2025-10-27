@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Check, Sparkles, Clock, MapPin, Gift } from "lucide-react";
+import { Check, Sparkles, Clock, MapPin, Gift, Star, ShieldCheck } from "lucide-react";
 import ServiceLayout from "@/components/ServiceLayout";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -177,6 +177,102 @@ const SpecialOffer = () => {
             <p className="text-lg font-semibold text-white mb-8">
               Join thousands of clients who have transformed their skin with Rolora.
             </p>
+          </div>
+        </section>
+
+        {/* Reviews Section */}
+        <section className="relative py-20 overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0">
+            <img 
+              src={facialImage}
+              alt="Rolora Client Reviews"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/80" />
+          </div>
+
+          <div className="container max-w-4xl mx-auto relative z-10 px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-white">
+                Verified Client Reviews
+              </h2>
+              <p className="text-white/80 text-lg">
+                Real results from real clients
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  name: "Michelle T.",
+                  date: "2 weeks ago",
+                  text: "This offer is incredible! I was skeptical at first, but the results after just one treatment were amazing. My skin felt so smooth and the glow lasted for days. Already booked my next session!",
+                  rating: 5
+                },
+                {
+                  name: "Amanda R.",
+                  date: "1 week ago",
+                  text: "Best decision ever. The $99 intro offer is such great value. The treatment was relaxing and professional. I noticed my skin looked brighter immediately. Highly recommend for first-timers!",
+                  rating: 5
+                },
+                {
+                  name: "Jennifer K.",
+                  date: "3 days ago",
+                  text: "I've tried many facials but Rolora is different. The attention to detail and the quality of products used really shows. My fine lines look smoother and my skin feels rejuvenated. Worth every penny!",
+                  rating: 5
+                },
+                {
+                  name: "Lisa M.",
+                  date: "5 days ago",
+                  text: "Absolutely loved my first Rolora experience! The staff was knowledgeable and the treatment exceeded my expectations. My skin has never looked better. Can't wait to come back!",
+                  rating: 5
+                }
+              ].map((review, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all"
+                >
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-full bg-accent/20 border-2 border-accent/50 flex items-center justify-center">
+                        <span className="text-lg font-display font-semibold text-accent">
+                          {review.name.charAt(0)}
+                        </span>
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <h4 className="font-semibold text-white">{review.name}</h4>
+                          <ShieldCheck className="w-4 h-4 text-accent fill-accent" />
+                        </div>
+                        <p className="text-xs text-white/60">{review.date}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Stars */}
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                    ))}
+                  </div>
+
+                  {/* Review Text */}
+                  <p className="text-white/90 text-sm leading-relaxed">
+                    {review.text}
+                  </p>
+
+                  {/* Verified Badge */}
+                  <div className="mt-4 pt-4 border-t border-white/10">
+                    <span className="text-xs text-accent font-semibold flex items-center gap-1">
+                      <ShieldCheck className="w-3 h-3" />
+                      Verified Client
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
