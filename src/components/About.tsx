@@ -18,16 +18,16 @@ const About = () => {
         {/* Text Content */}
         <div className="px-6 py-12 bg-background">
           <div className="max-w-xl mx-auto animate-fade-in">
-            <div className="flex justify-center mb-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
-            </div>
-            
             <h2 className="text-2xl md:text-3xl font-serif font-light tracking-wider text-center mb-2 text-muted-foreground/90">
               ROLORA SPA
             </h2>
-            <h3 className="text-xs md:text-sm font-serif font-light tracking-widest text-center mb-6 text-muted-foreground/60">
+            <h3 className="text-xs md:text-sm font-serif font-light tracking-widest text-center mb-4 text-muted-foreground/60">
               PHILOSOPHY
             </h3>
+            
+            <div className="flex justify-center mb-6">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
+            </div>
             
             <div className="space-y-4 text-sm leading-relaxed">
               <p className="text-muted-foreground/80 tracking-wide">
@@ -69,16 +69,16 @@ const About = () => {
           <div className="container px-6">
             <div className="ml-auto max-w-2xl pl-16 py-20">
               <div className="animate-fade-in">
-                <div className="flex justify-start mb-6">
-                  <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
-                </div>
-                
                 <h2 className="text-3xl xl:text-4xl font-serif font-light tracking-wider mb-2 text-muted-foreground/90">
                   ROLORA SPA
                 </h2>
-                <h3 className="text-xs xl:text-sm font-serif font-light tracking-widest mb-8 text-muted-foreground/60">
+                <h3 className="text-xs xl:text-sm font-serif font-light tracking-widest mb-6 text-muted-foreground/60">
                   PHILOSOPHY
                 </h3>
+                
+                <div className="flex justify-start mb-8">
+                  <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
+                </div>
                 
                 <div className="space-y-5 text-base leading-relaxed">
                   <p className="text-muted-foreground/80 tracking-wide">
