@@ -31,148 +31,44 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container px-6">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo - centered on mobile, left on desktop */}
-          <Link to="/" className="font-display text-2xl font-semibold lg:flex-none absolute left-1/2 -translate-x-1/2 lg:relative lg:left-0 lg:translate-x-0">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="text-xl font-bold tracking-tight">
             Rolora
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <Link to="/" className="text-foreground hover:text-accent transition-smooth">
-              Home
+            <Link to="/" className="text-sm uppercase tracking-wide hover:opacity-70 transition-opacity">
+              Locations
             </Link>
             
-            <Link 
-              to="/special-offer"
-              className="text-accent font-semibold hover:text-accent/80 transition-smooth flex items-center gap-1"
+            <button 
+              className="text-sm uppercase tracking-wide hover:opacity-70 transition-opacity"
+              onClick={() => scrollToSection('services')}
             >
-              Special Offer
-              <span className="text-xs bg-accent text-white px-2 py-0.5 rounded-full">New</span>
-            </Link>
+              Treatments
+            </button>
             
-            <Link 
-              to="/about"
-              className="text-foreground hover:text-accent transition-smooth"
-            >
-              About
-            </Link>
-
-            {/* Services Mega Menu */}
-            <div 
-              className="relative group"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
-            >
-              <button className="flex items-center gap-1 text-foreground hover:text-accent transition-smooth py-2">
-                Services
-                <ChevronDown className="w-4 h-4" />
-              </button>
-
-              {servicesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
-                  <div className="w-[800px] bg-card rounded-2xl shadow-elegant border border-border p-8 animate-fade-in">
-                  <div className="grid grid-cols-3 gap-8">
-                    {/* Facial Services */}
-                    <div>
-                      <h3 className="text-lg font-semibold text-muted-foreground uppercase tracking-wide mb-4">
-                        Facial Rituals
-                      </h3>
-                      <div className="space-y-3">
-                        {facialServices.map((service, idx) => (
-                          <Link
-                            key={idx}
-                            to={service.path}
-                            className="block group"
-                          >
-                            <div className="flex items-start gap-2">
-                              <div className="mt-1 w-4 h-4 border border-accent/30 rounded flex-shrink-0 group-hover:bg-accent/10 transition-smooth" />
-                              <div>
-                                <p className="font-medium text-foreground group-hover:text-accent transition-smooth">
-                                  {service.name}
-                                </p>
-                                <p className="text-xs text-muted-foreground">
-                                  {service.description}
-                                </p>
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Additional Services */}
-                    <div>
-                      <h3 className="text-lg font-semibold text-muted-foreground uppercase tracking-wide mb-4">
-                        Premium Experiences
-                      </h3>
-                      <div className="space-y-3">
-                        {additionalServices.map((service, idx) => (
-                          <Link
-                            key={idx}
-                            to={service.path}
-                            className="block group"
-                          >
-                            <div className="flex items-start gap-2">
-                              <div className="mt-1 w-4 h-4 border border-accent/30 rounded flex-shrink-0 group-hover:bg-accent/10 transition-smooth" />
-                              <div>
-                                <p className="font-medium text-foreground group-hover:text-accent transition-smooth">
-                                  {service.name}
-                                </p>
-                                <p className="text-xs text-muted-foreground">
-                                  {service.description}
-                                </p>
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* CTA Card */}
-                    <div className="bg-primary text-primary-foreground rounded-xl p-6 flex flex-col justify-between">
-                      <div>
-                        <h3 className="text-xl font-display font-semibold mb-2 leading-tight">
-                          Experience Luxury. Embrace Serenity.
-                        </h3>
-                        <p className="text-sm opacity-90 mb-4">
-                          Begin your transformation journey with our signature treatments.
-                        </p>
-                      </div>
-                      <Button 
-                        variant="secondary" 
-                        className="w-full"
-                        onClick={() => scrollToSection('contact')}
-                      >
-                        Book Now →
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-                </div>
-              )}
-            </div>
-
             <Link 
               to="/gallery"
-              className="text-foreground hover:text-accent transition-smooth"
+              className="text-sm uppercase tracking-wide hover:opacity-70 transition-opacity"
             >
-              Gallery
-            </Link>
-
-            <Link 
-              to="/contact"
-              className="text-foreground hover:text-accent transition-smooth"
-            >
-              Contact
+              Results
             </Link>
           </div>
 
-          {/* Book Now Button */}
-          <div className="hidden lg:block">
-            <Button onClick={() => scrollToSection('contact')}>
+          {/* Right Side Actions */}
+          <div className="hidden lg:flex items-center gap-4">
+            <button className="text-sm uppercase tracking-wide hover:opacity-70 transition-opacity">
+              Log In
+            </button>
+            <Button 
+              onClick={() => scrollToSection('contact')}
+              className="uppercase tracking-wide font-semibold"
+            >
               Book Now
             </Button>
           </div>

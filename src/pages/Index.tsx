@@ -1,5 +1,7 @@
+import AnnouncementBar from "@/components/AnnouncementBar";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import StatsSection from "@/components/StatsSection";
 import SignatureExperience from "@/components/SignatureExperience";
 import WhyRolora from "@/components/WhyRolora";
 import About from "@/components/About";
@@ -31,9 +33,11 @@ const AnimatedSection = ({ children, delay = 0 }: { children: React.ReactNode; d
 const Index = () => {
   return (
     <>
+      <AnnouncementBar />
       <Navigation />
       <main className="min-h-screen">
         <Hero />
+        <StatsSection />
         <AnimatedSection delay={100}>
           <SignatureExperience />
         </AnimatedSection>
