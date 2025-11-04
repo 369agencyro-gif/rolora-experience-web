@@ -91,14 +91,14 @@ const TreatmentExplorer = () => {
                 to={card.link}
                 className="group"
               >
-                <div className="aspect-[3/4] mb-4 overflow-hidden rounded-lg">
+                <div className="aspect-[3/4] mb-4 overflow-hidden border-2 border-border transition-all duration-300 group-hover:border-foreground group-hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] group-hover:scale-105">
                   <img 
                     src={card.image}
                     alt={card.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <h3 className="text-lg font-bold uppercase tracking-wide">
+                <h3 className="text-lg font-bold uppercase tracking-wide transition-colors group-hover:text-primary">
                   {card.title}
                 </h3>
               </Link>
