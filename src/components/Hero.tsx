@@ -7,7 +7,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[95vh] flex items-center overflow-hidden bg-background">
       <div 
         className="absolute inset-0 z-0"
         style={{
@@ -16,30 +16,42 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-background/40" />
+        <div className="absolute inset-0 bg-background/50" />
       </div>
       
-      <div className="container relative z-10 px-6 py-20">
-        <div className="max-w-4xl">
-          <p className="text-sm md:text-base mb-4 tracking-wide">
-            5,000+ TREATMENTS | 4.9 STARS
-          </p>
+      <div className="container relative z-10 px-6 py-32">
+        <div className="max-w-5xl">
+          <div className="inline-block mb-6 px-4 py-2 bg-foreground text-background">
+            <p className="text-xs md:text-sm font-bold tracking-widest">
+              5,000+ TREATMENTS | 4.9★ RATED
+            </p>
+          </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-[0.95] tracking-tight">
-            GET REALLY GOOD SKIN
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-[0.9] tracking-tighter">
+            GET REALLY<br />GOOD SKIN
           </h1>
           
-          <p className="text-lg md:text-xl mb-8 max-w-xl">
-            Target acne, wrinkles, dark spots & more with high-tech facials built for your skin.
+          <p className="text-xl md:text-2xl mb-12 max-w-2xl font-light leading-relaxed">
+            High-tech facials that target acne, wrinkles, dark spots & more.
           </p>
           
-          <Button 
-            size="lg" 
-            className="text-base px-10 py-6 font-semibold uppercase tracking-wide"
-            onClick={scrollToBooking}
-          >
-            BOOK NOW
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button 
+              variant="cta"
+              size="lg" 
+              className="text-lg"
+              onClick={scrollToBooking}
+            >
+              BOOK YOUR APPOINTMENT
+            </Button>
+            <Button 
+              variant="outline"
+              size="lg"
+              onClick={scrollToBooking}
+            >
+              VIEW PRICING
+            </Button>
+          </div>
         </div>
       </div>
     </section>
