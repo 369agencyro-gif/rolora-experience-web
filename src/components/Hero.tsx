@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
-import shrekHead from "@/assets/shrek-head.png";
 
 const Hero = () => {
   const scrollToBooking = () => {
@@ -26,14 +25,8 @@ const Hero = () => {
             5,000+ TREATMENTS | 4.9 STARS
           </p>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-[0.95] tracking-tight flex flex-wrap items-center gap-2">
-            <span>GET REALLY GO</span>
-            <img 
-              src={shrekHead} 
-              alt="o" 
-              className="inline-block w-[0.9em] h-[0.9em] object-contain"
-            />
-            <span>D SKIN</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-[0.95] tracking-tight">
+            GET REALLY GOOD SKIN
           </h1>
           
           <p className="text-lg md:text-xl mb-8 max-w-xl">
