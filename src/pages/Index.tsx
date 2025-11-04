@@ -2,6 +2,8 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import StatsSection from "@/components/StatsSection";
+import SignatureFacialSection from "@/components/SignatureFacialSection";
+import TreatmentExplorer from "@/components/TreatmentExplorer";
 import SignatureExperience from "@/components/SignatureExperience";
 import WhyRolora from "@/components/WhyRolora";
 import About from "@/components/About";
@@ -38,6 +40,12 @@ const Index = () => {
       <main className="min-h-screen">
         <Hero />
         <StatsSection />
+        <AnimatedSection delay={100}>
+          <SignatureFacialSection />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <TreatmentExplorer />
+        </AnimatedSection>
         <AnimatedSection delay={100}>
           <SignatureExperience />
         </AnimatedSection>
