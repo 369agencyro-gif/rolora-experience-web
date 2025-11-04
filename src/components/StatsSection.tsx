@@ -37,17 +37,17 @@ const StatsSection = () => {
             <img 
               src={facialRoom} 
               alt="Facial treatment in progress" 
-              className="w-full aspect-[3/4] object-cover rounded-sm"
+              className="w-full aspect-[3/4] object-cover rounded-sm border-2 border-border hover:border-foreground hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:scale-105 transition-all cursor-pointer"
             />
             <img 
               src={facialSculpting} 
               alt="Second cleanse facial treatment" 
-              className="w-full aspect-[3/4] object-cover rounded-sm"
+              className="w-full aspect-[3/4] object-cover rounded-sm border-2 border-border hover:border-foreground hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:scale-105 transition-all cursor-pointer"
             />
             <img 
               src={glowingSkin} 
               alt="Glowing skin results" 
-              className="w-full aspect-[3/4] object-cover rounded-sm"
+              className="w-full aspect-[3/4] object-cover rounded-sm border-2 border-border hover:border-foreground hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:scale-105 transition-all cursor-pointer"
             />
           </div>
         </div>

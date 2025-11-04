@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import categoryFacial from "@/assets/category-facial.jpg";
 import categoryPremium from "@/assets/category-premium.jpg";
 import serviceFacial from "@/assets/service-facial.jpg";
@@ -45,37 +43,23 @@ const TreatmentExplorer = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container px-6">
-        {/* Infinite Loop Carousel */}
-        <div className="mb-16">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            plugins={[
-              Autoplay({
-                delay: 2000,
-              }),
-            ]}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-4">
-              {[...treatments, ...treatments].map((treatment, idx) => (
-                <CarouselItem key={idx} className="pl-4 basis-auto">
-                  <button
-                    onClick={() => setActiveIndex(idx % treatments.length)}
-                    className={`text-xl md:text-2xl font-bold tracking-wide whitespace-nowrap transition-all px-6 py-3 border-2 ${
-                      (idx % treatments.length) === activeIndex
-                        ? 'bg-primary text-primary-foreground border-primary shadow-elegant'
-                        : 'text-foreground/60 border-border hover:text-foreground hover:border-foreground hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:scale-105'
-                    }`}
-                  >
-                    {treatment}
-                  </button>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+        {/* Horizontal Scrolling Treatments */}
+        <div className="mb-16 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-4 pb-4">
+            {treatments.map((treatment, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveIndex(idx)}
+                className={`text-xl md:text-2xl font-bold tracking-wide whitespace-nowrap transition-all px-6 py-3 border-2 ${
+                  idx === activeIndex
+                    ? 'bg-primary text-primary-foreground border-primary shadow-elegant'
+                    : 'text-foreground/60 border-border hover:text-foreground hover:border-foreground hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:scale-105'
+                }`}
+              >
+                {treatment}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Explore Our Treatments */}

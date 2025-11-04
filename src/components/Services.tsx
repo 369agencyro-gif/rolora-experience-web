@@ -91,7 +91,7 @@ const Services = () => {
               {/* Facial Category */}
               <button
                 onClick={() => setActiveCategory("facial")}
-                className="group relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden border-2 border-border hover:border-accent transition-smooth"
+                className="group relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden border-2 border-border hover:border-foreground hover:shadow-[0_0_30px_rgba(0,0,0,0.2)] hover:scale-[1.02] transition-all"
               >
                 <img 
                   src={categoryFacialImage}
@@ -116,7 +116,7 @@ const Services = () => {
               {/* Premium Category */}
               <button
                 onClick={() => setActiveCategory("premium")}
-                className="group relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden border-2 border-border hover:border-accent transition-smooth"
+                className="group relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden border-2 border-border hover:border-foreground hover:shadow-[0_0_30px_rgba(0,0,0,0.2)] hover:scale-[1.02] transition-all"
               >
                 <img 
                   src={categoryPremiumImage}
@@ -146,9 +146,9 @@ const Services = () => {
           <div className="max-w-6xl mx-auto mb-8 animate-fade-in">
             <button
               onClick={() => setActiveCategory(null)}
-              className="px-8 py-4 rounded-full bg-card border-2 border-border hover:border-accent text-foreground hover:shadow-elegant transition-smooth flex items-center gap-3 group font-semibold"
+              className="px-8 py-4 bg-card border-2 border-border hover:border-foreground text-foreground hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:scale-105 transition-all flex items-center gap-3 group font-bold tracking-wide uppercase"
             >
-              <span className="transform transition-smooth group-hover:translate-x-[-4px] text-xl">←</span>
+              <span className="transform transition-all group-hover:translate-x-[-4px] text-xl">←</span>
               <span>Back to Categories</span>
             </button>
           </div>

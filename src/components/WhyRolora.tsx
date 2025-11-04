@@ -56,7 +56,7 @@ const WhyRolora = () => {
                 className="text-center group"
               >
                 <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 rounded-full border-2 border-accent/30 flex items-center justify-center group-hover:border-accent transition-smooth">
+                  <div className="w-16 h-16 rounded-full border-2 border-accent/30 flex items-center justify-center group-hover:border-accent group-hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] group-hover:scale-110 transition-all">
                     <Icon className="w-7 h-7 text-accent" strokeWidth={1.5} />
                   </div>
                 </div>
