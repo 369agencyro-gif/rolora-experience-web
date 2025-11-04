@@ -39,7 +39,7 @@ const Hero = () => {
             <Button 
               variant="cta"
               size="lg" 
-              className="text-lg border-2 border-foreground hover:shadow-[0_0_30px_rgba(0,0,0,0.3)] hover:scale-105"
+              className="text-lg"
               onClick={scrollToBooking}
             >
               BOOK YOUR APPOINTMENT
@@ -47,7 +47,6 @@ const Hero = () => {
             <Button 
               variant="outline"
               size="lg"
-              className="border-2 hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:scale-105"
               onClick={scrollToBooking}
             >
               VIEW PRICING
