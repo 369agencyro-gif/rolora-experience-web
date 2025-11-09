@@ -2,56 +2,39 @@
 
 const SignatureExperience = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+    <section className="py-24 bg-background">
       <div className="container px-6">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <div className="mb-6">
-            <div className="h-px w-12 mx-auto mb-4 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
-            <h2 className="text-2xl md:text-3xl font-serif font-light tracking-wider mb-1 text-muted-foreground/90">
-              The Rolora
-            </h2>
-            <h2 className="text-xl md:text-2xl font-serif font-normal tracking-widest mb-4 text-muted-foreground">
-              SIGNATURE EXPERIENCE
-            </h2>
-            <div className="h-px w-12 mx-auto bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
-          </div>
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-sm md:text-base font-medium uppercase tracking-wider mb-12 text-foreground/60">
+            WHAT TO EXPECT AT ROLORA
+          </h3>
           
-          <p className="text-sm md:text-base text-muted-foreground/70 leading-relaxed mb-8 max-w-xl mx-auto font-light tracking-wide">
-            ROLORA treatments are meticulously crafted to sculpt, illuminate, and refine. 
-            Begin with your signature facial, enhance with targeted intensifiers, or harmonize with body rolling for a comprehensive ritual.
-          </p>
-          
-          <div className="flex items-center justify-center gap-4 mb-2">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent to-muted-foreground/30"></div>
-            <span className="text-xs md:text-sm font-light italic tracking-wider text-muted-foreground/80 px-2">
-              Where precision meets perfection
-            </span>
-            <div className="h-px w-16 bg-gradient-to-l from-transparent to-muted-foreground/30"></div>
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 bg-muted/30 transition-all duration-300 hover:bg-muted/50">
+              <h3 className="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tight">
+                ASSESS
+              </h3>
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
+                A refined, efficient, and results-focused experience tailored to your skin and goals.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-12 text-center">
-            <div className="p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-muted-foreground/10 hover:border-muted-foreground/20 transition-all duration-300">
-              <div className="mb-4 flex justify-center">
-                <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
-              </div>
-              <h3 className="font-serif font-light text-lg tracking-wider mb-3 text-muted-foreground">SCULPT</h3>
-              <p className="text-xs text-muted-foreground/70 leading-relaxed tracking-wide">Define and contour your natural beauty with precision techniques</p>
+            <div className="p-8 bg-muted/30 transition-all duration-300 hover:bg-muted/50">
+              <h3 className="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tight">
+                TREAT
+              </h3>
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
+                Expect expert guidance, elevated care, and visible improvement in how your skin looks and feels.
+              </p>
             </div>
-            
-            <div className="p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-muted-foreground/10 hover:border-muted-foreground/20 transition-all duration-300">
-              <div className="mb-4 flex justify-center">
-                <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
-              </div>
-              <h3 className="font-serif font-light text-lg tracking-wider mb-3 text-muted-foreground">ILLUMINATE</h3>
-              <p className="text-xs text-muted-foreground/70 leading-relaxed tracking-wide">Reveal luminous radiance through transformative treatments</p>
-            </div>
-            
-            <div className="p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-muted-foreground/10 hover:border-muted-foreground/20 transition-all duration-300">
-              <div className="mb-4 flex justify-center">
-                <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
-              </div>
-              <h3 className="font-serif font-light text-lg tracking-wider mb-3 text-muted-foreground">REFINE</h3>
-              <p className="text-xs text-muted-foreground/70 leading-relaxed tracking-wide">Perfect your glow with meticulous, luxurious care</p>
+
+            <div className="p-8 bg-muted/30 transition-all duration-300 hover:bg-muted/50">
+              <h3 className="text-4xl md:text-5xl font-black mb-6 uppercase tracking-tight">
+                RESULTS
+              </h3>
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
+                See results from your very first visit — and even more with each one after.
+              </p>
             </div>
           </div>
         </div>
