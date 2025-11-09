@@ -17,7 +17,7 @@ const StatsSection = () => {
   return (
     <section className="py-24 bg-background">
       <div className="container px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 items-start">
           {/* Stats on Left */}
           <div className="space-y-16">
             {stats.map((stat, idx) => (
@@ -32,13 +32,13 @@ const StatsSection = () => {
             ))}
           </div>
 
-          {/* Treatment Images on Right - Larger */}
-          <div className="grid grid-cols-3 gap-6">
+          {/* Treatment Images on Right - Much Larger */}
+          <div className="grid grid-cols-2 gap-8">
             <div className="group relative overflow-hidden rounded-sm cursor-pointer">
               <img 
                 src={facialRoom} 
                 alt="Facial treatment in progress" 
-                className="w-full aspect-[2/3] object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
             </div>
@@ -46,15 +46,15 @@ const StatsSection = () => {
               <img 
                 src={facialSculpting} 
                 alt="Second cleanse facial treatment" 
-                className="w-full aspect-[2/3] object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
             </div>
-            <div className="group relative overflow-hidden rounded-sm cursor-pointer">
+            <div className="group relative overflow-hidden rounded-sm cursor-pointer col-span-2">
               <img 
                 src={glowingSkin} 
                 alt="Glowing skin results" 
-                className="w-full aspect-[2/3] object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
             </div>
