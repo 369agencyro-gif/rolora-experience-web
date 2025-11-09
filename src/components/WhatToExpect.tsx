@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import diverseSkin from "@/assets/diverse-skin.jpg";
+
 const WhatToExpect = () => {
   const scrollToBooking = () => {
     document.getElementById('contact')?.scrollIntoView({
@@ -8,6 +10,15 @@ const WhatToExpect = () => {
   return <section className="py-24 bg-muted/20">
       <div className="container px-6">
       <div className="max-w-7xl mx-auto">
+          {/* Feature Image */}
+          <div className="mb-16">
+            <img 
+              src={diverseSkin} 
+              alt="Diverse women showing beautiful, glowing skin"
+              className="w-full h-auto rounded-lg object-cover"
+            />
+          </div>
+
           <h2 className="text-3xl md:text-5xl font-black mb-16 tracking-tight uppercase text-center">
             Here's what makes us stand out in Newport:
           </h2>
