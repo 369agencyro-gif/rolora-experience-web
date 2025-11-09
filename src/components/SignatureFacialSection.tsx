@@ -53,16 +53,16 @@ const SignatureFacialSection = () => {
             {/* CTAs */}
             <div className="flex gap-4">
               <Button 
-                size="lg"
+                size="default"
                 onClick={scrollToBooking}
-                className="uppercase font-bold tracking-wide px-8"
+                className="uppercase font-bold tracking-wide"
               >
                 BOOK NOW
               </Button>
               <Button 
-                size="lg"
+                size="default"
                 variant="outline"
-                className="uppercase font-bold tracking-wide px-8"
+                className="uppercase font-bold tracking-wide"
               >
                 LEARN MORE
               </Button>
