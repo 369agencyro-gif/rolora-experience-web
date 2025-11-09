@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import diverseSkin from "@/assets/diverse-skin.jpg";
+import diverseSkin from "@/assets/facial-mask.jpg";
 
 const WhatToExpect = () => {
   const scrollToBooking = () => {
