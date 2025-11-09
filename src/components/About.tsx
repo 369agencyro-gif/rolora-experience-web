@@ -1,106 +1,90 @@
-import aboutImage from "@/assets/about-image.jpg";
+import facialRoom from "@/assets/facial-room.jpg";
+import glowingSkin from "@/assets/glowing-skin.jpg";
+import facialSculpting from "@/assets/facial-sculpting.jpg";
 
 const About = () => {
-  return (
-    <section id="about" className="relative overflow-hidden bg-background">
-      {/* Mobile Layout - Stacked */}
-      <div className="lg:hidden">
-        {/* Image */}
-        <div className="relative h-[60vh] w-full">
-          <img 
-            src={aboutImage} 
-            alt="Rolora luxury spa experience" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-background" />
-        </div>
-        
-        {/* Text Content */}
-        <div className="px-6 py-12 bg-background">
-          <div className="max-w-xl mx-auto animate-fade-in">
-            <h2 className="text-2xl md:text-3xl font-serif font-light tracking-wider text-center mb-2 text-muted-foreground/90">
-              ROLORA SPA
-            </h2>
-            <h3 className="text-xs md:text-sm font-serif font-light tracking-widest text-center mb-4 text-muted-foreground/60">
-              PHILOSOPHY
-            </h3>
-            
-            <div className="flex justify-center mb-6">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
-            </div>
-            
-            <div className="space-y-4 text-sm leading-relaxed">
-              <p className="text-muted-foreground/80 tracking-wide">
-                At Rolora, we believe beauty is a journey of self-discovery and wellness. 
-                Our approach transcends traditional treatments, creating a sanctuary where 
-                science meets artistry, and luxury embraces authenticity.
-              </p>
-              <p className="text-muted-foreground/80 tracking-wide">
-                Each experience is thoughtfully crafted to honor your unique essence, 
-                combining cutting-edge techniques with timeless rituals. We celebrate 
-                natural radiance, nurture inner balance, and cultivate lasting transformation.
-              </p>
-              <div className="pt-4 flex flex-col items-center gap-2">
-                <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/30 to-transparent"></div>
-                <p className="text-muted-foreground/90 font-light text-xs italic tracking-wider text-center">
-                  Experience the art of refined beauty
-                </p>
-                <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/30 to-transparent"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  const scrollToGallery = () => {
+    const galleryElement = document.getElementById('gallery');
+    if (galleryElement) {
+      galleryElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-      {/* Desktop Layout - Side by Side */}
-      <div className="hidden lg:flex min-h-screen items-center">
-        {/* Left side - Image with fade effect */}
-        <div className="absolute inset-y-0 left-0 w-1/2">
-          <img 
-            src={aboutImage} 
-            alt="Rolora luxury spa experience" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-background/80 to-background" />
-        </div>
-        
-        {/* Right side - Text content */}
-        <div className="relative z-10 w-full">
-          <div className="container px-6">
-            <div className="ml-auto max-w-2xl pl-16 py-20">
-              <div className="animate-fade-in">
-                <h2 className="text-3xl xl:text-4xl font-serif font-light tracking-wider mb-2 text-muted-foreground/90">
-                  ROLORA SPA
-                </h2>
-                <h3 className="text-xs xl:text-sm font-serif font-light tracking-widest mb-6 text-muted-foreground/60">
-                  PHILOSOPHY
-                </h3>
-                
-                <div className="flex justify-start mb-8">
-                  <div className="h-px w-16 bg-gradient-to-r from-transparent via-muted-foreground/40 to-transparent"></div>
-                </div>
-                
-                <div className="space-y-5 text-base leading-relaxed">
-                  <p className="text-muted-foreground/80 tracking-wide">
-                    At Rolora, we believe beauty is a journey of self-discovery and wellness. 
-                    Our approach transcends traditional treatments, creating a sanctuary where 
-                    science meets artistry, and luxury embraces authenticity.
-                  </p>
-                  <p className="text-muted-foreground/80 tracking-wide">
-                    Each experience is thoughtfully crafted to honor your unique essence, 
-                    combining cutting-edge techniques with timeless rituals. We celebrate 
-                    natural radiance, nurture inner balance, and cultivate lasting transformation.
-                  </p>
-                  <div className="pt-4 flex items-center gap-3">
-                    <div className="h-px w-12 bg-gradient-to-r from-transparent to-muted-foreground/30"></div>
-                    <p className="text-muted-foreground/90 font-light text-sm italic tracking-wider">
-                      Experience the art of refined beauty
-                    </p>
+  const transformations = [
+    {
+      beforeImage: facialRoom,
+      afterImage: glowingSkin,
+      caption: "Emma after Chemical Peel"
+    },
+    {
+      beforeImage: facialSculpting,
+      afterImage: glowingSkin,
+      caption: "Jennifer after The Really Good Facial™, Radio Frequency"
+    },
+    {
+      beforeImage: facialRoom,
+      afterImage: facialSculpting,
+      caption: "Thi Thi after The Really Good Facial™"
+    }
+  ];
+
+  return (
+    <section id="about" className="py-24 bg-background">
+      <div className="container px-6">
+        <div className="max-w-7xl mx-auto">
+          {/* Title */}
+          <h2 className="text-sm md:text-base font-medium uppercase tracking-wider mb-16 text-foreground/80">
+            REAL SKIN TRANSFORMATIONS
+          </h2>
+
+          {/* Before/After Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {transformations.map((item, index) => (
+              <div key={index} className="group">
+                {/* Before/After Split Image */}
+                <div className="relative overflow-hidden mb-4 aspect-[4/5]">
+                  <div className="absolute inset-0 flex">
+                    {/* Before Half */}
+                    <div className="relative w-1/2 overflow-hidden">
+                      <img 
+                        src={item.beforeImage}
+                        alt="Before treatment"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute top-4 left-4 bg-black/80 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                        BEFORE
+                      </div>
+                    </div>
+                    
+                    {/* After Half */}
+                    <div className="relative w-1/2 overflow-hidden">
+                      <img 
+                        src={item.afterImage}
+                        alt="After treatment"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                        AFTER
+                      </div>
+                    </div>
                   </div>
                 </div>
+                
+                {/* Caption */}
+                <p className="text-sm text-foreground/80">
+                  {item.caption}
+                </p>
               </div>
-            </div>
+            ))}
           </div>
+
+          {/* See More Button */}
+          <button
+            onClick={scrollToGallery}
+            className="bg-[#0000FF] hover:bg-[#0000DD] text-white font-bold uppercase tracking-wider px-12 py-4 transition-all duration-300"
+          >
+            SEE MORE RESULTS
+          </button>
         </div>
       </div>
     </section>
