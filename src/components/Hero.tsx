@@ -1,21 +1,17 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-glow.jpg";
-
 const Hero = () => {
   const scrollToBooking = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="relative min-h-[95vh] flex items-center overflow-hidden bg-background">
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+  return <section className="relative min-h-[95vh] flex items-center overflow-hidden bg-background">
+      <div className="absolute inset-0 z-0" style={{
+      backgroundImage: `url(${heroImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         <div className="absolute inset-0 bg-background/50" />
       </div>
       
@@ -31,31 +27,18 @@ const Hero = () => {
             GET SCULPTED.<br />GET GLOWING.<br />GET ROLORA.
           </h1>
           
-          <p className="text-xl md:text-2xl mb-12 max-w-2xl font-bold leading-relaxed uppercase tracking-wide">
-            BOOK NOW
-          </p>
+          
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
-              variant="cta"
-              size="lg" 
-              className="text-lg"
-              onClick={scrollToBooking}
-            >
+            <Button variant="cta" size="lg" className="text-lg" onClick={scrollToBooking}>
               BOOK YOUR APPOINTMENT
             </Button>
-            <Button 
-              variant="outline"
-              size="lg"
-              onClick={scrollToBooking}
-            >
+            <Button variant="outline" size="lg" onClick={scrollToBooking}>
               VIEW PRICING
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
