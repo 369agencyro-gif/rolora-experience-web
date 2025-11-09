@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import roloraLogo from "@/assets/rolora-logo.png";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -35,8 +36,12 @@ const Navigation = () => {
       <div className="container px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="text-xl font-bold tracking-tight">
-            Rolora
+          <Link to="/" className="flex items-center">
+            <img 
+              src={roloraLogo} 
+              alt="Rolora" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
