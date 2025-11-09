@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="container relative z-10 px-6 py-32">
         <div className="max-w-5xl">
           <div className="inline-block mb-6 px-4 py-2 bg-foreground text-background">
-            <p className="text-xs md:text-sm font-bold tracking-widest"> Newport Beach |4.9★ RATED</p>
+            <p className="text-xs md:text-sm font-bold tracking-widest"> Newport Beach | 4.9★ RATED</p>
           </div>
           
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-[0.9] tracking-tighter">GET SCULPTED.
