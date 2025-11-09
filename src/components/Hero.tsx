@@ -21,9 +21,13 @@ const Hero = () => {
             <p className="text-xs md:text-sm font-bold tracking-widest"> Newport Beach | 4.9★ RATED</p>
           </div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-[0.9] tracking-tighter">GET SCULPTED.
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-[0.9] tracking-tighter">GET SCULPTED. 
 
-GET GLOWING.<br />GET GLOWING.<br />GET ROLORA.
+
+GET
+GLOWING.
+
+          <br />GET GLOWING.<br />GET ROLORA.
           </h1>
           
           
