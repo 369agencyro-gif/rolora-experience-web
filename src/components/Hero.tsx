@@ -35,9 +35,7 @@ const Hero = () => {
             <Button variant="cta" size="lg" className="text-lg" onClick={scrollToBooking}>
               BOOK YOUR APPOINTMENT
             </Button>
-            <Button variant="outline" size="lg" onClick={scrollToBooking}>
-              VIEW PRICING
-            </Button>
+            
           </div>
         </div>
       </div>
