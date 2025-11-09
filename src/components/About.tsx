@@ -3,6 +3,7 @@ import glowingSkin from "@/assets/glowing-skin.jpg";
 import facialSculpting from "@/assets/facial-sculpting.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   const scrollToGallery = () => {
@@ -98,12 +99,13 @@ const About = () => {
           </Carousel>
 
           {/* See More Button */}
-          <button
+          <Button
             onClick={scrollToGallery}
-            className="bg-[#0000FF] hover:bg-[#0000DD] text-white font-bold uppercase tracking-wider px-12 py-4 transition-all duration-300"
+            size="lg"
+            className="px-12"
           >
             SEE MORE RESULTS
-          </button>
+          </Button>
         </div>
       </div>
     </section>
