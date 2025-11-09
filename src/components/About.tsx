@@ -1,6 +1,7 @@
 import facialRoom from "@/assets/facial-room.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
 import facialSculpting from "@/assets/facial-sculpting.jpg";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const About = () => {
   const scrollToGallery = () => {
@@ -37,46 +38,58 @@ const About = () => {
             REAL SKIN TRANSFORMATIONS
           </h2>
 
-          {/* Before/After Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {transformations.map((item, index) => (
-              <div key={index} className="group">
-                {/* Before/After Split Image */}
-                <div className="relative overflow-hidden mb-4 aspect-[4/5]">
-                  <div className="absolute inset-0 flex">
-                    {/* Before Half */}
-                    <div className="relative w-1/2 overflow-hidden">
-                      <img 
-                        src={item.beforeImage}
-                        alt="Before treatment"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute top-4 left-4 bg-black/80 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider">
-                        BEFORE
+          {/* Before/After Carousel */}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full mb-12"
+          >
+            <CarouselContent className="-ml-4">
+              {transformations.map((item, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="group">
+                    {/* Before/After Split Image */}
+                    <div className="relative overflow-hidden mb-4 aspect-[4/5]">
+                      <div className="absolute inset-0 flex">
+                        {/* Before Half */}
+                        <div className="relative w-1/2 overflow-hidden">
+                          <img 
+                            src={item.beforeImage}
+                            alt="Before treatment"
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute top-4 left-4 bg-black/80 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                            BEFORE
+                          </div>
+                        </div>
+                        
+                        {/* After Half */}
+                        <div className="relative w-1/2 overflow-hidden">
+                          <img 
+                            src={item.afterImage}
+                            alt="After treatment"
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                            AFTER
+                          </div>
+                        </div>
                       </div>
                     </div>
                     
-                    {/* After Half */}
-                    <div className="relative w-1/2 overflow-hidden">
-                      <img 
-                        src={item.afterImage}
-                        alt="After treatment"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute top-4 right-4 bg-black/80 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider">
-                        AFTER
-                      </div>
-                    </div>
+                    {/* Caption */}
+                    <p className="text-sm text-foreground/80">
+                      {item.caption}
+                    </p>
                   </div>
-                </div>
-                
-                {/* Caption */}
-                <p className="text-sm text-foreground/80">
-                  {item.caption}
-                </p>
-              </div>
-            ))}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
 
           {/* See More Button */}
           <button
