@@ -12,7 +12,7 @@ const Hero = () => {
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
-        <div className="absolute inset-0 bg-background/50" />
+        <div className="absolute inset-0 bg-background/30" />
       </div>
       
       <div className="container relative z-10 px-6 py-32">
