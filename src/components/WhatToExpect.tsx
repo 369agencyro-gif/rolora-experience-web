@@ -10,15 +10,6 @@ const WhatToExpect = () => {
   return <section className="py-24 bg-muted/20">
       <div className="container px-6">
       <div className="max-w-7xl mx-auto">
-          {/* Feature Image */}
-          <div className="mb-16">
-            <img 
-              src={diverseSkin} 
-              alt="Diverse women showing beautiful, glowing skin"
-              className="w-full h-auto rounded-lg object-cover"
-            />
-          </div>
-
           <h2 className="text-3xl md:text-5xl font-black mb-16 tracking-tight uppercase text-center">
             Here's what makes us stand out in Newport:
           </h2>
@@ -68,10 +59,22 @@ const WhatToExpect = () => {
             </div>
           </div>
 
-          <div className="text-center">
-            <Button size="lg" onClick={scrollToBooking} className="bg-foreground text-background hover:bg-foreground/90 uppercase font-bold tracking-wide px-10 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
-              BOOK YOUR APPOINTMENT
-            </Button>
+          {/* Image with Button Overlay */}
+          <div className="relative mt-16">
+            <img 
+              src={diverseSkin} 
+              alt="Diverse women showing beautiful, glowing skin"
+              className="w-full h-auto rounded-lg object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Button 
+                size="lg" 
+                onClick={scrollToBooking} 
+                className="bg-foreground text-background hover:bg-foreground/90 uppercase font-bold tracking-wide px-10 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
+              >
+                BOOK YOUR APPOINTMENT
+              </Button>
+            </div>
           </div>
         </div>
       </div>
