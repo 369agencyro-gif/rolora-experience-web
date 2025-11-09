@@ -1,8 +1,13 @@
+import { Button } from "@/components/ui/button";
 import facialRoom from "@/assets/glowing-face.jpg";
 import facialSculpting from "@/assets/facial-sculpting.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
 
 const StatsSection = () => {
+  const scrollToBooking = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const stats = [
     {
       value: "4/5",
@@ -30,6 +35,14 @@ const StatsSection = () => {
                 </p>
               </div>
             ))}
+            
+            <Button 
+              size="lg" 
+              onClick={scrollToBooking}
+              className="uppercase font-bold tracking-wide"
+            >
+              BOOK NOW
+            </Button>
           </div>
 
           {/* Treatment Images on Right - Much Larger */}
