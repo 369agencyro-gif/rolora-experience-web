@@ -63,8 +63,8 @@ const WhatToExpect = () => {
           <div className="relative mt-16">
             <img 
               src={diverseSkin} 
-              alt="Diverse women showing beautiful, glowing skin"
-              className="w-full h-auto rounded-lg object-cover"
+              alt="Woman with luxurious facial mask treatment showing glowing skin"
+              className="w-full h-auto min-h-[500px] md:min-h-0 rounded-lg object-cover"
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <Button 
