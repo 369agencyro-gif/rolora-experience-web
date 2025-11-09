@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import categoryFacial from "@/assets/category-facial.jpg";
-import categoryPremium from "@/assets/category-premium.jpg";
-import serviceFacial from "@/assets/service-facial.jpg";
-import serviceBody from "@/assets/service-body.jpg";
+import treatment1 from "@/assets/treatment-1.jpg";
+import treatment2 from "@/assets/treatment-2.jpg";
+import treatment3 from "@/assets/treatment-3.jpg";
+import treatment4 from "@/assets/treatment-4.jpg";
 
 const TreatmentExplorer = () => {
   const [activeIndex, setActiveIndex] = useState(2);
@@ -21,22 +21,22 @@ const TreatmentExplorer = () => {
 
   const exploreCards = [
     {
-      image: categoryFacial,
+      image: treatment1,
       title: "CHEMICAL PEEL",
       link: "/services/reset"
     },
     {
-      image: serviceFacial,
+      image: treatment2,
       title: "MICRONEEDLING",
       link: "/services/timeless-lift"
     },
     {
-      image: categoryPremium,
+      image: treatment3,
       title: "FACE FORM",
       link: "/services/sculpt"
     },
     {
-      image: serviceBody,
+      image: treatment4,
       title: "THE MINI",
       link: "/services/express-sculpt"
     }
