@@ -1,4 +1,4 @@
-import facialRoom from "@/assets/facial-room.jpg";
+import facialRoom from "@/assets/glowing-face.jpg";
 import facialSculpting from "@/assets/facial-sculpting.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
 
