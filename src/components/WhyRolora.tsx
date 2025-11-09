@@ -1,4 +1,4 @@
-import studioInterior from "@/assets/studio-interior.jpg";
+import studioInterior from "@/assets/why-rolora-mask.jpg";
 
 const WhyRolora = () => {
   return (
