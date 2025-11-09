@@ -69,7 +69,7 @@ const StatsSection = () => {
             <Button 
               size="lg" 
               onClick={scrollToBooking}
-              className="uppercase font-bold tracking-wide w-full"
+              className="uppercase font-bold tracking-wide w-full md:w-auto md:px-16"
             >
               BOOK NOW
             </Button>
