@@ -21,8 +21,8 @@ const Hero = () => {
             <p className="text-xs md:text-sm font-bold tracking-widest"> Newport Beach | 4.9★ RATED</p>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tighter">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-8">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-8 leading-tight tracking-tighter">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4">
               <div className="animate-slide-in-left">GET SCULPTED.</div>
               <div className="animate-slide-in-right md:order-3">GET GLOWING.</div>
               <div className="animate-fade-in md:order-2">GET ROLORA.</div>
