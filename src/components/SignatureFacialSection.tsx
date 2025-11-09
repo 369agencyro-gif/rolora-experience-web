@@ -55,7 +55,7 @@ const SignatureFacialSection = () => {
               <Button 
                 size="lg"
                 onClick={scrollToBooking}
-                className="bg-[#0000ff] hover:bg-[#0000dd] text-white uppercase font-bold tracking-wide px-8"
+                className="uppercase font-bold tracking-wide px-8"
               >
                 BOOK NOW
               </Button>
