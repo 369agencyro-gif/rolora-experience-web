@@ -32,15 +32,19 @@ const WhyRolora = () => {
             return (
               <div
                 key={index}
-                className="text-center p-8 border-2 border-border hover:border-foreground transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:scale-105"
+                className="group relative text-center p-8 border-2 border-border bg-background transition-all duration-500 hover:border-foreground hover:scale-105 hover:shadow-[0_10px_40px_rgba(0,0,0,0.25)] overflow-hidden cursor-pointer"
               >
-                <h3 className="text-2xl font-black mb-4 text-foreground uppercase tracking-wider">
-                  {feature.title}
-                </h3>
+                <div className="absolute inset-0 bg-gradient-to-br from-foreground/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-black mb-4 text-foreground uppercase tracking-wider transition-transform duration-500 group-hover:scale-110">
+                    {feature.title}
+                  </h3>
+                  
+                  <p className="text-base text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
             );
           })}

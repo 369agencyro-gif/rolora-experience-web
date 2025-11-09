@@ -20,7 +20,7 @@ const WhatToExpect = () => {
           <Button 
             size="lg"
             onClick={scrollToBooking}
-            className="bg-foreground text-background hover:bg-foreground/90 uppercase font-bold tracking-wide px-10"
+            className="bg-foreground text-background hover:bg-foreground/90 uppercase font-bold tracking-wide px-10 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
           >
             BOOK YOUR APPOINTMENT
           </Button>
