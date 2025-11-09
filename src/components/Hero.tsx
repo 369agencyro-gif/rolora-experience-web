@@ -28,11 +28,11 @@ const Hero = () => {
           </div>
           
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-[0.9] tracking-tighter">
-            GET REALLY<br />GOOD SKIN
+            GET SCULPTED.<br />GET GLOWING.<br />GET ROLORA.
           </h1>
           
-          <p className="text-xl md:text-2xl mb-12 max-w-2xl font-light leading-relaxed">
-            High-tech facials that target acne, wrinkles, dark spots & more.
+          <p className="text-xl md:text-2xl mb-12 max-w-2xl font-bold leading-relaxed uppercase tracking-wide">
+            BOOK NOW
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">

@@ -6,6 +6,7 @@ import SignatureFacialSection from "@/components/SignatureFacialSection";
 import TreatmentExplorer from "@/components/TreatmentExplorer";
 import SignatureExperience from "@/components/SignatureExperience";
 import WhyRolora from "@/components/WhyRolora";
+import WhatToExpect from "@/components/WhatToExpect";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Gallery from "@/components/Gallery";
@@ -57,6 +58,9 @@ const Index = () => {
         </AnimatedSection>
         <AnimatedSection delay={100}>
           <WhyRolora />
+        </AnimatedSection>
+        <AnimatedSection delay={100}>
+          <WhatToExpect />
         </AnimatedSection>
         <AnimatedSection delay={100}>
           <Gallery />
