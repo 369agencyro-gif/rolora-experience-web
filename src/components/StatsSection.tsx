@@ -35,42 +35,44 @@ const StatsSection = () => {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Treatment Images on Right - Much Larger */}
+          <div className="space-y-8">
+            <div className="grid grid-cols-2 gap-8">
+              <div className="group relative overflow-hidden rounded-sm cursor-pointer">
+                <img 
+                  src={facialRoom} 
+                  alt="Facial treatment in progress" 
+                  className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
+              </div>
+              <div className="group relative overflow-hidden rounded-sm cursor-pointer">
+                <img 
+                  src={facialSculpting} 
+                  alt="Second cleanse facial treatment" 
+                  className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
+              </div>
+              <div className="group relative overflow-hidden rounded-sm cursor-pointer col-span-2">
+                <img 
+                  src={glowingSkin} 
+                  alt="Glowing skin results" 
+                  className="w-full aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
+              </div>
+            </div>
             
             <Button 
               size="lg" 
               onClick={scrollToBooking}
-              className="uppercase font-bold tracking-wide"
+              className="uppercase font-bold tracking-wide w-full"
             >
               BOOK NOW
             </Button>
-          </div>
-
-          {/* Treatment Images on Right - Much Larger */}
-          <div className="grid grid-cols-2 gap-8">
-            <div className="group relative overflow-hidden rounded-sm cursor-pointer">
-              <img 
-                src={facialRoom} 
-                alt="Facial treatment in progress" 
-                className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
-            </div>
-            <div className="group relative overflow-hidden rounded-sm cursor-pointer">
-              <img 
-                src={facialSculpting} 
-                alt="Second cleanse facial treatment" 
-                className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
-            </div>
-            <div className="group relative overflow-hidden rounded-sm cursor-pointer col-span-2">
-              <img 
-                src={glowingSkin} 
-                alt="Glowing skin results" 
-                className="w-full aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
-            </div>
           </div>
         </div>
       </div>
