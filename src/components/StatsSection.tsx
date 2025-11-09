@@ -15,17 +15,17 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-32 bg-background">
       <div className="container px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-20 items-start">
           {/* Stats on Left - Takes 2 columns */}
-          <div className="lg:col-span-2 space-y-16">
+          <div className="lg:col-span-2 space-y-20">
             {stats.map((stat, idx) => (
-              <div key={idx} className="space-y-3">
-                <div className="text-7xl md:text-8xl font-bold tracking-tight leading-none">
+              <div key={idx} className="space-y-4">
+                <div className="text-8xl md:text-9xl font-bold tracking-tight leading-none">
                   {stat.value}
                 </div>
-                <p className="text-lg leading-relaxed text-foreground max-w-xs">
+                <p className="text-xl leading-relaxed text-foreground max-w-xs">
                   {stat.label}
                 </p>
               </div>
@@ -33,7 +33,7 @@ const StatsSection = () => {
           </div>
 
           {/* Treatment Images on Right - Takes 3 columns */}
-          <div className="lg:col-span-3 grid grid-cols-3 gap-3">
+          <div className="lg:col-span-3 grid grid-cols-3 gap-4">
             <img 
               src={facialRoom} 
               alt="Facial treatment in progress" 
