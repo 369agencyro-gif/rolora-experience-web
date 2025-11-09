@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
-
 const WhatToExpect = () => {
   const scrollToBooking = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="py-24 bg-muted/20">
+  return <section className="py-24 bg-muted/20">
       <div className="container px-6">
       <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black mb-16 tracking-tight uppercase text-center">
@@ -33,9 +32,7 @@ const WhatToExpect = () => {
             </div>
 
             <div className="p-8 bg-muted/30 border border-border/20 transition-all duration-300 hover:bg-muted/50 hover:border-border/40 hover:shadow-lg group">
-              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
-                ⚡ Modern Techniques Only
-              </h3>
+              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">MODERN TECHNIQUES ONLY</h3>
               <p className="text-base text-foreground/80 leading-relaxed">
                 High-performance formulas, advanced modalities, and sculpting methods that actually move the needle — not a basic "relaxing" facial you forget tomorrow.
               </p>
@@ -61,18 +58,12 @@ const WhatToExpect = () => {
           </div>
 
           <div className="text-center">
-            <Button 
-              size="lg"
-              onClick={scrollToBooking}
-              className="bg-foreground text-background hover:bg-foreground/90 uppercase font-bold tracking-wide px-10 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
-            >
+            <Button size="lg" onClick={scrollToBooking} className="bg-foreground text-background hover:bg-foreground/90 uppercase font-bold tracking-wide px-10 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
               BOOK YOUR APPOINTMENT
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhatToExpect;
