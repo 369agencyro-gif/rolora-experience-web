@@ -2,6 +2,7 @@ import facialRoom from "@/assets/facial-room.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
 import facialSculpting from "@/assets/facial-sculpting.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const About = () => {
   const scrollToGallery = () => {
@@ -44,6 +45,11 @@ const About = () => {
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+              }),
+            ]}
             className="w-full mb-12"
           >
             <CarouselContent className="-ml-4">
