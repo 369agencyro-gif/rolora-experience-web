@@ -84,7 +84,38 @@ const TreatmentExplorer = () => {
             EXPLORE OUR TREATMENTS
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Mobile Carousel */}
+          <div className="md:hidden">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {exploreCards.map((card, idx) => (
+                  <CarouselItem key={idx} className="pl-4 basis-[85%]">
+                    <Link to={card.link} className="group block">
+                      <div className="aspect-[3/4] mb-4 overflow-hidden">
+                        <img 
+                          src={card.image}
+                          alt={card.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                      <h3 className="text-lg font-bold uppercase tracking-wide">
+                        {card.title}
+                      </h3>
+                    </Link>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {exploreCards.map((card, idx) => (
               <Link
                 key={idx}
