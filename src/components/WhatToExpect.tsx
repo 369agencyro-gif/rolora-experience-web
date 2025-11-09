@@ -60,17 +60,17 @@ const WhatToExpect = () => {
           </div>
 
           {/* Image with Button Overlay */}
-          <div className="relative mt-16">
+          <div className="relative mt-16 w-full aspect-[4/3] rounded-lg overflow-hidden">
             <img 
               src={diverseSkin} 
               alt="Woman with luxurious facial mask treatment showing glowing skin"
-              className="w-full h-auto min-h-[500px] md:min-h-0 rounded-lg object-cover"
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center p-4">
               <Button 
                 size="lg" 
                 onClick={scrollToBooking} 
-                className="bg-foreground text-background hover:bg-foreground/90 uppercase font-bold tracking-wide px-10 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
+                className="bg-foreground text-background hover:bg-foreground/90 uppercase font-bold tracking-wide px-6 md:px-10 text-xs md:text-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
               >
                 BOOK YOUR APPOINTMENT
               </Button>
