@@ -14,28 +14,27 @@ import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-
-const AnimatedSection = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.15 });
-  
-  return (
-    <div
-      ref={ref}
-      className={`transition-all duration-1000 ease-out ${
-        isVisible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-12'
-      }`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
+const AnimatedSection = ({
+  children,
+  delay = 0
+}: {
+  children: React.ReactNode;
+  delay?: number;
+}) => {
+  const {
+    ref,
+    isVisible
+  } = useScrollAnimation({
+    threshold: 0.15
+  });
+  return <div ref={ref} className={`transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{
+    transitionDelay: `${delay}ms`
+  }}>
       {children}
-    </div>
-  );
+    </div>;
 };
-
 const Index = () => {
-  return (
-    <>
+  return <>
       <AnnouncementBar />
       <Navigation />
       <main className="min-h-screen">
@@ -54,7 +53,7 @@ const Index = () => {
           <About />
         </AnimatedSection>
         <AnimatedSection delay={100}>
-          <Services />
+          
         </AnimatedSection>
         <AnimatedSection delay={100}>
           <WhyRolora />
@@ -73,8 +72,6 @@ const Index = () => {
         </AnimatedSection>
         <Footer />
       </main>
-    </>
-  );
+    </>;
 };
-
 export default Index;
