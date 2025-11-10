@@ -59,35 +59,33 @@ const WhatToExpect = () => {
             </div>
           </div>
 
-          {/* Content Card and Image Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16">
-            {/* Content Card on Left */}
-            <div className="bg-background/95 backdrop-blur-sm p-12 rounded-sm shadow-lg border border-border/50 max-w-xl">
-              <p className="text-sm uppercase tracking-wider mb-6 text-muted-foreground">
+          {/* Image with Overlaid Content Card */}
+          <div className="relative mt-16 w-full h-[600px] rounded-sm overflow-hidden">
+            {/* Background Image */}
+            <img 
+              src={diverseSkin} 
+              alt="Happy clients with great skin" 
+              className="w-full h-full object-cover"
+            />
+            
+            {/* Overlaid Content Card */}
+            <div className="absolute left-8 md:left-16 top-1/2 -translate-y-1/2 bg-background/95 backdrop-blur-sm p-8 md:p-12 rounded-sm shadow-2xl border border-border/50 max-w-md md:max-w-lg">
+              <p className="text-xs md:text-sm uppercase tracking-wider mb-4 md:mb-6 text-muted-foreground">
                 NOT YOUR AVERAGE FACIAL STUDIO
               </p>
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-8 leading-tight">
                 WHERE GREAT SKIN<br />MEETS GOOD VIBES
               </h2>
-              <p className="text-lg leading-relaxed mb-8 text-foreground/80">
+              <p className="text-base md:text-lg leading-relaxed mb-6 md:mb-8 text-foreground/80">
                 Our open-concept studios in Texas, Arizona, Virginia, and D.C. bring your vibe up and help your skin thrive.
               </p>
               <Button 
                 size="lg"
                 onClick={scrollToBooking}
-                className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90"
+                className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90 w-full md:w-auto"
               >
                 SEE LOCATIONS
               </Button>
-            </div>
-
-            {/* Large Image on Right */}
-            <div className="relative">
-              <img 
-                src={diverseSkin} 
-                alt="Happy clients with great skin" 
-                className="w-full h-[600px] object-cover rounded-sm shadow-2xl"
-              />
             </div>
           </div>
         </div>
