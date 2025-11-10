@@ -54,7 +54,8 @@ const Membership = () => {
             
             <Button 
               onClick={scrollToBooking}
-              className="bg-[#0000FF] hover:bg-[#0000DD] text-white font-bold uppercase tracking-wide px-8 py-6 text-base mb-4"
+              variant="cta"
+              size="lg"
             >
               BOOK NOW
             </Button>
