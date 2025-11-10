@@ -59,20 +59,29 @@ const WhatToExpect = () => {
             </div>
           </div>
 
-          {/* Image with Button Overlay */}
-          <div className="relative mt-16 w-full aspect-[4/3] rounded-lg overflow-hidden">
+          {/* Image with Card Overlay */}
+          <div className="relative mt-16 w-full h-[500px] md:h-[600px] overflow-hidden">
             <img 
               src={diverseSkin} 
               alt="Woman with luxurious facial mask treatment showing glowing skin"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 flex items-center justify-center p-4">
+            <div className="absolute left-0 top-0 bg-background p-8 md:p-10 max-w-md md:max-w-lg">
+              <p className="text-xs uppercase tracking-widest mb-3 text-foreground/60 font-medium">
+                NOT YOUR AVERAGE FACIAL STUDIO
+              </p>
+              <h3 className="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tight leading-none">
+                Where Great Skin Meets Good Vibes
+              </h3>
+              <p className="text-base text-foreground/80 mb-6 leading-relaxed">
+                Our open-concept studios in Newport bring your vibe up and help your skin thrive.
+              </p>
               <Button 
-                size="lg" 
-                onClick={scrollToBooking} 
-                className="bg-foreground text-background hover:bg-foreground/90 uppercase font-bold tracking-wide px-6 md:px-10 text-xs md:text-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
+                size="lg"
+                onClick={scrollToBooking}
+                className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90 px-8"
               >
-                BOOK YOUR APPOINTMENT
+                BOOK NOW
               </Button>
             </div>
           </div>
