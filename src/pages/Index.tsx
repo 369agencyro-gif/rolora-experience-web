@@ -59,9 +59,6 @@ const Index = () => {
           <WhatToExpect />
         </AnimatedSection>
         <AnimatedSection delay={100}>
-          
-        </AnimatedSection>
-        <AnimatedSection delay={100}>
           <Testimonials />
         </AnimatedSection>
         <AnimatedSection delay={100}>

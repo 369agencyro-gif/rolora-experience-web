@@ -1,97 +1,91 @@
-import { useState } from "react";
 import { Star } from "lucide-react";
-import studioImage from "@/assets/studio-interior.jpg";
+import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    name: "Sarah M.",
-    role: "Regular Client",
-    text: "The Rolora experience is truly transformative. From the moment I walked in, I felt pampered and cared for. The facial sculpting treatment left my skin glowing for weeks. The attention to detail and expertise is unmatched.",
+    name: "Geetu",
+    treatment: "after The Really Good Facial™, Microdermabrasion",
+    text: "They helped me build a plan for fading my dark spots over time. It finally feels like a difference!",
     rating: 5,
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
   },
   {
-    name: "Jessica L.",
-    role: "First-Time Visitor",
-    text: "I've been to many spas, but Rolora stands out. The personalized approach and luxurious atmosphere make every visit special. My skin has never looked better, and I always leave feeling refreshed and rejuvenated.",
+    name: "Jaycyll",
+    treatment: "after The Really Good Facial™",
+    text: "Every treatment feels like a reset for my dry, dull skin. My esthetician knows exactly what I need.",
     rating: 5,
+    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=400&fit=crop"
   },
   {
-    name: "Emily R.",
-    role: "Loyal Customer",
-    text: "Rolora has become my sanctuary. The treatments are not just about skincare—they're a holistic wellness experience. The staff is incredibly knowledgeable and the results speak for themselves.",
+    name: "Sarah",
+    treatment: "after The Really Good Facial™",
+    text: "The personalized approach and luxurious atmosphere make every visit special. My skin has never looked better.",
     rating: 5,
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop"
+  },
+  {
+    name: "Paola",
+    treatment: "after The Really Good Facial™",
+    text: "My skin used to feel tight and flaky no matter what I used. Now it feels balanced and glowy.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop"
   },
 ];
 
 const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   return (
-    <section className="relative py-32 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img 
-          src={studioImage}
-          alt="Rolora Studio Interior"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70" />
-      </div>
-
-      <div className="container px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <span className="text-white/80 uppercase tracking-[0.3em] text-xs font-semibold mb-4 block">
-            Testimonials
-          </span>
-          
-          <h2 className="text-4xl md:text-5xl font-display font-semibold mb-12">
-            What Our Clients Say
-          </h2>
-
-          {/* Testimonial Content */}
-          <div className="mb-12 animate-fade-in" key={currentIndex}>
-            <p className="text-lg md:text-xl leading-relaxed mb-8 text-white/90">
-              {testimonials[currentIndex].text}
-            </p>
-
-            {/* Stars */}
-            <div className="flex justify-center gap-1 mb-6">
-              {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-              ))}
-            </div>
-
-            {/* Client Info */}
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-accent/20 border-2 border-accent/50 flex items-center justify-center mb-3">
-                <span className="text-2xl font-display font-semibold text-accent">
-                  {testimonials[currentIndex].name.charAt(0)}
-                </span>
-              </div>
-              <h4 className="font-display text-xl font-semibold uppercase tracking-wider mb-1">
-                {testimonials[currentIndex].name}
-              </h4>
-              <p className="text-sm text-white/70">
-                {testimonials[currentIndex].role}
-              </p>
-            </div>
+    <section className="py-20 bg-background">
+      <div className="container px-6">
+        {/* Rating Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <span className="text-6xl font-black">4.9</span>
           </div>
-
-          {/* Dots Navigation */}
-          <div className="flex justify-center gap-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${
-                  index === currentIndex
-                    ? "bg-accent w-8"
-                    : "bg-white/40 hover:bg-white/60"
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
+          <div className="flex justify-center gap-1 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 fill-foreground text-foreground" />
             ))}
           </div>
+          <p className="text-sm uppercase tracking-widest font-semibold">
+            110,000+ FACIALS & COUNTING
+          </p>
+        </div>
+
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="overflow-hidden border-none shadow-none">
+              <CardContent className="p-0">
+                {/* Customer Image */}
+                <div className="aspect-[3/4] overflow-hidden mb-4">
+                  <img
+                    src={testimonial.image}
+                    alt={`${testimonial.name} after treatment`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* Customer Info */}
+                <div className="space-y-3">
+                  <p className="text-sm font-medium">
+                    {testimonial.name} {testimonial.treatment}
+                  </p>
+                  
+                  {/* Stars */}
+                  <div className="flex gap-0.5">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-foreground text-foreground" />
+                    ))}
+                  </div>
+                  
+                  {/* Quote */}
+                  <p className="text-sm leading-relaxed text-foreground/80">
+                    "{testimonial.text}"
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
