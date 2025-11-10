@@ -59,32 +59,20 @@ const WhatToExpect = () => {
             </div>
           </div>
 
-          {/* Image with Overlaid Content Card */}
-          <div className="relative mt-16 w-full h-[600px] rounded-sm overflow-hidden">
-            {/* Background Image */}
+          {/* Image with Button Overlay */}
+          <div className="relative mt-16 w-full aspect-[4/3] rounded-lg overflow-hidden">
             <img 
               src={diverseSkin} 
-              alt="Happy clients with great skin" 
+              alt="Woman with luxurious facial mask treatment showing glowing skin"
               className="w-full h-full object-cover"
             />
-            
-            {/* Overlaid Content Card - Top Left Corner */}
-            <div className="absolute left-6 md:left-12 top-6 md:top-12 bg-background/95 backdrop-blur-sm p-6 md:p-8 rounded-sm shadow-2xl border border-border/50 max-w-xs md:max-w-md">
-              <p className="text-xs uppercase tracking-wider mb-3 md:mb-4 text-muted-foreground">
-                NOT YOUR AVERAGE FACIAL STUDIO
-              </p>
-              <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 leading-tight">
-                WHERE GREAT SKIN<br />MEETS GOOD VIBES
-              </h2>
-              <p className="text-sm md:text-base leading-relaxed mb-4 md:mb-6 text-foreground/80">
-                Our open-concept studios in Texas, Arizona, Virginia, and D.C. bring your vibe up and help your skin thrive.
-              </p>
+            <div className="absolute inset-0 flex items-center justify-center p-4">
               <Button 
-                size="default"
-                onClick={scrollToBooking}
-                className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90 w-full"
+                size="lg" 
+                onClick={scrollToBooking} 
+                className="bg-foreground text-background hover:bg-foreground/90 uppercase font-bold tracking-wide px-6 md:px-10 text-xs md:text-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
               >
-                BOOK NOW
+                BOOK YOUR APPOINTMENT
               </Button>
             </div>
           </div>
