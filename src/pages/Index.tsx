@@ -66,7 +66,7 @@ const Index = () => {
           <Membership />
         </AnimatedSection>
         <AnimatedSection delay={100}>
-          <Contact />
+          
         </AnimatedSection>
         <Footer />
       </main>
