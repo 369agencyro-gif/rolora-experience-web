@@ -37,9 +37,9 @@ const StatsSection = () => {
             ))}
           </div>
 
-          {/* Treatment Images on Right - Much Larger */}
+          {/* Treatment Images on Right - Three in a Row */}
           <div className="space-y-8">
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-3 gap-6">
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
                 <img 
                   src={facialRoom} 
@@ -56,11 +56,11 @@ const StatsSection = () => {
                 />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
               </div>
-              <div className="group relative overflow-hidden rounded-sm cursor-pointer col-span-2">
+              <div className="group relative overflow-hidden rounded-sm cursor-pointer">
                 <img 
                   src={glowingSkin} 
                   alt="Glowing skin results" 
-                  className="w-full aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
               </div>
