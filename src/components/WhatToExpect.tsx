@@ -59,21 +59,35 @@ const WhatToExpect = () => {
             </div>
           </div>
 
-          {/* Image with Button Overlay */}
-          <div className="relative mt-16 w-full aspect-[4/3] rounded-lg overflow-hidden">
-            <img 
-              src={diverseSkin} 
-              alt="Woman with luxurious facial mask treatment showing glowing skin"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 flex items-center justify-center p-4">
+          {/* Content Card and Image Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16">
+            {/* Content Card on Left */}
+            <div className="bg-background/95 backdrop-blur-sm p-12 rounded-sm shadow-lg border border-border/50 max-w-xl">
+              <p className="text-sm uppercase tracking-wider mb-6 text-muted-foreground">
+                NOT YOUR AVERAGE FACIAL STUDIO
+              </p>
+              <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+                WHERE GREAT SKIN<br />MEETS GOOD VIBES
+              </h2>
+              <p className="text-lg leading-relaxed mb-8 text-foreground/80">
+                Our open-concept studios in Texas, Arizona, Virginia, and D.C. bring your vibe up and help your skin thrive.
+              </p>
               <Button 
-                size="lg" 
-                onClick={scrollToBooking} 
-                className="bg-foreground text-background hover:bg-foreground/90 uppercase font-bold tracking-wide px-6 md:px-10 text-xs md:text-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
+                size="lg"
+                onClick={scrollToBooking}
+                className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90"
               >
-                BOOK YOUR APPOINTMENT
+                SEE LOCATIONS
               </Button>
+            </div>
+
+            {/* Large Image on Right */}
+            <div className="relative">
+              <img 
+                src={diverseSkin} 
+                alt="Happy clients with great skin" 
+                className="w-full h-[600px] object-cover rounded-sm shadow-2xl"
+              />
             </div>
           </div>
         </div>
