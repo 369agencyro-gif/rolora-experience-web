@@ -68,23 +68,23 @@ const WhatToExpect = () => {
               className="w-full h-full object-cover"
             />
             
-            {/* Overlaid Content Card */}
-            <div className="absolute left-8 md:left-16 top-1/2 -translate-y-1/2 bg-background/95 backdrop-blur-sm p-8 md:p-12 rounded-sm shadow-2xl border border-border/50 max-w-md md:max-w-lg">
-              <p className="text-xs md:text-sm uppercase tracking-wider mb-4 md:mb-6 text-muted-foreground">
+            {/* Overlaid Content Card - Top Left Corner */}
+            <div className="absolute left-6 md:left-12 top-6 md:top-12 bg-background/95 backdrop-blur-sm p-6 md:p-8 rounded-sm shadow-2xl border border-border/50 max-w-xs md:max-w-md">
+              <p className="text-xs uppercase tracking-wider mb-3 md:mb-4 text-muted-foreground">
                 NOT YOUR AVERAGE FACIAL STUDIO
               </p>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-8 leading-tight">
+              <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 leading-tight">
                 WHERE GREAT SKIN<br />MEETS GOOD VIBES
               </h2>
-              <p className="text-base md:text-lg leading-relaxed mb-6 md:mb-8 text-foreground/80">
+              <p className="text-sm md:text-base leading-relaxed mb-4 md:mb-6 text-foreground/80">
                 Our open-concept studios in Texas, Arizona, Virginia, and D.C. bring your vibe up and help your skin thrive.
               </p>
               <Button 
-                size="lg"
+                size="default"
                 onClick={scrollToBooking}
-                className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90 w-full md:w-auto"
+                className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90 w-full"
               >
-                SEE LOCATIONS
+                BOOK NOW
               </Button>
             </div>
           </div>
