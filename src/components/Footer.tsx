@@ -6,15 +6,15 @@ const Footer = () => {
           {/* Left side - Links */}
           <div className="flex flex-wrap gap-8 md:gap-16 text-center md:text-left">
             <div>
-              <h4 className="font-bold uppercase tracking-wide mb-2 text-sm">SUPPORT</h4>
+              <h4 className="font-bold uppercase tracking-wide mb-2 text-sm text-white">SUPPORT</h4>
               <a href="/#contact" className="text-sm hover:underline block">FAQ</a>
             </div>
             <div>
-              <h4 className="font-bold uppercase tracking-wide mb-2 text-sm">ABOUT</h4>
+              <h4 className="font-bold uppercase tracking-wide mb-2 text-sm text-white">ABOUT</h4>
               <a href="/#about" className="text-sm hover:underline block">About Us</a>
             </div>
             <div>
-              <h4 className="font-bold uppercase tracking-wide mb-2 text-sm">SOCIAL</h4>
+              <h4 className="font-bold uppercase tracking-wide mb-2 text-sm text-white">SOCIAL</h4>
               <a href="#" className="text-sm hover:underline block">TikTok</a>
             </div>
           </div>
