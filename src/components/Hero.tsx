@@ -7,12 +7,13 @@ const Hero = () => {
     });
   };
   return <section className="relative min-h-[95vh] flex items-center overflow-hidden bg-background">
-      <div className="absolute inset-0 z-0" style={{
-      backgroundImage: `url(${heroImage})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
-        <div className="absolute inset-0 bg-background/30" />
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroImage} 
+          alt="Glowing skin treatment" 
+          className="w-full h-full object-cover object-center md:object-center"
+        />
+        <div className="absolute inset-0 bg-background/20" />
       </div>
       
       <div className="container relative z-10 px-6 py-32">
