@@ -47,7 +47,14 @@ const BookingButton = ({ children, variant = "cta", size = "lg", className = "",
         size === "icon" ? "h-12 w-12" :
         "h-12 px-6 py-3"
       } ${className}`}
-      style={{ textDecoration: 'none', display: 'inline-flex' }}
+      style={{ 
+        textDecoration: 'none', 
+        display: 'inline-flex',
+        background: 'hsl(var(--primary))',
+        color: 'hsl(var(--primary-foreground))',
+        border: '0px',
+        borderRadius: '0rem'
+      }}
       {...props}
     >
       {children}
