@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-glow.jpg";
+import { useBookingModal } from "@/hooks/use-booking-modal";
+
 const Hero = () => {
-  const scrollToBooking = () => {
-    document.getElementById('contact')?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
+  const { openBooking } = useBookingModal();
   return <section className="relative min-h-[95vh] flex items-center overflow-hidden bg-background">
       <div className="absolute inset-0 z-0">
         <img 
@@ -33,7 +31,7 @@ const Hero = () => {
           
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="cta" size="lg" className="text-lg" onClick={scrollToBooking}>
+            <Button variant="cta" size="lg" className="text-lg" onClick={openBooking}>
               BOOK YOUR APPOINTMENT
             </Button>
             
