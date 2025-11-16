@@ -1,5 +1,5 @@
 import ServiceLayout from "@/components/ServiceLayout";
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import massageImage from "@/assets/service-massage.jpg";
 import facialSculpting from "@/assets/facial-sculpting.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
@@ -268,13 +268,12 @@ const RoloraSculpt = () => {
               <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
                 Reveal your most defined, contoured features with Rolora Sculpt. Your snatched transformation starts here.
               </p>
-              <Button 
+              <BookingButton 
                 size="lg" 
                 className="px-12 py-6 text-lg shadow-elegant"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Book Rolora Sculpt
-              </Button>
+              </BookingButton>
             </div>
           </div>
         </div>

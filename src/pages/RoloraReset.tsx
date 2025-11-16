@@ -1,5 +1,5 @@
 import ServiceLayout from "@/components/ServiceLayout";
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import bodyImage from "@/assets/service-body.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
 import skincareProducts from "@/assets/skincare-products.jpg";
@@ -301,13 +301,12 @@ const RoloraReset = () => {
                   Transform dull, uneven skin into a clear, radiant canvas. Your reset journey begins now.
                 </p>
                 <div className="pt-6">
-                  <Button 
+                  <BookingButton 
                     size="lg" 
                     className="px-16 py-8 text-xl shadow-elegant hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Book Rolora Reset
-                  </Button>
+                  </BookingButton>
                 </div>
                 <p className="text-sm text-muted-foreground/60 italic">
                   Professional skin resurfacing with remarkable results

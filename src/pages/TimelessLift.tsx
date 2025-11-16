@@ -1,5 +1,5 @@
 import ServiceLayout from "@/components/ServiceLayout";
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import facialImage from "@/assets/service-facial.jpg";
 import facialSculpting from "@/assets/facial-sculpting.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
@@ -300,13 +300,12 @@ const TimelessLift = () => {
                   Experience the power of advanced anti-aging technology. Lift, firm, and turn back time naturally.
                 </p>
                 <div className="pt-6">
-                  <Button 
+                  <BookingButton 
                     size="lg" 
                     className="px-16 py-8 text-xl shadow-elegant hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Book Timeless Lift
-                  </Button>
+                  </BookingButton>
                 </div>
                 <p className="text-sm text-muted-foreground/60 italic">
                   Transform your skin with cutting-edge science
