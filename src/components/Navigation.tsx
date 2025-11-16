@@ -3,10 +3,24 @@ import { Link } from "react-router-dom";
 import BookingButton from "@/components/BookingButton";
 import { Menu, X, ChevronDown } from "lucide-react";
 import roloraLogo from "@/assets/rolora-logo.png";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+
+  const offers = [
+    { name: "New Client Special", path: "/special-offer", description: "First-time facial offer" },
+    { name: "Membership Plans", path: "/#membership", description: "Save on regular treatments" },
+    { name: "Gift Cards", path: "/#contact", description: "Share the glow" },
+  ];
 
   const facialServices = [
     { name: "Rolora Facial Glow™", path: "/services/facial-glow", description: "Your signature glow" },
@@ -45,17 +59,83 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            <Link to="/" className="text-sm uppercase tracking-wide hover:opacity-70 transition-opacity">
-              Locations
-            </Link>
-            
-            <button 
-              className="text-sm uppercase tracking-wide hover:opacity-70 transition-opacity"
-              onClick={() => scrollToSection('services')}
-            >
-              Treatments
-            </button>
+          <div className="hidden lg:flex items-center gap-4">
+            <NavigationMenu>
+              <NavigationMenuList>
+                {/* Offers Dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm uppercase tracking-wide">
+                    Offers
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4">
+                      {offers.map((offer) => (
+                        <li key={offer.name}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              to={offer.path}
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            >
+                              <div className="text-sm font-medium leading-none">{offer.name}</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                {offer.description}
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                {/* Treatments Dropdown */}
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm uppercase tracking-wide">
+                    Treatments
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[500px] gap-3 p-4 md:grid-cols-2">
+                      <div className="space-y-3">
+                        <p className="text-sm font-semibold text-muted-foreground px-3">Facial Services</p>
+                        {facialServices.map((service) => (
+                          <li key={service.name}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                to={service.path}
+                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              >
+                                <div className="text-sm font-medium leading-none">{service.name}</div>
+                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                  {service.description}
+                                </p>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </div>
+                      <div className="space-y-3">
+                        <p className="text-sm font-semibold text-muted-foreground px-3">Additional</p>
+                        {additionalServices.map((service) => (
+                          <li key={service.name}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                to={service.path}
+                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              >
+                                <div className="text-sm font-medium leading-none">{service.name}</div>
+                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                  {service.description}
+                                </p>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </div>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
             
             <Link 
               to="/gallery"
@@ -110,6 +190,22 @@ const Navigation = () => {
               >
                 About
               </Link>
+              
+              <div className="space-y-1.5">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">
+                  Offers
+                </p>
+                {offers.map((offer, idx) => (
+                  <Link
+                    key={idx}
+                    to={offer.path}
+                    className="block pl-3 py-1 text-xs text-foreground hover:text-accent transition-smooth"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {offer.name}
+                  </Link>
+                ))}
+              </div>
               
               <div className="space-y-1.5">
                 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">
