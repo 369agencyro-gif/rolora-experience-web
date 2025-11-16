@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import studioInterior from "@/assets/studio-interior.jpg";
-import { useBookingModal } from "@/hooks/use-booking-modal";
 
 const Membership = () => {
-  const { openBooking } = useBookingModal();
 
   return (
     <section className="py-0 bg-background">
@@ -50,13 +48,12 @@ const Membership = () => {
               </li>
             </ul>
             
-            <Button 
-              onClick={openBooking}
+            <BookingButton 
               variant="cta"
               size="lg"
             >
               BOOK NOW
-            </Button>
+            </BookingButton>
             
             <p className="text-sm text-foreground/60">
               Ask about membership during your next visit.
