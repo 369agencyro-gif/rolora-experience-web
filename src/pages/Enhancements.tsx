@@ -1,5 +1,5 @@
 import ServiceLayout from "@/components/ServiceLayout";
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import aboutImage from "@/assets/about-image.jpg";
 import Contact from "@/components/Contact";
 
@@ -115,13 +115,12 @@ const Enhancements = () => {
             </div>
 
             <div className="text-center py-12 animate-fade-in">
-              <Button 
+              <BookingButton 
                 size="lg" 
                 className="px-8 py-6 md:px-16 md:py-7 text-base md:text-lg shadow-elegant hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full max-w-xs md:max-w-none md:w-auto"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Book with Enhancements
-              </Button>
+              </BookingButton>
             </div>
           </div>
         </div>

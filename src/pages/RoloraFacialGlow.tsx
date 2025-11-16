@@ -1,5 +1,5 @@
 import ServiceLayout from "@/components/ServiceLayout";
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import facialImage from "@/assets/service-facial.jpg";
 import facialRoom from "@/assets/facial-room.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
@@ -303,13 +303,12 @@ const RoloraFacialGlow = () => {
                   Discover why Rolora Facial Glow™ is our most beloved treatment. Your radiant transformation awaits.
                 </p>
                 <div className="pt-6">
-                  <Button 
+                  <BookingButton 
                     size="lg" 
                     className="px-16 py-8 text-xl shadow-elegant hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Book Your Facial Glow
-                  </Button>
+                  </BookingButton>
                 </div>
                 <p className="text-sm text-muted-foreground/60 italic">
                   Limited availability — Reserve your exclusive session today

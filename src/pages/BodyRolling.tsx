@@ -1,5 +1,5 @@
 import ServiceLayout from "@/components/ServiceLayout";
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import bodyImage from "@/assets/service-body.jpg";
 import Contact from "@/components/Contact";
 
@@ -133,13 +133,12 @@ const BodyRolling = () => {
             </div>
 
             <div className="text-center py-12 animate-fade-in">
-              <Button 
+              <BookingButton 
                 size="lg" 
                 className="px-16 py-7 text-lg shadow-elegant hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Book Rolora Flow
-              </Button>
+              </BookingButton>
             </div>
           </div>
         </div>
