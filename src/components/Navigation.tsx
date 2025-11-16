@@ -66,7 +66,7 @@ const Navigation = () => {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm uppercase tracking-wide relative">
                     Offers
-                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full"></span>
+                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse"></span>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4">
@@ -186,7 +186,7 @@ const Navigation = () => {
               <div className="space-y-1.5">
                 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2 flex items-center gap-2">
                   Offers
-                  <span className="w-2 h-2 bg-accent rounded-full"></span>
+                  <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
                 </p>
                 {offers.map((offer, idx) => (
                   <Link
