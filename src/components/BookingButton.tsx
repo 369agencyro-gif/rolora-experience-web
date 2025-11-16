@@ -43,7 +43,7 @@ const BookingButton = ({ children, variant = "cta", size = "lg", className = "",
         "bg-primary text-primary-foreground hover:bg-primary/80 shadow-sm hover:shadow-md"
       } ${
         size === "lg" ? "h-14 px-10 py-4 text-base" :
-        size === "sm" ? "h-10 px-4 py-2" :
+        size === "sm" ? "h-10 px-8 py-2" :
         size === "icon" ? "h-12 w-12" :
         "h-12 px-6 py-3"
       } ${className}`}
