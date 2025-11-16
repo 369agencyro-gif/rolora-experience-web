@@ -28,10 +28,10 @@ const Navigation = () => {
     { name: "Timeless Lift", path: "/services/timeless-lift", description: "Lift. Firm. Defy time." },
     { name: "Rolora Reset", path: "/services/reset", description: "Peel. Reveal. Reset." },
     { name: "Express Sculpt", path: "/services/express-sculpt", description: "Glow + go" },
+    { name: "Enhancements", path: "/services/enhancements", description: "Perfect your glow" },
   ];
 
-  const additionalServices = [
-    { name: "Enhancements", path: "/services/enhancements", description: "Perfect your glow" },
+  const bodyRollers = [
     { name: "Rolora Flow™", path: "/services/body-rolling", description: "Body rolling therapy" },
   ];
 
@@ -64,8 +64,9 @@ const Navigation = () => {
               <NavigationMenuList>
                 {/* Offers Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm uppercase tracking-wide">
+                  <NavigationMenuTrigger className="text-sm uppercase tracking-wide relative">
                     Offers
+                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full"></span>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4">
@@ -114,8 +115,8 @@ const Navigation = () => {
                         ))}
                       </div>
                       <div className="space-y-3">
-                        <p className="text-sm font-semibold text-muted-foreground px-3">Additional</p>
-                        {additionalServices.map((service) => (
+                        <p className="text-sm font-semibold text-muted-foreground px-3">Body Rollers</p>
+                        {bodyRollers.map((service) => (
                           <li key={service.name}>
                             <NavigationMenuLink asChild>
                               <Link
@@ -175,15 +176,6 @@ const Navigation = () => {
               </Link>
               
               <Link 
-                to="/special-offer"
-                className="block py-2 text-sm text-accent font-semibold hover:text-accent/80 transition-smooth flex items-center gap-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Special Offer
-                <span className="text-xs bg-accent text-white px-2 py-0.5 rounded-full">New</span>
-              </Link>
-              
-              <Link 
                 to="/about"
                 className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth"
                 onClick={() => setMobileMenuOpen(false)}
@@ -192,8 +184,9 @@ const Navigation = () => {
               </Link>
               
               <div className="space-y-1.5">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2 flex items-center gap-2">
                   Offers
+                  <span className="w-2 h-2 bg-accent rounded-full"></span>
                 </p>
                 {offers.map((offer, idx) => (
                   <Link
@@ -225,9 +218,9 @@ const Navigation = () => {
 
               <div className="space-y-1.5">
                 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">
-                  Additional Services
+                  Body Rollers
                 </p>
-                {additionalServices.map((service, idx) => (
+                {bodyRollers.map((service, idx) => (
                   <Link
                     key={idx}
                     to={service.path}
