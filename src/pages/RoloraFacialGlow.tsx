@@ -3,318 +3,254 @@ import BookingButton from "@/components/BookingButton";
 import facialImage from "@/assets/service-facial.jpg";
 import facialRoom from "@/assets/facial-room.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
+import facialSculpting from "@/assets/facial-sculpting.jpg";
 import skincareProducts from "@/assets/skincare-products.jpg";
+import diverseSkin from "@/assets/diverse-skin.jpg";
 import Contact from "@/components/Contact";
-import { Sparkles, Clock, Users, Award } from "lucide-react";
+import { Star } from "lucide-react";
 
 const RoloraFacialGlow = () => {
   return (
     <ServiceLayout>
-      {/* Hero Section with Overlay */}
-      <section className="relative">
-        <div className="relative h-[70vh] min-h-[600px] overflow-hidden">
-          <img 
-            src={facialImage} 
-            alt="Rolora Facial Glow luxury treatment"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
-          
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center px-6 animate-fade-in">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold mb-12 tracking-tight">
-                Rolora Facial Glow™
-              </h1>
-              <div className="relative inline-flex flex-col items-center mb-8 py-6 px-4 overflow-visible isolate z-10">
-                <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full"></div>
-                <div className="relative px-12 py-5 rounded-2xl bg-card/10 backdrop-blur-md border-2 border-accent/30 shadow-2xl overflow-visible">
-                  <p className="text-5xl md:text-6xl leading-[1.4] pt-2 pb-1 whitespace-nowrap overflow-visible font-display font-bold bg-gradient-to-br from-accent via-accent to-accent/60 bg-clip-text text-transparent tracking-tight">$235</p>
+      {/* Hero Section - Two Column Layout */}
+      <section className="py-12 md:py-20">
+        <div className="container px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
+            {/* Left: Image */}
+            <div className="relative rounded-none overflow-hidden h-[500px] lg:h-[700px] lg:sticky lg:top-24">
+              <img 
+                src={facialImage} 
+                alt="Rolora Facial Glow treatment"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Right: Content */}
+            <div className="space-y-8">
+              {/* Title & Rating */}
+              <div>
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-6 uppercase tracking-tighter leading-none">
+                  ROLORA FACIAL GLOW™
+                </h1>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                    ))}
+                  </div>
+                  <span className="text-xl font-bold">5.0</span>
+                </div>
+                
+                <div className="inline-block px-5 py-2 bg-accent text-primary-foreground rounded-none mb-8">
+                  <span className="text-sm font-black uppercase tracking-widest">Signature Treatment</span>
+                </div>
+
+                <p className="text-xl leading-relaxed mb-8">
+                  A couture signature treatment blending dermaplaning, microdermabrasion, and tailored modalities for glowing skin. This ritual refines texture, boosts luminosity, and deeply hydrates for a glass-skin finish that defines the Rolora experience.
+                </p>
+
+                <BookingButton 
+                  size="lg"
+                  className="w-full md:w-auto px-16 py-7 text-base uppercase font-black tracking-widest rounded-none"
+                >
+                  Book Now
+                </BookingButton>
+              </div>
+
+              {/* What Makes it Great */}
+              <div className="border-t-2 border-foreground pt-8">
+                <h2 className="text-xl font-black mb-8 uppercase tracking-widest">What Makes it Great</h2>
+                <div className="grid gap-8">
+                  <div>
+                    <h3 className="font-black text-xl mb-2 uppercase">Glass Skin Finish</h3>
+                    <p className="text-muted-foreground text-lg">Achieve the signature Rolora glow with refined, luminous texture.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-black text-xl mb-2 uppercase">Tailored Modalities</h3>
+                    <p className="text-muted-foreground text-lg">Customized treatment combining dermaplaning and microdermabrasion.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-black text-xl mb-2 uppercase">Deep Hydration</h3>
+                    <p className="text-muted-foreground text-lg">Intensive moisture infusion for plump, radiant, healthy skin.</p>
+                  </div>
                 </div>
               </div>
-              <p className="text-xl md:text-2xl text-foreground/90 italic font-light max-w-2xl mx-auto">
-                Your signature glow, defined by Rolora.
-              </p>
+
+              {/* Info Box */}
+              <div className="bg-muted border-2 border-foreground p-8 grid grid-cols-3 gap-6">
+                <div>
+                  <div className="text-xs font-black mb-2 uppercase tracking-widest">Duration</div>
+                  <div className="text-2xl font-black">90 min</div>
+                </div>
+                <div>
+                  <div className="text-xs font-black mb-2 uppercase tracking-widest">Price</div>
+                  <div className="text-2xl font-black">$235</div>
+                </div>
+                <div>
+                  <div className="text-xs font-black mb-2 uppercase tracking-widest">Ideal For</div>
+                  <div className="text-sm font-bold">All skin types</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-32">
+      {/* What's Involved Section */}
+      <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
-          <div className="max-w-6xl mx-auto">
-
-            {/* Signature Divider */}
-            <div className="flex items-center justify-center mb-16 animate-fade-in">
-              <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent"></div>
-              <span className="px-6 text-accent text-sm uppercase tracking-widest">Signature Treatment</span>
-              <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent"></div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-16 mb-20 animate-fade-in">
-              <div className="space-y-6">
-                <div>
-                  <h2 className="text-3xl font-display font-semibold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                    The Experience
-                  </h2>
-                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                    A couture signature treatment blending dermaplaning, microdermabrasion, and tailored modalities for glowing skin.
-                  </p>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    This ritual refines texture, boosts luminosity, and deeply hydrates for a glass-skin finish that defines the Rolora experience.
-                  </p>
-                </div>
-                <div className="pt-6 border-t border-border/50">
-                  <p className="text-sm text-muted-foreground italic">
-                    "The ultimate facial experience for those who seek nothing but perfection."
-                  </p>
-                </div>
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-6xl md:text-7xl font-black mb-16 uppercase tracking-tighter">
+              WHAT'S INVOLVED
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-12 mb-20">
+              <div className="border-t-2 border-foreground pt-6">
+                <div className="text-lg font-black mb-3 uppercase">01. Deep Cleanse</div>
+                <p className="text-muted-foreground">
+                  Professional cleansing to prep skin for optimal treatment absorption.
+                </p>
               </div>
-
-              <div className="bg-muted/20 rounded-3xl p-8 border border-border/50">
-                <h2 className="text-3xl font-display font-semibold mb-6">What to Expect</h2>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-4 group">
-                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
-                    <span className="text-muted-foreground text-lg">Dermaplaning for ultra-smooth texture</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
-                    <span className="text-muted-foreground text-lg">Microdermabrasion to refine and polish</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
-                    <span className="text-muted-foreground text-lg">Deep hydration infusion</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
-                    <span className="text-muted-foreground text-lg">Customized serum application</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
-                    <span className="text-muted-foreground text-lg">Glass-skin luminous finish</span>
-                  </li>
-                </ul>
+              <div className="border-t-2 border-foreground pt-6">
+                <div className="text-lg font-black mb-3 uppercase">02. Exfoliation</div>
+                <p className="text-muted-foreground">
+                  Dermaplaning and microdermabrasion to refine and resurface texture.
+                </p>
+              </div>
+              <div className="border-t-2 border-foreground pt-6">
+                <div className="text-lg font-black mb-3 uppercase">03. Glow Infusion</div>
+                <p className="text-muted-foreground">
+                  Tailored serums and hydration for luminous, glass-skin finish.
+                </p>
               </div>
             </div>
 
-            {/* Benefits Section */}
-            <div className="relative mb-20 animate-fade-in">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 rounded-3xl"></div>
-              <div className="relative bg-card/50 backdrop-blur-sm rounded-3xl p-10 md:p-16 border border-border/50 shadow-elegant">
-                <div className="text-center mb-12">
-                  <h2 className="text-4xl md:text-5xl font-display font-semibold mb-4">Treatment Benefits</h2>
-                  <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                    Experience transformative results that redefine luxury skincare
-                  </p>
-                </div>
-                <div className="grid md:grid-cols-2 gap-10">
-                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                        <Sparkles className="w-9 h-9 text-accent" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-xl mb-3">Radiant Glass Skin</h3>
-                      <p className="text-muted-foreground leading-relaxed">Achieve luminous, dewy skin with a flawless glass-skin finish that glows from within.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                        <Award className="w-9 h-9 text-accent" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-xl mb-3">Refined Texture</h3>
-                      <p className="text-muted-foreground leading-relaxed">Smooth away imperfections and reveal baby-soft skin through expert exfoliation.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                        <Clock className="w-9 h-9 text-accent" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-xl mb-3">Instant Hydration</h3>
-                      <p className="text-muted-foreground leading-relaxed">Deep moisture infusion that plumps and revitalizes your complexion immediately.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                        <Users className="w-9 h-9 text-accent" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-xl mb-3">Customized Care</h3>
-                      <p className="text-muted-foreground leading-relaxed">Tailored modalities selected specifically for your unique skin needs and goals.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Process Section with Images */}
-            <div className="mb-20 animate-fade-in">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6">Your Journey to Glow</h2>
-                <div className="flex items-center justify-center gap-4">
-                  <div className="h-px w-16 bg-gradient-to-r from-transparent to-accent"></div>
-                  <span className="text-accent">✦</span>
-                  <div className="h-px w-16 bg-gradient-to-l from-transparent to-accent"></div>
-                </div>
-              </div>
+            {/* Expert-Curated Techniques */}
+            <div className="mb-12">
+              <h3 className="text-xs font-black uppercase tracking-widest mb-8">
+                Expert-Curated Techniques & Tools
+              </h3>
               
-              <div className="grid md:grid-cols-2 gap-12 mb-16">
-                <div className="group relative rounded-3xl overflow-hidden shadow-elegant hover:shadow-2xl transition-all duration-500">
-                  <img src={skincareProducts} alt="Premium skincare products" className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-                <div className="flex flex-col justify-center space-y-6">
-                  <div className="inline-flex items-center gap-3 mb-2">
-                    <span className="text-5xl font-display text-accent/20">01</span>
-                    <div className="h-px flex-1 bg-gradient-to-r from-accent to-transparent"></div>
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Technique 1 */}
+                <div>
+                  <div className="relative aspect-[4/5] overflow-hidden mb-4">
+                    <img 
+                      src={facialSculpting} 
+                      alt="Dermaplaning"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-3xl font-display font-semibold">Consultation & Cleanse</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    We begin with a thorough skin analysis to understand your unique needs. A gentle double cleanse prepares your skin for the transformative treatments ahead.
-                  </p>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    Premium botanical cleansers remove impurities while maintaining your skin's natural moisture barrier.
+                  <h4 className="text-xl font-black mb-2 uppercase">Dermaplaning</h4>
+                  <p className="text-muted-foreground">
+                    Removes peach fuzz and dead skin for ultra-smooth, glowing complexion.
                   </p>
                 </div>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-12 mb-16">
-                <div className="flex flex-col justify-center order-2 md:order-1 space-y-6">
-                  <div className="inline-flex items-center gap-3 mb-2">
-                    <span className="text-5xl font-display text-accent/20">02</span>
-                    <div className="h-px flex-1 bg-gradient-to-r from-accent to-transparent"></div>
+                {/* Technique 2 */}
+                <div>
+                  <div className="relative aspect-[4/5] overflow-hidden mb-4">
+                    <img 
+                      src={skincareProducts} 
+                      alt="Microdermabrasion"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-3xl font-display font-semibold">Exfoliation & Refinement</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    Expert dermaplaning removes vellus hair and dead skin cells, instantly revealing smoother, brighter skin beneath.
-                  </p>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    Microdermabrasion follows to polish your complexion, refining texture and enhancing product absorption for maximum results.
+                  <h4 className="text-xl font-black mb-2 uppercase">Microdermabrasion</h4>
+                  <p className="text-muted-foreground">
+                    Polishes skin to reveal refined texture and enhanced radiance.
                   </p>
                 </div>
-                <div className="group relative rounded-3xl overflow-hidden shadow-elegant hover:shadow-2xl transition-all duration-500 order-1 md:order-2">
-                  <img src={facialRoom} alt="Luxury treatment room" className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-12">
-                <div className="group relative rounded-3xl overflow-hidden shadow-elegant hover:shadow-2xl transition-all duration-500">
-                  <img src={glowingSkin} alt="Glowing radiant skin results" className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-                <div className="flex flex-col justify-center space-y-6">
-                  <div className="inline-flex items-center gap-3 mb-2">
-                    <span className="text-5xl font-display text-accent/20">03</span>
-                    <div className="h-px flex-1 bg-gradient-to-r from-accent to-transparent"></div>
+                {/* Technique 3 */}
+                <div>
+                  <div className="relative aspect-[4/5] overflow-hidden mb-4">
+                    <img 
+                      src={diverseSkin} 
+                      alt="Custom Serums"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-3xl font-display font-semibold">Hydration & Glow Infusion</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    Customized serums rich in hyaluronic acid, vitamins, and antioxidants are carefully infused into your skin.
-                  </p>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    A luxurious hydrating mask seals in moisture, leaving you with that coveted dewy, glass-skin finish.
+                  <h4 className="text-xl font-black mb-2 uppercase">Custom Serums</h4>
+                  <p className="text-muted-foreground">
+                    Tailored formulas deliver targeted ingredients for your skin needs.
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Who Is It For */}
-            <div className="relative mb-20 animate-fade-in overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-accent/90 to-primary/95 rounded-3xl"></div>
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-primary-foreground rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-foreground rounded-full blur-3xl"></div>
+      {/* Large Image Break */}
+      <section className="relative h-[60vh] overflow-hidden">
+        <img 
+          src={glowingSkin} 
+          alt="Glowing Results"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+          <div className="container px-6 pb-12">
+            <h3 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter">
+              Glass Skin Perfection
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      {/* Perfect For Section */}
+      <section className="py-20 bg-accent text-primary-foreground">
+        <div className="container px-6">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-6xl md:text-7xl font-black mb-12 uppercase tracking-tighter text-white">
+              PERFECT FOR
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8 text-lg">
+              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
+                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
+                <p className="font-medium">Those seeking the ultimate Rolora signature glow</p>
               </div>
-              <div className="relative text-primary-foreground rounded-3xl p-12 md:p-20">
-                <div className="text-center mb-16">
-                  <h2 className="text-5xl md:text-6xl font-display font-semibold mb-6 tracking-tight">Perfect For</h2>
-                  <div className="flex items-center justify-center gap-6 mt-8">
-                    <div className="h-px w-24 bg-primary-foreground/40"></div>
-                    <div className="w-2 h-2 rounded-full bg-primary-foreground/60 ring-4 ring-primary-foreground/20"></div>
-                    <div className="h-px w-24 bg-primary-foreground/40"></div>
-                  </div>
-                </div>
-                <div className="max-w-5xl mx-auto">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="group relative">
-                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
-                        <span className="text-xl leading-relaxed font-light">Anyone seeking the signature Rolora glow and luminous skin</span>
-                      </div>
-                    </div>
-                    <div className="group relative">
-                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
-                        <span className="text-xl leading-relaxed font-light">Dull, tired skin in need of revitalization</span>
-                      </div>
-                    </div>
-                    <div className="group relative">
-                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
-                        <span className="text-xl leading-relaxed font-light">Uneven texture or fine lines requiring smoothing</span>
-                      </div>
-                    </div>
-                    <div className="group relative">
-                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
-                        <span className="text-xl leading-relaxed font-light">Pre-event preparation for camera-ready skin</span>
-                      </div>
-                    </div>
-                    <div className="group relative md:col-span-2">
-                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02] max-w-3xl mx-auto">
-                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
-                        <span className="text-xl leading-relaxed font-light">Regular maintenance for sustained radiance</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
+                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
+                <p className="font-medium">All skin types looking for glass-skin finish</p>
+              </div>
+              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
+                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
+                <p className="font-medium">Special occasions and milestone events</p>
+              </div>
+              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
+                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
+                <p className="font-medium">Regular maintenance of radiant, healthy skin</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* CTA */}
-            <div className="text-center py-16 animate-fade-in">
-              <div className="max-w-4xl mx-auto space-y-8">
-                <div className="space-y-4">
-                  <h2 className="text-4xl md:text-6xl font-display font-semibold leading-tight">
-                    Ready to Experience<br />Your Signature Glow?
-                  </h2>
-                  <div className="flex items-center justify-center gap-4">
-                    <div className="h-px w-12 bg-gradient-to-r from-transparent to-accent"></div>
-                    <span className="text-accent text-2xl">✦</span>
-                    <div className="h-px w-12 bg-gradient-to-l from-transparent to-accent"></div>
-                  </div>
-                </div>
-                <p className="text-muted-foreground text-xl leading-relaxed max-w-2xl mx-auto">
-                  Discover why Rolora Facial Glow™ is our most beloved treatment. Your radiant transformation awaits.
-                </p>
-                <div className="pt-6">
-                  <BookingButton 
-                    size="lg" 
-                    className="px-16 py-8 text-xl shadow-elegant hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                  >
-                    Book Your Facial Glow
-                  </BookingButton>
-                </div>
-                <p className="text-sm text-muted-foreground/60 italic">
-                  Limited availability — Reserve your exclusive session today
-                </p>
-              </div>
-            </div>
+      {/* Two Column Image Section */}
+      <section className="grid md:grid-cols-2">
+        <div className="relative h-[500px] overflow-hidden">
+          <img 
+            src={facialRoom} 
+            alt="Treatment Room"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative h-[500px] overflow-hidden bg-muted flex items-center justify-center p-12">
+          <div className="max-w-md">
+            <h3 className="text-5xl font-black mb-6 uppercase tracking-tighter leading-none">
+              READY FOR YOUR GLOW?
+            </h3>
+            <p className="text-xl mb-8">
+              Experience the signature Rolora treatment. Book your Facial Glow today.
+            </p>
+            <BookingButton 
+              size="lg"
+              className="w-full px-12 py-7 text-base uppercase font-black tracking-widest rounded-none"
+            >
+              Book Rolora Facial Glow
+            </BookingButton>
           </div>
         </div>
       </section>

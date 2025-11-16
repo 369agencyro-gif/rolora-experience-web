@@ -3,315 +3,254 @@ import BookingButton from "@/components/BookingButton";
 import facialImage from "@/assets/service-facial.jpg";
 import facialSculpting from "@/assets/facial-sculpting.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
+import facialRoom from "@/assets/facial-room.jpg";
+import skincareProducts from "@/assets/skincare-products.jpg";
+import diverseSkin from "@/assets/diverse-skin.jpg";
 import Contact from "@/components/Contact";
-import { Sparkles, Clock, Award, Zap } from "lucide-react";
+import { Star } from "lucide-react";
 
 const TimelessLift = () => {
   return (
     <ServiceLayout>
-      {/* Hero Section with Overlay */}
-      <section className="relative">
-        <div className="relative h-[70vh] min-h-[600px] overflow-hidden">
-          <img 
-            src={facialImage} 
-            alt="Timeless Lift luxury treatment"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
-          
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center px-6 animate-fade-in">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold mb-12 tracking-tight">
-                Timeless Lift
-              </h1>
-              <div className="relative inline-flex flex-col items-center mb-8 py-6 px-4 overflow-visible isolate z-10">
-                <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full"></div>
-                 <div className="relative px-12 py-6 rounded-2xl bg-card/10 backdrop-blur-md border-2 border-accent/30 shadow-2xl overflow-visible flex items-center justify-center">
-                   <p className="text-5xl md:text-6xl leading-[1.35] py-1 whitespace-nowrap overflow-visible font-display font-bold bg-gradient-to-br from-accent via-accent to-accent/60 bg-clip-text text-transparent tracking-tight translate-y-[1px]">$245</p>
-                 </div>
+      {/* Hero Section - Two Column Layout */}
+      <section className="py-12 md:py-20">
+        <div className="container px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
+            {/* Left: Image */}
+            <div className="relative rounded-none overflow-hidden h-[500px] lg:h-[700px] lg:sticky lg:top-24">
+              <img 
+                src={facialImage} 
+                alt="Timeless Lift treatment"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Right: Content */}
+            <div className="space-y-8">
+              {/* Title & Rating */}
+              <div>
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-6 uppercase tracking-tighter leading-none">
+                  TIMELESS LIFT
+                </h1>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                    ))}
+                  </div>
+                  <span className="text-xl font-bold">5.0</span>
+                </div>
+                
+                <div className="inline-block px-5 py-2 bg-accent text-primary-foreground rounded-none mb-8">
+                  <span className="text-sm font-black uppercase tracking-widest">Age-Defying</span>
+                </div>
+
+                <p className="text-xl leading-relaxed mb-8">
+                  A rejuvenating facial designed to restore elasticity, firm, and smooth the skin using advanced ultrasound, peptide infusion, and cryo lifting. Ideal for those seeking an age-defying, lifted complexion with visible anti-aging results.
+                </p>
+
+                <BookingButton 
+                  size="lg"
+                  className="w-full md:w-auto px-16 py-7 text-base uppercase font-black tracking-widest rounded-none"
+                >
+                  Book Now
+                </BookingButton>
               </div>
-              <p className="text-xl md:text-2xl text-foreground/90 italic font-light max-w-2xl mx-auto">
-                Lift. Firm. Defy time.
-              </p>
+
+              {/* What Makes it Great */}
+              <div className="border-t-2 border-foreground pt-8">
+                <h2 className="text-xl font-black mb-8 uppercase tracking-widest">What Makes it Great</h2>
+                <div className="grid gap-8">
+                  <div>
+                    <h3 className="font-black text-xl mb-2 uppercase">Ultrasound Technology</h3>
+                    <p className="text-muted-foreground text-lg">Advanced ultrasound therapy lifts and firms for visible tightening.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-black text-xl mb-2 uppercase">Peptide Infusion</h3>
+                    <p className="text-muted-foreground text-lg">Powerful peptides boost collagen and restore youthful elasticity.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-black text-xl mb-2 uppercase">Cryo Lifting</h3>
+                    <p className="text-muted-foreground text-lg">Cold therapy instantly tightens and firms for lasting lift effect.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Info Box */}
+              <div className="bg-muted border-2 border-foreground p-8 grid grid-cols-3 gap-6">
+                <div>
+                  <div className="text-xs font-black mb-2 uppercase tracking-widest">Duration</div>
+                  <div className="text-2xl font-black">90 min</div>
+                </div>
+                <div>
+                  <div className="text-xs font-black mb-2 uppercase tracking-widest">Price</div>
+                  <div className="text-2xl font-black">$245</div>
+                </div>
+                <div>
+                  <div className="text-xs font-black mb-2 uppercase tracking-widest">Ideal For</div>
+                  <div className="text-sm font-bold">Anti-aging</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-32">
+      {/* What's Involved Section */}
+      <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
-          <div className="max-w-6xl mx-auto">
-
-            {/* Signature Divider */}
-            <div className="flex items-center justify-center mb-16 animate-fade-in">
-              <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent"></div>
-              <span className="px-6 text-accent text-sm uppercase tracking-widest">Age-Defying Technology</span>
-              <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent"></div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-16 mb-20 animate-fade-in">
-              <div className="space-y-6">
-                <div>
-                  <h2 className="text-3xl font-display font-semibold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                    The Experience
-                  </h2>
-                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                    A rejuvenating facial designed to restore elasticity, firm, and smooth the skin using advanced ultrasound, peptide infusion, and cryo lifting.
-                  </p>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    Ideal for those seeking an age-defying, lifted complexion with visible anti-aging results.
-                  </p>
-                </div>
-                <div className="pt-6 border-t border-border/50">
-                  <p className="text-sm text-muted-foreground italic">
-                    "Advanced technology meets timeless beauty."
-                  </p>
-                </div>
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-6xl md:text-7xl font-black mb-16 uppercase tracking-tighter">
+              WHAT'S INVOLVED
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-12 mb-20">
+              <div className="border-t-2 border-foreground pt-6">
+                <div className="text-lg font-black mb-3 uppercase">01. Ultrasound Therapy</div>
+                <p className="text-muted-foreground">
+                  Deep penetrating ultrasound stimulates collagen for lifting and firming.
+                </p>
               </div>
-
-              <div className="bg-muted/20 rounded-3xl p-8 border border-border/50">
-                <h2 className="text-3xl font-display font-semibold mb-6">What to Expect</h2>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-4 group">
-                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
-                    <span className="text-muted-foreground text-lg">Advanced ultrasound technology</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
-                    <span className="text-muted-foreground text-lg">Peptide infusion treatment</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
-                    <span className="text-muted-foreground text-lg">Cryo lifting techniques</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
-                    <span className="text-muted-foreground text-lg">Enhanced elasticity and firmness</span>
-                  </li>
-                  <li className="flex items-start gap-4 group">
-                    <span className="text-accent mt-1 text-xl transition-transform group-hover:scale-110">✦</span>
-                    <span className="text-muted-foreground text-lg">Visibly lifted, youthful appearance</span>
-                  </li>
-                </ul>
+              <div className="border-t-2 border-foreground pt-6">
+                <div className="text-lg font-black mb-3 uppercase">02. Peptide Infusion</div>
+                <p className="text-muted-foreground">
+                  Advanced peptide serums restore elasticity and smooth fine lines.
+                </p>
+              </div>
+              <div className="border-t-2 border-foreground pt-6">
+                <div className="text-lg font-black mb-3 uppercase">03. Cryo Lifting</div>
+                <p className="text-muted-foreground">
+                  Cold therapy tightens and contours for immediate age-defying results.
+                </p>
               </div>
             </div>
 
-            {/* Visual Results Section */}
-            <div className="mb-20 animate-fade-in">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="group relative rounded-3xl overflow-hidden shadow-elegant hover:shadow-2xl transition-all duration-500">
-                  <img src={facialSculpting} alt="Advanced lifting treatment" className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-                <div className="group relative rounded-3xl overflow-hidden shadow-elegant hover:shadow-2xl transition-all duration-500">
-                  <img src={glowingSkin} alt="Youthful lifted results" className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Benefits Section */}
-            <div className="relative mb-20 animate-fade-in">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 rounded-3xl"></div>
-              <div className="relative bg-card/50 backdrop-blur-sm rounded-3xl p-10 md:p-16 border border-border/50 shadow-elegant">
-                <div className="text-center mb-12">
-                  <h2 className="text-4xl md:text-5xl font-display font-semibold mb-4">Age-Defying Benefits</h2>
-                  <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                    Transform your skin with cutting-edge technology
-                  </p>
-                </div>
-                <div className="grid md:grid-cols-2 gap-10">
-                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                        <Sparkles className="w-9 h-9 text-accent" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-xl mb-3">Advanced Lifting</h3>
-                      <p className="text-muted-foreground leading-relaxed">Ultrasound technology penetrates deep to lift and firm from within.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                        <Award className="w-9 h-9 text-accent" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-xl mb-3">Peptide Power</h3>
-                      <p className="text-muted-foreground leading-relaxed">Targeted peptides stimulate collagen production for lasting firmness.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                        <Zap className="w-9 h-9 text-accent" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-xl mb-3">Cryo Tightening</h3>
-                      <p className="text-muted-foreground leading-relaxed">Cold therapy tightens and refines for immediate visible lift.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-6 group hover:transform hover:scale-105 transition-all duration-300">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                        <Clock className="w-9 h-9 text-accent" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-xl mb-3">Time-Reversing Results</h3>
-                      <p className="text-muted-foreground leading-relaxed">Turn back the clock with enhanced elasticity and smooth, youthful skin.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Treatment Journey */}
-            <div className="mb-20 animate-fade-in">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6">Your Lifting Journey</h2>
-                <div className="flex items-center justify-center gap-4">
-                  <div className="h-px w-16 bg-gradient-to-r from-transparent to-accent"></div>
-                  <span className="text-accent">✦</span>
-                  <div className="h-px w-16 bg-gradient-to-l from-transparent to-accent"></div>
-                </div>
-              </div>
+            {/* Expert-Curated Techniques */}
+            <div className="mb-12">
+              <h3 className="text-xs font-black uppercase tracking-widest mb-8">
+                Expert-Curated Techniques & Tools
+              </h3>
               
-              <div className="space-y-10">
-                <div className="bg-card border border-border rounded-3xl p-10 hover:shadow-elegant transition-shadow">
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent font-bold text-2xl">
-                      1
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-display font-semibold mb-4">Deep Ultrasound Therapy</h3>
-                      <p className="text-muted-foreground text-lg leading-relaxed">
-                        We begin with advanced ultrasound technology that penetrates deep into your skin's layers. This non-invasive treatment stimulates natural collagen production and targets areas of concern with precision, laying the foundation for visible lifting.
-                      </p>
-                    </div>
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Technique 1 */}
+                <div>
+                  <div className="relative aspect-[4/5] overflow-hidden mb-4">
+                    <img 
+                      src={facialSculpting} 
+                      alt="Ultrasound Therapy"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+                  <h4 className="text-xl font-black mb-2 uppercase">Ultrasound Therapy</h4>
+                  <p className="text-muted-foreground">
+                    Medical-grade ultrasound penetrates deep to stimulate collagen production.
+                  </p>
                 </div>
 
-                <div className="bg-card border border-border rounded-3xl p-10 hover:shadow-elegant transition-shadow">
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent font-bold text-2xl">
-                      2
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-display font-semibold mb-4">Peptide Infusion</h3>
-                      <p className="text-muted-foreground text-lg leading-relaxed">
-                        Powerful age-defying peptides are infused into your skin, delivering targeted ingredients that boost firmness and elasticity. These bio-active compounds work at a cellular level to restore youthful bounce and resilience.
-                      </p>
-                    </div>
+                {/* Technique 2 */}
+                <div>
+                  <div className="relative aspect-[4/5] overflow-hidden mb-4">
+                    <img 
+                      src={skincareProducts} 
+                      alt="Peptide Serums"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+                  <h4 className="text-xl font-black mb-2 uppercase">Peptide Serums</h4>
+                  <p className="text-muted-foreground">
+                    Clinical-strength peptides rebuild skin structure and restore firmness.
+                  </p>
                 </div>
 
-                <div className="bg-card border border-border rounded-3xl p-10 hover:shadow-elegant transition-shadow">
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent font-bold text-2xl">
-                      3
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-display font-semibold mb-4">Cryo Lifting Finish</h3>
-                      <p className="text-muted-foreground text-lg leading-relaxed">
-                        The treatment concludes with cryo therapy that instantly tightens and lifts, sealing in all the age-defying benefits. Cold technology reduces any inflammation while creating immediate visible contouring and a smooth, firm finish.
-                      </p>
-                    </div>
+                {/* Technique 3 */}
+                <div>
+                  <div className="relative aspect-[4/5] overflow-hidden mb-4">
+                    <img 
+                      src={diverseSkin} 
+                      alt="Cryo Technology"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+                  <h4 className="text-xl font-black mb-2 uppercase">Cryo Technology</h4>
+                  <p className="text-muted-foreground">
+                    Precision cold therapy instantly tightens and lifts for dramatic results.
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Perfect For Section */}
-            <div className="relative mb-20 animate-fade-in overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-accent/90 to-primary/95 rounded-3xl"></div>
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-primary-foreground rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-foreground rounded-full blur-3xl"></div>
+      {/* Large Image Break */}
+      <section className="relative h-[60vh] overflow-hidden">
+        <img 
+          src={glowingSkin} 
+          alt="Lifted Results"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+          <div className="container px-6 pb-12">
+            <h3 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter">
+              Defy Time
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      {/* Perfect For Section */}
+      <section className="py-20 bg-accent text-primary-foreground">
+        <div className="container px-6">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-6xl md:text-7xl font-black mb-12 uppercase tracking-tighter text-white">
+              PERFECT FOR
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8 text-lg">
+              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
+                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
+                <p className="font-medium">Mature skin seeking visible lifting and firming</p>
               </div>
-              <div className="relative text-primary-foreground rounded-3xl p-12 md:p-20">
-                <div className="text-center mb-16">
-                  <h2 className="text-5xl md:text-6xl font-display font-semibold mb-6 tracking-tight">Ideal Candidates</h2>
-                  <div className="flex items-center justify-center gap-6 mt-8">
-                    <div className="h-px w-24 bg-primary-foreground/40"></div>
-                    <div className="w-2 h-2 rounded-full bg-primary-foreground/60 ring-4 ring-primary-foreground/20"></div>
-                    <div className="h-px w-24 bg-primary-foreground/40"></div>
-                  </div>
-                </div>
-                <div className="max-w-5xl mx-auto">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="group relative">
-                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
-                        <span className="text-xl leading-relaxed font-light">Loss of firmness and elasticity</span>
-                      </div>
-                    </div>
-                    <div className="group relative">
-                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
-                        <span className="text-xl leading-relaxed font-light">Fine lines and early signs of aging</span>
-                      </div>
-                    </div>
-                    <div className="group relative">
-                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
-                        <span className="text-xl leading-relaxed font-light">Sagging or drooping facial contours</span>
-                      </div>
-                    </div>
-                    <div className="group relative">
-                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02]">
-                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
-                        <span className="text-xl leading-relaxed font-light">Desire for non-invasive lifting alternative</span>
-                      </div>
-                    </div>
-                    <div className="group relative md:col-span-2">
-                      <div className="absolute inset-0 bg-primary-foreground/5 rounded-3xl blur-xl group-hover:bg-primary-foreground/10 transition-all"></div>
-                      <div className="relative flex items-start gap-6 bg-primary-foreground/10 backdrop-blur-md rounded-3xl p-10 border border-primary-foreground/20 hover:border-primary-foreground/40 transition-all hover:transform hover:scale-[1.02] max-w-3xl mx-auto">
-                        <div className="flex-shrink-0 w-3 h-3 rounded-full bg-primary-foreground/60 mt-2"></div>
-                        <span className="text-xl leading-relaxed font-light">Preventative anti-aging maintenance</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
+                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
+                <p className="font-medium">Loss of elasticity and sagging concerns</p>
+              </div>
+              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
+                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
+                <p className="font-medium">Fine lines and wrinkle reduction</p>
+              </div>
+              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
+                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
+                <p className="font-medium">Age-defying, long-term skin investment</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* CTA */}
-            <div className="text-center py-16 animate-fade-in">
-              <div className="max-w-4xl mx-auto space-y-8">
-                <div className="space-y-4">
-                  <h2 className="text-4xl md:text-6xl font-display font-semibold leading-tight">
-                    Defy Time with<br />Timeless Lift
-                  </h2>
-                  <div className="flex items-center justify-center gap-4">
-                    <div className="h-px w-12 bg-gradient-to-r from-transparent to-accent"></div>
-                    <span className="text-accent text-2xl">✦</span>
-                    <div className="h-px w-12 bg-gradient-to-l from-transparent to-accent"></div>
-                  </div>
-                </div>
-                <p className="text-muted-foreground text-xl leading-relaxed max-w-2xl mx-auto">
-                  Experience the power of advanced anti-aging technology. Lift, firm, and turn back time naturally.
-                </p>
-                <div className="pt-6">
-                  <BookingButton 
-                    size="lg" 
-                    className="px-16 py-8 text-xl shadow-elegant hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                  >
-                    Book Timeless Lift
-                  </BookingButton>
-                </div>
-                <p className="text-sm text-muted-foreground/60 italic">
-                  Transform your skin with cutting-edge science
-                </p>
-              </div>
-            </div>
+      {/* Two Column Image Section */}
+      <section className="grid md:grid-cols-2">
+        <div className="relative h-[500px] overflow-hidden">
+          <img 
+            src={facialRoom} 
+            alt="Treatment Room"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative h-[500px] overflow-hidden bg-muted flex items-center justify-center p-12">
+          <div className="max-w-md">
+            <h3 className="text-5xl font-black mb-6 uppercase tracking-tighter leading-none">
+              DEFY TIME
+            </h3>
+            <p className="text-xl mb-8">
+              Experience advanced anti-aging technology. Book Timeless Lift today.
+            </p>
+            <BookingButton 
+              size="lg"
+              className="w-full px-12 py-7 text-base uppercase font-black tracking-widest rounded-none"
+            >
+              Book Timeless Lift
+            </BookingButton>
           </div>
         </div>
       </section>
