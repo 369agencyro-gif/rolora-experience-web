@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
 import studioInterior from "@/assets/studio-interior.jpg";
+import { useBookingModal } from "@/hooks/use-booking-modal";
 
 const Membership = () => {
-  const scrollToBooking = () => {
-    const contactSection = document.getElementById('contact');
-    contactSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+  const { openBooking } = useBookingModal();
 
   return (
     <section className="py-0 bg-background">
@@ -53,7 +51,7 @@ const Membership = () => {
             </ul>
             
             <Button 
-              onClick={scrollToBooking}
+              onClick={openBooking}
               variant="cta"
               size="lg"
             >

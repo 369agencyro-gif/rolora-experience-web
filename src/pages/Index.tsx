@@ -14,7 +14,9 @@ import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
 import Membership from "@/components/Membership";
 import Footer from "@/components/Footer";
+import BookingModal from "@/components/BookingModal";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { BookingModalProvider, useBookingModal } from "@/hooks/use-booking-modal";
 const AnimatedSection = ({
   children,
   delay = 0
@@ -35,6 +37,14 @@ const AnimatedSection = ({
     </div>;
 };
 const Index = () => {
+  return <BookingModalProvider>
+      <IndexContent />
+    </BookingModalProvider>;
+};
+
+const IndexContent = () => {
+  const { isOpen, closeBooking } = useBookingModal();
+  
   return <>
       <AnnouncementBar />
       <Navigation />
@@ -67,6 +77,7 @@ const Index = () => {
         </AnimatedSection>
         <Footer />
       </main>
+      <BookingModal open={isOpen} onOpenChange={closeBooking} />
     </>;
 };
 export default Index;
