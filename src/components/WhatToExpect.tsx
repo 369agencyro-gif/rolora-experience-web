@@ -55,25 +55,25 @@ const WhatToExpect = () => {
           </div>
 
           {/* Image with Card Overlay */}
-          <div className="relative mt-16 w-full h-[500px] md:h-[600px] overflow-hidden">
+          <div className="relative mt-16 w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg">
             <img 
               src={diverseSkin} 
               alt="Woman with luxurious facial mask treatment showing glowing skin"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
-            <div className="absolute left-0 top-0 bg-background p-8 md:p-10 max-w-md md:max-w-lg">
+            <div className="absolute left-4 right-4 top-4 md:left-0 md:right-auto md:top-0 bg-background/95 backdrop-blur-sm p-6 md:p-10 md:max-w-lg">
               <p className="text-xs uppercase tracking-widest mb-3 text-foreground/60 font-medium">
                 NOT YOUR AVERAGE FACIAL STUDIO
               </p>
-              <h3 className="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tight leading-none">
+              <h3 className="text-2xl md:text-3xl lg:text-5xl font-black mb-4 uppercase tracking-tight leading-none">
                 Where Great Skin Meets Good Vibes
               </h3>
-              <p className="text-base text-foreground/80 mb-6 leading-relaxed">
+              <p className="text-sm md:text-base text-foreground/80 mb-6 leading-relaxed">
                 Our open-concept studios in Newport bring your vibe up and help your skin thrive.
               </p>
               <BookingButton 
                 size="lg"
-                className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90 px-8"
+                className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90 px-8 w-full md:w-auto"
               >
                 BOOK NOW
               </BookingButton>
