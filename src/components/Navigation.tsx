@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import { Menu, X, ChevronDown } from "lucide-react";
 import roloraLogo from "@/assets/rolora-logo.png";
 
@@ -70,12 +70,11 @@ const Navigation = () => {
             <button className="text-sm uppercase tracking-wide hover:opacity-70 transition-opacity">
               Log In
             </button>
-            <Button 
-              onClick={() => scrollToSection('contact')}
+            <BookingButton 
               className="uppercase tracking-wide font-semibold"
             >
               Book Now
-            </Button>
+            </BookingButton>
           </div>
 
           {/* Mobile Menu Button */}
@@ -160,13 +159,12 @@ const Navigation = () => {
               </Link>
               
               <div className="pt-3 pb-2">
-                <Button 
-                  onClick={() => scrollToSection('contact')} 
+                <BookingButton 
                   className="w-full"
                   size="sm"
                 >
                   Book Now
-                </Button>
+                </BookingButton>
               </div>
             </div>
           </div>

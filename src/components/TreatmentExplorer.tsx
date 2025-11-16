@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import treatment1 from "@/assets/treatment-1.jpg";
@@ -10,10 +10,6 @@ import treatment4 from "@/assets/treatment-4.jpg";
 
 const TreatmentExplorer = () => {
   const [activeIndex, setActiveIndex] = useState(2);
-
-  const scrollToBooking = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const treatments = [
     "CRYO GLOBES",
@@ -143,13 +139,12 @@ const TreatmentExplorer = () => {
 
           {/* Book Now Button */}
           <div className="mt-12 flex justify-center">
-            <Button 
+            <BookingButton 
               size="lg"
-              onClick={scrollToBooking}
               className="uppercase font-bold tracking-wide"
             >
               BOOK NOW
-            </Button>
+            </BookingButton>
           </div>
         </div>
       </div>

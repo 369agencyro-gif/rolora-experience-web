@@ -1,12 +1,7 @@
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import diverseSkin from "@/assets/facial-mask.jpg";
 
 const WhatToExpect = () => {
-  const scrollToBooking = () => {
-    document.getElementById('contact')?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
   return <section className="py-24 bg-muted/20">
       <div className="container px-6">
       <div className="max-w-7xl mx-auto">
@@ -76,13 +71,12 @@ const WhatToExpect = () => {
               <p className="text-base text-foreground/80 mb-6 leading-relaxed">
                 Our open-concept studios in Newport bring your vibe up and help your skin thrive.
               </p>
-              <Button 
+              <BookingButton 
                 size="lg"
-                onClick={scrollToBooking}
                 className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90 px-8"
               >
                 BOOK NOW
-              </Button>
+              </BookingButton>
             </div>
           </div>
         </div>

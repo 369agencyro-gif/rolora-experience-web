@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import heroImage from "@/assets/facial-skincare.jpg";
 
 const SignatureFacialSection = () => {
@@ -10,10 +11,6 @@ const SignatureFacialSection = () => {
     "Strengthens skin",
     "Calms irritation"
   ];
-
-  const scrollToBooking = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="py-20 bg-muted/20">
@@ -52,13 +49,12 @@ const SignatureFacialSection = () => {
 
             {/* CTAs */}
             <div className="flex gap-4">
-              <Button 
+              <BookingButton 
                 size="default"
-                onClick={scrollToBooking}
                 className="uppercase font-bold tracking-wide"
               >
                 BOOK NOW
-              </Button>
+              </BookingButton>
               <Button 
                 size="default"
                 variant="outline"

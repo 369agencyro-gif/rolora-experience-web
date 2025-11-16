@@ -1,12 +1,9 @@
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import facialRoom from "@/assets/glowing-face.jpg";
 import facialSculpting from "@/assets/facial-sculpting.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
 
 const StatsSection = () => {
-  const scrollToBooking = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const stats = [
     {
@@ -66,13 +63,12 @@ const StatsSection = () => {
               </div>
             </div>
             
-            <Button 
+            <BookingButton 
               size="lg" 
-              onClick={scrollToBooking}
               className="uppercase font-bold tracking-wide w-full md:w-auto md:px-16"
             >
               BOOK NOW
-            </Button>
+            </BookingButton>
           </div>
         </div>
       </div>
