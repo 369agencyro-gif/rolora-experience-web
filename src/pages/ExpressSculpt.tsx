@@ -202,7 +202,7 @@ const ExpressSculpt = () => {
       <section className="py-20 bg-accent text-primary-foreground">
         <div className="container px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-black mb-12 uppercase tracking-tighter">
+            <h2 className="text-6xl md:text-7xl font-black mb-12 uppercase tracking-tighter text-white">
               PERFECT FOR
             </h2>
             
