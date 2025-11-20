@@ -52,10 +52,13 @@ const TreatmentExplorer = () => {
             opts={{
               align: "start",
               loop: true,
+              dragFree: true,
             }}
             plugins={[
               Autoplay({
                 delay: 2000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: false,
               }),
             ]}
             className="w-full"
@@ -91,7 +94,15 @@ const TreatmentExplorer = () => {
               opts={{
                 align: "start",
                 loop: true,
+                dragFree: true,
               }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: false,
+                  stopOnMouseEnter: false,
+                }),
+              ]}
               className="w-full"
             >
               <CarouselContent className="-ml-4">
