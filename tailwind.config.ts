@@ -56,7 +56,6 @@ export default {
         taupe: "hsl(var(--taupe))",
         "rose-gold": "hsl(var(--rose-gold))",
         "soft-gray": "hsl(var(--soft-gray))",
-        chocolate: "hsl(var(--chocolate))",
       },
       borderRadius: {
         lg: "0px",

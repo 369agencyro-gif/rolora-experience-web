@@ -8,60 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Premium Luxury Palette */
-    --background: 32 35% 98%;
-    --foreground: 24 25% 22%;
+    /* Warm Spa Palette - Gold Focused */
+    --background: 34 41% 97%;
+    --foreground: 25 22% 30%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 24 25% 22%;
+    --card: 34 41% 97%;
+    --card-foreground: 25 22% 30%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 24 25% 22%;
+    --popover: 32 52% 94%;
+    --popover-foreground: 25 22% 30%;
 
-    --primary: 39 48% 56%;
+    --primary: 40 50% 63%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 15% 92%;
-    --secondary-foreground: 24 25% 22%;
+    --secondary: 38 38% 88%;
+    --secondary-foreground: 25 22% 30%;
 
-    --muted: 30 20% 94%;
-    --muted-foreground: 24 15% 45%;
+    --muted: 38 38% 88%;
+    --muted-foreground: 25 22% 50%;
 
-    --accent: 39 48% 56%;
+    --accent: 40 50% 63%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 88%;
-    --input: 30 15% 90%;
-    --ring: 39 48% 56%;
+    --border: 30 25% 80%;
+    --input: 38 38% 85%;
+    --ring: 40 50% 63%;
 
     --radius: 0rem;
     
-    /* Premium custom colors */
-    --cream: 35 45% 94%;
-    --warm-beige: 32 25% 72%;
-    --taupe: 28 15% 42%;
-    --rose-gold: 39 48% 56%;
-    --soft-gray: 220 10% 92%;
-    --chocolate: 30 60% 20%;
+    /* Spa-inspired custom colors */
+    --cream: 32 52% 91%;
+    --warm-beige: 30 25% 62%;
+    --taupe: 25 22% 50%;
+    --rose-gold: 40 50% 63%;
+    --soft-gray: 38 38% 85%;
     
-    /* Sophisticated Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(39 48% 56%) 0%, hsl(35 55% 48%) 100%);
-    --gradient-hero: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(32 35% 98%) 0%, hsl(30 20% 94%) 100%);
-    --gradient-luxury: linear-gradient(135deg, hsl(24 25% 22%) 0%, hsl(28 30% 18%) 100%);
+    /* Gradients - Warm and inviting */
+    --gradient-primary: linear-gradient(180deg, hsl(34 41% 97%), hsl(32 52% 91%));
+    --gradient-subtle: linear-gradient(180deg, hsl(38 38% 88%), hsl(34 41% 97%));
     
-    /* Premium Shadows */
-    --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.04);
-    --shadow-elegant: 0 4px 24px rgba(0, 0, 0, 0.08);
-    --shadow-luxury: 0 8px 40px rgba(0, 0, 0, 0.12);
-    --shadow-glow: 0 0 30px rgba(209, 178, 114, 0.15);
+    /* Shadows - Soft and elegant */
+    --shadow-soft: 0 2px 8px rgba(156, 123, 99, 0.08);
+    --shadow-elegant: 0 4px 16px rgba(156, 123, 99, 0.12);
     
-    /* Smooth Transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Transitions */
+    --transition-smooth: all 0.3s ease;
 
     --sidebar-background: 32 52% 94%;
     --sidebar-foreground: 25 22% 30%;
@@ -111,24 +105,10 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-body antialiased;
-    letter-spacing: 0.01em;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold text-primary;
-    letter-spacing: -0.02em;
-  }
-  
-  h1 {
-    @apply text-5xl md:text-6xl lg:text-7xl;
-  }
-  
-  h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
-  }
-  
-  h3 {
-    @apply text-2xl md:text-3xl;
+    @apply font-display font-semibold tracking-normal text-primary;
   }
 }
 
@@ -153,20 +133,8 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-elegant);
   }
   
-  .shadow-luxury {
-    box-shadow: var(--shadow-luxury);
-  }
-  
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
-  
   .transition-smooth {
     transition: var(--transition-smooth);
-  }
-  
-  .transition-fast {
-    transition: var(--transition-fast);
   }
 }
 
