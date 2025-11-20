@@ -46,9 +46,9 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <nav className="sticky top-0 z-50 bg-white/98 backdrop-blur-xl border-b border-border shadow-soft">
       <div className="container px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
@@ -64,9 +64,9 @@ const Navigation = () => {
               <NavigationMenuList>
                 {/* Offers Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm uppercase tracking-wide relative">
+                  <NavigationMenuTrigger className="text-sm uppercase tracking-[0.15em] font-medium relative hover:text-primary transition-colors">
                     Offers
-                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse shadow-glow"></span>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4">
@@ -91,7 +91,7 @@ const Navigation = () => {
 
                 {/* Treatments Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm uppercase tracking-wide">
+                  <NavigationMenuTrigger className="text-sm uppercase tracking-[0.15em] font-medium hover:text-primary transition-colors">
                     Treatments
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
