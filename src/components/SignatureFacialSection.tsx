@@ -16,7 +16,7 @@ const SignatureFacialSection = () => {
     <section className="py-20 bg-muted/20">
       <div className="container px-6">
         {/* New Client Offer Banner */}
-        <div className="bg-[#d4e157] text-foreground py-4 px-6 mb-12 rounded-lg">
+        <div className="bg-[#3B2414] text-white py-4 px-6 mb-12 rounded-lg">
           <p className="text-center font-medium">
             New Client Offer: First Facial for $99
           </p>
