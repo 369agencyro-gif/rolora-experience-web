@@ -116,7 +116,7 @@ const TreatmentExplorer = () => {
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
-                      <h3 className="text-lg font-bold uppercase tracking-wide">
+                      <h3 className="text-xl md:text-2xl font-display font-semibold text-primary mt-2">
                         {card.title}
                       </h3>
                     </Link>
@@ -141,7 +141,7 @@ const TreatmentExplorer = () => {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="text-lg font-bold uppercase tracking-wide">
+                <h3 className="text-xl md:text-2xl font-display font-semibold text-primary mt-2">
                   {card.title}
                 </h3>
               </Link>
