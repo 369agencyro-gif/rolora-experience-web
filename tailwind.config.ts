@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Barlow Condensed', 'Impact', 'sans-serif'],
+        display: ['Antonio', 'Impact', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
