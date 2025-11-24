@@ -5,7 +5,13 @@ import bodyRollingMachine from "@/assets/body-rolling-machine.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
 import facialRoom from "@/assets/facial-room.jpg";
 import Contact from "@/components/Contact";
-import { Star } from "lucide-react";
+import { Star, Plus } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const BodyRolling = () => {
   return (
@@ -214,28 +220,52 @@ const BodyRolling = () => {
               WHY IT WORKS
             </h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-              <div className="border-t-2 border-foreground pt-6">
-                <h3 className="font-black text-xl mb-3 uppercase">Consistent Pressure</h3>
-                <p className="text-muted-foreground text-lg">Delivers deeper lymphatic stimulation than hands alone.</p>
-              </div>
-              <div className="border-t-2 border-foreground pt-6">
-                <h3 className="font-black text-xl mb-3 uppercase">Structured Positioning</h3>
-                <p className="text-muted-foreground text-lg">Every body zone is strategically targeted to move lymph upward and out.</p>
-              </div>
-              <div className="border-t-2 border-foreground pt-6">
-                <h3 className="font-black text-xl mb-3 uppercase">Infrared Technology</h3>
-                <p className="text-muted-foreground text-lg">Boosts circulation, smooths texture, and softens muscle tension.</p>
-              </div>
-              <div className="border-t-2 border-foreground pt-6">
-                <h3 className="font-black text-xl mb-3 uppercase">Sculpted Wooden Rollers</h3>
-                <p className="text-muted-foreground text-lg">Designed to mimic a therapist's hands for maximum contouring.</p>
-              </div>
-              <div className="border-t-2 border-foreground pt-6">
-                <h3 className="font-black text-xl mb-3 uppercase">The Rolora Method™</h3>
-                <p className="text-muted-foreground text-lg">Our signature layering of movement, energy, and technology.</p>
-              </div>
-            </div>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem value="item-1" className="border-2 border-foreground rounded-none px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <h3 className="font-black text-xl uppercase">Consistent Pressure</h3>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-lg pb-6">
+                  Delivers deeper lymphatic stimulation than hands alone.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="border-2 border-foreground rounded-none px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <h3 className="font-black text-xl uppercase">Structured Positioning</h3>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-lg pb-6">
+                  Every body zone is strategically targeted to move lymph upward and out.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border-2 border-foreground rounded-none px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <h3 className="font-black text-xl uppercase">Infrared Technology</h3>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-lg pb-6">
+                  Boosts circulation, smooths texture, and softens muscle tension.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border-2 border-foreground rounded-none px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <h3 className="font-black text-xl uppercase">Sculpted Wooden Rollers</h3>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-lg pb-6">
+                  Designed to mimic a therapist's hands for maximum contouring.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border-2 border-foreground rounded-none px-6">
+                <AccordionTrigger className="text-left hover:no-underline py-6">
+                  <h3 className="font-black text-xl uppercase">The Rolora Method™</h3>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-lg pb-6">
+                  Our signature layering of movement, energy, and technology.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
