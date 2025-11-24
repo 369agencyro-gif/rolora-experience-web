@@ -3,7 +3,7 @@ import BookingButton from "@/components/BookingButton";
 import bodyImage from "@/assets/service-body.jpg";
 import bodyRollingMachine from "@/assets/body-rolling-machine-new.webp";
 import glowingSkin from "@/assets/glowing-skin.jpg";
-import facialRoom from "@/assets/facial-room.jpg";
+import bodyRollingTreatment from "@/assets/body-rolling-treatment.webp";
 import Contact from "@/components/Contact";
 import { Star, Plus, Minus } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
@@ -217,7 +217,7 @@ const BodyRolling = () => {
               <img src={bodyRollingMachine} alt="Body Rolling Machine" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={facialRoom} alt="Treatment Environment" className="w-full h-full object-cover" />
+              <img src={bodyRollingTreatment} alt="Body Rolling Treatment" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
