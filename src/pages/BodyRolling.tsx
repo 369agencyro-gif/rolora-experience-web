@@ -215,53 +215,53 @@ const BodyRolling = () => {
       {/* Why It Works Section */}
       <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-black mb-16 uppercase tracking-tighter">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-6xl md:text-7xl font-black mb-16 uppercase tracking-tighter text-center">
               WHY IT WORKS
             </h2>
             
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              <AccordionItem value="item-1" className="border-2 border-foreground rounded-none px-6">
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <h3 className="font-black text-xl uppercase">Consistent Pressure</h3>
+            <Accordion type="single" collapsible className="w-full space-y-6">
+              <AccordionItem value="item-1" className="border border-primary/20 bg-card rounded-lg px-8 shadow-sm hover:shadow-md transition-shadow">
+                <AccordionTrigger className="text-left hover:no-underline py-8 text-primary">
+                  <h3 className="font-display font-semibold text-2xl tracking-wide">Consistent Pressure</h3>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-lg pb-6">
+                <AccordionContent className="text-foreground/80 text-lg pb-8 leading-relaxed">
                   Delivers deeper lymphatic stimulation than hands alone.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2" className="border-2 border-foreground rounded-none px-6">
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <h3 className="font-black text-xl uppercase">Structured Positioning</h3>
+              <AccordionItem value="item-2" className="border border-primary/20 bg-card rounded-lg px-8 shadow-sm hover:shadow-md transition-shadow">
+                <AccordionTrigger className="text-left hover:no-underline py-8 text-primary">
+                  <h3 className="font-display font-semibold text-2xl tracking-wide">Structured Positioning</h3>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-lg pb-6">
+                <AccordionContent className="text-foreground/80 text-lg pb-8 leading-relaxed">
                   Every body zone is strategically targeted to move lymph upward and out.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3" className="border-2 border-foreground rounded-none px-6">
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <h3 className="font-black text-xl uppercase">Infrared Technology</h3>
+              <AccordionItem value="item-3" className="border border-primary/20 bg-card rounded-lg px-8 shadow-sm hover:shadow-md transition-shadow">
+                <AccordionTrigger className="text-left hover:no-underline py-8 text-primary">
+                  <h3 className="font-display font-semibold text-2xl tracking-wide">Infrared Technology</h3>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-lg pb-6">
+                <AccordionContent className="text-foreground/80 text-lg pb-8 leading-relaxed">
                   Boosts circulation, smooths texture, and softens muscle tension.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-4" className="border-2 border-foreground rounded-none px-6">
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <h3 className="font-black text-xl uppercase">Sculpted Wooden Rollers</h3>
+              <AccordionItem value="item-4" className="border border-primary/20 bg-card rounded-lg px-8 shadow-sm hover:shadow-md transition-shadow">
+                <AccordionTrigger className="text-left hover:no-underline py-8 text-primary">
+                  <h3 className="font-display font-semibold text-2xl tracking-wide">Sculpted Wooden Rollers</h3>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-lg pb-6">
+                <AccordionContent className="text-foreground/80 text-lg pb-8 leading-relaxed">
                   Designed to mimic a therapist's hands for maximum contouring.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-5" className="border-2 border-foreground rounded-none px-6">
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <h3 className="font-black text-xl uppercase">The Rolora Method™</h3>
+              <AccordionItem value="item-5" className="border border-primary/20 bg-card rounded-lg px-8 shadow-sm hover:shadow-md transition-shadow">
+                <AccordionTrigger className="text-left hover:no-underline py-8 text-primary">
+                  <h3 className="font-display font-semibold text-2xl tracking-wide">The Rolora Method™</h3>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-lg pb-6">
+                <AccordionContent className="text-foreground/80 text-lg pb-8 leading-relaxed">
                   Our signature layering of movement, energy, and technology.
                 </AccordionContent>
               </AccordionItem>
