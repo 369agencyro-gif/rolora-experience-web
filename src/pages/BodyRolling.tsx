@@ -116,6 +116,13 @@ const BodyRolling = () => {
                   </div>
                 </div>
               </div>
+
+              <BookingButton 
+                size="lg"
+                className="w-full px-16 py-7 text-base uppercase font-black tracking-widest rounded-none mt-8"
+              >
+                Book Now
+              </BookingButton>
             </div>
           </div>
         </div>
