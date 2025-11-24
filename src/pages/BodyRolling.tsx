@@ -5,13 +5,9 @@ import bodyRollingMachine from "@/assets/body-rolling-machine.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
 import facialRoom from "@/assets/facial-room.jpg";
 import Contact from "@/components/Contact";
-import { Star, Plus } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Star, Plus, Minus } from "lucide-react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
 
 const BodyRolling = () => {
   return (
@@ -213,59 +209,88 @@ const BodyRolling = () => {
       </section>
 
       {/* Why It Works Section */}
-      <section className="py-20 bg-background border-t-4 border-foreground">
-        <div className="container px-6">
+      <section className="py-20 relative overflow-hidden">
+        {/* Gradient Background Effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+        
+        <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-6xl md:text-7xl font-black mb-16 uppercase tracking-tighter text-center">
               WHY IT WORKS
             </h2>
             
-            <Accordion type="single" collapsible className="w-full space-y-6">
-              <AccordionItem value="item-1" className="border border-primary/20 bg-card rounded-lg px-8 shadow-sm hover:shadow-md transition-shadow">
-                <AccordionTrigger className="text-left hover:no-underline py-8 text-primary">
-                  <h3 className="font-display font-semibold text-2xl tracking-wide">Consistent Pressure</h3>
-                </AccordionTrigger>
-                <AccordionContent className="text-foreground/80 text-lg pb-8 leading-relaxed">
+            <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
+              <AccordionItem value="item-1" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Consistent Pressure
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
                   Delivers deeper lymphatic stimulation than hands alone.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2" className="border border-primary/20 bg-card rounded-lg px-8 shadow-sm hover:shadow-md transition-shadow">
-                <AccordionTrigger className="text-left hover:no-underline py-8 text-primary">
-                  <h3 className="font-display font-semibold text-2xl tracking-wide">Structured Positioning</h3>
-                </AccordionTrigger>
-                <AccordionContent className="text-foreground/80 text-lg pb-8 leading-relaxed">
+              <AccordionItem value="item-2" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Structured Positioning
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
                   Every body zone is strategically targeted to move lymph upward and out.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3" className="border border-primary/20 bg-card rounded-lg px-8 shadow-sm hover:shadow-md transition-shadow">
-                <AccordionTrigger className="text-left hover:no-underline py-8 text-primary">
-                  <h3 className="font-display font-semibold text-2xl tracking-wide">Infrared Technology</h3>
-                </AccordionTrigger>
-                <AccordionContent className="text-foreground/80 text-lg pb-8 leading-relaxed">
+              <AccordionItem value="item-3" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Infrared Technology
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
                   Boosts circulation, smooths texture, and softens muscle tension.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-4" className="border border-primary/20 bg-card rounded-lg px-8 shadow-sm hover:shadow-md transition-shadow">
-                <AccordionTrigger className="text-left hover:no-underline py-8 text-primary">
-                  <h3 className="font-display font-semibold text-2xl tracking-wide">Sculpted Wooden Rollers</h3>
-                </AccordionTrigger>
-                <AccordionContent className="text-foreground/80 text-lg pb-8 leading-relaxed">
+              <AccordionItem value="item-4" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Sculpted Wooden Rollers
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
                   Designed to mimic a therapist's hands for maximum contouring.
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-5" className="border border-primary/20 bg-card rounded-lg px-8 shadow-sm hover:shadow-md transition-shadow">
-                <AccordionTrigger className="text-left hover:no-underline py-8 text-primary">
-                  <h3 className="font-display font-semibold text-2xl tracking-wide">The Rolora Method™</h3>
-                </AccordionTrigger>
-                <AccordionContent className="text-foreground/80 text-lg pb-8 leading-relaxed">
+              <AccordionItem value="item-5" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      The Rolora Method™
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
                   Our signature layering of movement, energy, and technology.
                 </AccordionContent>
               </AccordionItem>
-            </Accordion>
+            </AccordionPrimitive.Root>
           </div>
         </div>
       </section>
