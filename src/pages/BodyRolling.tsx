@@ -43,8 +43,13 @@ const BodyRolling = () => {
                   <span className="text-sm font-black uppercase tracking-widest">Body Rolling</span>
                 </div>
 
-                <p className="text-xl leading-relaxed mb-8">
-                  Discover the power of sculpting lymphatic massage with advanced rolling technology paired with built-in red light therapy. This full-body ritual stimulates circulation, promotes lymphatic drainage, and reduces water retention—leaving you feeling lighter, sculpted, and renewed.
+                <p className="text-xl leading-relaxed mb-4">
+                  Rolora Flow™ is our signature full-body rolling ritual — a modern, results-driven lymphatic experience designed to reduce bloating, improve circulation, sculpt your curves, and leave your body feeling lighter, tighter, and re-energized.
+                </p>
+                
+                <p className="text-xl leading-relaxed mb-8 font-bold">
+                  This isn't a massage.<br />
+                  This is circulation technology, intentional movement, and structured sequencing — brought together the Rolora way.
                 </p>
 
                 <BookingButton 
@@ -55,33 +60,46 @@ const BodyRolling = () => {
                 </BookingButton>
               </div>
 
-              {/* What Makes it Great */}
+              {/* What Is Rolora Flow */}
               <div className="border-t-2 border-foreground pt-8">
-                <h2 className="text-xl font-black mb-8 uppercase tracking-widest">What Makes it Great</h2>
-                <div className="grid gap-8">
-                  <div>
-                    <h3 className="font-black text-xl mb-2 uppercase">Lymphatic Drainage</h3>
-                    <p className="text-muted-foreground text-lg">Promotes detoxification and reduces water retention for a sculpted feel.</p>
-                  </div>
-                  <div>
-                    <h3 className="font-black text-xl mb-2 uppercase">Red Light Therapy</h3>
-                    <p className="text-muted-foreground text-lg">Built-in red light enhances collagen and accelerates recovery.</p>
-                  </div>
-                  <div>
-                    <h3 className="font-black text-xl mb-2 uppercase">Full Body Renewal</h3>
-                    <p className="text-muted-foreground text-lg">Energizes circulation and leaves you feeling lighter and refreshed.</p>
-                  </div>
+                <h2 className="text-xl font-black mb-8 uppercase tracking-widest">What Is Rolora Flow™?</h2>
+                <p className="text-lg leading-relaxed mb-6">
+                  Rolora Flow™ uses European rolling technology paired with infrared and red-light therapy to stimulate the lymphatic system, break up stagnation, and encourage natural detox.
+                </p>
+                <p className="text-lg leading-relaxed mb-6">
+                  Each roller is engineered with sculpted wooden nodes that mimic the hands of a therapist — but deeper, more consistent, and more effective.
+                </p>
+                <div className="mt-8">
+                  <p className="font-bold text-lg mb-4">The result:</p>
+                  <ul className="space-y-2 text-muted-foreground text-lg">
+                    <li className="flex items-start gap-3">
+                      <span className="mt-2">•</span>
+                      <span>Reduced water retention</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-2">•</span>
+                      <span>Visible contouring</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-2">•</span>
+                      <span>Less puffiness and swelling</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-2">•</span>
+                      <span>Improved lymph movement</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-2">•</span>
+                      <span>A lighter, smoother, energized body</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
               {/* Pricing Info */}
               <div className="bg-muted border-2 border-foreground p-8">
-                <h3 className="text-xs font-black mb-6 uppercase tracking-widest">Pricing Options</h3>
+                <h3 className="text-xs font-black mb-6 uppercase tracking-widest">Rolora Flow™ Menu</h3>
                 <div className="grid gap-4">
-                  <div className="flex justify-between items-center border-b border-foreground pb-3">
-                    <span className="font-bold">First-Time Roll</span>
-                    <span className="text-xl font-black">$40</span>
-                  </div>
                   <div className="flex justify-between items-center border-b border-foreground pb-3">
                     <span className="font-bold">Single Roll</span>
                     <span className="text-xl font-black">$80</span>
@@ -91,8 +109,8 @@ const BodyRolling = () => {
                     <span className="text-xl font-black">$375</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="font-bold">Monthly Unlimited</span>
-                    <span className="text-xl font-black">$399</span>
+                    <span className="font-bold">10-Pack</span>
+                    <span className="text-xl font-black">$700</span>
                   </div>
                 </div>
               </div>
@@ -101,34 +119,71 @@ const BodyRolling = () => {
         </div>
       </section>
 
-      {/* What's Involved Section */}
+      {/* The Flow Sequence Section */}
       <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-black mb-16 uppercase tracking-tighter">
-              WHAT'S INVOLVED
+            <h2 className="text-6xl md:text-7xl font-black mb-8 uppercase tracking-tighter">
+              THE FLOW SEQUENCE
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-12 mb-20">
-              <div className="border-t-2 border-foreground pt-6">
-                <div className="text-lg font-black mb-3 uppercase">01. Preparation</div>
-                <p className="text-muted-foreground">
-                  You'll be guided onto the advanced rolling machine for your session.
-                </p>
-              </div>
-              <div className="border-t-2 border-foreground pt-6">
-                <div className="text-lg font-black mb-3 uppercase">02. Rolling Therapy</div>
-                <p className="text-muted-foreground">
-                  Mechanized rollers with red light therapy massage your full body.
-                </p>
-              </div>
-              <div className="border-t-2 border-foreground pt-6">
-                <div className="text-lg font-black mb-3 uppercase">03. Recovery</div>
-                <p className="text-muted-foreground">
-                  Relax post-session feeling lighter, sculpted, and energized.
-                </p>
+            <p className="text-xl leading-relaxed mb-12 max-w-4xl">
+              Every Rolora Flow™ session follows a carefully structured 15-position sequence focused on sculpting, circulation, and lymphatic activation.
+            </p>
+
+            <div className="mb-12">
+              <h3 className="text-2xl font-black mb-6 uppercase">Your session includes:</h3>
+              <ul className="space-y-3 text-lg">
+                <li className="flex items-start gap-3">
+                  <span className="mt-2">•</span>
+                  <span>Targeted rolling for legs, glutes, stomach, back, arms, and hips</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-2">•</span>
+                  <span>Infrared + red-light therapy for enhanced detox and smoothing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-2">•</span>
+                  <span>Customized pace + intensity</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-2">•</span>
+                  <span>Guided positions for perfect form</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-2">•</span>
+                  <span>A full rhythmic flow designed for results</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mb-16">
+              <h3 className="text-2xl font-black mb-6 uppercase">The sequence is designed to:</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="border-l-4 border-foreground pl-6">
+                  <p className="text-lg font-bold">1. Release trapped fluids</p>
+                </div>
+                <div className="border-l-4 border-foreground pl-6">
+                  <p className="text-lg font-bold">2. Improve lymphatic drainage</p>
+                </div>
+                <div className="border-l-4 border-foreground pl-6">
+                  <p className="text-lg font-bold">3. Increase circulation</p>
+                </div>
+                <div className="border-l-4 border-foreground pl-6">
+                  <p className="text-lg font-bold">4. Reduce inflammation</p>
+                </div>
+                <div className="border-l-4 border-foreground pl-6">
+                  <p className="text-lg font-bold">5. Enhance muscle recovery</p>
+                </div>
+                <div className="border-l-4 border-foreground pl-6">
+                  <p className="text-lg font-bold">6. Reveal smoother contours</p>
+                </div>
               </div>
             </div>
+
+            <p className="text-xl font-bold mb-20">
+              You'll feel lighter after one session — and noticeably more sculpted with consistency.
+            </p>
 
             {/* Image Grid */}
             <div className="grid md:grid-cols-2 gap-8">
@@ -147,6 +202,94 @@ const BodyRolling = () => {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why It Works Section */}
+      <section className="py-20 bg-muted border-t-4 border-foreground">
+        <div className="container px-6">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-6xl md:text-7xl font-black mb-16 uppercase tracking-tighter">
+              WHY IT WORKS
+            </h2>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+              <div className="border-t-2 border-foreground pt-6">
+                <h3 className="font-black text-xl mb-3 uppercase">Consistent Pressure</h3>
+                <p className="text-muted-foreground text-lg">Delivers deeper lymphatic stimulation than hands alone.</p>
+              </div>
+              <div className="border-t-2 border-foreground pt-6">
+                <h3 className="font-black text-xl mb-3 uppercase">Structured Positioning</h3>
+                <p className="text-muted-foreground text-lg">Every body zone is strategically targeted to move lymph upward and out.</p>
+              </div>
+              <div className="border-t-2 border-foreground pt-6">
+                <h3 className="font-black text-xl mb-3 uppercase">Infrared Technology</h3>
+                <p className="text-muted-foreground text-lg">Boosts circulation, smooths texture, and softens muscle tension.</p>
+              </div>
+              <div className="border-t-2 border-foreground pt-6">
+                <h3 className="font-black text-xl mb-3 uppercase">Sculpted Wooden Rollers</h3>
+                <p className="text-muted-foreground text-lg">Designed to mimic a therapist's hands for maximum contouring.</p>
+              </div>
+              <div className="border-t-2 border-foreground pt-6">
+                <h3 className="font-black text-xl mb-3 uppercase">The Rolora Method™</h3>
+                <p className="text-muted-foreground text-lg">Our signature layering of movement, energy, and technology.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-background border-t-4 border-foreground">
+        <div className="container px-6">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-6xl md:text-7xl font-black mb-12 uppercase tracking-tighter">
+              BENEFITS YOU'LL FEEL IMMEDIATELY
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-8 text-lg mb-12">
+              <div className="flex items-start gap-3">
+                <span className="mt-2">•</span>
+                <span>Reduced bloat</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="mt-2">•</span>
+                <span>Slimmer waist appearance</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="mt-2">•</span>
+                <span>Defined legs + arms</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="mt-2">•</span>
+                <span>Smoother skin</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="mt-2">•</span>
+                <span>Better digestion</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="mt-2">•</span>
+                <span>Boosted energy</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="mt-2">•</span>
+                <span>Less swelling + water retention</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="mt-2">•</span>
+                <span>Muscle relaxation</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="mt-2">•</span>
+                <span>Stress relief</span>
+              </div>
+            </div>
+
+            <p className="text-2xl font-bold">
+              Your body resets — your energy rises.
+            </p>
           </div>
         </div>
       </section>
@@ -171,28 +314,46 @@ const BodyRolling = () => {
       <section className="py-20 bg-accent text-primary-foreground">
         <div className="container px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-black mb-12 uppercase tracking-tighter text-white">
-              PERFECT FOR
+            <h2 className="text-6xl md:text-7xl font-black mb-8 uppercase tracking-tighter text-white">
+              WHO IT'S FOR
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8 text-lg">
+            <p className="text-xl mb-12">Perfect for anyone who wants to:</p>
+            
+            <div className="grid md:grid-cols-2 gap-6 text-lg">
               <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
-                <p className="font-medium">Reducing water retention and bloating</p>
+                <span className="text-2xl">✔</span>
+                <p className="font-medium">De-bloat</p>
               </div>
               <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
-                <p className="font-medium">Post-workout recovery and muscle relaxation</p>
+                <span className="text-2xl">✔</span>
+                <p className="font-medium">Sculpt + tighten</p>
               </div>
               <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
-                <p className="font-medium">Lymphatic drainage and detoxification</p>
+                <span className="text-2xl">✔</span>
+                <p className="font-medium">Improve lymphatic flow</p>
               </div>
               <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
-                <p className="font-medium">Body sculpting and circulation boost</p>
+                <span className="text-2xl">✔</span>
+                <p className="font-medium">Feel lighter and more energized</p>
+              </div>
+              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
+                <span className="text-2xl">✔</span>
+                <p className="font-medium">Recover from workouts</p>
+              </div>
+              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
+                <span className="text-2xl">✔</span>
+                <p className="font-medium">Smooth the appearance of cellulite</p>
+              </div>
+              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
+                <span className="text-2xl">✔</span>
+                <p className="font-medium">Maintain overall wellness</p>
               </div>
             </div>
+
+            <p className="text-xl mt-12 font-bold">
+              It pairs perfectly with facials for that full-body Rolora glow.
+            </p>
           </div>
         </div>
       </section>
@@ -209,10 +370,14 @@ const BodyRolling = () => {
         <div className="relative h-[500px] overflow-hidden bg-muted flex items-center justify-center p-12">
           <div className="max-w-md">
             <h3 className="text-5xl font-black mb-6 uppercase tracking-tighter leading-none">
-              FLOW WITH US
+              💎 THE ROLORA DIFFERENCE
             </h3>
             <p className="text-xl mb-8">
-              Experience full-body renewal with Rolora Flow. Book your session today.
+              Rolora Flow™ is results-focused, structured, and elevated — blending technology with intentional movement to sculpt your body and rebalance your energy.
+            </p>
+            <p className="text-xl font-bold mb-8">
+              This is modern beauty. Elevated energy.<br />
+              This is Rolora Flow™.
             </p>
             <BookingButton 
               size="lg"
