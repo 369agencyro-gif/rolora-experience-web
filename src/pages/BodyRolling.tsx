@@ -347,7 +347,7 @@ const BodyRolling = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img src={glowingSkin} alt="Body Rolling Results" className="w-full h-full object-cover" />
+        <img alt="Body Rolling Results" className="w-full h-full object-cover" src="/lovable-uploads/cc839568-51ce-44e5-a3bd-23003dc4a5e0.jpg" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
