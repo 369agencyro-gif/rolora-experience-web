@@ -52,35 +52,35 @@ const BodyRolling = () => {
               </div>
 
               {/* What Is Rolora Flow */}
-              <div className="border-t-2 border-foreground pt-8">
-                <h2 className="text-xl font-black mb-8 uppercase tracking-widest">What Is Rolora Flow™?</h2>
-                <p className="text-lg leading-relaxed mb-6">
+              <div className="border-t-4 border-primary pt-12 mt-8">
+                <h2 className="font-display text-3xl md:text-4xl font-black mb-10 uppercase tracking-wide text-primary">What Is Rolora Flow™?</h2>
+                <p className="font-body text-xl leading-relaxed mb-8">
                   Rolora Flow™ uses European rolling technology paired with infrared and red-light therapy to stimulate the lymphatic system, break up stagnation, and encourage natural detox.
                 </p>
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="font-body text-xl leading-relaxed mb-8">
                   Each roller is engineered with sculpted wooden nodes that mimic the hands of a therapist — but deeper, more consistent, and more effective.
                 </p>
-                <div className="mt-8">
-                  <p className="font-bold text-lg mb-4">The result:</p>
-                  <ul className="space-y-2 text-muted-foreground text-lg">
-                    <li className="flex items-start gap-3">
-                      <span className="mt-2">•</span>
+                <div className="mt-12">
+                  <p className="font-body font-bold text-xl mb-6">The result:</p>
+                  <ul className="space-y-4 text-muted-foreground text-xl font-body">
+                    <li className="flex items-start gap-4">
+                      <span className="mt-1">•</span>
                       <span>Reduced water retention</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-2">•</span>
+                    <li className="flex items-start gap-4">
+                      <span className="mt-1">•</span>
                       <span>Visible contouring</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-2">•</span>
+                    <li className="flex items-start gap-4">
+                      <span className="mt-1">•</span>
                       <span>Less puffiness and swelling</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-2">•</span>
+                    <li className="flex items-start gap-4">
+                      <span className="mt-1">•</span>
                       <span>Improved lymph movement</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-2">•</span>
+                    <li className="flex items-start gap-4">
+                      <span className="mt-1">•</span>
                       <span>A lighter, smoother, energized body</span>
                     </li>
                   </ul>
