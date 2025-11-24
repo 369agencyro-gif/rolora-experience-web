@@ -115,79 +115,109 @@ const BodyRolling = () => {
       </section>
 
       {/* The Flow Sequence Section */}
-      <section className="py-20 bg-background border-t-4 border-foreground">
-        <div className="container px-6">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] mb-8 text-primary">
+      <section className="py-20 relative overflow-hidden">
+        {/* Gradient Background Effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+        
+        <div className="container px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-8 text-primary">
               THE FLOW SEQUENCE
             </h2>
             
-            <p className="text-xl leading-relaxed mb-12 max-w-4xl">
+            <p className="text-xl leading-relaxed mb-16 text-center">
               Every Rolora Flow™ session follows a carefully structured 15-position sequence focused on sculpting, circulation, and lymphatic activation.
             </p>
 
-            <div className="mb-12">
-              <h3 className="text-2xl font-black mb-6 uppercase">Your session includes:</h3>
-              <ul className="space-y-3 text-lg">
-                <li className="flex items-start gap-3">
-                  <span className="mt-2">•</span>
-                  <span>Targeted rolling for legs, glutes, stomach, back, arms, and hips</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-2">•</span>
-                  <span>Infrared + red-light therapy for enhanced detox and smoothing</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-2">•</span>
-                  <span>Customized pace + intensity</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-2">•</span>
-                  <span>Guided positions for perfect form</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-2">•</span>
-                  <span>A full rhythmic flow designed for results</span>
-                </li>
-              </ul>
-            </div>
+            <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
+              <AccordionItem value="item-1" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Targeted Rolling
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Focused rolling for legs, glutes, stomach, back, arms, and hips to sculpt and contour every area.
+                </AccordionContent>
+              </AccordionItem>
 
-            <div className="mb-16">
-              <h3 className="text-2xl font-black mb-6 uppercase">The sequence is designed to:</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="border-l-4 border-foreground pl-6">
-                  <p className="text-lg font-bold">1. Release trapped fluids</p>
-                </div>
-                <div className="border-l-4 border-foreground pl-6">
-                  <p className="text-lg font-bold">2. Improve lymphatic drainage</p>
-                </div>
-                <div className="border-l-4 border-foreground pl-6">
-                  <p className="text-lg font-bold">3. Increase circulation</p>
-                </div>
-                <div className="border-l-4 border-foreground pl-6">
-                  <p className="text-lg font-bold">4. Reduce inflammation</p>
-                </div>
-                <div className="border-l-4 border-foreground pl-6">
-                  <p className="text-lg font-bold">5. Enhance muscle recovery</p>
-                </div>
-                <div className="border-l-4 border-foreground pl-6">
-                  <p className="text-lg font-bold">6. Reveal smoother contours</p>
-                </div>
-              </div>
-            </div>
+              <AccordionItem value="item-2" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Infrared + Red-Light Therapy
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Enhanced detox and smoothing through advanced light therapy technology.
+                </AccordionContent>
+              </AccordionItem>
 
-            <p className="text-xl font-bold mb-20">
+              <AccordionItem value="item-3" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Customized Intensity
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Personalized pace and intensity tailored to your body and comfort level.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Guided Positioning
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Expert guidance through each position to ensure maximum effectiveness and proper form.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Full Rhythmic Flow
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  A complete sequence designed for visible results — releasing trapped fluids, improving lymphatic drainage, increasing circulation, reducing inflammation, enhancing muscle recovery, and revealing smoother contours.
+                </AccordionContent>
+              </AccordionItem>
+            </AccordionPrimitive.Root>
+
+            <p className="text-xl font-bold text-center mt-16">
               You'll feel lighter after one session — and noticeably more sculpted with consistency.
             </p>
+          </div>
+        </div>
+      </section>
 
-            {/* Image Grid */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={bodyRollingMachine} alt="Body Rolling Machine" className="w-full h-full object-cover" />
-              </div>
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={facialRoom} alt="Treatment Environment" className="w-full h-full object-cover" />
-              </div>
+      {/* Image Grid */}
+      <section className="py-12 bg-background">
+        <div className="container px-6">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <img src={bodyRollingMachine} alt="Body Rolling Machine" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <img src={facialRoom} alt="Treatment Environment" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
