@@ -458,11 +458,9 @@ const BodyRolling = () => {
                   Pairs perfectly with facials for that full-body Rolora glow
                 </p>
               </div>
-              <Link to="/#services">
-                <Button size="lg" className="px-12 py-6 text-sm uppercase font-bold tracking-wider">
-                  See Facial Services
-                </Button>
-              </Link>
+              <BookingButton variant="cta" size="lg">
+                BOOK NOW
+              </BookingButton>
             </div>
           </div>
         </div>
