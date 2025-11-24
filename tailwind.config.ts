@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Antonio', 'Impact', 'sans-serif'],
+        display: ['Satisfy', 'cursive'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
