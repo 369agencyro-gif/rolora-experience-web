@@ -284,37 +284,25 @@ const BodyRolling = () => {
       <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-black mb-12 uppercase tracking-tighter animate-fade-in">
+            <h2 className="md:text-7xl font-black mb-12 uppercase tracking-tighter animate-fade-in text-5xl">
               BENEFITS YOU'LL FEEL IMMEDIATELY
             </h2>
             
             <div className="grid md:grid-cols-3 gap-6 text-lg mb-12">
-              {[
-                "Reduced bloat",
-                "Slimmer waist appearance",
-                "Defined legs + arms",
-                "Smoother skin",
-                "Better digestion",
-                "Boosted energy",
-                "Less swelling + water retention",
-                "Muscle relaxation",
-                "Stress relief"
-              ].map((benefit, index) => (
-                <div
-                  key={benefit}
-                  className="group relative p-6 rounded-lg bg-card border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(209,178,114,0.15)] animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+              {["Reduced bloat", "Slimmer waist appearance", "Defined legs + arms", "Smoother skin", "Better digestion", "Boosted energy", "Less swelling + water retention", "Muscle relaxation", "Stress relief"].map((benefit, index) => <div key={benefit} className="group relative p-6 rounded-lg bg-card border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(209,178,114,0.15)] animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative flex items-start gap-3">
                     <span className="text-primary text-xl mt-1">✦</span>
                     <span className="font-medium">{benefit}</span>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
-            <p className="text-2xl font-bold text-center animate-fade-in" style={{ animationDelay: "0.9s" }}>
+            <p className="text-2xl font-bold text-center animate-fade-in" style={{
+            animationDelay: "0.9s"
+          }}>
               Your body resets — your energy rises.
             </p>
           </div>
