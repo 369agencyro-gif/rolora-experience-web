@@ -70,23 +70,12 @@ const BodyRolling = () => {
                 <div className="mt-8 pt-6 space-y-6">
                   <p className="font-display text-lg font-semibold text-foreground/90">The Result</p>
                   <div className="grid gap-4">
-                    {[
-                      "Reduced water retention",
-                      "Visible contouring",
-                      "Less puffiness and swelling",
-                      "Improved lymph movement",
-                      "A lighter, smoother, energized body"
-                    ].map((benefit, i) => (
-                      <div 
-                        key={i} 
-                        className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
-                      >
+                    {["Reduced water retention", "Visible contouring", "Less puffiness and swelling", "Improved lymph movement", "A lighter, smoother, energized body"].map((benefit, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                           <span className="text-primary text-xs font-bold">✓</span>
                         </div>
                         <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
               </div>
@@ -411,7 +400,7 @@ const BodyRolling = () => {
 
             <div className="mt-12 flex justify-center">
               <div className="inline-flex items-center gap-3 px-8 py-5 rounded-full border border-border/30 bg-background shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 hover:scale-[1.02]">
-                <span className="text-2xl">✨</span>
+                
                 <p className="text-lg font-medium text-foreground">
                   Pairs perfectly with facials for that full-body Rolora glow
                 </p>
