@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Cormorant', 'serif'],
+        display: ['Bebas Neue', 'Impact', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
       },
       colors: {
