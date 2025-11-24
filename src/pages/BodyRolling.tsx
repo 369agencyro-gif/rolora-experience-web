@@ -8,6 +8,8 @@ import Contact from "@/components/Contact";
 import { Star, Plus, Minus } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 const BodyRolling = () => {
   return <ServiceLayout>
       {/* Hero Section - Two Column Layout */}
@@ -324,17 +326,34 @@ const BodyRolling = () => {
               BENEFITS YOU'LL FEEL IMMEDIATELY
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-6 text-lg mb-12">
-              {["Reduced bloat", "Slimmer waist appearance", "Defined legs + arms", "Smoother skin", "Better digestion", "Boosted energy", "Less swelling + water retention", "Muscle relaxation", "Stress relief"].map((benefit, index) => <div key={benefit} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(209,178,114,0.25)] animate-fade-in" style={{
-              animationDelay: `${index * 0.1}s`
-            }}>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative flex items-center justify-center gap-3">
-                    <span className="text-primary text-lg">✦</span>
-                    <span className="font-semibold text-center">{benefit}</span>
-                  </div>
-                </div>)}
-            </div>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 500,
+                }),
+              ]}
+              className="w-full mb-12"
+            >
+              <CarouselContent>
+                {["Reduced bloat", "Slimmer waist appearance", "Defined legs + arms", "Smoother skin", "Better digestion", "Boosted energy", "Less swelling + water retention", "Muscle relaxation", "Stress relief"].map((benefit, index) => (
+                  <CarouselItem key={benefit} className="md:basis-1/3">
+                    <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(209,178,114,0.25)] animate-fade-in" style={{
+                      animationDelay: `${index * 0.1}s`
+                    }}>
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="relative flex items-center justify-center gap-3">
+                        <span className="text-primary text-lg">✦</span>
+                        <span className="font-semibold text-center">{benefit}</span>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
 
             <p className="text-2xl font-bold text-center animate-fade-in" style={{
             animationDelay: "0.9s"
