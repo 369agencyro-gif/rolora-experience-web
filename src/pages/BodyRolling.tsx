@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 const BodyRolling = () => {
   return <ServiceLayout>
       {/* Hero Section - Full Width Slider */}
-      <section className="py-12 md:py-20">
+      <section className="pb-12 md:pb-20">
         <div className="container px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
             {/* Left: Image Slider - Full Width */}
