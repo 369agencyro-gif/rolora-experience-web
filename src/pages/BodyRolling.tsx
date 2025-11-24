@@ -215,9 +215,13 @@ const BodyRolling = () => {
               </AccordionItem>
             </AccordionPrimitive.Root>
 
-            <p className="text-xl font-bold text-center mt-16">
-              You'll feel lighter after one session — and noticeably more sculpted with consistency.
-            </p>
+            <div className="relative mt-16 p-8 rounded-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"></div>
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent"></div>
+              <p className="relative text-xl font-medium text-center leading-relaxed text-foreground">
+                You'll feel lighter after one session — and noticeably more sculpted with consistency.
+              </p>
+            </div>
           </div>
         </div>
       </section>
