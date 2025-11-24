@@ -355,6 +355,12 @@ const BodyRolling = () => {
                 </AccordionContent>
               </AccordionItem>
             </AccordionPrimitive.Root>
+            
+            <div className="flex justify-center mt-12">
+              <BookingButton variant="cta" size="lg">
+                BOOK NOW
+              </BookingButton>
+            </div>
           </div>
         </div>
       </section>
