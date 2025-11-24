@@ -396,22 +396,22 @@ const BodyRolling = () => {
 
       {/* Two Column CTA Section */}
       <section className="grid md:grid-cols-2">
-        <div className="relative h-[500px] overflow-hidden">
+        <div className="relative h-[300px] md:h-[500px] overflow-hidden">
           <img src={bodyImage} alt="Body Rolling Experience" className="w-full h-full object-cover" />
         </div>
-        <div className="relative h-[500px] overflow-hidden bg-muted flex items-center justify-center p-12">
+        <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
-            <h3 className="text-5xl font-black mb-6 uppercase tracking-tighter leading-none">
+            <h3 className="text-3xl md:text-5xl font-black mb-4 md:mb-6 uppercase tracking-tighter leading-none">
               💎 THE ROLORA DIFFERENCE
             </h3>
-            <p className="text-xl mb-8">
+            <p className="text-lg md:text-xl mb-6 md:mb-8">
               Rolora Flow™ is results-focused, structured, and elevated — blending technology with intentional movement to sculpt your body and rebalance your energy.
             </p>
-            <p className="text-xl font-bold mb-8">
+            <p className="text-lg md:text-xl font-bold mb-6 md:mb-8">
               This is modern beauty. Elevated energy.<br />
               This is Rolora Flow™.
             </p>
-            <BookingButton size="lg" className="w-full px-12 py-7 text-base uppercase font-black tracking-widest rounded-none">
+            <BookingButton size="lg" className="w-full px-8 md:px-12 py-6 md:py-7 text-sm md:text-base uppercase font-black tracking-widest rounded-none">
               Book Rolora Flow
             </BookingButton>
           </div>
