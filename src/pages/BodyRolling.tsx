@@ -409,12 +409,13 @@ const BodyRolling = () => {
               </div>
             </div>
 
-            <div className="relative mt-12 p-8 rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent"></div>
-              <p className="relative text-xl font-medium text-center leading-relaxed">
-                It pairs perfectly with facials for that full-body Rolora glow.
-              </p>
+            <div className="mt-12 flex justify-center">
+              <div className="inline-flex items-center gap-3 px-8 py-5 rounded-full border border-border/30 bg-background shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 hover:scale-[1.02]">
+                <span className="text-2xl">✨</span>
+                <p className="text-lg font-medium text-foreground">
+                  Pairs perfectly with facials for that full-body Rolora glow
+                </p>
+              </div>
             </div>
           </div>
         </div>
