@@ -10,6 +10,8 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 const BodyRolling = () => {
   return <ServiceLayout>
       {/* Hero Section - Two Column Layout */}
@@ -404,13 +406,18 @@ const BodyRolling = () => {
               ))}
             </div>
 
-            <div className="flex justify-center">
-              <div className="inline-flex items-center gap-3 px-8 py-5 rounded-full border border-primary/20 bg-background/50 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:scale-[1.02]">
+            <div className="flex flex-col items-center gap-4">
+              <div className="inline-flex items-center gap-3 px-8 py-5 rounded-full border border-primary/20 bg-background/50 backdrop-blur-sm">
                 <span className="text-primary text-xl">✦</span>
                 <p className="text-lg font-medium text-foreground">
                   Pairs perfectly with facials for that full-body Rolora glow
                 </p>
               </div>
+              <Link to="/#services">
+                <Button size="lg" className="px-12 py-6 text-sm uppercase font-bold tracking-wider">
+                  See Facial Services
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
