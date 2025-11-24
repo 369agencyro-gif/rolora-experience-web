@@ -1,6 +1,6 @@
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
-import bodyImage from "@/assets/service-body.jpg";
+import bodyImage from "@/assets/body-rolling-hero.webp";
 import bodyRollingMachine from "@/assets/body-rolling-machine-new.webp";
 import glowingSkin from "@/assets/glowing-skin.jpg";
 import bodyRollingTreatment from "@/assets/body-rolling-treatment.webp";
