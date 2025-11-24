@@ -23,7 +23,7 @@ const BodyRolling = () => {
             <div className="space-y-8">
               {/* Title & Rating */}
               <div>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-6 uppercase tracking-tighter leading-none">
+                <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-black mb-6 uppercase tracking-wide leading-none">
                   ROLORA FLOW™
                 </h1>
                 <div className="flex items-center gap-3 mb-6">
@@ -118,7 +118,7 @@ const BodyRolling = () => {
       <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide mb-8 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+            <h2 className="font-display text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide mb-8 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
               THE FLOW SEQUENCE
             </h2>
             
@@ -201,7 +201,7 @@ const BodyRolling = () => {
         
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide text-center mb-16 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+            <h2 className="font-display text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide text-center mb-16 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
               WHY IT WORKS
             </h2>
             
@@ -284,7 +284,7 @@ const BodyRolling = () => {
       <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide animate-fade-in mb-12 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+            <h2 className="font-display text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide animate-fade-in mb-12 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
               BENEFITS YOU'LL FEEL IMMEDIATELY
             </h2>
             
@@ -320,7 +320,7 @@ const BodyRolling = () => {
         <img src={glowingSkin} alt="Body Rolling Results" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
-            <h3 className="text-6xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-wide drop-shadow-[0_6px_16px_rgba(0,0,0,0.6)]">
+            <h3 className="font-display text-6xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-wide drop-shadow-[0_6px_16px_rgba(0,0,0,0.6)]">
               Detox. Sculpt. Energize.
             </h3>
           </div>
@@ -331,7 +331,7 @@ const BodyRolling = () => {
       <section className="py-20 bg-accent text-primary-foreground">
         <div className="container px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide text-white mb-8 drop-shadow-[0_6px_16px_rgba(0,0,0,0.6)]">
+            <h2 className="font-display text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide text-white mb-8 drop-shadow-[0_6px_16px_rgba(0,0,0,0.6)]">
               WHO IT'S FOR
             </h2>
             
@@ -382,7 +382,7 @@ const BodyRolling = () => {
         </div>
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
-            <h3 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-wide leading-none mb-4 md:mb-6 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+            <h3 className="font-display text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-wide leading-none mb-4 md:mb-6 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
               THE ROLORA DIFFERENCE
             </h3>
             <p className="text-lg md:text-xl mb-6 md:mb-8">
