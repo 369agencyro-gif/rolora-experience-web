@@ -23,7 +23,7 @@ const BodyRolling = () => {
             <div className="space-y-8">
               {/* Title & Rating */}
               <div>
-                <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-black mb-6 uppercase tracking-wide leading-none">
+                <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-black mb-6 uppercase tracking-tight leading-[0.9] text-primary">
                   ROLORA FLOW™
                 </h1>
                 <div className="flex items-center gap-3 mb-6">
@@ -52,35 +52,35 @@ const BodyRolling = () => {
               </div>
 
               {/* What Is Rolora Flow */}
-              <div className="border-t-4 border-primary pt-12 mt-8">
-                <h2 className="font-display text-3xl md:text-4xl font-black mb-10 uppercase tracking-wide text-primary">What Is Rolora Flow™?</h2>
-                <p className="font-body text-xl leading-relaxed mb-8">
+              <div className="border-t border-primary/30 pt-10 mt-8">
+                <h2 className="font-display text-2xl md:text-3xl font-bold mb-8 uppercase tracking-wider text-primary">What Is Rolora Flow™?</h2>
+                <p className="font-body text-lg leading-relaxed mb-6 text-foreground/90">
                   Rolora Flow™ uses European rolling technology paired with infrared and red-light therapy to stimulate the lymphatic system, break up stagnation, and encourage natural detox.
                 </p>
-                <p className="font-body text-xl leading-relaxed mb-8">
+                <p className="font-body text-lg leading-relaxed mb-6 text-foreground/90">
                   Each roller is engineered with sculpted wooden nodes that mimic the hands of a therapist — but deeper, more consistent, and more effective.
                 </p>
-                <div className="mt-12">
-                  <p className="font-body font-bold text-xl mb-6">The result:</p>
-                  <ul className="space-y-4 text-muted-foreground text-xl font-body">
-                    <li className="flex items-start gap-4">
-                      <span className="mt-1">•</span>
+                <div className="mt-10 pt-8 border-t border-border">
+                  <p className="font-body font-semibold text-lg mb-5 text-foreground">The result:</p>
+                  <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3 text-base font-body text-foreground/80">
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary">—</span>
                       <span>Reduced water retention</span>
                     </li>
-                    <li className="flex items-start gap-4">
-                      <span className="mt-1">•</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary">—</span>
                       <span>Visible contouring</span>
                     </li>
-                    <li className="flex items-start gap-4">
-                      <span className="mt-1">•</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary">—</span>
                       <span>Less puffiness and swelling</span>
                     </li>
-                    <li className="flex items-start gap-4">
-                      <span className="mt-1">•</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary">—</span>
                       <span>Improved lymph movement</span>
                     </li>
-                    <li className="flex items-start gap-4">
-                      <span className="mt-1">•</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary">—</span>
                       <span>A lighter, smoother, energized body</span>
                     </li>
                   </ul>
@@ -118,7 +118,7 @@ const BodyRolling = () => {
       <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-display text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide mb-8 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] mb-8 text-primary">
               THE FLOW SEQUENCE
             </h2>
             
@@ -201,7 +201,7 @@ const BodyRolling = () => {
         
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide text-center mb-16 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-16 text-primary">
               WHY IT WORKS
             </h2>
             
@@ -284,7 +284,7 @@ const BodyRolling = () => {
       <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-display text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide animate-fade-in mb-12 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+            <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] animate-fade-in mb-12 text-primary">
               BENEFITS YOU'LL FEEL IMMEDIATELY
             </h2>
             
@@ -320,7 +320,7 @@ const BodyRolling = () => {
         <img src={glowingSkin} alt="Body Rolling Results" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
-            <h3 className="font-display text-6xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-wide drop-shadow-[0_6px_16px_rgba(0,0,0,0.6)]">
+            <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
               Detox. Sculpt. Energize.
             </h3>
           </div>
@@ -331,7 +331,7 @@ const BodyRolling = () => {
       <section className="py-20 bg-accent text-primary-foreground">
         <div className="container px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="font-display text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-wide text-white mb-8 drop-shadow-[0_6px_16px_rgba(0,0,0,0.6)]">
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-white mb-8">
               WHO IT'S FOR
             </h2>
             
@@ -382,7 +382,7 @@ const BodyRolling = () => {
         </div>
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
-            <h3 className="font-display text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-wide leading-none mb-4 md:mb-6 text-primary drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+            <h3 className="font-display text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.9] mb-4 md:mb-6 text-primary">
               THE ROLORA DIFFERENCE
             </h3>
             <p className="text-lg md:text-xl mb-6 md:mb-8">
