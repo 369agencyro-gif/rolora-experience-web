@@ -37,22 +37,22 @@ const BodyRolling = () => {
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
                       <img src={bodyImage} alt="Rolora Flow body rolling treatment" className="w-full h-full object-cover" />
-                      <div className="absolute bottom-8 left-8 bg-background/95 backdrop-blur-sm px-6 py-4 rounded-2xl border border-primary/20 shadow-lg">
-                        <div className="flex items-center gap-1 mb-2">
-                          {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+                      <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
+                        <div className="flex items-center gap-1.5">
+                          {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
+                          <span className="text-xs font-medium text-foreground/80 ml-1">Sarah M.</span>
                         </div>
-                        <p className="font-medium text-foreground">Sarah M.</p>
                       </div>
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
                       <img src={bodyRollingTools} alt="Body rolling wooden tools" className="w-full h-full object-cover" />
-                      <div className="absolute bottom-8 left-8 bg-background/95 backdrop-blur-sm px-6 py-4 rounded-2xl border border-primary/20 shadow-lg">
-                        <div className="flex items-center gap-1 mb-2">
-                          {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+                      <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
+                        <div className="flex items-center gap-1.5">
+                          {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
+                          <span className="text-xs font-medium text-foreground/80 ml-1">Jessica T.</span>
                         </div>
-                        <p className="font-medium text-foreground">Jessica T.</p>
                       </div>
                     </div>
                   </CarouselItem>
