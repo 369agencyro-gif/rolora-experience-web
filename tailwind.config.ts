@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Lexend Deca', 'system-ui', 'sans-serif'],
+        display: ['Barlow Condensed', 'Impact', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
