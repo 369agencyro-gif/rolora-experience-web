@@ -67,9 +67,9 @@ const BodyRolling = () => {
                   </p>
                 </div>
 
-                <div className="mt-8 pt-6 space-y-5">
-                  <p className="font-display text-lg font-semibold text-foreground">The Result</p>
-                  <div className="grid gap-3">
+                <div className="mt-8 pt-6 space-y-6">
+                  <p className="font-display text-lg font-semibold text-foreground/90">The Result</p>
+                  <div className="grid gap-4">
                     {[
                       "Reduced water retention",
                       "Visible contouring",
@@ -77,9 +77,14 @@ const BodyRolling = () => {
                       "Improved lymph movement",
                       "A lighter, smoother, energized body"
                     ].map((benefit, i) => (
-                      <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors">
-                        <span className="text-primary text-sm mt-0.5">✓</span>
-                        <span className="text-sm text-foreground/80 font-light">{benefit}</span>
+                      <div 
+                        key={i} 
+                        className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
+                      >
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                          <span className="text-primary text-xs font-bold">✓</span>
+                        </div>
+                        <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
                       </div>
                     ))}
                   </div>
