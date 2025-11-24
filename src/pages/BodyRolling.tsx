@@ -383,7 +383,7 @@ const BodyRolling = () => {
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
             <h3 className="text-3xl md:text-5xl font-black mb-4 md:mb-6 uppercase tracking-tighter leading-none">
-              💎 THE ROLORA DIFFERENCE
+              THE ROLORA DIFFERENCE
             </h3>
             <p className="text-lg md:text-xl mb-6 md:mb-8">
               Rolora Flow™ is results-focused, structured, and elevated — blending technology with intentional movement to sculpt your body and rebalance your energy.
