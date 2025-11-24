@@ -37,11 +37,23 @@ const BodyRolling = () => {
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
                       <img src={bodyImage} alt="Rolora Flow body rolling treatment" className="w-full h-full object-cover" />
+                      <div className="absolute bottom-8 left-8 bg-background/95 backdrop-blur-sm px-6 py-4 rounded-2xl border border-primary/20 shadow-lg">
+                        <div className="flex items-center gap-1 mb-2">
+                          {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+                        </div>
+                        <p className="font-medium text-foreground">Sarah M.</p>
+                      </div>
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
                       <img src={bodyRollingTools} alt="Body rolling wooden tools" className="w-full h-full object-cover" />
+                      <div className="absolute bottom-8 left-8 bg-background/95 backdrop-blur-sm px-6 py-4 rounded-2xl border border-primary/20 shadow-lg">
+                        <div className="flex items-center gap-1 mb-2">
+                          {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+                        </div>
+                        <p className="font-medium text-foreground">Jessica T.</p>
+                      </div>
                     </div>
                   </CarouselItem>
                 </CarouselContent>
