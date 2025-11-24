@@ -377,49 +377,36 @@ const BodyRolling = () => {
       </section>
 
       {/* Perfect For Section */}
-      <section className="py-20 bg-accent text-primary-foreground">
-        <div className="container px-6">
+      <section className="py-20 relative overflow-hidden bg-background border-t-4 border-foreground">
+        {/* Gradient Background Effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+        
+        <div className="container px-6 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-white mb-8">
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-primary mb-8">
               WHO IT'S FOR
             </h2>
             
-            <p className="text-xl mb-12">Perfect for anyone who wants to:</p>
+            <p className="text-xl mb-12 text-foreground/80">Perfect for anyone who wants to:</p>
             
-            <div className="grid md:grid-cols-2 gap-6 text-lg">
-              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <span className="text-2xl">✔</span>
-                <p className="font-medium">De-bloat</p>
-              </div>
-              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <span className="text-2xl">✔</span>
-                <p className="font-medium">Sculpt + tighten</p>
-              </div>
-              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <span className="text-2xl">✔</span>
-                <p className="font-medium">Improve lymphatic flow</p>
-              </div>
-              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <span className="text-2xl">✔</span>
-                <p className="font-medium">Feel lighter and more energized</p>
-              </div>
-              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <span className="text-2xl">✔</span>
-                <p className="font-medium">Recover from workouts</p>
-              </div>
-              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <span className="text-2xl">✔</span>
-                <p className="font-medium">Smooth the appearance of cellulite</p>
-              </div>
-              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <span className="text-2xl">✔</span>
-                <p className="font-medium">Maintain overall wellness</p>
-              </div>
+            <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
+              {["De-bloat", "Sculpt + tighten", "Improve lymphatic flow", "Feel lighter and more energized", "Recover from workouts", "Smooth the appearance of cellulite", "Maintain overall wellness"].map((item, index) => (
+                <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
+                  animationDelay: `${index * 0.1}s`
+                }}>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative flex items-center gap-4">
+                    <span className="text-primary text-xl flex-shrink-0">✔</span>
+                    <p className="font-semibold text-foreground">{item}</p>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div className="mt-12 flex justify-center">
-              <div className="inline-flex items-center gap-3 px-8 py-5 rounded-full border border-border/30 bg-background shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 hover:scale-[1.02]">
-                
+            <div className="flex justify-center">
+              <div className="inline-flex items-center gap-3 px-8 py-5 rounded-full border border-primary/20 bg-background/50 backdrop-blur-sm hover:border-primary/40 transition-all duration-300 hover:scale-[1.02]">
+                <span className="text-primary text-xl">✦</span>
                 <p className="text-lg font-medium text-foreground">
                   Pairs perfectly with facials for that full-body Rolora glow
                 </p>
