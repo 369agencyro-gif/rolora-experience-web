@@ -118,9 +118,12 @@ const BodyRolling = () => {
       <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-black mb-8 uppercase tracking-tighter">
-              THE FLOW SEQUENCE
-            </h2>
+            <div className="mb-8">
+              <h2 className="text-6xl md:text-7xl font-black uppercase tracking-tight relative inline-block">
+                THE FLOW SEQUENCE
+              </h2>
+              <div className="h-1 w-32 bg-primary mt-4"></div>
+            </div>
             
             <p className="text-xl leading-relaxed mb-12 max-w-4xl">
               Every Rolora Flow™ session follows a carefully structured 15-position sequence focused on sculpting, circulation, and lymphatic activation.
@@ -201,9 +204,12 @@ const BodyRolling = () => {
         
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-black mb-16 uppercase tracking-tighter text-center">
-              WHY IT WORKS
-            </h2>
+            <div className="mb-16 text-center">
+              <h2 className="text-6xl md:text-7xl font-black uppercase tracking-tight inline-block">
+                WHY IT WORKS
+              </h2>
+              <div className="h-1 w-32 bg-primary mt-4 mx-auto"></div>
+            </div>
             
             <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
               <AccordionItem value="item-1" className="border-none">
@@ -284,9 +290,12 @@ const BodyRolling = () => {
       <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="md:text-7xl font-black mb-12 uppercase tracking-tighter animate-fade-in text-5xl">
-              BENEFITS YOU'LL FEEL IMMEDIATELY
-            </h2>
+            <div className="mb-12">
+              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tight animate-fade-in inline-block">
+                BENEFITS YOU'LL FEEL IMMEDIATELY
+              </h2>
+              <div className="h-1 w-32 bg-primary mt-4"></div>
+            </div>
             
             <div className="grid md:grid-cols-3 gap-6 text-lg mb-12">
               {["Reduced bloat", "Slimmer waist appearance", "Defined legs + arms", "Smoother skin", "Better digestion", "Boosted energy", "Less swelling + water retention", "Muscle relaxation", "Stress relief"].map((benefit, index) => (
@@ -320,9 +329,12 @@ const BodyRolling = () => {
         <img src={glowingSkin} alt="Body Rolling Results" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
-            <h3 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter">
-              Detox. Sculpt. Energize.
-            </h3>
+            <div>
+              <h3 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tight inline-block">
+                Detox. Sculpt. Energize.
+              </h3>
+              <div className="h-1 w-24 bg-white mt-3"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -331,9 +343,12 @@ const BodyRolling = () => {
       <section className="py-20 bg-accent text-primary-foreground">
         <div className="container px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-black mb-8 uppercase tracking-tighter text-white">
-              WHO IT'S FOR
-            </h2>
+            <div className="mb-8">
+              <h2 className="text-6xl md:text-7xl font-black uppercase tracking-tight text-white inline-block">
+                WHO IT'S FOR
+              </h2>
+              <div className="h-1 w-32 bg-white mt-4"></div>
+            </div>
             
             <p className="text-xl mb-12">Perfect for anyone who wants to:</p>
             
@@ -382,9 +397,12 @@ const BodyRolling = () => {
         </div>
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
-            <h3 className="text-3xl md:text-5xl font-black mb-4 md:mb-6 uppercase tracking-tighter leading-none">
-              THE ROLORA DIFFERENCE
-            </h3>
+            <div className="mb-4 md:mb-6">
+              <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-none inline-block">
+                THE ROLORA DIFFERENCE
+              </h3>
+              <div className="h-1 w-24 bg-primary mt-3"></div>
+            </div>
             <p className="text-lg md:text-xl mb-6 md:mb-8">
               Rolora Flow™ is results-focused, structured, and elevated — blending technology with intentional movement to sculpt your body and rebalance your energy.
             </p>
