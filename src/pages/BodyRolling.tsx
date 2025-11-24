@@ -333,7 +333,7 @@ const BodyRolling = () => {
               }}
               plugins={[
                 Autoplay({
-                  delay: 500,
+                  delay: 1200,
                 }),
               ]}
               className="w-full mb-12"
@@ -341,7 +341,7 @@ const BodyRolling = () => {
               <CarouselContent>
                 {["Reduced bloat", "Slimmer waist appearance", "Defined legs + arms", "Smoother skin", "Better digestion", "Boosted energy", "Less swelling + water retention", "Muscle relaxation", "Stress relief"].map((benefit, index) => (
                   <CarouselItem key={benefit} className="md:basis-1/3">
-                    <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(209,178,114,0.25)] animate-fade-in" style={{
+                    <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
                       animationDelay: `${index * 0.1}s`
                     }}>
                       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
