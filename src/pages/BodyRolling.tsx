@@ -207,7 +207,7 @@ const BodyRolling = () => {
       </section>
 
       {/* Why It Works Section */}
-      <section className="py-20 bg-muted border-t-4 border-foreground">
+      <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-6xl md:text-7xl font-black mb-16 uppercase tracking-tighter">
