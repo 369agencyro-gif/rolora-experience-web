@@ -8,21 +8,15 @@ import Contact from "@/components/Contact";
 import { Star, Plus, Minus } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
-
 const BodyRolling = () => {
-  return (
-    <ServiceLayout>
+  return <ServiceLayout>
       {/* Hero Section - Two Column Layout */}
       <section className="py-12 md:py-20">
         <div className="container px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
             {/* Left: Image */}
             <div className="relative rounded-none overflow-hidden h-[500px] lg:h-[700px] lg:sticky lg:top-24">
-              <img 
-                src={bodyImage} 
-                alt="Rolora Flow body rolling"
-                className="w-full h-full object-cover"
-              />
+              <img src={bodyImage} alt="Rolora Flow body rolling" className="w-full h-full object-cover" />
             </div>
 
             {/* Right: Content */}
@@ -34,9 +28,7 @@ const BodyRolling = () => {
                 </h1>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
                   </div>
                   <span className="text-xl font-bold">4.9</span>
                 </div>
@@ -54,10 +46,7 @@ const BodyRolling = () => {
                   This is circulation technology, intentional movement, and structured sequencing — brought together the Rolora way.
                 </p>
 
-                <BookingButton 
-                  size="lg"
-                  className="w-full md:w-auto px-16 py-7 text-base uppercase font-black tracking-widest rounded-none"
-                >
+                <BookingButton size="lg" className="w-full md:w-auto px-16 py-7 text-base uppercase font-black tracking-widest rounded-none">
                   Book Now
                 </BookingButton>
               </div>
@@ -100,7 +89,7 @@ const BodyRolling = () => {
 
               {/* Pricing Info */}
               <div className="bg-muted border-2 border-foreground p-8">
-                <h3 className="text-xs font-black mb-6 uppercase tracking-widest">Rolora Flow™ Menu</h3>
+                <h3 className="font-black mb-6 uppercase tracking-widest text-4xl text-center">Rolora Flow™ Menu</h3>
                 <div className="grid gap-4">
                   <div className="flex justify-between items-center border-b border-foreground pb-3">
                     <span className="font-bold">Single Roll</span>
@@ -117,10 +106,7 @@ const BodyRolling = () => {
                 </div>
               </div>
 
-              <BookingButton 
-                size="lg"
-                className="w-full px-16 py-7 text-base uppercase font-black tracking-widest rounded-none mt-8"
-              >
+              <BookingButton size="lg" className="w-full px-16 py-7 text-base uppercase font-black tracking-widest rounded-none mt-8">
                 Book Now
               </BookingButton>
             </div>
@@ -197,18 +183,10 @@ const BodyRolling = () => {
             {/* Image Grid */}
             <div className="grid md:grid-cols-2 gap-8">
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img 
-                  src={bodyRollingMachine} 
-                  alt="Body Rolling Machine"
-                  className="w-full h-full object-cover"
-                />
+                <img src={bodyRollingMachine} alt="Body Rolling Machine" className="w-full h-full object-cover" />
               </div>
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img 
-                  src={facialRoom} 
-                  alt="Treatment Environment"
-                  className="w-full h-full object-cover"
-                />
+                <img src={facialRoom} alt="Treatment Environment" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -358,11 +336,7 @@ const BodyRolling = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img 
-          src={glowingSkin} 
-          alt="Body Rolling Results"
-          className="w-full h-full object-cover"
-        />
+        <img src={glowingSkin} alt="Body Rolling Results" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter">
@@ -423,11 +397,7 @@ const BodyRolling = () => {
       {/* Two Column CTA Section */}
       <section className="grid md:grid-cols-2">
         <div className="relative h-[500px] overflow-hidden">
-          <img 
-            src={bodyImage} 
-            alt="Body Rolling Experience"
-            className="w-full h-full object-cover"
-          />
+          <img src={bodyImage} alt="Body Rolling Experience" className="w-full h-full object-cover" />
         </div>
         <div className="relative h-[500px] overflow-hidden bg-muted flex items-center justify-center p-12">
           <div className="max-w-md">
@@ -441,10 +411,7 @@ const BodyRolling = () => {
               This is modern beauty. Elevated energy.<br />
               This is Rolora Flow™.
             </p>
-            <BookingButton 
-              size="lg"
-              className="w-full px-12 py-7 text-base uppercase font-black tracking-widest rounded-none"
-            >
+            <BookingButton size="lg" className="w-full px-12 py-7 text-base uppercase font-black tracking-widest rounded-none">
               Book Rolora Flow
             </BookingButton>
           </div>
@@ -452,8 +419,6 @@ const BodyRolling = () => {
       </section>
 
       <Contact />
-    </ServiceLayout>
-  );
+    </ServiceLayout>;
 };
-
 export default BodyRolling;
