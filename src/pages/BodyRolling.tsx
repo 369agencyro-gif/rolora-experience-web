@@ -20,94 +20,102 @@ const BodyRolling = () => {
             </div>
 
             {/* Right: Content */}
-            <div className="space-y-8">
+            <div className="space-y-12">
               {/* Title & Rating */}
-              <div>
-                <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-black mb-6 uppercase tracking-tight leading-[0.9] text-primary">
-                  ROLORA FLOW™
-                </h1>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
+              <div className="space-y-6">
+                <div>
+                  <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight leading-[1.1] text-foreground">
+                    Rolora Flow™
+                  </h1>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+                    </div>
+                    <span className="text-sm font-medium text-foreground/70">4.9 / 5.0</span>
                   </div>
-                  <span className="text-xl font-bold">4.9</span>
                 </div>
                 
-                <div className="inline-block px-5 py-2 bg-accent text-primary-foreground rounded-none mb-8">
-                  <span className="text-sm font-black uppercase tracking-widest">Body Rolling</span>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">Body Rolling</span>
                 </div>
 
-                <p className="text-xl leading-relaxed mb-4">
-                  Rolora Flow™ is our signature full-body rolling ritual — a modern, results-driven lymphatic experience designed to reduce bloating, improve circulation, sculpt your curves, and leave your body feeling lighter, tighter, and re-energized.
-                </p>
-                
-                <p className="text-xl leading-relaxed mb-8 font-bold">
-                  This isn't a massage.<br />
-                  This is circulation technology, intentional movement, and structured sequencing — brought together the Rolora way.
-                </p>
+                <div className="space-y-4 pt-4">
+                  <p className="text-lg leading-relaxed text-foreground/80 font-light">
+                    Rolora Flow™ is our signature full-body rolling ritual — a modern, results-driven lymphatic experience designed to reduce bloating, improve circulation, sculpt your curves, and leave your body feeling lighter, tighter, and re-energized.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed font-medium text-foreground border-l-2 border-primary pl-6">
+                    This isn't a massage. This is circulation technology, intentional movement, and structured sequencing — brought together the Rolora way.
+                  </p>
+                </div>
 
-                <BookingButton size="lg" className="w-full md:w-auto px-16 py-7 text-base uppercase font-black tracking-widest rounded-none">
-                  Book Now
+                <BookingButton size="lg" className="w-full md:w-auto px-12 py-6 text-sm uppercase font-bold tracking-wider">
+                  Book Your Session
                 </BookingButton>
               </div>
 
               {/* What Is Rolora Flow */}
-              <div className="border-t border-primary/30 pt-10 mt-8">
-                <h2 className="font-display text-2xl md:text-3xl font-bold mb-8 uppercase tracking-wider text-primary">What Is Rolora Flow™?</h2>
-                <p className="font-body text-lg leading-relaxed mb-6 text-foreground/90">
-                  Rolora Flow™ uses European rolling technology paired with infrared and red-light therapy to stimulate the lymphatic system, break up stagnation, and encourage natural detox.
-                </p>
-                <p className="font-body text-lg leading-relaxed mb-6 text-foreground/90">
-                  Each roller is engineered with sculpted wooden nodes that mimic the hands of a therapist — but deeper, more consistent, and more effective.
-                </p>
-                <div className="mt-10 pt-8 border-t border-border">
-                  <p className="font-body font-semibold text-lg mb-5 text-foreground">The result:</p>
-                  <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3 text-base font-body text-foreground/80">
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary">—</span>
-                      <span>Reduced water retention</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary">—</span>
-                      <span>Visible contouring</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary">—</span>
-                      <span>Less puffiness and swelling</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary">—</span>
-                      <span>Improved lymph movement</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary">—</span>
-                      <span>A lighter, smoother, energized body</span>
-                    </li>
-                  </ul>
+              <div className="pt-8 border-t border-border/50 space-y-6">
+                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">What Is Rolora Flow™?</h2>
+                
+                <div className="space-y-4">
+                  <p className="text-base leading-relaxed text-foreground/70 font-light">
+                    Rolora Flow™ uses European rolling technology paired with infrared and red-light therapy to stimulate the lymphatic system, break up stagnation, and encourage natural detox.
+                  </p>
+                  <p className="text-base leading-relaxed text-foreground/70 font-light">
+                    Each roller is engineered with sculpted wooden nodes that mimic the hands of a therapist — but deeper, more consistent, and more effective.
+                  </p>
+                </div>
+
+                <div className="mt-8 pt-6 space-y-5">
+                  <p className="font-display text-lg font-semibold text-foreground">The Result</p>
+                  <div className="grid gap-3">
+                    {[
+                      "Reduced water retention",
+                      "Visible contouring",
+                      "Less puffiness and swelling",
+                      "Improved lymph movement",
+                      "A lighter, smoother, energized body"
+                    ].map((benefit, i) => (
+                      <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors">
+                        <span className="text-primary text-sm mt-0.5">✓</span>
+                        <span className="text-sm text-foreground/80 font-light">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
               {/* Pricing Info */}
-              <div className="bg-muted border-2 border-foreground p-8">
-                <h3 className="font-black mb-6 uppercase tracking-widest text-4xl text-center">Rolora Flow™ Menu</h3>
-                <div className="grid gap-4">
-                  <div className="flex justify-between items-center border-b border-foreground pb-3">
-                    <span className="font-bold">Single Roll</span>
-                    <span className="text-xl font-black">$80</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-foreground pb-3">
-                    <span className="font-bold">5-Pack</span>
-                    <span className="text-xl font-black">$375</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="font-bold">10-Pack</span>
-                    <span className="text-xl font-black">$700</span>
+              <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-gradient-to-br from-background to-muted/30 p-8 shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+                <div className="relative">
+                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-8 text-center">Rolora Flow™ Pricing</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors">
+                      <span className="font-medium text-foreground">Single Roll</span>
+                      <span className="text-2xl font-bold text-primary">$80</span>
+                    </div>
+                    <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors">
+                      <div>
+                        <span className="font-medium text-foreground">5-Pack</span>
+                        <span className="text-xs text-foreground/50 ml-2">Save $25</span>
+                      </div>
+                      <span className="text-2xl font-bold text-primary">$375</span>
+                    </div>
+                    <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border-2 border-primary/30">
+                      <div>
+                        <span className="font-medium text-foreground">10-Pack</span>
+                        <span className="text-xs text-primary font-semibold ml-2">Best Value</span>
+                      </div>
+                      <span className="text-2xl font-bold text-primary">$700</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <BookingButton size="lg" className="w-full px-16 py-7 text-base uppercase font-black tracking-widest rounded-none mt-8">
-                Book Now
+              <BookingButton size="lg" className="w-full px-12 py-6 text-sm uppercase font-bold tracking-wider">
+                Book Your Session
               </BookingButton>
             </div>
           </div>
