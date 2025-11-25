@@ -1,6 +1,9 @@
-import { Button } from "@/components/ui/button";
 import BookingButton from "@/components/BookingButton";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/facial-skincare.jpg";
+import facialRoom from "@/assets/facial-room.jpg";
+import glowingSkin from "@/assets/glowing-skin.jpg";
 
 const SignatureFacialSection = () => {
   const benefits = [
@@ -16,20 +19,32 @@ const SignatureFacialSection = () => {
     <section className="py-20 bg-muted/20">
       <div className="container px-6">
         {/* New Client Offer Banner */}
-        <div className="bg-[#3B2414] text-white py-4 px-6 mb-12 rounded-lg">
-          <p className="text-center font-medium">
+        <div className="bg-[#3B2414] text-white py-4 px-6 mb-12 rounded-lg text-center">
+          <p className="font-medium text-lg">
             New Client Offer: First Facial for $99
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Large Treatment Image */}
+          {/* Image Carousel */}
           <div className="order-2 lg:order-1">
-            <img 
-              src={heroImage} 
-              alt="Facial treatment with specialized tools"
-              className="w-full aspect-[4/3] object-cover rounded-lg"
-            />
+            <Carousel
+              opts={{ loop: true }}
+              plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {[heroImage, facialRoom, glowingSkin].map((img, idx) => (
+                  <CarouselItem key={idx}>
+                    <img 
+                      src={img} 
+                      alt="Facial treatment"
+                      className="w-full aspect-[4/3] object-cover rounded-lg"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
 
           {/* Content */}
@@ -47,33 +62,33 @@ const SignatureFacialSection = () => {
               Our signature 60-minute facial combines expert techniques and clinical products to target your unique skin concerns.
             </p>
 
-            {/* CTAs */}
-            <div className="flex gap-4">
+            {/* CTA */}
+            <div>
               <BookingButton 
-                size="default"
+                size="lg"
                 className="uppercase font-bold tracking-wide"
               >
                 BOOK NOW
               </BookingButton>
-              <Button 
-                size="default"
-                variant="outline"
-                className="uppercase font-bold tracking-wide"
-              >
-                LEARN MORE
-              </Button>
             </div>
 
-            {/* Benefits Grid */}
-            <div className="grid grid-cols-2 gap-x-8 gap-y-4 pt-6">
-              {benefits.map((benefit, idx) => (
-                <div 
-                  key={idx}
-                  className="border-t border-border pt-4"
-                >
-                  <p className="text-base">{benefit}</p>
-                </div>
-              ))}
+            {/* Benefits Carousel - Mobile Pill Style */}
+            <div className="pt-6">
+              <Carousel
+                opts={{ loop: true, align: "start" }}
+                plugins={[Autoplay({ delay: 1200, stopOnInteraction: false })]}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-2">
+                  {benefits.map((benefit, idx) => (
+                    <CarouselItem key={idx} className="pl-2 basis-auto">
+                      <div className="rounded-full border border-border/50 bg-background/50 backdrop-blur-sm px-6 py-3 hover:scale-105 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300">
+                        <p className="text-sm font-medium whitespace-nowrap">{benefit}</p>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
             </div>
           </div>
         </div>
