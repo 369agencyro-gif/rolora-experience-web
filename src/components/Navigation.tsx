@@ -33,6 +33,9 @@ const Navigation = () => {
 
   const bodyRollers = [
     { name: "Rolora Flow™", path: "/services/body-rolling", description: "Body rolling therapy" },
+  ];
+
+  const headSpa = [
     { name: "Rolora Head Spa", path: "/services/head-spa", description: "Scalp & relaxation ritual" },
   ];
 
@@ -96,7 +99,7 @@ const Navigation = () => {
                     Treatments
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[500px] gap-3 p-4 md:grid-cols-2">
+                    <ul className="grid w-[600px] gap-3 p-4 md:grid-cols-3">
                       <div className="space-y-3">
                         <p className="text-sm font-semibold text-muted-foreground px-3">Facial Services</p>
                         {facialServices.map((service) => (
@@ -118,6 +121,24 @@ const Navigation = () => {
                       <div className="space-y-3">
                         <p className="text-sm font-semibold text-muted-foreground px-3">Body Rollers</p>
                         {bodyRollers.map((service) => (
+                          <li key={service.name}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                to={service.path}
+                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              >
+                                <div className="text-sm font-medium leading-none">{service.name}</div>
+                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                  {service.description}
+                                </p>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </div>
+                      <div className="space-y-3">
+                        <p className="text-sm font-semibold text-muted-foreground px-3">Head Spa</p>
+                        {headSpa.map((service) => (
                           <li key={service.name}>
                             <NavigationMenuLink asChild>
                               <Link
@@ -222,6 +243,22 @@ const Navigation = () => {
                   Body Rollers
                 </p>
                 {bodyRollers.map((service, idx) => (
+                  <Link
+                    key={idx}
+                    to={service.path}
+                    className="block pl-3 py-1 text-xs text-foreground hover:text-accent transition-smooth"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+
+              <div className="space-y-1.5">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">
+                  Head Spa
+                </p>
+                {headSpa.map((service, idx) => (
                   <Link
                     key={idx}
                     to={service.path}
