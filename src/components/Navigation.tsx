@@ -33,6 +33,7 @@ const Navigation = () => {
 
   const bodyRollers = [
     { name: "Rolora Flow™", path: "/services/body-rolling", description: "Body rolling therapy" },
+    { name: "Rolora Head Spa", path: "/services/head-spa", description: "Scalp & relaxation ritual" },
   ];
 
   const scrollToSection = (id: string) => {
