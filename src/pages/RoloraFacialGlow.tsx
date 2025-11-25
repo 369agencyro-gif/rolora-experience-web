@@ -7,178 +7,349 @@ import facialSculpting from "@/assets/facial-sculpting.jpg";
 import skincareProducts from "@/assets/skincare-products.jpg";
 import diverseSkin from "@/assets/diverse-skin.jpg";
 import Contact from "@/components/Contact";
-import { Star } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Star, Plus } from "lucide-react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
 const RoloraFacialGlow = () => {
   return (
     <ServiceLayout>
-      {/* Hero Section - Two Column Layout */}
-      <section className="py-12 md:py-20">
+      {/* Hero Section - Full Width Slider */}
+      <section className="pb-12 md:pb-20">
         <div className="container px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
-            {/* Left: Image */}
-            <div className="relative rounded-none overflow-hidden h-[500px] lg:h-[700px] lg:sticky lg:top-24">
-              <img 
-                src={facialImage} 
-                alt="Rolora Facial Glow treatment"
-                className="w-full h-full object-cover"
-              />
+            {/* Left: Image Slider - Full Width */}
+            <div className="relative lg:sticky lg:top-24 -mx-6 lg:mx-0">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                plugins={[
+                  Autoplay({
+                    delay: 3000,
+                  }),
+                ]}
+                className="w-full"
+              >
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
+                      <img src={facialImage} alt="Rolora Facial Glow treatment" className="w-full h-full object-cover" />
+                      <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
+                        <div className="flex items-center gap-1.5">
+                          {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
+                          <span className="text-xs font-medium text-foreground/80 ml-1">Maria S.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
+                      <img src={glowingSkin} alt="Glowing skin results" className="w-full h-full object-cover" />
+                      <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
+                        <div className="flex items-center gap-1.5">
+                          {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
+                          <span className="text-xs font-medium text-foreground/80 ml-1">Rachel K.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-4 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground" />
+                <CarouselNext className="right-4 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground" />
+              </Carousel>
             </div>
 
             {/* Right: Content */}
-            <div className="space-y-8">
+            <div className="space-y-12">
               {/* Title & Rating */}
-              <div>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-6 uppercase tracking-tighter leading-none">
-                  ROLORA FACIAL GLOW™
-                </h1>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                    ))}
+              <div className="space-y-6">
+                <div>
+                  <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight leading-[1.1] text-foreground">
+                    Rolora Facial Glow™
+                  </h1>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+                    </div>
+                    <span className="text-sm font-medium text-foreground/70">5.0 / 5.0</span>
                   </div>
-                  <span className="text-xl font-bold">5.0</span>
                 </div>
                 
-                <div className="inline-block px-5 py-2 bg-accent text-primary-foreground rounded-none mb-8">
-                  <span className="text-sm font-black uppercase tracking-widest">Signature Treatment</span>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">Signature Treatment</span>
                 </div>
 
-                <p className="text-xl leading-relaxed mb-8">
-                  A couture signature treatment blending dermaplaning, microdermabrasion, and tailored modalities for glowing skin. This ritual refines texture, boosts luminosity, and deeply hydrates for a glass-skin finish that defines the Rolora experience.
-                </p>
+                <div className="space-y-4 pt-4">
+                  <p className="text-lg leading-relaxed text-foreground/80 font-light">
+                    A couture signature treatment blending dermaplaning, microdermabrasion, and tailored modalities for glowing skin. This ritual refines texture, boosts luminosity, and deeply hydrates for a glass-skin finish that defines the Rolora experience.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed font-medium text-foreground border-l-2 border-primary pl-6">
+                    This isn't just a facial. This is precision artistry, curated technique, and glass-skin perfection — crafted the Rolora way.
+                  </p>
+                </div>
 
-                <BookingButton 
-                  size="lg"
-                  className="w-full md:w-auto px-16 py-7 text-base uppercase font-black tracking-widest rounded-none"
-                >
-                  Book Now
+                <BookingButton size="lg" className="w-full md:w-auto px-12 py-6 text-sm uppercase font-bold tracking-wider">
+                  Book Your Session
                 </BookingButton>
               </div>
 
-              {/* What Makes it Great */}
-              <div className="border-t-2 border-foreground pt-8">
-                <h2 className="text-xl font-black mb-8 uppercase tracking-widest">What Makes it Great</h2>
-                <div className="grid gap-8">
-                  <div>
-                    <h3 className="font-black text-xl mb-2 uppercase">Glass Skin Finish</h3>
-                    <p className="text-muted-foreground text-lg">Achieve the signature Rolora glow with refined, luminous texture.</p>
-                  </div>
-                  <div>
-                    <h3 className="font-black text-xl mb-2 uppercase">Tailored Modalities</h3>
-                    <p className="text-muted-foreground text-lg">Customized treatment combining dermaplaning and microdermabrasion.</p>
-                  </div>
-                  <div>
-                    <h3 className="font-black text-xl mb-2 uppercase">Deep Hydration</h3>
-                    <p className="text-muted-foreground text-lg">Intensive moisture infusion for plump, radiant, healthy skin.</p>
+              {/* What Is Rolora Facial Glow */}
+              <div className="pt-8 border-t border-border/50 space-y-6">
+                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">What Is Rolora Facial Glow™?</h2>
+                
+                <div className="space-y-4">
+                  <p className="text-base leading-relaxed text-foreground/70 font-light">
+                    Rolora Facial Glow™ combines advanced exfoliation techniques with custom serum infusions to create the signature glass-skin finish that defines our studio.
+                  </p>
+                  <p className="text-base leading-relaxed text-foreground/70 font-light">
+                    Each treatment is tailored to your skin's unique needs, combining dermaplaning, microdermabrasion, and intensive hydration for luminous, radiant results.
+                  </p>
+                </div>
+
+                <div className="mt-8 pt-6 space-y-6">
+                  <p className="font-display text-lg font-semibold text-foreground/90">The Result</p>
+                  <div className="grid gap-4">
+                    {["Glass-skin luminosity", "Refined texture", "Deep hydration", "Even tone", "Radiant clarity", "Plump, healthy skin"].map((benefit, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                          <span className="text-primary text-xs font-bold">✓</span>
+                        </div>
+                        <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
+                      </div>)}
                   </div>
                 </div>
               </div>
 
-              {/* Info Box */}
-              <div className="bg-muted border-2 border-foreground p-8 grid grid-cols-3 gap-6">
-                <div>
-                  <div className="text-xs font-black mb-2 uppercase tracking-widest">Duration</div>
-                  <div className="text-2xl font-black">90 min</div>
-                </div>
-                <div>
-                  <div className="text-xs font-black mb-2 uppercase tracking-widest">Price</div>
-                  <div className="text-2xl font-black">$235</div>
-                </div>
-                <div>
-                  <div className="text-xs font-black mb-2 uppercase tracking-widest">Ideal For</div>
-                  <div className="text-sm font-bold">All skin types</div>
+              {/* Pricing Info */}
+              <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-gradient-to-br from-background to-muted/30 p-8 shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+                <div className="relative">
+                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-8 text-center">Rolora Facial Glow™ Pricing</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors">
+                      <div>
+                        <span className="font-medium text-foreground">Single Session</span>
+                        <span className="text-xs text-foreground/50 ml-2">90 minutes</span>
+                      </div>
+                      <span className="text-2xl font-bold text-primary">$235</span>
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              <BookingButton size="lg" className="w-full px-12 py-6 text-sm uppercase font-bold tracking-wider">
+                Book Your Session
+              </BookingButton>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What's Involved Section */}
-      <section className="py-20 bg-background border-t-4 border-foreground">
-        <div className="container px-6">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-black mb-16 uppercase tracking-tighter">
-              WHAT'S INVOLVED
+      {/* The Treatment Ritual Section */}
+      <section className="py-20 relative overflow-hidden">
+        {/* Gradient Background Effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+        
+        <div className="container px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-8 text-primary">
+              THE GLOW RITUAL
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-12 mb-20">
-              <div className="border-t-2 border-foreground pt-6">
-                <div className="text-lg font-black mb-3 uppercase">01. Deep Cleanse</div>
-                <p className="text-muted-foreground">
-                  Professional cleansing to prep skin for optimal treatment absorption.
-                </p>
-              </div>
-              <div className="border-t-2 border-foreground pt-6">
-                <div className="text-lg font-black mb-3 uppercase">02. Exfoliation</div>
-                <p className="text-muted-foreground">
-                  Dermaplaning and microdermabrasion to refine and resurface texture.
-                </p>
-              </div>
-              <div className="border-t-2 border-foreground pt-6">
-                <div className="text-lg font-black mb-3 uppercase">03. Glow Infusion</div>
-                <p className="text-muted-foreground">
-                  Tailored serums and hydration for luminous, glass-skin finish.
-                </p>
-              </div>
+            <p className="text-xl leading-relaxed mb-16 text-center">
+              Every Rolora Facial Glow™ session follows a carefully structured sequence focused on achieving luminous, glass-skin perfection.
+            </p>
+
+            <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
+              <AccordionItem value="item-1" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Deep Cleanse & Prep
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Professional cleansing removes impurities and prepares skin for optimal treatment absorption.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Dermaplaning
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Removes peach fuzz and dead skin cells for an ultra-smooth, glowing complexion.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Microdermabrasion
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Polishes skin to reveal refined texture and enhanced radiance.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Custom Serum Infusion
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Tailored formulas deliver targeted ingredients for your specific skin needs.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Hydration & Glow Lock
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Intensive moisture infusion for plump, radiant, healthy skin with lasting luminosity.
+                </AccordionContent>
+              </AccordionItem>
+            </AccordionPrimitive.Root>
+
+            <div className="relative mt-16 p-8 rounded-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"></div>
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent"></div>
+              <p className="relative text-xl font-medium text-center leading-relaxed text-foreground">
+                You'll see the glow after one session — and maintain glass-skin with regular treatments.
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Expert-Curated Techniques */}
-            <div className="mb-12">
-              <h3 className="text-xs font-black uppercase tracking-widest mb-8">
-                Expert-Curated Techniques & Tools
-              </h3>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                {/* Technique 1 */}
-                <div>
-                  <div className="relative aspect-[4/5] overflow-hidden mb-4">
-                    <img 
-                      src={facialSculpting} 
-                      alt="Dermaplaning"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h4 className="text-xl font-black mb-2 uppercase">Dermaplaning</h4>
-                  <p className="text-muted-foreground">
-                    Removes peach fuzz and dead skin for ultra-smooth, glowing complexion.
-                  </p>
-                </div>
+      {/* Image Grid */}
+      <section className="py-12 bg-background">
+        <div className="container px-6">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <img src={facialSculpting} alt="Facial Treatment" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <img src={skincareProducts} alt="Skincare Products" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-                {/* Technique 2 */}
-                <div>
-                  <div className="relative aspect-[4/5] overflow-hidden mb-4">
-                    <img 
-                      src={skincareProducts} 
-                      alt="Microdermabrasion"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h4 className="text-xl font-black mb-2 uppercase">Microdermabrasion</h4>
-                  <p className="text-muted-foreground">
-                    Polishes skin to reveal refined texture and enhanced radiance.
-                  </p>
-                </div>
+      {/* Why It Works Section */}
+      <section className="py-20 relative overflow-hidden">
+        {/* Gradient Background Effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+        
+        <div className="container px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-16 text-primary">
+              WHY IT WORKS
+            </h2>
+            
+            <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
+              <AccordionItem value="item-1" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Precision Exfoliation
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Combined dermaplaning and microdermabrasion remove dead cells for ultra-smooth texture.
+                </AccordionContent>
+              </AccordionItem>
 
-                {/* Technique 3 */}
-                <div>
-                  <div className="relative aspect-[4/5] overflow-hidden mb-4">
-                    <img 
-                      src={diverseSkin} 
-                      alt="Custom Serums"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h4 className="text-xl font-black mb-2 uppercase">Custom Serums</h4>
-                  <p className="text-muted-foreground">
-                    Tailored formulas deliver targeted ingredients for your skin needs.
-                  </p>
-                </div>
-              </div>
+              <AccordionItem value="item-2" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Customized Formulas
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Tailored serum selection addresses your unique skin concerns for targeted results.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Deep Hydration
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Intensive moisture infusion plumps and revitalizes for lasting glow.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Multi-Modal Approach
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Layered techniques work synergistically for enhanced, comprehensive results.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      The Rolora Method™
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Our signature layering of technique, product, and expertise for glass-skin perfection.
+                </AccordionContent>
+              </AccordionItem>
+            </AccordionPrimitive.Root>
+            
+            <div className="flex justify-center mt-12">
+              <BookingButton variant="cta" size="lg">
+                BOOK NOW
+              </BookingButton>
             </div>
           </div>
         </div>
@@ -247,57 +418,67 @@ const RoloraFacialGlow = () => {
       </section>
 
       {/* Perfect For Section */}
-      <section className="py-20 bg-accent text-primary-foreground">
-        <div className="container px-6">
+      <section className="py-20 relative overflow-hidden bg-background border-t-4 border-foreground">
+        {/* Gradient Background Effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+        
+        <div className="container px-6 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-6xl md:text-7xl font-black mb-12 uppercase tracking-tighter text-white">
-              PERFECT FOR
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-primary mb-8">
+              WHO IT'S FOR
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8 text-lg">
-              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
-                <p className="font-medium">Those seeking the ultimate Rolora signature glow</p>
+            <p className="text-xl mb-12 text-foreground/80">Perfect for anyone who wants to:</p>
+            
+            <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
+              {["Achieve glass-skin luminosity", "Refine texture and tone", "Deep hydration boost", "Special occasion glow", "Maintain radiant skin", "Ultimate Rolora experience", "Luxury self-care ritual"].map((item, index) => (
+                <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
+                  animationDelay: `${index * 0.1}s`
+                }}>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative flex items-center gap-4">
+                    <span className="text-primary text-xl flex-shrink-0">✔</span>
+                    <p className="font-semibold text-foreground">{item}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col items-center gap-4">
+              <div className="inline-flex items-center gap-3 px-8 py-5 rounded-full border border-primary/20 bg-background/50 backdrop-blur-sm">
+                <span className="text-primary text-xl">✦</span>
+                <p className="text-lg font-medium text-foreground">
+                  Our most popular treatment — perfect for all skin types
+                </p>
               </div>
-              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
-                <p className="font-medium">All skin types looking for glass-skin finish</p>
-              </div>
-              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
-                <p className="font-medium">Special occasions and milestone events</p>
-              </div>
-              <div className="flex items-start gap-4 border-t-2 border-primary-foreground pt-6">
-                <div className="w-3 h-3 bg-primary-foreground mt-2 flex-shrink-0"></div>
-                <p className="font-medium">Regular maintenance of radiant, healthy skin</p>
-              </div>
+              <BookingButton variant="cta" size="lg">
+                BOOK NOW
+              </BookingButton>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Two Column Image Section */}
+      {/* Two Column CTA Section */}
       <section className="grid md:grid-cols-2">
-        <div className="relative h-[500px] overflow-hidden">
-          <img 
-            src={facialRoom} 
-            alt="Treatment Room"
-            className="w-full h-full object-cover"
-          />
+        <div className="relative h-[300px] md:h-[500px] overflow-hidden">
+          <img src={facialRoom} alt="Facial Glow Experience" className="w-full h-full object-cover" />
         </div>
-        <div className="relative h-[500px] overflow-hidden bg-muted flex items-center justify-center p-12">
+        <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
-            <h3 className="text-5xl font-black mb-6 uppercase tracking-tighter leading-none">
-              READY FOR YOUR GLOW?
+            <h3 className="font-display text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.9] mb-4 md:mb-6 text-primary">
+              THE ROLORA DIFFERENCE
             </h3>
-            <p className="text-xl mb-8">
-              Experience the signature Rolora treatment. Book your Facial Glow today.
+            <p className="text-lg md:text-xl mb-6 md:mb-8">
+              Rolora Facial Glow™ is precision-focused, results-driven, and elevated — combining expert technique with curated products for the ultimate glass-skin finish.
             </p>
-            <BookingButton 
-              size="lg"
-              className="w-full px-12 py-7 text-base uppercase font-black tracking-widest rounded-none"
-            >
-              Book Rolora Facial Glow
+            <p className="text-lg md:text-xl font-bold mb-6 md:mb-8">
+              This is signature beauty. Glass-skin perfection.<br />
+              This is Rolora Facial Glow™.
+            </p>
+            <BookingButton size="lg" className="w-full px-8 md:px-12 py-6 md:py-7 text-sm md:text-base uppercase font-black tracking-widest rounded-none">
+              Book Facial Glow
             </BookingButton>
           </div>
         </div>
