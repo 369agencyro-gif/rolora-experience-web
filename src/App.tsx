@@ -14,6 +14,7 @@ import RoloraReset from "./pages/RoloraReset";
 import ExpressSculpt from "./pages/ExpressSculpt";
 import Enhancements from "./pages/Enhancements";
 import BodyRolling from "./pages/BodyRolling";
+import HeadSpa from "./pages/HeadSpa";
 import FullGallery from "./pages/FullGallery";
 import SpecialOffer from "./pages/SpecialOffer";
 import NotFound from "./pages/NotFound";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/services/express-sculpt" element={<ExpressSculpt />} />
           <Route path="/services/enhancements" element={<Enhancements />} />
           <Route path="/services/body-rolling" element={<BodyRolling />} />
+          <Route path="/services/head-spa" element={<HeadSpa />} />
           <Route path="/gallery" element={<FullGallery />} />
           <Route path="/special-offer" element={<SpecialOffer />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
