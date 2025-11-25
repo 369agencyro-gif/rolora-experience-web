@@ -33,7 +33,6 @@ const Navigation = () => {
 
   const bodyRollers = [
     { name: "Rolora Flow™", path: "/services/body-rolling", description: "Body rolling therapy" },
-    { name: "Rolora Head Spa", path: "/services/head-spa", description: "Scalp & relaxation ritual" },
   ];
 
   const scrollToSection = (id: string) => {
@@ -140,6 +139,13 @@ const Navigation = () => {
             </NavigationMenu>
             
             <Link 
+              to="/services/head-spa"
+              className="text-sm uppercase tracking-wide hover:opacity-70 transition-opacity"
+            >
+              Head Spa
+            </Link>
+            
+            <Link 
               to="/gallery"
               className="text-sm uppercase tracking-wide hover:opacity-70 transition-opacity"
             >
@@ -232,6 +238,14 @@ const Navigation = () => {
                   </Link>
                 ))}
               </div>
+
+              <Link 
+                to="/services/head-spa"
+                className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Head Spa
+              </Link>
 
               <Link 
                 to="/gallery"
