@@ -17,7 +17,7 @@ const WhyRolora = () => {
             </p>
           </div>
           
-          <div className="w-full rounded-lg overflow-hidden">
+          <div className="w-full">
             <img 
               src={studioInterior} 
               alt="Rolora Studio" 
@@ -28,20 +28,20 @@ const WhyRolora = () => {
 
         {/* Desktop Layout - Overlay */}
         <div className="hidden lg:block max-w-7xl mx-auto">
-          <div className="relative h-[600px] rounded-lg overflow-hidden">
+          <div className="relative h-[600px]">
             <img 
               src={studioInterior} 
               alt="Rolora Studio" 
               className="w-full h-full object-cover"
             />
             
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30 flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <div className="text-center max-w-4xl px-12">
                 <h2 className="text-5xl xl:text-6xl font-black mb-8 tracking-tight uppercase text-white">
                   WHY ROLORA HITS DIFFERENT
                 </h2>
                 
-                <p className="text-xl xl:text-2xl text-white/95 leading-relaxed">
+                <p className="text-xl xl:text-2xl text-white/90 leading-relaxed">
                   Rolora isn't your typical "relax-and-hope-for-a-glow" facial spot.
                   We're here for snatched results, sculpted energy, and glow that gets noticed.
                 </p>

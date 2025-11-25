@@ -2,51 +2,56 @@ import BookingButton from "@/components/BookingButton";
 import diverseSkin from "@/assets/facial-mask.jpg";
 
 const WhatToExpect = () => {
-  const features = [
-    {
-      title: "Results You Can See",
-      description: "We don't do fluff. Every technique is intentional, targeted, and designed to lift, sculpt, and illuminate from the first session."
-    },
-    {
-      title: "Sculpting Specialists",
-      description: "Your skin isn't treated with a \"one-size-fits-all\" protocol. Rolora estheticians are trained in facial contouring and sculpting work — we know how to shape, lift, and energize the face."
-    },
-    {
-      title: "MODERN TECHNIQUES ONLY",
-      description: "High-performance formulas, advanced modalities, and sculpting methods that actually move the needle — not a basic \"relaxing\" facial you forget tomorrow."
-    },
-    {
-      title: "Glow with Energy",
-      description: "We don't just treat the skin — we activate it. Expect lifted features, brighter tone, and that unmistakable Rolora Glow that feels alive, not coated."
-    },
-    {
-      title: "Face + Body Connection",
-      description: "Your glow isn't only on your face. Rolora's Flow approach treats lymph, energy, and circulation — so your whole appearance looks lighter, tighter, and more defined."
-    }
-  ];
-
-  return (
-    <section className="py-24 bg-muted/20">
+  return <section className="py-24 bg-muted/20">
       <div className="container px-6">
-        <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black mb-16 tracking-tight uppercase text-center">
             Here's what makes us stand out in Newport:
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {features.map((feature, idx) => (
-              <div 
-                key={idx}
-                className="p-8 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm hover:scale-105 hover:shadow-[0_12px_40px_rgb(0,0,0,0.15)] transition-all duration-300"
-              >
-                <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight">
-                  {feature.title}
-                </h3>
-                <p className="text-base text-foreground/80 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
+            <div className="p-8 bg-muted/30 border border-border/20 transition-all duration-300 hover:bg-muted/50 hover:border-border/40 hover:shadow-lg group">
+              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
+                Results You Can See
+              </h3>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                We don't do fluff. Every technique is intentional, targeted, and designed to lift, sculpt, and illuminate from the first session.
+              </p>
+            </div>
+
+            <div className="p-8 bg-muted/30 border border-border/20 transition-all duration-300 hover:bg-muted/50 hover:border-border/40 hover:shadow-lg group">
+              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
+                Sculpting Specialists
+              </h3>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Your skin isn't treated with a "one-size-fits-all" protocol. Rolora estheticians are trained in facial contouring and sculpting work — we know how to shape, lift, and energize the face.
+              </p>
+            </div>
+
+            <div className="p-8 bg-muted/30 border border-border/20 transition-all duration-300 hover:bg-muted/50 hover:border-border/40 hover:shadow-lg group">
+              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">MODERN TECHNIQUES ONLY</h3>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                High-performance formulas, advanced modalities, and sculpting methods that actually move the needle — not a basic "relaxing" facial you forget tomorrow.
+              </p>
+            </div>
+
+            <div className="p-8 bg-muted/30 border border-border/20 transition-all duration-300 hover:bg-muted/50 hover:border-border/40 hover:shadow-lg group">
+              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
+                Glow with Energy
+              </h3>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                We don't just treat the skin — we activate it. Expect lifted features, brighter tone, and that unmistakable Rolora Glow that feels alive, not coated.
+              </p>
+            </div>
+
+            <div className="p-8 bg-muted/30 border border-border/20 transition-all duration-300 hover:bg-muted/50 hover:border-border/40 hover:shadow-lg group md:col-span-2 lg:col-span-1">
+              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
+                Face + Body Connection
+              </h3>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Your glow isn't only on your face. Rolora's Flow approach treats lymph, energy, and circulation — so your whole appearance looks lighter, tighter, and more defined.
+              </p>
+            </div>
           </div>
 
           {/* Image with Card Overlay */}
@@ -56,7 +61,7 @@ const WhatToExpect = () => {
               alt="Woman with luxurious facial mask treatment showing glowing skin"
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute left-4 right-4 top-4 md:left-0 md:right-auto md:top-0 bg-background/95 backdrop-blur-sm p-6 md:p-10 md:max-w-lg rounded-lg">
+            <div className="absolute left-4 right-4 top-4 md:left-0 md:right-auto md:top-0 bg-background/95 backdrop-blur-sm p-6 md:p-10 md:max-w-lg">
               <p className="text-xs uppercase tracking-widest mb-3 text-foreground/60 font-medium">
                 NOT YOUR AVERAGE FACIAL STUDIO
               </p>
@@ -68,7 +73,7 @@ const WhatToExpect = () => {
               </p>
               <BookingButton 
                 size="lg"
-                className="uppercase font-bold tracking-wide px-8 w-full md:w-auto"
+                className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90 px-8 w-full md:w-auto"
               >
                 BOOK NOW
               </BookingButton>
@@ -76,8 +81,6 @@ const WhatToExpect = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhatToExpect;
