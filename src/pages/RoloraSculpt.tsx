@@ -8,6 +8,8 @@ import skincareProducts from "@/assets/skincare-products.jpg";
 import diverseSkin from "@/assets/diverse-skin.jpg";
 import Contact from "@/components/Contact";
 import { Star } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const RoloraSculpt = () => {
   return (
@@ -194,6 +196,52 @@ const RoloraSculpt = () => {
             <h3 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter">
               Get Snatched
             </h3>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-background border-t-4 border-foreground">
+        <div className="container px-6">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] animate-fade-in mb-12 text-primary">
+              BENEFITS YOU'LL FEEL IMMEDIATELY
+            </h2>
+            
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 1200,
+                }),
+              ]}
+              className="w-full mb-12"
+            >
+              <CarouselContent>
+                {["Sharper facial definition", "Reduced puffiness", "Lifted cheekbones", "Defined jawline", "Sculpted contours", "Tighter skin", "Reduced bloating", "Improved circulation", "Instant lift effect"].map((benefit, index) => (
+                  <CarouselItem key={benefit} className="md:basis-1/3">
+                    <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
+                      animationDelay: `${index * 0.1}s`
+                    }}>
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="relative flex items-center justify-center gap-3">
+                        <span className="text-primary text-lg">✦</span>
+                        <span className="font-semibold text-center">{benefit}</span>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+
+            <p className="text-2xl font-bold text-center animate-fade-in" style={{
+              animationDelay: "0.9s"
+            }}>
+              Your contours sharpen — your features define.
+            </p>
           </div>
         </div>
       </section>
