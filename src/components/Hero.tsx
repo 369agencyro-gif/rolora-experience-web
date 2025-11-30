@@ -24,12 +24,12 @@ const Hero = () => {
       <CarouselContent>
         {/* Main Hero Slide */}
         <CarouselItem>
-          <section className="relative min-h-[95vh] flex items-center overflow-hidden bg-background">
+          <section className="relative h-[95vh] flex items-center overflow-hidden bg-background">
             <div className="absolute inset-0 z-0">
               <img 
                 src={heroImage} 
                 alt="Glowing skin treatment" 
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-[50%_50%]"
               />
               <div className="absolute inset-0 bg-black/60" />
             </div>
@@ -60,12 +60,12 @@ const Hero = () => {
 
         {/* First Glow Offer Slide */}
         <CarouselItem>
-          <section className="relative min-h-[95vh] flex items-center overflow-hidden bg-background">
+          <section className="relative h-[95vh] flex items-center overflow-hidden bg-background">
             <div className="absolute inset-0 z-0">
               <img 
                 src={facialGlowImage} 
                 alt="First Glow Offer" 
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-[50%_50%]"
               />
               <div className="absolute inset-0 bg-black/60" />
             </div>
@@ -122,12 +122,12 @@ const Hero = () => {
 
         {/* Glow + Flow Duo Offer Slide */}
         <CarouselItem>
-          <section className="relative min-h-[95vh] flex items-center overflow-hidden bg-background">
+          <section className="relative h-[95vh] flex items-center overflow-hidden bg-background">
             <div className="absolute inset-0 z-0">
               <img 
                 src={bodyRollingImage} 
                 alt="Glow + Flow Duo Offer" 
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-[50%_50%]"
               />
               <div className="absolute inset-0 bg-black/60" />
             </div>
