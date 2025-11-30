@@ -100,8 +100,8 @@ const TreatmentExplorer = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground" />
-            <CarouselNext className="hidden md:flex -right-12 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground" />
+            <CarouselPrevious className="hidden md:flex -left-12 bg-primary text-primary-foreground border-2 border-primary shadow-lg hover:bg-primary/90 hover:scale-110 transition-all" />
+            <CarouselNext className="hidden md:flex -right-12 bg-primary text-primary-foreground border-2 border-primary shadow-lg hover:bg-primary/90 hover:scale-110 transition-all" />
           </Carousel>
         </div>
 
