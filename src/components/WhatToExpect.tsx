@@ -1,82 +1,105 @@
 import BookingButton from "@/components/BookingButton";
 import diverseSkin from "@/assets/facial-mask.jpg";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const WhatToExpect = () => {
-  return <section className="py-24 bg-muted/20">
-      <div className="container px-6">
-      <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-black mb-16 tracking-tight uppercase text-center">
-            Here's what makes us stand out in Newport:
+  const benefits = [
+    {
+      title: "Results You Can See",
+      description: "Every technique is intentional, targeted, and designed to lift, sculpt, and illuminate from the first session."
+    },
+    {
+      title: "Sculpting Specialists",
+      description: "Rolora estheticians are trained in facial contouring and sculpting work — we know how to shape, lift, and energize the face."
+    },
+    {
+      title: "Modern Techniques Only",
+      description: "High-performance formulas, advanced modalities, and sculpting methods that actually move the needle."
+    },
+    {
+      title: "Glow with Energy",
+      description: "We activate your skin. Expect lifted features, brighter tone, and that unmistakable Rolora Glow that feels alive."
+    },
+    {
+      title: "Face + Body Connection",
+      description: "Rolora's Flow approach treats lymph, energy, and circulation — so your whole appearance looks lighter and more defined."
+    }
+  ];
+
+  return <section className="py-20 relative overflow-hidden">
+      {/* Gradient Background Effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+      
+      <div className="container px-6 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-[0.9] text-center mb-8 text-primary">
+            WHAT MAKES US DIFFERENT
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div className="p-8 bg-muted/30 border border-border/20 transition-all duration-300 hover:bg-muted/50 hover:border-border/40 hover:shadow-lg group">
-              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
-                Results You Can See
-              </h3>
-              <p className="text-base text-foreground/80 leading-relaxed">
-                We don't do fluff. Every technique is intentional, targeted, and designed to lift, sculpt, and illuminate from the first session.
-              </p>
-            </div>
+          <p className="text-xl leading-relaxed mb-16 text-center max-w-3xl mx-auto">
+            Rolora isn't your typical facial studio. We're here for snatched results, sculpted energy, and glow that gets noticed.
+          </p>
 
-            <div className="p-8 bg-muted/30 border border-border/20 transition-all duration-300 hover:bg-muted/50 hover:border-border/40 hover:shadow-lg group">
-              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
-                Sculpting Specialists
-              </h3>
-              <p className="text-base text-foreground/80 leading-relaxed">
-                Your skin isn't treated with a "one-size-fits-all" protocol. Rolora estheticians are trained in facial contouring and sculpting work — we know how to shape, lift, and energize the face.
-              </p>
-            </div>
-
-            <div className="p-8 bg-muted/30 border border-border/20 transition-all duration-300 hover:bg-muted/50 hover:border-border/40 hover:shadow-lg group">
-              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">MODERN TECHNIQUES ONLY</h3>
-              <p className="text-base text-foreground/80 leading-relaxed">
-                High-performance formulas, advanced modalities, and sculpting methods that actually move the needle — not a basic "relaxing" facial you forget tomorrow.
-              </p>
-            </div>
-
-            <div className="p-8 bg-muted/30 border border-border/20 transition-all duration-300 hover:bg-muted/50 hover:border-border/40 hover:shadow-lg group">
-              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
-                Glow with Energy
-              </h3>
-              <p className="text-base text-foreground/80 leading-relaxed">
-                We don't just treat the skin — we activate it. Expect lifted features, brighter tone, and that unmistakable Rolora Glow that feels alive, not coated.
-              </p>
-            </div>
-
-            <div className="p-8 bg-muted/30 border border-border/20 transition-all duration-300 hover:bg-muted/50 hover:border-border/40 hover:shadow-lg group md:col-span-2 lg:col-span-1">
-              <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-primary transition-colors">
-                Face + Body Connection
-              </h3>
-              <p className="text-base text-foreground/80 leading-relaxed">
-                Your glow isn't only on your face. Rolora's Flow approach treats lymph, energy, and circulation — so your whole appearance looks lighter, tighter, and more defined.
-              </p>
-            </div>
+          {/* Benefits Carousel */}
+          <div className="mb-16">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: false,
+                }),
+              ]}
+              className="w-full max-w-5xl mx-auto"
+            >
+              <CarouselContent>
+                {benefits.map((benefit, i) => (
+                  <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="group relative flex flex-col gap-4 px-8 py-8 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] backdrop-blur-sm h-full">
+                      <h3 className="font-display text-xl md:text-2xl font-bold text-foreground tracking-tight">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-sm text-foreground/70 leading-relaxed">
+                        {benefit.description}
+                      </p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
 
-          {/* Image with Card Overlay */}
-          <div className="relative mt-16 w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg">
+          {/* Image with modern overlay */}
+          <div className="relative overflow-hidden rounded-2xl">
             <img 
               src={diverseSkin} 
-              alt="Woman with luxurious facial mask treatment showing glowing skin"
-              className="w-full h-full object-cover object-center"
+              alt="Luxurious facial treatment at Rolora"
+              className="w-full h-[500px] md:h-[600px] object-cover"
             />
-            <div className="absolute left-4 right-4 top-4 md:left-0 md:right-auto md:top-0 bg-background/95 backdrop-blur-sm p-6 md:p-10 md:max-w-lg">
-              <p className="text-xs uppercase tracking-widest mb-3 text-foreground/60 font-medium">
-                NOT YOUR AVERAGE FACIAL STUDIO
-              </p>
-              <h3 className="text-2xl md:text-3xl lg:text-5xl font-black mb-4 uppercase tracking-tight leading-none">
-                Where Great Skin Meets Good Vibes
-              </h3>
-              <p className="text-sm md:text-base text-foreground/80 mb-6 leading-relaxed">
-                Our open-concept studios in Newport bring your vibe up and help your skin thrive.
-              </p>
-              <BookingButton 
-                size="lg"
-                className="uppercase font-bold tracking-wide bg-primary hover:bg-primary/90 px-8 w-full md:w-auto"
-              >
-                BOOK NOW
-              </BookingButton>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+              <div className="max-w-2xl">
+                <p className="text-xs uppercase tracking-widest mb-3 text-primary font-bold">
+                  NEWPORT BEACH
+                </p>
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 uppercase tracking-tight leading-tight text-white">
+                  Where Great Skin Meets Good Vibes
+                </h3>
+                <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed">
+                  Our open-concept studio brings your vibe up and helps your skin thrive.
+                </p>
+                <BookingButton 
+                  size="lg"
+                  className="px-12 py-6 text-sm uppercase font-bold tracking-wider"
+                >
+                  BOOK YOUR VISIT
+                </BookingButton>
+              </div>
             </div>
           </div>
         </div>
