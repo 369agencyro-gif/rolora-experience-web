@@ -200,13 +200,13 @@ const SpecialOffer = () => {
             
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                { title: "Arrival & Quick Check-In", desc: "You'll be welcomed into Rolora's calm, modern space in Corona del Mar and complete a short skin + lifestyle intake.", emoji: "✨" },
-                { title: "Skin Analysis & Plan", desc: "We look at your skin up close, talk about your goals (glow, texture, breakouts, fine lines), and create a targeted plan for today.", emoji: "🔍" },
-                { title: "Deep Cleanse & Exfoliation", desc: "Gentle double cleanse and refined exfoliation to remove buildup, soften texture, and prep your skin.", emoji: "💧" },
-                { title: "Hydrodermabrasion & Treatment Work", desc: "Tailored hydrodermabrasion and treatment steps to address dullness, congestion, or early signs of aging.", emoji: "✨" },
-                { title: "Custom Rolora Glow Serum Blend", desc: "We mix serums just for your skin—brightening, hydrating, calming, or firming—and infuse them deeply.", emoji: "💎" },
-                { title: "Oxygen Glow Finish", desc: "Oxygen infusion seals everything in for a fresh, glassy, \"I slept 10 hours\" glow.", emoji: "🌟" },
-                { title: "Post-Treatment Plan", desc: "Before you leave, we walk you through what to use at home and when to come back for best results.", emoji: "📋" }
+                { title: "Arrival & Quick Check-In", desc: "You'll be welcomed into Rolora's calm, modern space in Corona del Mar and complete a short skin + lifestyle intake." },
+                { title: "Skin Analysis & Plan", desc: "We look at your skin up close, talk about your goals (glow, texture, breakouts, fine lines), and create a targeted plan for today." },
+                { title: "Deep Cleanse & Exfoliation", desc: "Gentle double cleanse and refined exfoliation to remove buildup, soften texture, and prep your skin." },
+                { title: "Hydrodermabrasion & Treatment Work", desc: "Tailored hydrodermabrasion and treatment steps to address dullness, congestion, or early signs of aging." },
+                { title: "Custom Rolora Glow Serum Blend", desc: "We mix serums just for your skin—brightening, hydrating, calming, or firming—and infuse them deeply." },
+                { title: "Oxygen Glow Finish", desc: "Oxygen infusion seals everything in for a fresh, glassy, \"I slept 10 hours\" glow." },
+                { title: "Post-Treatment Plan", desc: "Before you leave, we walk you through what to use at home and when to come back for best results." }
               ].map((step, i) => (
                 <div 
                   key={i} 
@@ -218,9 +218,6 @@ const SpecialOffer = () => {
                   
                   {/* Number badge */}
                   <div className="relative flex items-start gap-4 mb-3">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                      <span className="text-2xl">{step.emoji}</span>
-                    </div>
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <span className="text-primary font-bold text-sm">{i + 1}</span>
                     </div>
@@ -245,7 +242,7 @@ const SpecialOffer = () => {
             <div className="mt-16 text-center">
               <div className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border border-primary/20 mb-6 animate-pulse">
                 <p className="text-sm md:text-base font-semibold text-foreground">
-                  Ready for your glow-up? ✨
+                  Ready for your glow-up?
                 </p>
               </div>
             </div>
