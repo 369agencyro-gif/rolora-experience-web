@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import BookingButton from "@/components/BookingButton";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import treatment1 from "@/assets/treatment-1.jpg";
 import treatment2 from "@/assets/treatment-2.jpg";
@@ -63,7 +63,7 @@ const TreatmentExplorer = () => {
         </h2>
 
         {/* Treatment Cards Carousel - All Screens */}
-        <div className="mb-12">
+        <div className="mb-12 relative">
           <Carousel
             opts={{
               align: "start",
@@ -100,6 +100,8 @@ const TreatmentExplorer = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground" />
+            <CarouselNext className="hidden md:flex -right-12 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground" />
           </Carousel>
         </div>
 
