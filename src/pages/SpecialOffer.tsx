@@ -1,520 +1,407 @@
 import { Link } from "react-router-dom";
-import { Check, Sparkles, Clock, MapPin, Gift, Star, ShieldCheck } from "lucide-react";
+import { Check, MapPin, Plus } from "lucide-react";
 import ServiceLayout from "@/components/ServiceLayout";
-import { Button } from "@/components/ui/button";
+import BookingButton from "@/components/BookingButton";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { useCountdownTimer } from "@/hooks/use-countdown-timer";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import facialImage from "@/assets/facial-sculpting.jpg";
 import facialRoom from "@/assets/facial-room.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
-import studioInterior from "@/assets/studio-interior.jpg";
+import glowingFace from "@/assets/glowing-face.jpg";
 import skincareProducts from "@/assets/skincare-products.jpg";
 
 const SpecialOffer = () => {
-  const { ref: includedRef, isVisible: includedVisible } = useScrollAnimation({ threshold: 0.2 });
-  const timeLeft = useCountdownTimer();
-
   return (
     <ServiceLayout>
-      {/* Hero Section with Offer */}
-      <section className="relative">
-        <div className="relative h-[80vh] min-h-[700px] overflow-hidden">
-          <img 
-            src={facialImage}
-            alt="Rolora Facial Treatment"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
-          
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="container max-w-3xl mx-auto text-center px-6 animate-fade-in">
-              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-accent/10 backdrop-blur-md border border-accent/30 mb-8 shadow-elegant">
-                <Clock className="w-5 h-5 text-accent" />
-                <span className="text-sm font-semibold text-foreground">
-                  Exclusive Offer Ends: <span className="text-accent font-bold">{timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s</span>
-                </span>
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        <img 
+          src={facialImage}
+          alt="ROLORA Facial Glow Treatment"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/90"></div>
+        
+        <div className="relative container max-w-4xl mx-auto text-center px-6 py-20 animate-fade-in">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 tracking-tight leading-[1.1] text-foreground">
+            Try Your First<br />
+            ROLORA Facial Glow™<br />
+            for Only $99
+          </h1>
+
+          <p className="text-xl md:text-2xl mb-10 text-foreground/80 max-w-2xl mx-auto leading-relaxed">
+            New-client exclusive. Our signature glass-skin facial—now $99 (regularly $235).
+          </p>
+
+          <div className="mb-10 space-y-3">
+            {["Deep cleanse, refine, and hydrate", "Custom serum blends mixed just for your skin", "Instant glow with zero downtime"].map((item, i) => (
+              <div key={i} className="flex items-center justify-center gap-3">
+                <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-base text-foreground/70">{item}</span>
               </div>
+            ))}
+          </div>
 
-              <h1 className="text-3xl md:text-5xl font-display font-semibold mb-6 leading-tight tracking-tight">
-                Try Your First<br />
-                <span className="text-accent">ROLORA FACIAL GLOW™</span><br />
-                For Only
-              </h1>
+          <BookingButton size="lg" className="px-12 py-7 text-sm uppercase font-black tracking-wider mb-6">
+            YES, I WANT THE GLOW™
+          </BookingButton>
 
-              <div className="relative inline-flex flex-col items-center mb-8 py-6 px-4 overflow-visible isolate z-10">
-                <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full"></div>
-                <div className="relative px-16 py-6 rounded-2xl bg-card/10 backdrop-blur-md border-2 border-accent/30 shadow-2xl overflow-visible">
-                  <p className="text-6xl md:text-7xl leading-[1.2] font-display font-bold bg-gradient-to-br from-accent via-accent to-accent/60 bg-clip-text text-transparent tracking-tight">$99</p>
-                  <p className="text-lg text-muted-foreground mt-2">
-                    Instead of <span className="line-through">$235</span>
-                  </p>
-                </div>
-              </div>
+          <p className="text-xs text-foreground/60">
+            Limited time. New Rolora clients only. One intro offer per person.
+          </p>
+        </div>
+      </section>
 
-              <div className="flex items-center justify-center gap-2 mb-8">
-                <Sparkles className="w-4 h-4 text-accent" />
-                <span className="text-sm text-accent font-semibold uppercase tracking-wide">First-Time Clients Only • Limited Availability</span>
-              </div>
-
-              <Button
-                size="lg"
-                className="h-14 text-sm font-bold uppercase tracking-wide bg-accent hover:bg-accent/90 text-white px-12 hover:scale-105 transition-all duration-300 shadow-elegant"
-                asChild
-              >
-                <a href="#book-now">
-                  Reserve My Spot Now →
-                </a>
-              </Button>
-
-              <p className="text-sm text-muted-foreground mt-6 flex items-center justify-center gap-2">
-                <MapPin className="w-4 h-4" />
-                Available at All Rolora Locations
+      {/* What Is ROLORA Facial Glow™ */}
+      <section className="py-20 bg-background">
+        <div className="container px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-primary text-center">
+              What Is the ROLORA Facial Glow™?
+            </h2>
+            
+            <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
+              <p>
+                ROLORA Facial Glow™ is our signature, high-performance glow facial designed for glassy, smooth, camera-ready skin. In one session, we focus on clarity, texture, and hydration using tailored exfoliation, hydrodermabrasion, and precise techniques to soften fine lines and brighten dull tone.
+              </p>
+              
+              <p>
+                Each treatment is finished with our custom Rolora serum blend—mixed based on your skin that day—plus oxygen infusion for that unmistakable "Rolora glow."
               </p>
             </div>
           </div>
         </div>
       </section>
 
-        {/* Gallery Carousel Section */}
-        <section className="py-20 md:py-32 bg-gradient-to-b from-background to-secondary/20">
-          <div className="container px-6">
-            <div className="max-w-6xl mx-auto">
-              {/* Signature Divider */}
-              <div className="flex items-center justify-center mb-8 animate-fade-in">
-                <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent"></div>
-                <span className="px-6 text-accent text-sm uppercase tracking-widest">Your Journey</span>
-                <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent"></div>
-              </div>
-              
-              <div className="text-center mb-16 animate-fade-in">
-                <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
-                  Experience the Transformation
-                </h2>
-                <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                  A glimpse into your Rolora journey
-                </p>
-              </div>
+      {/* Image Break */}
+      <section className="relative h-[50vh] overflow-hidden">
+        <img alt="Glowing Skin" className="w-full h-full object-cover" src={glowingSkin} />
+      </section>
 
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                className="w-full animate-fade-in"
-              >
-                <CarouselContent>
-                  {[
-                    { src: facialRoom, alt: "Luxurious Facial Treatment Room" },
-                    { src: glowingSkin, alt: "Glowing Skin Results" },
-                    { src: studioInterior, alt: "Rolora Studio Interior" },
-                    { src: skincareProducts, alt: "Premium Skincare Products" },
-                    { src: facialImage, alt: "Facial Sculpting Treatment" }
-                  ].map((image, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                      <div className="p-2">
-                        <div className="overflow-hidden rounded-3xl ring-1 ring-border/50 shadow-elegant">
-                          <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-full h-80 object-cover hover:scale-110 transition-transform duration-700"
-                          />
-                        </div>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="hidden md:flex" />
-                <CarouselNext className="hidden md:flex" />
-              </Carousel>
+      {/* Why This $99 Intro Glow Is a Big Deal */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        
+        <div className="container px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-12 text-primary text-center">
+              Why This $99 Intro Glow Is a Big Deal
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { title: "$235 value for $99", desc: "Full treatment, not a mini express." },
+                { title: "Completely customized", desc: "No cookie-cutter protocol; we treat your skin concerns." },
+                { title: "New-client only", desc: "Designed to let you experience Rolora before memberships or packages." },
+                { title: "Perfect before events", desc: "Photos, trips, or when your skin just needs a reset." }
+              ].map((item, i) => (
+                <div key={i} className="p-6 rounded-xl bg-background/50 border border-primary/20 hover:bg-background/80 transition-colors">
+                  <h3 className="font-display text-xl font-bold mb-2 text-foreground">{item.title}</h3>
+                  <p className="text-foreground/70">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <BookingButton size="lg" className="px-10 py-6 text-sm uppercase font-bold tracking-wider">
+                BOOK MY FIRST GLOW FOR $99
+              </BookingButton>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* What's Included Section */}
-        <section className="py-20 md:py-32">
-          <div className="container px-6">
-            <div className="max-w-6xl mx-auto">
-              {/* Signature Divider */}
-              <div className="flex items-center justify-center mb-8 animate-fade-in">
-                <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent"></div>
-                <span className="px-6 text-accent text-sm uppercase tracking-widest">Included</span>
-                <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent"></div>
-              </div>
-              
-              <div className="text-center mb-16 animate-fade-in">
-                <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
-                  What's Included in Your $99 Experience
-                </h2>
-                <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                  Experience our signature treatment at an exclusive introductory price
-                </p>
-              </div>
-
-            <div ref={includedRef} className="space-y-4 max-w-4xl mx-auto">
+      {/* What to Expect During Your Visit */}
+      <section className="py-20 bg-background">
+        <div className="container px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-12 text-primary text-center">
+              What to Expect During Your Visit
+            </h2>
+            
+            <div className="space-y-8">
               {[
-                "60-minute Rolora Facial Glow™ treatment",
-                "Deep cleansing and exfoliation",
-                "Advanced sculpting massage techniques",
-                "Hydrating mask with premium serums",
-                "LED light therapy for radiance",
-                "Facial rolling and gua sha techniques",
-                "Personalized skincare consultation",
-                "Take-home skincare recommendations"
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className={`flex items-start gap-4 p-6 rounded-3xl bg-muted/20 border border-border/50 hover:shadow-elegant transition-all duration-1000 ease-out ${
-                    includedVisible
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 translate-y-12'
-                  }`}
-                  style={{
-                    transitionDelay: includedVisible ? `${index * 100}ms` : '0ms'
-                  }}
-                >
-                  <div className="mt-1 bg-accent/20 rounded-full p-2 flex-shrink-0">
-                    <Check className="w-5 h-5 text-accent" />
+                { title: "Arrival & Quick Check-In", desc: "You'll be welcomed into Rolora's calm, modern space in Corona del Mar and complete a short skin + lifestyle intake." },
+                { title: "Skin Analysis & Plan", desc: "We look at your skin up close, talk about your goals (glow, texture, breakouts, fine lines), and create a targeted plan for today." },
+                { title: "Deep Cleanse & Exfoliation", desc: "Gentle double cleanse and refined exfoliation to remove buildup, soften texture, and prep your skin." },
+                { title: "Hydrodermabrasion & Treatment Work", desc: "Tailored hydrodermabrasion and treatment steps to address dullness, congestion, or early signs of aging." },
+                { title: "Custom Rolora Glow Serum Blend", desc: "We mix serums just for your skin—brightening, hydrating, calming, or firming—and infuse them deeply." },
+                { title: "Oxygen Glow Finish", desc: "Oxygen infusion seals everything in for a fresh, glassy, \"I slept 10 hours\" glow." },
+                { title: "Post-Treatment Plan", desc: "Before you leave, we walk you through what to use at home and when to come back for best results." }
+              ].map((step, i) => (
+                <div key={i} className="flex gap-6">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary font-bold">{i + 1}</span>
                   </div>
-                  <span className="text-foreground text-lg font-medium">{item}</span>
+                  <div>
+                    <h3 className="font-display text-xl font-bold mb-2 text-foreground">{step.title}</h3>
+                    <p className="text-foreground/70 leading-relaxed">{step.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Reviews Section */}
-        <section className="py-20 md:py-32 bg-gradient-to-b from-secondary/20 to-background">
-          <div className="container px-6">
-            <div className="max-w-6xl mx-auto">
-              {/* Signature Divider */}
-              <div className="flex items-center justify-center mb-8 animate-fade-in">
-                <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent"></div>
-                <span className="px-6 text-accent text-sm uppercase tracking-widest">Testimonials</span>
-                <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent"></div>
-              </div>
-              
-              <div className="text-center mb-16 animate-fade-in">
-                <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
-                  Verified Client Reviews
-                </h2>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  Real results from real clients
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6 animate-fade-in">
-                {[
-                  {
-                    name: "Michelle T.",
-                    date: "2 weeks ago",
-                    text: "This offer is incredible! I was skeptical at first, but the results after just one treatment were amazing. My skin felt so smooth and the glow lasted for days. Already booked my next session!",
-                    rating: 5
-                  },
-                  {
-                    name: "Amanda R.",
-                    date: "1 week ago",
-                    text: "Best decision ever. The $99 intro offer is such great value. The treatment was relaxing and professional. I noticed my skin looked brighter immediately. Highly recommend for first-timers!",
-                    rating: 5
-                  },
-                  {
-                    name: "Jennifer K.",
-                    date: "3 days ago",
-                    text: "I've tried many facials but Rolora is different. The attention to detail and the quality of products used really shows. My fine lines look smoother and my skin feels rejuvenated. Worth every penny!",
-                    rating: 5
-                  },
-                  {
-                    name: "Lisa M.",
-                    date: "5 days ago",
-                    text: "Absolutely loved my first Rolora experience! The staff was knowledgeable and the treatment exceeded my expectations. My skin has never looked better. Can't wait to come back!",
-                    rating: 5
-                  }
-                ].map((review, index) => (
-                  <div
-                    key={index}
-                    className="bg-muted/20 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:shadow-elegant transition-all duration-300"
-                  >
-                    {/* Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-full bg-accent/10 border-2 border-accent/30 flex items-center justify-center">
-                          <span className="text-lg font-display font-semibold text-accent">
-                            {review.name.charAt(0)}
-                          </span>
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-2">
-                            <h4 className="font-semibold text-foreground">{review.name}</h4>
-                            <ShieldCheck className="w-4 h-4 text-accent fill-accent" />
-                          </div>
-                          <p className="text-xs text-muted-foreground">{review.date}</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Stars */}
-                    <div className="flex gap-1 mb-3">
-                      {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                      ))}
-                    </div>
-
-                    {/* Review Text */}
-                    <p className="text-foreground/90 leading-relaxed">
-                      {review.text}
-                    </p>
-
-                    {/* Verified Badge */}
-                    <div className="mt-4 pt-4 border-t border-border/50">
-                      <span className="text-xs text-accent font-semibold flex items-center gap-1">
-                        <ShieldCheck className="w-3 h-3" />
-                        Verified Client
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+      {/* Image Grid */}
+      <section className="py-12 bg-background">
+        <div className="container px-6">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <img src={facialRoom} alt="Rolora Treatment Room" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <img src={skincareProducts} alt="Custom Serum Blends" className="w-full h-full object-cover" />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 md:py-32">
-          <div className="container px-6">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16 animate-fade-in">
-                <h2 className="text-4xl md:text-5xl font-display font-semibold mb-8 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
-                  Transform Your Skin
-                </h2>
-                
-                <Button
-                  size="lg"
-                  className="h-14 text-sm font-bold uppercase tracking-wide bg-accent hover:bg-accent/90 text-white px-12 hover:scale-105 transition-all duration-300 shadow-elegant mb-12"
-                  asChild
-                >
-                  <a href="#book-now">
-                    Reserve My Spot Now →
-                  </a>
-                </Button>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6 animate-fade-in">
-                {[
-                  {
-                    title: "Instant Glow",
-                    description: "See visible radiance and luminosity immediately after your first treatment"
-                  },
-                  {
-                    title: "Sculpted Contours",
-                    description: "Experience lifted, defined facial features with our specialized techniques"
-                  },
-                  {
-                    title: "Deep Hydration",
-                    description: "Restore moisture balance and achieve plump, supple skin"
-                  },
-                  {
-                    title: "Reduced Fine Lines",
-                    description: "Smooth away signs of aging with our advanced facial massage"
-                  }
-                ].map((benefit, index) => (
-                  <div
-                    key={index}
-                    className="p-8 rounded-3xl bg-muted/20 border border-border/50 hover:shadow-elegant transition-all duration-300 hover:scale-[1.02]"
-                  >
-                    <h3 className="text-2xl font-display font-semibold mb-3 text-accent">{benefit.title}</h3>
-                    <p className="text-muted-foreground text-lg leading-relaxed">{benefit.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why This Offer Section */}
-        <section className="py-20 md:py-32 bg-gradient-to-b from-secondary/20 to-background">
-          <div className="container px-6">
-            <div className="max-w-4xl mx-auto text-center animate-fade-in">
-              {/* Signature Divider */}
-              <div className="flex items-center justify-center mb-8">
-                <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent"></div>
-                <span className="px-6 text-accent text-sm uppercase tracking-widest">Our Promise</span>
-                <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent"></div>
-              </div>
-              
-              <h2 className="text-4xl md:text-5xl font-display font-semibold mb-8 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
-                Why This Special Offer?
-              </h2>
-              <p className="text-xl text-muted-foreground mb-6 leading-relaxed max-w-3xl mx-auto">
-                We believe everyone deserves to experience the transformative power of our signature Rolora Facial Glow™. 
-                This exclusive offer is our way of welcoming you to discover the Rolora difference at an accessible price.
-              </p>
-              <p className="text-xl font-semibold mb-8 text-foreground">
-                Join thousands of clients who have transformed their skin with Rolora.
-              </p>
-              
-              {/* Star Rating */}
-              <div className="flex flex-col items-center gap-3 p-8 rounded-3xl bg-muted/20 border border-border/50 max-w-md mx-auto">
-                <div className="flex items-center gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      className={`w-5 h-5 ${i < 4 ? 'fill-accent text-accent' : 'fill-accent/50 text-accent/50'}`}
-                    />
-                  ))}
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-2xl font-display font-bold text-accent">4.95</span>
-                  <span className="text-muted-foreground text-sm">out of 5 stars</span>
-                </div>
-                <span className="text-sm text-muted-foreground uppercase tracking-wide">Based on 2,847+ verified reviews</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA Section */}
-        <section id="book-now" className="py-20 md:py-32">
-          <div className="container px-6">
-            <div className="max-w-3xl mx-auto">
-              <div className="bg-gradient-to-br from-accent/10 via-accent/5 to-transparent backdrop-blur-sm border-2 border-accent/30 rounded-3xl p-12 md:p-16 text-center shadow-elegant animate-fade-in">
-                <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-accent/10 backdrop-blur-md border border-accent/30 mb-8 shadow-elegant">
-                  <Clock className="w-5 h-5 text-accent" />
-                  <span className="text-sm font-semibold">
-                    Offer Ends: <span className="text-accent font-bold">{timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s</span>
-                  </span>
-                </div>
-
-                <h2 className="text-4xl md:text-6xl font-display font-semibold mb-6 tracking-tight">
-                  Ready to Glow?
-                </h2>
-                <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed">
-                  Book your introductory Rolora Facial Glow™ for only $99
-                </p>
-
-                <Button
-                  size="lg"
-                  className="w-full max-w-md h-16 text-sm font-bold uppercase tracking-wide bg-accent hover:bg-accent/90 text-white shadow-elegant hover:scale-105 transition-all duration-300 mb-8"
-                  asChild
-                >
-                  <Link to="/contact">
-                    Reserve My Spot Now →
-                  </Link>
-                </Button>
-
-                <p className="text-sm text-muted-foreground mb-3">
-                  First-time clients only • Limited availability
-                </p>
-                <p className="text-xs text-muted-foreground/70">
-                  By booking, you agree to our terms of service and cancellation policy
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Video Section */}
-        <section className="py-20 md:py-32 bg-gradient-to-b from-background to-secondary/20">
-          <div className="container px-6">
-            <div className="max-w-5xl mx-auto">
-              {/* Signature Divider */}
-              <div className="flex items-center justify-center mb-8 animate-fade-in">
-                <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent"></div>
-                <span className="px-6 text-accent text-sm uppercase tracking-widest">Watch</span>
-                <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent"></div>
-              </div>
-              
-              <div className="text-center mb-16 animate-fade-in">
-                <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
-                  See The Rolora Difference
-                </h2>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  Watch how we transform skin with our signature treatment
-                </p>
-              </div>
-
-              <div className="relative aspect-video rounded-3xl overflow-hidden shadow-elegant ring-1 ring-border/50 animate-fade-in">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="Rolora Facial Glow Treatment"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-
-              <p className="text-center text-muted-foreground mt-8 animate-fade-in">
-                Experience the luxury and expertise that makes Rolora special
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 md:py-32">
-          <div className="container px-6">
-            <div className="max-w-4xl mx-auto">
-              {/* Signature Divider */}
-              <div className="flex items-center justify-center mb-8 animate-fade-in">
-                <div className="h-px w-24 bg-gradient-to-r from-transparent to-accent"></div>
-                <span className="px-6 text-accent text-sm uppercase tracking-widest">Questions</span>
-                <div className="h-px w-24 bg-gradient-to-l from-transparent to-accent"></div>
-              </div>
-              
-              <div className="text-center mb-16 animate-fade-in">
-                <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6 bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent">
-                  Frequently Asked Questions
-                </h2>
-              </div>
-
-            <Accordion type="single" collapsible className="w-full">
+      {/* Who This Is For */}
+      <section className="py-20 relative overflow-hidden bg-background border-t-4 border-foreground">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        
+        <div className="container px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-[0.9] text-primary mb-8">
+              This Offer Is Perfect If…
+            </h2>
+            
+            <div className="space-y-4 mb-8">
               {[
-                {
-                  question: "Is this offer for new clients only?",
-                  answer: "Yes, this exclusive introductory offer is available for first-time Rolora clients only."
-                },
-                {
-                  question: "How long does the treatment take?",
-                  answer: "Your full Rolora Facial Glow™ treatment takes 60 minutes, with time for consultation before and after."
-                },
-                {
-                  question: "What should I expect after the treatment?",
-                  answer: "You'll notice immediate glow and radiance. Results continue to improve over the next 24-48 hours as skin fully absorbs the treatment benefits."
-                },
-                {
-                  question: "Can I purchase additional treatments?",
-                  answer: "Absolutely! After experiencing your first treatment, you can book additional sessions at regular pricing or explore our packages for better value."
-                }
-              ].map((faq, index) => (
-                <AccordionItem 
-                  key={index} 
-                  value={`item-${index}`}
-                  className="border border-border rounded-2xl px-6 mb-4 bg-background"
-                >
-                  <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-6">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
+                "Your skin looks dull, tired, or uneven in photos",
+                "You want glass-skin glow without fillers or heavy makeup",
+                "You're curious about Rolora and want to try us before committing",
+                "You have an event, trip, or restart moment coming up",
+                "You value results + experience, not quick, rushed facials"
+              ].map((item, i) => (
+                <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <span className="text-primary text-xs font-bold">✓</span>
+                  </div>
+                  <span className="text-base text-foreground/80 font-light tracking-wide">{item}</span>
+                </div>
               ))}
-            </Accordion>
+            </div>
+
+            <p className="text-sm text-foreground/60 italic text-center">
+              If you're dealing with active medical skin conditions, we'll adjust the treatment or recommend a different option during your consult.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Real Results Section */}
+      <section className="py-20 bg-background">
+        <div className="container px-6">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary text-center">
+              See the Glow
+            </h2>
+            
+            <p className="text-lg text-foreground/70 mb-12 text-center">
+              Results after ROLORA Facial Glow™ treatments
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                <img src={glowingFace} alt="Glowing skin results" className="w-full h-full object-cover" />
+                <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg">
+                  <p className="text-sm font-medium text-foreground">Results after 1 ROLORA Facial Glow™</p>
+                </div>
+              </div>
+              <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                <img src={glowingSkin} alt="Clear radiant skin" className="w-full h-full object-cover" />
+                <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg">
+                  <p className="text-sm font-medium text-foreground">Series of 3 sessions, 4 weeks apart</p>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-xs text-foreground/60 text-center italic">
+              Individual results vary. Photos are for educational purposes and show real outcomes from consistent treatments.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Rolora */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        
+        <div className="container px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-12 text-primary text-center">
+              Why Rolora?
+            </h2>
+            
+            <div className="space-y-6">
+              {[
+                "Modern, results-driven facials with a calm, elevated atmosphere.",
+                "High-end devices + techniques used intentionally, not just for show.",
+                "Glow + flow philosophy – lymphatic focus for face and body so you leave lighter, not just moisturized.",
+                "Founder-led protocols created from years of experience with Newport Beach's high-end clientele."
+              ].map((item, i) => (
+                <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <span className="text-primary text-xs font-bold">✓</span>
+                  </div>
+                  <span className="text-base text-foreground/80 font-light tracking-wide">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
+      {/* How to Claim Your $99 Glow */}
+      <section className="py-20 bg-background">
+        <div className="container px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-12 text-primary text-center">
+              How to Claim This Offer
+            </h2>
+            
+            <div className="space-y-8 mb-12">
+              {[
+                { step: "1", title: "Tap \"Book My $99 Glow\" on this page." },
+                { step: "2", title: "Choose your date and time that works best for you." },
+                { step: "3", title: "Show up ready to glow – we'll handle the rest." }
+              ].map((item, i) => (
+                <div key={i} className="flex gap-6 items-start">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary font-bold text-xl">{item.step}</span>
+                  </div>
+                  <div className="pt-2">
+                    <p className="text-lg text-foreground/80">{item.title}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-sm text-foreground/60 text-center mb-8">
+              New clients only. One intro offer per person. Cannot be combined with other promotions or membership pricing.
+            </p>
+
+            <div className="text-center">
+              <BookingButton size="lg" className="px-12 py-7 text-sm uppercase font-black tracking-wider">
+                BOOK MY FIRST ROLORA GLOW™ FOR $99
+              </BookingButton>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        
+        <div className="container px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-12 text-primary text-center">
+              FAQ
+            </h2>
+            
+            <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
+              <AccordionItem value="item-1" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Is this really the full facial, not a mini?
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Yes. This is the complete ROLORA Facial Glow™ ($235 value), offered at $99 for first-time clients so you can truly experience the treatment.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Is there downtime?
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Most clients leave with fresh, glowing skin and can go straight back to work, events, or dinner. If your skin is very sensitive or we do stronger exfoliation, you may have light redness for a few hours.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      How long does the appointment take?
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Plan for about 60 minutes in the treatment room, plus a few minutes before and after for check-in and post-care.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Can I combine this with other intro offers?
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  No. To keep it fair and sustainable, this is one intro offer per person. After your first visit, we'll walk you through memberships, packages, or other treatments if you'd like to continue.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      What if I need to reschedule?
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  We follow a simple reschedule/cancellation policy to respect everyone's time. You'll see all details when you book, and you can manage your appointment online.
+                </AccordionContent>
+              </AccordionItem>
+            </AccordionPrimitive.Root>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-20 bg-background border-t-4 border-foreground">
+        <div className="container px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.9] mb-8 text-primary">
+              READY TO GLOW?
+            </h2>
+            <p className="text-xl mb-8 text-foreground/80">
+              Book your $99 ROLORA Facial Glow™ today and experience glass-skin results.
+            </p>
+            <BookingButton size="lg" className="px-12 py-7 text-sm uppercase font-black tracking-wider">
+              BOOK MY FIRST ROLORA GLOW™ FOR $99
+            </BookingButton>
+            <p className="text-xs text-foreground/60 mt-6">
+              <MapPin className="w-3 h-3 inline mr-1" />
+              Corona del Mar, Newport Beach
+            </p>
+          </div>
+        </div>
+      </section>
     </ServiceLayout>
   );
 };
