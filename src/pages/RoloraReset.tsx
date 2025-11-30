@@ -12,28 +12,20 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-
 const RoloraReset = () => {
-  return (
-    <ServiceLayout>
+  return <ServiceLayout>
       {/* Hero Section - Full Width Slider */}
       <section className="pb-12 md:pb-20">
         <div className="container px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
             {/* Left: Image Slider - Full Width */}
             <div className="relative lg:sticky lg:top-24 -mx-6 lg:mx-0">
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                plugins={[
-                  Autoplay({
-                    delay: 3000,
-                  }),
-                ]}
-                className="w-full"
-              >
+              <Carousel opts={{
+              align: "start",
+              loop: true
+            }} plugins={[Autoplay({
+              delay: 3000
+            })]} className="w-full">
                 <CarouselContent>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
@@ -100,7 +92,7 @@ const RoloraReset = () => {
 
               {/* What This Treatment Does */}
               <div className="pt-8 border-t border-border/50 space-y-6">
-                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">✧ WHAT THIS TREATMENT DOES</h2>
+                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground"> WHAT THIS TREATMENT DOES</h2>
                 
                 <div className="space-y-4">
                   <p className="text-base leading-relaxed text-foreground/70 font-light">
@@ -110,21 +102,12 @@ const RoloraReset = () => {
 
                 <div className="mt-8 pt-6 space-y-6">
                   <div className="grid gap-4">
-                    {[
-                      "Dull, tired skin",
-                      "Uneven tone + pigmentation",
-                      "Texture irregularities",
-                      "Congestion",
-                      "Post-breakout marks",
-                      "Lack of overall radiance"
-                    ].map((benefit, i) => (
-                      <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                    {["Dull, tired skin", "Uneven tone + pigmentation", "Texture irregularities", "Congestion", "Post-breakout marks", "Lack of overall radiance"].map((benefit, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                           <span className="text-primary text-xs font-bold">✓</span>
                         </div>
                         <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                   <p className="text-base leading-relaxed text-foreground/70 font-light italic pt-4">
                     Your complexion appears clearer, brighter, and more refined — immediately and progressively.
@@ -282,21 +265,12 @@ const RoloraReset = () => {
             
             <div className="space-y-6">
               <div className="grid gap-4">
-                {[
-                  "Brighter, more even skin tone",
-                  "Smoother, refined texture",
-                  "Reduced discoloration",
-                  "Clearer, cleaner complexion",
-                  "Fresh, radiant glow",
-                  "Suitable for ongoing maintenance"
-                ].map((benefit, i) => (
-                  <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                {["Brighter, more even skin tone", "Smoother, refined texture", "Reduced discoloration", "Clearer, cleaner complexion", "Fresh, radiant glow", "Suitable for ongoing maintenance"].map((benefit, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <span className="text-primary text-xs font-bold">✓</span>
                     </div>
                     <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
               <p className="text-base leading-relaxed text-foreground/70 font-light italic pt-4 text-center">
                 (Everything below is compatible with a peel and enhances the result.)
@@ -413,17 +387,15 @@ const RoloraReset = () => {
             <p className="text-xl mb-12 text-foreground/80">Perfect for anyone who wants to:</p>
             
             <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
-              {["Brighten dull skin", "Fade hyperpigmentation", "Refine texture", "Clear congestion", "Reduce sun damage", "Even skin tone", "Complete transformation"].map((item, index) => (
-                <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                  animationDelay: `${index * 0.1}s`
-                }}>
+              {["Brighten dull skin", "Fade hyperpigmentation", "Refine texture", "Clear congestion", "Reduce sun damage", "Even skin tone", "Complete transformation"].map((item, index) => <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative flex items-center gap-4">
                     <span className="text-primary text-xl flex-shrink-0">✔</span>
                     <p className="font-semibold text-foreground">{item}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="flex flex-col items-center gap-4">
@@ -466,8 +438,6 @@ const RoloraReset = () => {
       </section>
 
       <Contact />
-    </ServiceLayout>
-  );
+    </ServiceLayout>;
 };
-
 export default RoloraReset;
