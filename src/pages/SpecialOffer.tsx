@@ -46,7 +46,7 @@ const SpecialOffer = () => {
             ))}
           </div>
 
-          <BookingButton size="lg" className="px-12 py-7 text-sm uppercase font-black tracking-wider mb-6">
+          <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-12 py-6 md:py-7 text-sm uppercase font-black tracking-wider mb-6">
             YES, I WANT THE GLOW™
           </BookingButton>
 
@@ -72,6 +72,75 @@ const SpecialOffer = () => {
               <p>
                 Each treatment is finished with our custom Rolora serum blend—mixed based on your skin that day—plus oxygen infusion for that unmistakable "Rolora glow."
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Other Offers Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container px-6">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center text-foreground">
+              Or Explore Our Other Signature Treatments
+            </h2>
+            <p className="text-lg text-foreground/70 mb-12 text-center">
+              Not sure if the Facial Glow™ is right for you? Check out these popular options.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Face Sculpt Card */}
+              <div className="bg-background rounded-2xl overflow-hidden border border-border/50 hover:shadow-lg transition-all duration-300">
+                <div className="relative h-64 overflow-hidden">
+                  <img src={facialImage} alt="Face Sculpt" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                  <div className="absolute bottom-4 left-6 right-6">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-1">FACE SCULPT</h3>
+                    <p className="text-white/90 text-sm">Lift. Sculpt. Define.</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-foreground/70 mb-4 leading-relaxed">
+                    Deep lymphatic contouring + gua sha sculpting for instant lift and definition. Perfect for jawline sharpening and facial toning.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-bold text-primary">$205</span>
+                    <BookingButton size="sm" className="px-6 py-3 text-xs uppercase font-bold">
+                      BOOK NOW
+                    </BookingButton>
+                  </div>
+                </div>
+              </div>
+
+              {/* Lift Renew Card */}
+              <div className="bg-background rounded-2xl overflow-hidden border border-border/50 hover:shadow-lg transition-all duration-300">
+                <div className="relative h-64 overflow-hidden">
+                  <img src={facialRoom} alt="Lift Renew" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                  <div className="absolute bottom-4 left-6 right-6">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-1">LIFT RENEW™</h3>
+                    <p className="text-white/90 text-sm">Lift. Firm. Renew.</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-foreground/70 mb-4 leading-relaxed">
+                    High-performance age-defying treatment with ultrasound lift, microcurrent, and red light therapy to restore elasticity and smooth fine lines.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-bold text-primary">$265</span>
+                    <BookingButton size="sm" className="px-6 py-3 text-xs uppercase font-bold">
+                      BOOK NOW
+                    </BookingButton>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-10">
+              <p className="text-sm text-foreground/60 mb-4">Want to see all our treatments?</p>
+              <Link to="/" className="text-primary hover:text-primary/80 font-semibold text-lg underline">
+                View Full Treatment Menu
+              </Link>
             </div>
           </div>
         </div>
@@ -107,7 +176,7 @@ const SpecialOffer = () => {
             </div>
 
             <div className="text-center mt-12">
-              <BookingButton size="lg" className="px-10 py-6 text-sm uppercase font-bold tracking-wider">
+              <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-10 py-6 text-sm uppercase font-bold tracking-wider">
                 BOOK MY FIRST GLOW FOR $99
               </BookingButton>
             </div>
@@ -189,9 +258,15 @@ const SpecialOffer = () => {
               ))}
             </div>
 
-            <p className="text-sm text-foreground/60 italic text-center">
+            <p className="text-sm text-foreground/60 italic text-center mb-8">
               If you're dealing with active medical skin conditions, we'll adjust the treatment or recommend a different option during your consult.
             </p>
+
+            <div className="text-center">
+              <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-10 py-6 text-sm uppercase font-bold tracking-wider">
+                BOOK MY $99 GLOW NOW
+              </BookingButton>
+            </div>
           </div>
         </div>
       </section>
@@ -255,6 +330,12 @@ const SpecialOffer = () => {
                 </div>
               ))}
             </div>
+
+            <div className="text-center mt-12">
+              <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-10 py-6 text-sm uppercase font-bold tracking-wider">
+                CLAIM MY $99 GLOW
+              </BookingButton>
+            </div>
           </div>
         </div>
       </section>
@@ -289,7 +370,7 @@ const SpecialOffer = () => {
             </p>
 
             <div className="text-center">
-              <BookingButton size="lg" className="px-12 py-7 text-sm uppercase font-black tracking-wider">
+              <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-12 py-6 md:py-7 text-sm uppercase font-black tracking-wider">
                 BOOK MY FIRST ROLORA GLOW™ FOR $99
               </BookingButton>
             </div>
@@ -392,7 +473,7 @@ const SpecialOffer = () => {
             <p className="text-xl mb-8 text-foreground/80">
               Book your $99 ROLORA Facial Glow™ today and experience glass-skin results.
             </p>
-            <BookingButton size="lg" className="px-12 py-7 text-sm uppercase font-black tracking-wider">
+            <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-12 py-6 md:py-7 text-sm uppercase font-black tracking-wider">
               BOOK MY FIRST ROLORA GLOW™ FOR $99
             </BookingButton>
             <p className="text-xs text-foreground/60 mt-6">
