@@ -69,7 +69,7 @@ const RoloraReset = () => {
               <div className="space-y-6">
                 <div>
                   <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight leading-[1.1] text-foreground">
-                    Rolora Reset
+                    ROLORA RESET PEEL™
                   </h1>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="flex items-center gap-1">
@@ -80,16 +80,16 @@ const RoloraReset = () => {
                 </div>
                 
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">Chemical Peel</span>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">Brighten. Smooth. Reset.</span>
                 </div>
 
                 <div className="space-y-4 pt-4">
                   <p className="text-lg leading-relaxed text-foreground/80 font-light">
-                    A luxury chemical peel facial that resurfaces texture, refines tone, and reveals clear, radiant skin. Perfect for dullness, discoloration, and uneven texture with low-downtime for maximum results.
+                    A low-downtime resurfacing peel that gently smooths texture, brightens uneven tone, and reveals fresh, radiant skin with every session. Designed for clarity, glow, and a clean reset — without harsh peeling or irritation.
                   </p>
                   
                   <p className="text-lg leading-relaxed font-medium text-foreground border-l-2 border-primary pl-6">
-                    This isn't just resurfacing. This is controlled renewal, targeted correction, and transformative clarity — crafted the Rolora way.
+                    Best in a series of 3–6 for visible, lasting transformation.
                   </p>
                 </div>
 
@@ -98,29 +98,37 @@ const RoloraReset = () => {
                 </BookingButton>
               </div>
 
-              {/* What Is Rolora Reset */}
+              {/* What This Treatment Does */}
               <div className="pt-8 border-t border-border/50 space-y-6">
-                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">What Is Rolora Reset?</h2>
+                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">✧ WHAT THIS TREATMENT DOES</h2>
                 
                 <div className="space-y-4">
                   <p className="text-base leading-relaxed text-foreground/70 font-light">
-                    Rolora Reset uses professional-grade chemical peel formulations to safely remove damaged outer skin layers, revealing fresh, clear, even-toned skin beneath.
-                  </p>
-                  <p className="text-base leading-relaxed text-foreground/70 font-light">
-                    Each treatment is customized to your skin's tolerance and concerns, with careful monitoring to achieve maximum results with minimal downtime.
+                    ROLORA RESET PEEL™ is your targeted solution for:
                   </p>
                 </div>
 
                 <div className="mt-8 pt-6 space-y-6">
-                  <p className="font-display text-lg font-semibold text-foreground/90">The Result</p>
                   <div className="grid gap-4">
-                    {["Brighter, even tone", "Refined texture", "Reduced discoloration", "Cleared pores", "Fresh, renewed skin", "Faded dark spots"].map((benefit, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                    {[
+                      "Dull, tired skin",
+                      "Uneven tone + pigmentation",
+                      "Texture irregularities",
+                      "Congestion",
+                      "Post-breakout marks",
+                      "Lack of overall radiance"
+                    ].map((benefit, i) => (
+                      <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                           <span className="text-primary text-xs font-bold">✓</span>
                         </div>
                         <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
-                      </div>)}
+                      </div>
+                    ))}
                   </div>
+                  <p className="text-base leading-relaxed text-foreground/70 font-light italic pt-4">
+                    Your complexion appears clearer, brighter, and more refined — immediately and progressively.
+                  </p>
                 </div>
               </div>
 
@@ -128,12 +136,11 @@ const RoloraReset = () => {
               <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-gradient-to-br from-background to-muted/30 p-8 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
                 <div className="relative">
-                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-8 text-center">Rolora Reset Pricing</h3>
+                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-8 text-center">ROLORA RESET PEEL™ Pricing</h3>
                   <div className="space-y-4">
                     <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors">
                       <div>
                         <span className="font-medium text-foreground">Single Session</span>
-                        <span className="text-xs text-foreground/50 ml-2">75 minutes</span>
                       </div>
                       <span className="text-2xl font-bold text-primary">$245</span>
                     </div>
@@ -158,11 +165,11 @@ const RoloraReset = () => {
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-8 text-primary">
-              THE RESET RITUAL
+              ✧ WHAT TO EXPECT
             </h2>
             
             <p className="text-xl leading-relaxed mb-16 text-center">
-              Every Rolora Reset session follows a carefully structured sequence focused on safe, effective skin resurfacing and renewal.
+              A precise, results-first approach:
             </p>
 
             <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
@@ -170,13 +177,13 @@ const RoloraReset = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Skin Analysis
+                      Deep cleanse to prep the skin
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Thorough consultation to determine optimal peel strength and customization for your skin.
+                  Thorough cleansing to prepare skin for optimal treatment absorption.
                 </AccordionContent>
               </AccordionItem>
 
@@ -184,13 +191,13 @@ const RoloraReset = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Pre-Treatment Prep
+                      Gentle pre-exfoliation (if needed)
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Deep cleansing and skin preparation to ensure safe, even peel application.
+                  Customized light exfoliation to enhance peel penetration and effectiveness.
                 </AccordionContent>
               </AccordionItem>
 
@@ -198,13 +205,13 @@ const RoloraReset = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Chemical Peel Application
+                      Application of the Reset Peel solution
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Professional-grade peel carefully applied to resurface and renew skin safely.
+                  Targeted peel application to resurface, brighten, and renew skin safely.
                 </AccordionContent>
               </AccordionItem>
 
@@ -212,13 +219,13 @@ const RoloraReset = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Soothing Care
+                      Calm + balance phase to soothe the skin
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Calming treatment and protective serums to support the healing process.
+                  Soothing treatment to neutralize and calm skin post-peel.
                 </AccordionContent>
               </AccordionItem>
 
@@ -226,13 +233,13 @@ const RoloraReset = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Recovery Support
+                      Hydrating finish for restored glow
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Barrier-strengthening products and aftercare guidance for optimal healing and results.
+                  Final hydration and protection to lock in results and restore radiance.
                 </AccordionContent>
               </AccordionItem>
             </AccordionPrimitive.Root>
@@ -241,7 +248,7 @@ const RoloraReset = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"></div>
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent"></div>
               <p className="relative text-xl font-medium text-center leading-relaxed text-foreground">
-                You'll see renewed clarity after healing — and transformative results with a treatment series.
+                Minimal downtime. Maximum clarity.
               </p>
             </div>
           </div>
@@ -262,141 +269,119 @@ const RoloraReset = () => {
         </div>
       </section>
 
-      {/* Why It Works Section */}
+      {/* Benefits Section */}
       <section className="py-20 relative overflow-hidden">
-        {/* Gradient Background Effect */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
         
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-16 text-primary">
-              WHY IT WORKS
+              ✧ BENEFITS
             </h2>
             
-            <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
-              <AccordionItem value="item-1" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Controlled Resurfacing
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Medical-grade peel safely removes damaged layers to reveal fresh, clear skin beneath.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-2" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Targeted Correction
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Addresses specific concerns like hyperpigmentation, sun damage, and uneven tone directly.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-3" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Cellular Renewal
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Stimulates natural skin regeneration for improved texture and clarity over time.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-4" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Low Downtime
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Carefully calibrated strength delivers maximum results without extended recovery.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-5" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      The Rolora Method™
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Our expert protocol ensures safe, effective resurfacing with beautiful, transformative results.
-                </AccordionContent>
-              </AccordionItem>
-            </AccordionPrimitive.Root>
-            
-            <div className="flex justify-center mt-12">
-              <BookingButton variant="cta" size="lg">
-                BOOK NOW
-              </BookingButton>
+            <div className="space-y-6">
+              <div className="grid gap-4">
+                {[
+                  "Brighter, more even skin tone",
+                  "Smoother, refined texture",
+                  "Reduced discoloration",
+                  "Clearer, cleaner complexion",
+                  "Fresh, radiant glow",
+                  "Suitable for ongoing maintenance"
+                ].map((benefit, i) => (
+                  <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <span className="text-primary text-xs font-bold">✓</span>
+                    </div>
+                    <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-base leading-relaxed text-foreground/70 font-light italic pt-4 text-center">
+                (Everything below is compatible with a peel and enhances the result.)
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-background border-t-4 border-foreground">
+      {/* Pair with Boosters Section */}
+      <section className="py-20 bg-background">
         <div className="container px-6">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] animate-fade-in mb-12 text-primary">
-              BENEFITS YOU'LL FEEL IMMEDIATELY
-            </h2>
-            
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 1200,
-                }),
-              ]}
-              className="w-full mb-12"
-            >
-              <CarouselContent>
-                {["Brighter, even tone", "Refined texture", "Reduced discoloration", "Cleared pores", "Fresh, new skin", "Faded dark spots", "Smooth surface", "Radiant clarity", "Renewed confidence"].map((benefit, index) => (
-                  <CarouselItem key={benefit} className="md:basis-1/3">
-                    <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                      animationDelay: `${index * 0.1}s`
-                    }}>
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="relative flex items-center justify-center gap-3">
-                        <span className="text-primary text-lg">✦</span>
-                        <span className="font-semibold text-center">{benefit}</span>
-                      </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-12">
+              {/* Hydrate & Soothe */}
+              <div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">+ Hydrate & Soothe (Best Pairings)</h3>
+                <p className="text-base text-foreground/70 mb-6 italic">These are the MOST logical for a peel.</p>
+                
+                <div className="space-y-6">
+                  <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="font-semibold text-lg text-foreground">Hydra Infusion</span>
+                      <span className="text-2xl font-bold text-primary">$55</span>
                     </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
+                    <p className="text-foreground/70">Deep hydration replenishes moisture after the peel, leaving skin plump and radiant.</p>
+                  </div>
 
-            <p className="text-2xl font-bold text-center animate-fade-in" style={{
-              animationDelay: "0.9s"
-            }}>
-              Your skin resets — your glow returns.
-            </p>
+                  <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="font-semibold text-lg text-foreground">Oxygen Glow Boost</span>
+                      <span className="text-2xl font-bold text-primary">$55</span>
+                    </div>
+                    <p className="text-foreground/70">Pure oxygen infusion brightens, calms irritation, and enhances clarity post-peel.</p>
+                  </div>
+
+                  <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="font-semibold text-lg text-foreground">Red Light Therapy</span>
+                      <span className="text-2xl font-bold text-primary">$50</span>
+                    </div>
+                    <p className="text-foreground/70">Calms inflammation, speeds healing, boosts collagen — perfect after a peel.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Smooth & Perfect */}
+              <div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">+ Smooth & Perfect</h3>
+                <p className="text-base text-foreground/70 mb-6 italic">These boost the peel WITHOUT damaging the barrier.</p>
+                
+                <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                  <div className="flex justify-between items-start mb-3">
+                    <span className="font-semibold text-lg text-foreground">Dermaplaning Add-On</span>
+                    <span className="text-2xl font-bold text-primary">$55</span>
+                  </div>
+                  <p className="text-foreground/70 mb-2">Safe + ideal before a peel. Removes dead skin and peach fuzz to help the peel penetrate evenly and reveal a smoother finish.</p>
+                  <p className="text-foreground/60 text-sm italic">(Dermaplaning + peel is a classic combo — very popular and safe.)</p>
+                </div>
+              </div>
+
+              {/* Rolora Signature Touch */}
+              <div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">+ Rolora Signature Touch</h3>
+                <p className="text-base text-foreground/70 mb-6 italic">Adds experience without irritation.</p>
+                
+                <div className="space-y-6">
+                  <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="font-semibold text-lg text-foreground">Neck Lifting Upgrade</span>
+                      <span className="text-2xl font-bold text-primary">$45</span>
+                    </div>
+                    <p className="text-foreground/70">A sculpting boost that firms the neck + jawline. Safe because it does not exfoliate or irritate.</p>
+                  </div>
+
+                  <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="font-semibold text-lg text-foreground">Gua Sha Sculpt Boost</span>
+                      <span className="text-2xl font-bold text-primary">$45</span>
+                    </div>
+                    <p className="text-foreground/70">Gentle contour refinement that does not interfere with the peel.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -464,17 +449,17 @@ const RoloraReset = () => {
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
             <h3 className="font-display text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.9] mb-4 md:mb-6 text-primary">
-              THE ROLORA DIFFERENCE
+              READY FOR A RESET?
             </h3>
             <p className="text-lg md:text-xl mb-6 md:mb-8">
-              Rolora Reset is expert-guided, results-oriented, and elevated — delivering transformative resurfacing with professional care.
+              ROLORA RESET PEEL™ delivers clarity, brightness, and a clean slate for your skin — with minimal downtime and maximum transformation.
             </p>
             <p className="text-lg md:text-xl font-bold mb-6 md:mb-8">
-              This is controlled renewal. Clear radiance.<br />
-              This is Rolora Reset.
+              Book your Reset today.<br />
+              Your clearest skin awaits.
             </p>
             <BookingButton size="lg" className="w-full px-8 md:px-12 py-6 md:py-7 text-sm md:text-base uppercase font-black tracking-widest rounded-none">
-              Book Rolora Reset
+              Book ROLORA RESET PEEL™
             </BookingButton>
           </div>
         </div>
