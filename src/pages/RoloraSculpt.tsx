@@ -69,7 +69,7 @@ const RoloraSculpt = () => {
               <div className="space-y-6">
                 <div>
                   <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight leading-[1.1] text-foreground">
-                    Rolora Sculpt
+                    FACE SCULPT · $205
                   </h1>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="flex items-center gap-1">
@@ -80,16 +80,12 @@ const RoloraSculpt = () => {
                 </div>
                 
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">Get Snatched</span>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">Lift. Sculpt. Define</span>
                 </div>
 
                 <div className="space-y-4 pt-4">
                   <p className="text-lg leading-relaxed text-foreground/80 font-light">
-                    A lifting and contouring facial designed to sculpt, define, and depuff. Using lymphatic drainage, gua sha, cryo sculpting and stem cell infused serum, this ritual enhances definition and awakens natural facial contours.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed font-medium text-foreground border-l-2 border-primary pl-6">
-                    This isn't just lifting. This is precision sculpting, defined contours, and snatched results — crafted the Rolora way.
+                    Our signature sculpting massage + pro tools. Instantly lifts, sculpts, and reduces puffiness with lymphatic contouring, cryo sculpting, gua sha and microcurrent lift—revealing defined, snatched looks.
                   </p>
                 </div>
 
@@ -98,29 +94,27 @@ const RoloraSculpt = () => {
                 </BookingButton>
               </div>
 
-              {/* What Is Rolora Sculpt */}
+              {/* What Is Face Sculpt */}
               <div className="pt-8 border-t border-border/50 space-y-6">
-                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">What Is Rolora Sculpt?</h2>
+                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">WHAT IS FACE SCULPT?</h2>
                 
                 <div className="space-y-4">
                   <p className="text-base leading-relaxed text-foreground/70 font-light">
-                    Rolora Sculpt combines lymphatic drainage massage with advanced gua sha techniques and cryo therapy to eliminate puffiness, define facial contours, and create a visibly lifted appearance.
+                    A modern sculpting facial designed to lift and contour using intentional hands-on work and targeted tools.
                   </p>
                   <p className="text-base leading-relaxed text-foreground/70 font-light">
-                    Each treatment is customized to sculpt your unique facial structure, targeting areas that benefit most from contouring and lifting techniques.
+                    Every movement is purposeful — working with the face's natural anatomy to:
                   </p>
-                </div>
-
-                <div className="mt-8 pt-6 space-y-6">
-                  <p className="font-display text-lg font-semibold text-foreground/90">The Result</p>
-                  <div className="grid gap-4">
-                    {["Defined facial contours", "Reduced puffiness", "Lifted cheekbones", "Sculpted jawline", "Tighter appearance", "Enhanced definition"].map((benefit, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                          <span className="text-primary text-xs font-bold">✓</span>
-                        </div>
-                        <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
-                      </div>)}
-                  </div>
+                  <ul className="space-y-2 pl-6">
+                    <li className="text-base leading-relaxed text-foreground/70 font-light list-disc">Reduce puffiness</li>
+                    <li className="text-base leading-relaxed text-foreground/70 font-light list-disc">Define jawline + cheekbones</li>
+                    <li className="text-base leading-relaxed text-foreground/70 font-light list-disc">Improve circulation and flow</li>
+                    <li className="text-base leading-relaxed text-foreground/70 font-light list-disc">Sculpt and tone facial muscles</li>
+                    <li className="text-base leading-relaxed text-foreground/70 font-light list-disc">Create a lifted, refreshed appearance</li>
+                  </ul>
+                  <p className="text-base leading-relaxed font-medium text-foreground border-l-2 border-primary pl-6">
+                    It's not just relaxation — it's precision.
+                  </p>
                 </div>
               </div>
 
@@ -128,12 +122,11 @@ const RoloraSculpt = () => {
               <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-gradient-to-br from-background to-muted/30 p-8 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
                 <div className="relative">
-                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-8 text-center">Rolora Sculpt Pricing</h3>
+                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-8 text-center">Face Sculpt Pricing</h3>
                   <div className="space-y-4">
                     <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors">
                       <div>
-                        <span className="font-medium text-foreground">Single Session</span>
-                        <span className="text-xs text-foreground/50 ml-2">75 minutes</span>
+                        <span className="font-medium text-foreground">FACE SCULPT</span>
                       </div>
                       <span className="text-2xl font-bold text-primary">$205</span>
                     </div>
@@ -158,11 +151,11 @@ const RoloraSculpt = () => {
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-8 text-primary">
-              THE SCULPT RITUAL
+              WHAT HAPPENS DURING YOUR SESSION
             </h2>
             
             <p className="text-xl leading-relaxed mb-16 text-center">
-              Every Rolora Sculpt session follows a carefully structured sequence focused on lifting, contouring, and defining your features.
+              Your sculpting experience blends lymphatic work, contouring techniques, and cooling lift tools for immediate, visible results:
             </p>
 
             <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
@@ -170,13 +163,13 @@ const RoloraSculpt = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Lymphatic Drainage
+                      Deep Lymphatic Contouring
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Gentle massage technique reduces puffiness and promotes detoxification for a sculpted base.
+                  Clears stagnation, depuffs, and boosts circulation for instant definition.
                 </AccordionContent>
               </AccordionItem>
 
@@ -184,13 +177,13 @@ const RoloraSculpt = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Gua Sha Sculpting
+                      Gua Sha Lift Work
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Ancient tool work lifts, contours, and defines facial structure for visible results.
+                  Strategic stone sculpting to refine shape and improve flow.
                 </AccordionContent>
               </AccordionItem>
 
@@ -204,7 +197,7 @@ const RoloraSculpt = () => {
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Cold therapy instantly tightens and firms for dramatic lift and definition.
+                  Cooling precision tools tighten, tone, and visibly snatch the face.
                 </AccordionContent>
               </AccordionItem>
 
@@ -212,13 +205,13 @@ const RoloraSculpt = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Stem Cell Infusion
+                      Microcurrent Lift
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Advanced serum penetrates deep to support skin firmness and elasticity.
+                  Targets facial muscles for a lifted, toned appearance and sharper contours.
                 </AccordionContent>
               </AccordionItem>
 
@@ -226,13 +219,13 @@ const RoloraSculpt = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Contouring Finish
+                      Finishing Glow
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Final sculpting techniques lock in lifted, snatched, defined results.
+                  Light hydration and finishing serums to seal in a refreshed, sculpted look.
                 </AccordionContent>
               </AccordionItem>
             </AccordionPrimitive.Root>
@@ -241,7 +234,7 @@ const RoloraSculpt = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"></div>
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent"></div>
               <p className="relative text-xl font-medium text-center leading-relaxed text-foreground">
-                You'll feel the lift after one session — and see dramatic definition with regular treatments.
+                Every step is calibrated to enhance structure, restore balance, and energize the skin.
               </p>
             </div>
           </div>
@@ -271,85 +264,30 @@ const RoloraSculpt = () => {
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-16 text-primary">
-              WHY IT WORKS
+              RESULTS YOU CAN EXPECT
             </h2>
             
-            <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
-              <AccordionItem value="item-1" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Targeted Drainage
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Lymphatic massage eliminates fluid retention for immediate depuffing and contouring.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-2" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Ancient Technique
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Gua sha tools provide consistent pressure that manual massage cannot achieve.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-3" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Cold Technology
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Cryo therapy tightens pores and firms skin for instant, visible lift.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-4" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Advanced Serums
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Stem cell infusions support long-term firmness and structure.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-5" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      The Rolora Method™
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Our signature combination of drainage, sculpting, and firming for defined results.
-                </AccordionContent>
-              </AccordionItem>
-            </AccordionPrimitive.Root>
-            
-            <div className="flex justify-center mt-12">
-              <BookingButton variant="cta" size="lg">
-                BOOK NOW
-              </BookingButton>
+            <div className="space-y-6 mb-8">
+              <div className="grid gap-4">
+                {[
+                  "Sharper jawline + cheekbones",
+                  "Reduced puffiness",
+                  "Improved circulation",
+                  "Lifted, toned facial muscles",
+                  "A naturally defined, snatched look",
+                  "Energized flow and glow"
+                ].map((result, i) => (
+                  <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <span className="text-primary text-xs font-bold">✓</span>
+                    </div>
+                    <span className="text-base text-foreground/80 font-light tracking-wide">{result}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-lg text-center text-foreground/70 font-light italic mt-8">
+                Results are visible after one session — optimal with consistency.
+              </p>
             </div>
           </div>
         </div>
@@ -376,7 +314,7 @@ const RoloraSculpt = () => {
               className="w-full mb-12"
             >
               <CarouselContent>
-                {["Sharper facial definition", "Reduced puffiness", "Lifted cheekbones", "Defined jawline", "Sculpted contours", "Tighter skin", "Reduced bloating", "Improved circulation", "Instant lift effect"].map((benefit, index) => (
+                {["Sharper jawline", "Reduced puffiness", "Improved circulation", "Lifted muscles", "Snatched look", "Energized glow", "Camera-ready results", "Defined contours", "Instant lift"].map((benefit, index) => (
                   <CarouselItem key={benefit} className="md:basis-1/3">
                     <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
                       animationDelay: `${index * 0.1}s`
@@ -395,8 +333,40 @@ const RoloraSculpt = () => {
             <p className="text-2xl font-bold text-center animate-fade-in" style={{
               animationDelay: "0.9s"
             }}>
-              Your contours sharpen — your features define.
+              Visible lift. Sculpted contours. Your signature snatch.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Boost Your Sculpt Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-[0.9] text-center mb-12 text-primary">
+              BOOST YOUR SCULPT
+            </h2>
+            <p className="text-xl text-center mb-12 text-foreground/70">
+              Pair your sculpt with targeted Rolora intensifiers for even more definition:
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { name: "Oxygen Glow Boost", price: "$55" },
+                { name: "Hydra Infusion", price: "$55" },
+                { name: "Dermaplaning Add-On", price: "$55" },
+                { name: "Microderm Polish", price: "$55" },
+                { name: "Red Light Therapy", price: "$50" },
+                { name: "Glow Peel", price: "$65" }
+              ].map((boost, index) => (
+                <div key={boost.name} className="group relative flex items-center justify-between px-8 py-5 rounded-2xl bg-background/80 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-[1.02] animate-fade-in shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]" style={{
+                  animationDelay: `${index * 0.1}s`
+                }}>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <span className="relative font-semibold text-foreground">{boost.name}</span>
+                  <span className="relative text-xl font-bold text-primary">{boost.price}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -422,13 +392,18 @@ const RoloraSculpt = () => {
         <div className="container px-6 relative z-10">
           <div className="max-w-5xl mx-auto">
             <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-primary mb-8">
-              WHO IT'S FOR
+              WHO IS THIS FOR?
             </h2>
             
-            <p className="text-xl mb-12 text-foreground/80">Perfect for anyone who wants to:</p>
-            
             <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
-              {["Define facial contours", "Reduce puffiness", "Lift and sculpt", "Pre-event sharpening", "Maintain definition", "Combat fluid retention", "Achieve snatched look"].map((item, index) => (
+              {[
+                "Clients wanting natural lift + contour",
+                "Persistent puffiness",
+                "Jawline + cheekbone definition",
+                "Sculpting before an event",
+                "Strengthening facial muscle tone",
+                "A snatched, refreshed look — instantly"
+              ].map((item, index) => (
                 <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
                   animationDelay: `${index * 0.1}s`
                 }}>
@@ -441,13 +416,16 @@ const RoloraSculpt = () => {
               ))}
             </div>
 
-            <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col items-center gap-4 mb-8">
               <div className="inline-flex items-center gap-3 px-8 py-5 rounded-full border border-primary/20 bg-background/50 backdrop-blur-sm">
                 <span className="text-primary text-xl">✦</span>
                 <p className="text-lg font-medium text-foreground">
-                  Perfect for those seeking dramatic contouring and lifting results
+                  Face Sculpt is one of Rolora's most-requested treatments for immediate, camera-ready results.
                 </p>
               </div>
+            </div>
+            
+            <div className="flex justify-center">
               <BookingButton variant="cta" size="lg">
                 BOOK NOW
               </BookingButton>
@@ -459,22 +437,18 @@ const RoloraSculpt = () => {
       {/* Two Column CTA Section */}
       <section className="grid md:grid-cols-2">
         <div className="relative h-[300px] md:h-[500px] overflow-hidden">
-          <img src={facialRoom} alt="Rolora Sculpt Experience" className="w-full h-full object-cover" />
+          <img src={facialRoom} alt="Face Sculpt Experience" className="w-full h-full object-cover" />
         </div>
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
             <h3 className="font-display text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.9] mb-4 md:mb-6 text-primary">
-              THE ROLORA DIFFERENCE
+              BOOK YOUR SCULPT
             </h3>
             <p className="text-lg md:text-xl mb-6 md:mb-8">
-              Rolora Sculpt is results-focused, technique-driven, and elevated — combining ancient methods with modern technology for dramatic contouring.
-            </p>
-            <p className="text-lg md:text-xl font-bold mb-6 md:mb-8">
-              This is precision sculpting. Defined beauty.<br />
-              This is Rolora Sculpt.
+              Ready for definition? Face Sculpt delivers instant lift, contour, and radiance — all in one elevated session.
             </p>
             <BookingButton size="lg" className="w-full px-8 md:px-12 py-6 md:py-7 text-sm md:text-base uppercase font-black tracking-widest rounded-none">
-              Book Rolora Sculpt
+              Book Face Sculpt
             </BookingButton>
           </div>
         </div>
