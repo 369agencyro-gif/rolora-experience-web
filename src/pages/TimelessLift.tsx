@@ -69,7 +69,7 @@ const TimelessLift = () => {
               <div className="space-y-6">
                 <div>
                   <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight leading-[1.1] text-foreground">
-                    Timeless Lift
+                    LIFT RENEW™
                   </h1>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="flex items-center gap-1">
@@ -80,16 +80,16 @@ const TimelessLift = () => {
                 </div>
                 
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">Age-Defying</span>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">Lift. Firm. Renew.</span>
                 </div>
 
                 <div className="space-y-4 pt-4">
                   <p className="text-lg leading-relaxed text-foreground/80 font-light">
-                    A rejuvenating facial designed to restore elasticity, firm, and smooth the skin using advanced ultrasound, peptide infusion, and cryo lifting. Ideal for those seeking an age-defying, lifted complexion with visible anti-aging results.
+                    Rolora's high-performance age-defying treatment designed to restore elasticity, smooth fine lines, and revive tired skin. Powered by advanced active infusions, ultrasound lift, microcurrent toning, cooling sculpting, and red light therapy — this facial delivers a tighter, brighter, more refreshed complexion.
                   </p>
                   
                   <p className="text-lg leading-relaxed font-medium text-foreground border-l-2 border-primary pl-6">
-                    This isn't just anti-aging. This is advanced technology, visible firming, and time-defying results — crafted the Rolora way.
+                    Visible results. Elevated energy.
                   </p>
                 </div>
 
@@ -98,29 +98,36 @@ const TimelessLift = () => {
                 </BookingButton>
               </div>
 
-              {/* What Is Timeless Lift */}
+              {/* Who It's For */}
               <div className="pt-8 border-t border-border/50 space-y-6">
-                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">What Is Timeless Lift?</h2>
+                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">WHO IT'S FOR</h2>
                 
                 <div className="space-y-4">
                   <p className="text-base leading-relaxed text-foreground/70 font-light">
-                    Timeless Lift combines advanced ultrasound therapy with clinical-strength peptides and cryo technology to stimulate collagen production, restore elasticity, and create visible lifting effects.
-                  </p>
-                  <p className="text-base leading-relaxed text-foreground/70 font-light">
-                    Each treatment targets signs of aging at multiple levels, delivering firming and lifting results that become more pronounced with regular sessions.
+                    LIFT RENEW™ is ideal for clients who want to:
                   </p>
                 </div>
 
                 <div className="mt-8 pt-6 space-y-6">
-                  <p className="font-display text-lg font-semibold text-foreground/90">The Result</p>
                   <div className="grid gap-4">
-                    {["Firmer, tighter skin", "Reduced fine lines", "Lifted contours", "Improved elasticity", "Smoother texture", "Youthful radiance"].map((benefit, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                    {[
+                      "Firm and tighten laxity",
+                      "Lift cheeks, jawline, and facial contours",
+                      "Smooth fine lines and early signs of aging",
+                      "Brighten dull or fatigued skin",
+                      "Support long-term skin health and collagen"
+                    ].map((benefit, i) => (
+                      <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                           <span className="text-primary text-xs font-bold">✓</span>
                         </div>
                         <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
-                      </div>)}
+                      </div>
+                    ))}
                   </div>
+                  <p className="text-base leading-relaxed text-foreground/70 font-light italic pt-4">
+                    If they want youthful definition without downtime — this is it.
+                  </p>
                 </div>
               </div>
 
@@ -128,12 +135,11 @@ const TimelessLift = () => {
               <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-gradient-to-br from-background to-muted/30 p-8 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
                 <div className="relative">
-                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-8 text-center">Timeless Lift Pricing</h3>
+                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-8 text-center">LIFT RENEW™ Pricing</h3>
                   <div className="space-y-4">
                     <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors">
                       <div>
                         <span className="font-medium text-foreground">Single Session</span>
-                        <span className="text-xs text-foreground/50 ml-2">90 minutes</span>
                       </div>
                       <span className="text-2xl font-bold text-primary">$245</span>
                     </div>
@@ -158,11 +164,11 @@ const TimelessLift = () => {
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-8 text-primary">
-              THE LIFT RITUAL
+              WHAT'S INCLUDED
             </h2>
             
             <p className="text-xl leading-relaxed mb-16 text-center">
-              Every Timeless Lift session follows a carefully structured sequence focused on firming, lifting, and reversing visible signs of aging.
+              A structured, results-driven sequence designed to lift and renew:
             </p>
 
             <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
@@ -170,13 +176,13 @@ const TimelessLift = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Deep Cleanse & Analysis
+                      Deep double cleanse
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Thorough cleansing and skin analysis to customize the treatment for optimal results.
+                  Thorough cleansing to prepare skin for maximum treatment efficacy.
                 </AccordionContent>
               </AccordionItem>
 
@@ -184,13 +190,13 @@ const TimelessLift = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Ultrasound Therapy
+                      Exfoliation tailored to skin condition
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Deep penetrating ultrasound stimulates collagen production for lifting and firming effects.
+                  Customized exfoliation to refine texture and enhance treatment penetration.
                 </AccordionContent>
               </AccordionItem>
 
@@ -198,13 +204,13 @@ const TimelessLift = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Peptide Infusion
+                      Ultrasound lift to firm + stimulate deeper layers
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Advanced peptide serums restore elasticity and smooth fine lines for age-defying results.
+                  Deep penetrating ultrasound stimulates collagen and firms from within.
                 </AccordionContent>
               </AccordionItem>
 
@@ -212,13 +218,13 @@ const TimelessLift = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Cryo Lifting
+                      Microcurrent toning for defined contours
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Cold therapy tightens and contours for immediate lifting and firming effect.
+                  Targeted microcurrent to tone facial muscles and create lift.
                 </AccordionContent>
               </AccordionItem>
 
@@ -226,13 +232,55 @@ const TimelessLift = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Firming Seal
+                      Cooling sculpting to depuff and refine
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Final treatment application locks in lifting effects for lasting, visible results.
+                  Cooling therapy to tighten, depuff, and visibly contour.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Active infusion (peptides or stem cell–based formulations)
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Advanced active serums to restore elasticity and smooth fine lines.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Red light therapy to boost collagen and calm inflammation
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Therapeutic red light to enhance collagen production and reduce inflammation.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-8" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Finishing hydration + barrier support
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Final hydration and barrier protection to seal in results.
                 </AccordionContent>
               </AccordionItem>
             </AccordionPrimitive.Root>
@@ -241,7 +289,7 @@ const TimelessLift = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"></div>
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent"></div>
               <p className="relative text-xl font-medium text-center leading-relaxed text-foreground">
-                You'll notice firming after one session — and see dramatic lifting with consistent treatments.
+                Every step works together to restore tightness, clarity, and long-lasting luminosity.
               </p>
             </div>
           </div>
@@ -271,80 +319,31 @@ const TimelessLift = () => {
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-16 text-primary">
-              WHY IT WORKS
+              EXPECTED RESULTS
             </h2>
             
-            <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
-              <AccordionItem value="item-1" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Deep Collagen Activation
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Medical-grade ultrasound penetrates deep to stimulate natural collagen production from within.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-2" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Clinical-Strength Peptides
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Advanced peptides rebuild skin structure and restore elasticity for visible firmness.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-3" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Instant Tightening
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Cryo technology provides immediate tightening and lifting for visible transformation.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-4" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Multi-Level Approach
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Combined technologies address aging at surface and deep tissue levels simultaneously.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-5" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      The Rolora Method™
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Our signature protocol layers advanced technologies for maximum anti-aging impact.
-                </AccordionContent>
-              </AccordionItem>
-            </AccordionPrimitive.Root>
+            <div className="space-y-6">
+              <p className="text-lg leading-relaxed text-center text-foreground/80">
+                Clients leave with:
+              </p>
+              <div className="grid gap-4">
+                {[
+                  "A firmer, more lifted appearance",
+                  "Smoother texture and improved elasticity",
+                  "Reduced puffiness around jawline + cheeks",
+                  "Brighter, more even tone",
+                  "A refreshed, youthful glow",
+                  "Results that compound with consistency"
+                ].map((result, i) => (
+                  <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <span className="text-primary text-xs font-bold">✓</span>
+                    </div>
+                    <span className="text-base text-foreground/80 font-light tracking-wide">{result}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
             
             <div className="flex justify-center mt-12">
               <BookingButton variant="cta" size="lg">
@@ -376,7 +375,7 @@ const TimelessLift = () => {
               className="w-full mb-12"
             >
               <CarouselContent>
-                {["Firmer, tighter skin", "Reduced fine lines", "Lifted contours", "Improved elasticity", "Smoother texture", "Youthful appearance", "Enhanced collagen", "Diminished wrinkles", "Age-defying results"].map((benefit, index) => (
+                {["Firmer appearance", "Lifted skin", "Smoother texture", "Improved elasticity", "Reduced puffiness", "Brighter tone", "Youthful glow", "Enhanced radiance", "Contoured jawline"].map((benefit, index) => (
                   <CarouselItem key={benefit} className="md:basis-1/3">
                     <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
                       animationDelay: `${index * 0.1}s`
@@ -397,6 +396,76 @@ const TimelessLift = () => {
             }}>
               Your skin lifts — time reverses.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pair with Boosters Section */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+        
+        <div className="container px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-16 text-primary">
+              PAIR WITH BOOSTERS
+            </h2>
+            
+            <p className="text-xl leading-relaxed mb-12 text-center text-foreground/80">
+              Enhance your Lift Renew results with targeted upgrades:
+            </p>
+
+            <div className="space-y-8">
+              <div>
+                <h3 className="font-display text-2xl font-bold mb-4 text-primary">+ To Brighten & Renew</h3>
+                <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                  <span className="font-medium text-foreground">Glow Peel</span>
+                  <span className="text-xl font-bold text-primary">$65</span>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-display text-2xl font-bold mb-4 text-primary">+ To Smooth & Refine</h3>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <span className="font-medium text-foreground">Dermaplaning</span>
+                    <span className="text-xl font-bold text-primary">$55</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <span className="font-medium text-foreground">Microderm Polish</span>
+                    <span className="text-xl font-bold text-primary">$55</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-display text-2xl font-bold mb-4 text-primary">+ To Hydrate & Glow</h3>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <span className="font-medium text-foreground">Oxygen Glow Boost</span>
+                    <span className="text-xl font-bold text-primary">$55</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <span className="font-medium text-foreground">Hydra Infusion</span>
+                    <span className="text-xl font-bold text-primary">$55</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-display text-2xl font-bold mb-4 text-primary">+ To Sculpt More</h3>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <span className="font-medium text-foreground">Neck Lifting Upgrade</span>
+                    <span className="text-xl font-bold text-primary">$45</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <span className="font-medium text-foreground">Gua Sha Sculpt Boost</span>
+                    <span className="text-xl font-bold text-primary">$45</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -425,10 +494,17 @@ const TimelessLift = () => {
               WHO IT'S FOR
             </h2>
             
-            <p className="text-xl mb-12 text-foreground/80">Perfect for anyone who wants to:</p>
+            <p className="text-xl mb-12 text-foreground/80">LIFT RENEW™ is ideal for clients who want to:</p>
             
             <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
-              {["Firm and lift mature skin", "Reduce fine lines and wrinkles", "Restore elasticity", "Combat sagging", "Anti-aging results", "Long-term skin investment", "Visible transformation"].map((item, index) => (
+              {[
+                "Firm and tighten laxity",
+                "Lift cheeks, jawline, and facial contours",
+                "Smooth fine lines and early signs of aging",
+                "Brighten dull or fatigued skin",
+                "Support long-term skin health and collagen",
+                "Youthful definition without downtime"
+              ].map((item, index) => (
                 <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
                   animationDelay: `${index * 0.1}s`
                 }}>
@@ -445,7 +521,7 @@ const TimelessLift = () => {
               <div className="inline-flex items-center gap-3 px-8 py-5 rounded-full border border-primary/20 bg-background/50 backdrop-blur-sm">
                 <span className="text-primary text-xl">✦</span>
                 <p className="text-lg font-medium text-foreground">
-                  Our most advanced anti-aging treatment for visible lifting and firming
+                  If they want youthful definition without downtime — this is it.
                 </p>
               </div>
               <BookingButton variant="cta" size="lg">
@@ -464,17 +540,17 @@ const TimelessLift = () => {
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
             <h3 className="font-display text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.9] mb-4 md:mb-6 text-primary">
-              THE ROLORA DIFFERENCE
+              WHY CLIENTS LOVE IT
             </h3>
             <p className="text-lg md:text-xl mb-6 md:mb-8">
-              Timeless Lift is science-backed, technology-driven, and elevated — combining advanced modalities for dramatic age-defying transformation.
+              It's the perfect balance of technology and technique — a sculpting-meets-rejuvenation facial that leaves the skin visibly tighter, toned, and renewed.
             </p>
             <p className="text-lg md:text-xl font-bold mb-6 md:mb-8">
-              This is advanced anti-aging. Visible lifting.<br />
-              This is Timeless Lift.
+              Ready for definition?<br />
+              LIFT RENEW™ delivers instant lift, contour, and radiance — all in one elevated session.
             </p>
             <BookingButton size="lg" className="w-full px-8 md:px-12 py-6 md:py-7 text-sm md:text-base uppercase font-black tracking-widest rounded-none">
-              Book Timeless Lift
+              Book LIFT RENEW™
             </BookingButton>
           </div>
         </div>
