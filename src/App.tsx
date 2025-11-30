@@ -18,6 +18,7 @@ import HeadSpa from "./pages/HeadSpa";
 import FullGallery from "./pages/FullGallery";
 import SpecialOffer from "./pages/SpecialOffer";
 import GlowFlowOffer from "./pages/GlowFlowOffer";
+import NewClientOffers from "./pages/NewClientOffers";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/gallery" element={<FullGallery />} />
           <Route path="/special-offer" element={<SpecialOffer />} />
           <Route path="/glow-flow-offer" element={<GlowFlowOffer />} />
+          <Route path="/intro-offers" element={<NewClientOffers />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
