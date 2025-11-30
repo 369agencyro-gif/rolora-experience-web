@@ -6,13 +6,17 @@ import bodyRollingImage from "@/assets/body-rolling-hero.webp";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { Check, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import type { CarouselApi } from "@/components/ui/carousel";
 
 const Hero = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  
+  const plugin = useRef(
+    Autoplay({ delay: 7000, stopOnInteraction: false })
+  );
 
   useEffect(() => {
     if (!api) return;
@@ -33,11 +37,7 @@ const Hero = () => {
           align: "start",
           loop: true,
         }}
-        plugins={[
-          Autoplay({
-            delay: 7000,
-          }),
-        ]}
+        plugins={[plugin.current]}
         className="w-full"
       >
         <CarouselContent>
@@ -204,7 +204,7 @@ const Hero = () => {
     </Carousel>
 
     {/* Slide Indicators with label below */}
-    <div className="absolute bottom-8 left-0 right-0 z-20 flex flex-col items-center gap-3">
+    <div className="absolute bottom-3 left-0 right-0 z-20 flex flex-col items-center gap-3">
       {/* Dots */}
       <div className="flex justify-center items-center gap-3">
         {Array.from({ length: count }).map((_, index) => (
