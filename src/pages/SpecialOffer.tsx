@@ -183,33 +183,71 @@ const SpecialOffer = () => {
       </section>
 
       {/* What to Expect During Your Visit */}
-      <section className="py-20 bg-background">
-        <div className="container px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-12 text-primary text-center">
-              What to Expect During Your Visit
+      <section className="py-20 relative overflow-hidden">
+        {/* Premium gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
+        
+        <div className="container px-6 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.95] text-primary text-center mb-6">
+              What to Expect<br />During Your Visit
             </h2>
             
-            <div className="space-y-8">
+            <p className="text-lg md:text-xl text-foreground/70 text-center mb-16 max-w-2xl mx-auto">
+              Your journey to glowing skin, step by step
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6">
               {[
-                { title: "Arrival & Quick Check-In", desc: "You'll be welcomed into Rolora's calm, modern space in Corona del Mar and complete a short skin + lifestyle intake." },
-                { title: "Skin Analysis & Plan", desc: "We look at your skin up close, talk about your goals (glow, texture, breakouts, fine lines), and create a targeted plan for today." },
-                { title: "Deep Cleanse & Exfoliation", desc: "Gentle double cleanse and refined exfoliation to remove buildup, soften texture, and prep your skin." },
-                { title: "Hydrodermabrasion & Treatment Work", desc: "Tailored hydrodermabrasion and treatment steps to address dullness, congestion, or early signs of aging." },
-                { title: "Custom Rolora Glow Serum Blend", desc: "We mix serums just for your skin—brightening, hydrating, calming, or firming—and infuse them deeply." },
-                { title: "Oxygen Glow Finish", desc: "Oxygen infusion seals everything in for a fresh, glassy, \"I slept 10 hours\" glow." },
-                { title: "Post-Treatment Plan", desc: "Before you leave, we walk you through what to use at home and when to come back for best results." }
+                { title: "Arrival & Quick Check-In", desc: "You'll be welcomed into Rolora's calm, modern space in Corona del Mar and complete a short skin + lifestyle intake.", emoji: "✨" },
+                { title: "Skin Analysis & Plan", desc: "We look at your skin up close, talk about your goals (glow, texture, breakouts, fine lines), and create a targeted plan for today.", emoji: "🔍" },
+                { title: "Deep Cleanse & Exfoliation", desc: "Gentle double cleanse and refined exfoliation to remove buildup, soften texture, and prep your skin.", emoji: "💧" },
+                { title: "Hydrodermabrasion & Treatment Work", desc: "Tailored hydrodermabrasion and treatment steps to address dullness, congestion, or early signs of aging.", emoji: "✨" },
+                { title: "Custom Rolora Glow Serum Blend", desc: "We mix serums just for your skin—brightening, hydrating, calming, or firming—and infuse them deeply.", emoji: "💎" },
+                { title: "Oxygen Glow Finish", desc: "Oxygen infusion seals everything in for a fresh, glassy, \"I slept 10 hours\" glow.", emoji: "🌟" },
+                { title: "Post-Treatment Plan", desc: "Before you leave, we walk you through what to use at home and when to come back for best results.", emoji: "📋" }
               ].map((step, i) => (
-                <div key={i} className="flex gap-6">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary font-bold">{i + 1}</span>
+                <div 
+                  key={i} 
+                  className="group relative p-6 rounded-2xl bg-gradient-to-br from-background via-background to-primary/5 border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_20px_60px_rgb(0,0,0,0.15)] shadow-[0_8px_30px_rgb(0,0,0,0.08)] backdrop-blur-sm overflow-hidden"
+                  style={{ animationDelay: `${i * 100}ms` }}
+                >
+                  {/* Playful glow effect on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Number badge */}
+                  <div className="relative flex items-start gap-4 mb-3">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                      <span className="text-2xl">{step.emoji}</span>
+                    </div>
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <span className="text-primary font-bold text-sm">{i + 1}</span>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-display text-xl font-bold mb-2 text-foreground">{step.title}</h3>
-                    <p className="text-foreground/70 leading-relaxed">{step.desc}</p>
+                  
+                  <div className="relative">
+                    <h3 className="font-display text-xl md:text-2xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors tracking-tight">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
+                      {step.desc}
+                    </p>
                   </div>
+                  
+                  {/* Decorative corner accent */}
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/5 to-transparent rounded-bl-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
                 </div>
               ))}
+            </div>
+            
+            {/* Playful bottom CTA */}
+            <div className="mt-16 text-center">
+              <div className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border border-primary/20 mb-6 animate-pulse">
+                <p className="text-sm md:text-base font-semibold text-foreground">
+                  Ready for your glow-up? ✨
+                </p>
+              </div>
             </div>
           </div>
         </div>
