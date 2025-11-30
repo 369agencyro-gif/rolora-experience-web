@@ -248,7 +248,7 @@ const Hero = () => {
       {/* Slide hint text below dots */}
       <div className="flex items-center gap-2 text-white/80 animate-bounce">
         <ChevronLeft className="w-4 h-4 animate-pulse" />
-        <span className="text-xs font-bold tracking-wider uppercase">Auto Slide</span>
+        <span className="text-xs font-bold tracking-wider uppercase">New Offers</span>
         <ChevronRight className="w-4 h-4 animate-pulse" />
       </div>
     </div>
