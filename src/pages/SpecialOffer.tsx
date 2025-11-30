@@ -46,7 +46,7 @@ const SpecialOffer = () => {
             ))}
           </div>
 
-          <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-12 py-6 md:py-7 text-sm uppercase font-black tracking-wider mb-6">
+          <BookingButton size="lg" className="w-full max-w-md mx-auto md:w-auto px-6 md:px-12 py-4 md:py-6 text-xs md:text-sm uppercase font-bold tracking-wide mb-6">
             YES, I WANT THE GLOW™
           </BookingButton>
 
@@ -176,8 +176,8 @@ const SpecialOffer = () => {
             </div>
 
             <div className="text-center mt-12">
-              <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-10 py-6 text-sm uppercase font-bold tracking-wider">
-                BOOK MY FIRST GLOW FOR $99
+              <BookingButton size="lg" className="w-full max-w-md mx-auto md:w-auto px-6 md:px-10 py-4 md:py-6 text-xs md:text-sm uppercase font-bold tracking-wide">
+                BOOK MY FIRST GLOW
               </BookingButton>
             </div>
           </div>
@@ -263,8 +263,8 @@ const SpecialOffer = () => {
             </p>
 
             <div className="text-center">
-              <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-10 py-6 text-sm uppercase font-bold tracking-wider">
-                BOOK MY $99 GLOW NOW
+              <BookingButton size="lg" className="w-full max-w-sm mx-auto md:w-auto px-6 md:px-10 py-4 md:py-6 text-xs md:text-sm uppercase font-bold tracking-wide">
+                BOOK MY $99 GLOW
               </BookingButton>
             </div>
           </div>
@@ -332,8 +332,8 @@ const SpecialOffer = () => {
             </div>
 
             <div className="text-center mt-12">
-              <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-10 py-6 text-sm uppercase font-bold tracking-wider">
-                CLAIM MY $99 GLOW
+              <BookingButton size="lg" className="w-full max-w-sm mx-auto md:w-auto px-6 md:px-10 py-4 md:py-6 text-xs md:text-sm uppercase font-bold tracking-wide">
+                CLAIM MY GLOW
               </BookingButton>
             </div>
           </div>
@@ -370,8 +370,8 @@ const SpecialOffer = () => {
             </p>
 
             <div className="text-center">
-              <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-12 py-6 md:py-7 text-sm uppercase font-black tracking-wider">
-                BOOK MY FIRST ROLORA GLOW™ FOR $99
+              <BookingButton size="lg" className="w-full max-w-md mx-auto md:w-auto px-6 md:px-12 py-4 md:py-6 text-xs md:text-sm uppercase font-bold tracking-wide">
+                BOOK MY $99 GLOW
               </BookingButton>
             </div>
           </div>
@@ -473,8 +473,8 @@ const SpecialOffer = () => {
             <p className="text-xl mb-8 text-foreground/80">
               Book your $99 ROLORA Facial Glow™ today and experience glass-skin results.
             </p>
-            <BookingButton size="lg" className="w-full md:w-auto px-8 md:px-12 py-6 md:py-7 text-sm uppercase font-black tracking-wider">
-              BOOK MY FIRST ROLORA GLOW™ FOR $99
+            <BookingButton size="lg" className="w-full max-w-md mx-auto md:w-auto px-6 md:px-12 py-4 md:py-6 text-xs md:text-sm uppercase font-bold tracking-wide">
+              BOOK MY $99 GLOW
             </BookingButton>
             <p className="text-xs text-foreground/60 mt-6">
               <MapPin className="w-3 h-3 inline mr-1" />
