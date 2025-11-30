@@ -89,12 +89,12 @@ const TreatmentExplorer = () => {
                         alt={card.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <h3 className="text-2xl font-display font-bold text-primary drop-shadow-lg">
-                          {card.title}
-                        </h3>
-                      </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="text-2xl font-display font-bold text-primary">
+                    {card.title}
+                  </h3>
+                </div>
                     </div>
                   </Link>
                 </CarouselItem>
@@ -117,12 +117,12 @@ const TreatmentExplorer = () => {
                   alt={card.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-2xl font-display font-bold text-primary drop-shadow-lg">
-                    {card.title}
-                  </h3>
-                </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                      <div className="absolute bottom-6 left-6 right-6">
+                        <h3 className="text-2xl font-display font-bold text-primary">
+                          {card.title}
+                        </h3>
+                      </div>
               </div>
             </Link>
           ))}
