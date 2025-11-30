@@ -37,6 +37,21 @@ const TreatmentExplorer = () => {
       image: treatment4,
       title: "TIMELESS LIFT™",
       link: "/services/timeless-lift"
+    },
+    {
+      image: treatment1,
+      title: "EXPRESS SCULPT™",
+      link: "/services/express-sculpt"
+    },
+    {
+      image: treatment2,
+      title: "ROLORA FLOW™",
+      link: "/body-rolling"
+    },
+    {
+      image: treatment3,
+      title: "ROLORA HEAD SPA",
+      link: "/head-spa"
     }
   ];
 
@@ -76,7 +91,7 @@ const TreatmentExplorer = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
                       <div className="absolute bottom-6 left-6 right-6">
-                        <h3 className="text-2xl font-display font-bold text-white drop-shadow-lg">
+                        <h3 className="text-2xl font-display font-bold text-primary drop-shadow-lg">
                           {card.title}
                         </h3>
                       </div>
@@ -89,7 +104,7 @@ const TreatmentExplorer = () => {
         </div>
 
         {/* Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
           {exploreCards.map((card, idx) => (
             <Link
               key={idx}
@@ -104,7 +119,7 @@ const TreatmentExplorer = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-2xl font-display font-bold text-white drop-shadow-lg">
+                  <h3 className="text-2xl font-display font-bold text-primary drop-shadow-lg">
                     {card.title}
                   </h3>
                 </div>
