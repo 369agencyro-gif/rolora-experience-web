@@ -91,6 +91,12 @@ const GlowFlowOffer = () => {
                 </div>
               ))}
             </div>
+
+            <div className="text-center mt-12">
+              <BookingButton size="lg" className="w-full max-w-md mx-auto md:w-auto px-6 md:px-10 py-4 md:py-6 text-xs md:text-sm uppercase font-bold tracking-wide">
+                BOOK THE DUO
+              </BookingButton>
+            </div>
           </div>
         </div>
       </section>
@@ -176,6 +182,12 @@ const GlowFlowOffer = () => {
                 </div>
               ))}
             </div>
+
+            <div className="text-center mt-12">
+              <BookingButton size="lg" className="w-full max-w-sm mx-auto md:w-auto px-6 md:px-10 py-4 md:py-6 text-xs md:text-sm uppercase font-bold tracking-wide">
+                ADD ENHANCEMENTS
+              </BookingButton>
+            </div>
           </div>
         </div>
       </section>
@@ -205,6 +217,12 @@ const GlowFlowOffer = () => {
                   <p className="text-sm font-semibold text-foreground">— {review.name}</p>
                 </div>
               ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <BookingButton size="lg" className="w-full max-w-md mx-auto md:w-auto px-6 md:px-10 py-4 md:py-6 text-xs md:text-sm uppercase font-bold tracking-wide">
+                BOOK MY RESET
+              </BookingButton>
             </div>
           </div>
         </div>

@@ -17,9 +17,8 @@ const Navigation = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const offers = [
-    { name: "New Client Special", path: "/special-offer", description: "First-time facial offer" },
-    { name: "Membership Plans", path: "/#membership", description: "Save on regular treatments" },
-    { name: "Gift Cards", path: "/#contact", description: "Share the glow" },
+    { name: "First Glow · $99", path: "/special-offer", description: "New client exclusive facial" },
+    { name: "Glow + Flow Duo · $139", path: "/glow-flow-offer", description: "Facial + body rolling combo" },
   ];
 
   const facialServices = [
