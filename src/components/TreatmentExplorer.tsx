@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import BookingButton from "@/components/BookingButton";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
@@ -9,8 +8,6 @@ import treatment3 from "@/assets/treatment-3.jpg";
 import treatment4 from "@/assets/treatment-4.jpg";
 
 const TreatmentExplorer = () => {
-  const [activeIndex, setActiveIndex] = useState(2);
-
   const treatments = [
     "CRYO GLOBES",
     "FACIAL FORM",
@@ -44,10 +41,80 @@ const TreatmentExplorer = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 relative overflow-hidden bg-background">
       <div className="container px-6">
-        {/* Infinite Loop Carousel */}
-        <div className="mb-16">
+        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.9] text-center mb-12 text-primary">
+          EXPLORE OUR TREATMENTS
+        </h2>
+
+        {/* Mobile Carousel */}
+        <div className="md:hidden mb-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+              dragFree: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: false,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {exploreCards.map((card, idx) => (
+                <CarouselItem key={idx} className="pl-4 basis-[85%]">
+                  <Link to={card.link} className="group block">
+                    <div className="relative aspect-[3/4] mb-4 overflow-hidden rounded-2xl">
+                      <img 
+                        src={card.image}
+                        alt={card.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                      <div className="absolute bottom-6 left-6 right-6">
+                        <h3 className="text-2xl font-display font-bold text-white">
+                          {card.title}
+                        </h3>
+                      </div>
+                    </div>
+                  </Link>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {exploreCards.map((card, idx) => (
+            <Link
+              key={idx}
+              to={card.link}
+              className="group"
+            >
+              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+                <img 
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="text-2xl font-display font-bold text-white">
+                    {card.title}
+                  </h3>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Feature Pills */}
+        <div className="max-w-5xl mx-auto mb-12">
           <Carousel
             opts={{
               align: "start",
@@ -64,99 +131,25 @@ const TreatmentExplorer = () => {
             className="w-full"
           >
             <CarouselContent className="-ml-4">
-              {[...treatments, ...treatments].map((treatment, idx) => (
+              {treatments.map((treatment, idx) => (
                 <CarouselItem key={idx} className="pl-4 basis-auto">
-                  <button
-                    onClick={() => setActiveIndex(idx % treatments.length)}
-                    className={`text-xl md:text-2xl font-bold tracking-wide whitespace-nowrap transition-all px-6 py-3 border-2 ${
-                      (idx % treatments.length) === activeIndex
-                        ? 'bg-primary text-primary-foreground border-primary shadow-elegant'
-                        : 'text-foreground/60 border-border hover:text-foreground hover:border-foreground hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] hover:scale-105'
-                    }`}
-                  >
-                    {treatment}
-                  </button>
+                  <div className="group relative flex items-center justify-center gap-4 px-8 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 backdrop-blur-sm whitespace-nowrap">
+                    <span className="text-base text-foreground/80 font-medium tracking-wide">{treatment}</span>
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
           </Carousel>
         </div>
 
-        {/* Explore Our Treatments */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 uppercase tracking-wide">
-            EXPLORE OUR TREATMENTS
-          </h2>
-          
-          {/* Mobile Carousel */}
-          <div className="md:hidden">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-                dragFree: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 3000,
-                  stopOnInteraction: false,
-                  stopOnMouseEnter: false,
-                }),
-              ]}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-4">
-                {exploreCards.map((card, idx) => (
-                  <CarouselItem key={idx} className="pl-4 basis-[85%]">
-                    <Link to={card.link} className="group block">
-                      <div className="aspect-[3/4] mb-4 overflow-hidden">
-                        <img 
-                          src={card.image}
-                          alt={card.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                      <h3 className="text-xl md:text-2xl font-display font-semibold text-primary mt-2">
-                        {card.title}
-                      </h3>
-                    </Link>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
-          </div>
-
-          {/* Desktop Grid */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {exploreCards.map((card, idx) => (
-              <Link
-                key={idx}
-                to={card.link}
-                className="group"
-              >
-                <div className="aspect-[3/4] mb-4 overflow-hidden">
-                  <img 
-                    src={card.image}
-                    alt={card.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="text-xl md:text-2xl font-display font-semibold text-primary mt-2">
-                  {card.title}
-                </h3>
-              </Link>
-            ))}
-          </div>
-
-          {/* Book Now Button */}
-          <div className="mt-12 flex justify-center">
-            <BookingButton 
-              size="lg"
-              className="uppercase font-bold tracking-wide"
-            >
-              BOOK NOW
-            </BookingButton>
-          </div>
+        {/* Book Now Button */}
+        <div className="flex justify-center">
+          <BookingButton 
+            size="lg"
+            className="px-12 py-6 text-sm uppercase font-bold tracking-wider"
+          >
+            BOOK YOUR TREATMENT
+          </BookingButton>
         </div>
       </div>
     </section>
