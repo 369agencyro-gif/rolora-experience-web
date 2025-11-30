@@ -260,7 +260,7 @@ const RoloraReset = () => {
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-16 text-primary">
-              ✧ BENEFITS
+              BENEFITS
             </h2>
             
             <div className="space-y-6">
