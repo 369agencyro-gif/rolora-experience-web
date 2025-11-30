@@ -67,12 +67,12 @@ const Hero = () => {
                 alt="First Glow Offer" 
                 className="w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-background/60" />
+              <div className="absolute inset-0 bg-background/20" />
             </div>
             
             <div className="container relative z-10 px-6 py-32">
               <div className="max-w-4xl">
-                <div className="inline-block mb-6 px-4 py-2 bg-primary text-primary-foreground">
+                <div className="inline-block mb-6 px-4 py-2 bg-foreground text-background">
                   <p className="text-xs md:text-sm font-bold tracking-widest">NEW CLIENT EXCLUSIVE</p>
                 </div>
                 
@@ -80,11 +80,11 @@ const Hero = () => {
                   THE FIRST GLOW™
                 </h2>
                 
-                <div className="text-6xl md:text-7xl font-black text-primary mb-6 drop-shadow-lg">
+                <div className="text-6xl md:text-7xl font-black text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] mb-6">
                   $99
                 </div>
                 
-                <p className="text-xl md:text-2xl text-white/90 mb-6 drop-shadow font-semibold">
+                <p className="text-xl md:text-2xl text-white mb-6 drop-shadow-lg font-semibold">
                   Signature glass-skin facial — Regularly $235
                 </p>
 
@@ -95,20 +95,22 @@ const Hero = () => {
                     "Instant glow with zero downtime"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-base text-white drop-shadow">{item}</span>
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-base text-white drop-shadow-lg font-medium">{item}</span>
                     </div>
                   ))}
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link to="/special-offer">
-                    <BookingButton variant="cta" size="lg" className="text-lg">
+                    <BookingButton variant="cta" size="lg" className="text-lg w-full sm:w-auto">
                       BOOK FIRST GLOW — $99
                     </BookingButton>
                   </Link>
                   <Link to="/special-offer">
-                    <BookingButton variant="outline" size="lg" className="text-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-white">
+                    <BookingButton variant="outline" size="lg" className="text-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-white w-full sm:w-auto">
                       LEARN MORE
                     </BookingButton>
                   </Link>
@@ -127,12 +129,12 @@ const Hero = () => {
                 alt="Glow + Flow Duo Offer" 
                 className="w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-background/60" />
+              <div className="absolute inset-0 bg-background/20" />
             </div>
             
             <div className="container relative z-10 px-6 py-32">
               <div className="max-w-4xl">
-                <div className="inline-block mb-6 px-4 py-2 bg-primary text-primary-foreground">
+                <div className="inline-block mb-6 px-4 py-2 bg-foreground text-background">
                   <p className="text-xs md:text-sm font-bold tracking-widest">NEW CLIENT EXCLUSIVE</p>
                 </div>
                 
@@ -140,11 +142,11 @@ const Hero = () => {
                   GLOW + FLOW DUO™
                 </h2>
                 
-                <div className="text-6xl md:text-7xl font-black text-primary mb-6 drop-shadow-lg">
+                <div className="text-6xl md:text-7xl font-black text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] mb-6">
                   $139
                 </div>
                 
-                <p className="text-xl md:text-2xl text-white/90 mb-6 drop-shadow font-semibold">
+                <p className="text-xl md:text-2xl text-white mb-6 drop-shadow-lg font-semibold">
                   Face + Body • One Visit. Full Reset.
                 </p>
 
@@ -155,20 +157,22 @@ const Hero = () => {
                     "75-90 minutes of transformation"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-base text-white drop-shadow">{item}</span>
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-base text-white drop-shadow-lg font-medium">{item}</span>
                     </div>
                   ))}
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link to="/glow-flow-offer">
-                    <BookingButton variant="cta" size="lg" className="text-lg">
+                    <BookingButton variant="cta" size="lg" className="text-lg w-full sm:w-auto">
                       BOOK THE DUO — $139
                     </BookingButton>
                   </Link>
                   <Link to="/glow-flow-offer">
-                    <BookingButton variant="outline" size="lg" className="text-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-white">
+                    <BookingButton variant="outline" size="lg" className="text-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-white w-full sm:w-auto">
                       LEARN MORE
                     </BookingButton>
                   </Link>
