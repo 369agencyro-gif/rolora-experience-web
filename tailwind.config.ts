@@ -127,6 +127,14 @@ export default {
             transform: "translateX(0)"
           }
         },
+        "progress": {
+          "0%": {
+            transform: "scaleX(0)"
+          },
+          "100%": {
+            transform: "scaleX(1)"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

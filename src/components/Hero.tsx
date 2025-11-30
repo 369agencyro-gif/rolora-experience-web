@@ -5,23 +5,42 @@ import facialGlowImage from "@/assets/glowing-face.jpg";
 import bodyRollingImage from "@/assets/body-rolling-hero.webp";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { Check } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 const Hero = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
-    <Carousel
-      opts={{
-        align: "start",
-        loop: true,
-      }}
-      plugins={[
-        Autoplay({
-          delay: 7000,
-        }),
-      ]}
-      className="w-full"
-    >
-      <CarouselContent>
+    <div className="relative w-full">
+      <Carousel
+        setApi={setApi}
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 7000,
+          }),
+        ]}
+        className="w-full"
+      >
+        <CarouselContent>
         {/* Main Hero Slide */}
         <CarouselItem>
           <section className="relative h-[95vh] flex items-center overflow-hidden bg-background">
@@ -183,6 +202,57 @@ const Hero = () => {
         </CarouselItem>
       </CarouselContent>
     </Carousel>
+
+    {/* Slide Indicators */}
+    <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center items-center gap-3">
+      {Array.from({ length: count }).map((_, index) => (
+        <button
+          key={index}
+          onClick={() => api?.scrollTo(index)}
+          className="group relative"
+        >
+          {/* Outer pulsing ring - only on active slide */}
+          {current === index && (
+            <span className="absolute inset-0 w-12 h-12 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 animate-ping">
+              <span className="block w-full h-full rounded-full bg-white/30"></span>
+            </span>
+          )}
+          
+          {/* Main dot */}
+          <span
+            className={`block w-3 h-3 rounded-full transition-all duration-300 ${
+              current === index
+                ? "bg-white scale-125 shadow-lg shadow-white/50"
+                : "bg-white/50 hover:bg-white/80 scale-100"
+            }`}
+          >
+            {/* Progress bar for active slide */}
+            {current === index && (
+              <span className="absolute inset-0 rounded-full overflow-hidden">
+                <span
+                  className="block h-full bg-primary origin-left animate-[progress_7s_linear]"
+                  style={{
+                    animation: "progress 7s linear forwards"
+                  }}
+                ></span>
+              </span>
+            )}
+          </span>
+        </button>
+      ))}
+    </div>
+
+    {/* Scroll hint animation */}
+    <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+      <div className="flex flex-col items-center gap-2 text-white/80">
+        <div className="flex gap-2">
+          <ChevronLeft className="w-5 h-5 animate-pulse" />
+          <span className="text-xs font-bold tracking-wider uppercase">Slide</span>
+          <ChevronRight className="w-5 h-5 animate-pulse" />
+        </div>
+      </div>
+    </div>
+  </div>
   );
 };
 
