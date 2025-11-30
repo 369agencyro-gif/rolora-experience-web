@@ -69,7 +69,7 @@ const ExpressSculpt = () => {
               <div className="space-y-6">
                 <div>
                   <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight leading-[1.1] text-foreground">
-                    Express Sculpt
+                    EXPRESS SCULPT™ · $115
                   </h1>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="flex items-center gap-1">
@@ -80,16 +80,16 @@ const ExpressSculpt = () => {
                 </div>
                 
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">Glow + Go</span>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">Lift. Refresh. Go.</span>
                 </div>
 
                 <div className="space-y-4 pt-4">
                   <p className="text-lg leading-relaxed text-foreground/80 font-light">
-                    A targeted mini facial that refreshes, hydrates, and contours in under 40 minutes. Perfect pre-event or as a midweek pick-me-up when you need instant radiance without the time commitment.
+                    A fast, focused sculpting treatment designed to depuff, contour, and revive the skin in under 40 minutes. The perfect mid-week reset, pre-event boost, or "quick fix" when you want to look lifted and refreshed — without committing to a full facial.
                   </p>
                   
                   <p className="text-lg leading-relaxed font-medium text-foreground border-l-2 border-primary pl-6">
-                    This isn't just quick. This is efficient excellence, instant radiance, and time-respected results — crafted the Rolora way.
+                    Visible definition. Immediate glow. Zero downtime.
                   </p>
                 </div>
 
@@ -98,29 +98,28 @@ const ExpressSculpt = () => {
                 </BookingButton>
               </div>
 
-              {/* What Is Express Sculpt */}
+              {/* What This Treatment Does */}
               <div className="pt-8 border-t border-border/50 space-y-6">
-                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">What Is Express Sculpt?</h2>
+                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">WHAT THIS TREATMENT DOES</h2>
                 
                 <div className="space-y-4">
                   <p className="text-base leading-relaxed text-foreground/70 font-light">
-                    Express Sculpt combines targeted exfoliation, lymphatic drainage, and intensive hydration into a streamlined 40-minute treatment designed for busy schedules.
-                  </p>
-                  <p className="text-base leading-relaxed text-foreground/70 font-light">
-                    Each treatment focuses on immediate visible results — refreshed appearance, reduced puffiness, and instant glow for any occasion.
+                    Express Sculpt™ delivers immediate, targeted results:
                   </p>
                 </div>
 
                 <div className="mt-8 pt-6 space-y-6">
-                  <p className="font-display text-lg font-semibold text-foreground/90">The Result</p>
                   <div className="grid gap-4">
-                    {["Instant radiance", "Refreshed appearance", "Reduced puffiness", "Hydrated, plump skin", "Quick results", "Time-efficient glow"].map((benefit, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                    {["Reduces puffiness", "Enhances facial definition", "Boosts circulation + lymphatic flow", "Refreshes tired features", "Leaves skin looking lifted, sculpted, and awake"].map((benefit, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                           <span className="text-primary text-xs font-bold">✓</span>
                         </div>
                         <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
                       </div>)}
                   </div>
+                  <p className="text-base leading-relaxed text-foreground/70 font-light italic pt-4">
+                    It's the Rolora signature sculpt — simplified, sped up, and refined.
+                  </p>
                 </div>
               </div>
 
@@ -128,14 +127,13 @@ const ExpressSculpt = () => {
               <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-gradient-to-br from-background to-muted/30 p-8 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
                 <div className="relative">
-                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-8 text-center">Express Sculpt Pricing</h3>
+                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-8 text-center">EXPRESS SCULPT™ Pricing</h3>
                   <div className="space-y-4">
                     <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors">
                       <div>
                         <span className="font-medium text-foreground">Single Session</span>
-                        <span className="text-xs text-foreground/50 ml-2">40 minutes</span>
                       </div>
-                      <span className="text-2xl font-bold text-primary">$145</span>
+                      <span className="text-2xl font-bold text-primary">$115</span>
                     </div>
                   </div>
                 </div>
@@ -158,11 +156,11 @@ const ExpressSculpt = () => {
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-8 text-primary">
-              THE EXPRESS RITUAL
+              WHAT TO EXPECT
             </h2>
             
             <p className="text-xl leading-relaxed mb-16 text-center">
-              Every Express Sculpt session follows a streamlined sequence focused on instant radiance and time-efficient results.
+              A streamlined, results-driven sequence:
             </p>
 
             <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
@@ -170,13 +168,13 @@ const ExpressSculpt = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Cleanse & Prep
+                      Cleanse & prep for optimal sculpting
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Quick, thorough cleansing removes impurities and prepares skin for treatment.
+                  Quick, thorough cleansing to prepare skin for treatment.
                 </AccordionContent>
               </AccordionItem>
 
@@ -184,21 +182,7 @@ const ExpressSculpt = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Gentle Exfoliation
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Resurfaces skin to reveal smooth, radiant texture beneath.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-3" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Lymphatic Drainage
+                      Quick lymphatic drainage to depuff
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
@@ -208,17 +192,31 @@ const ExpressSculpt = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-4" className="border-none">
+              <AccordionItem value="item-3" className="border-none">
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Gua Sha Massage
+                      Precision gua sha or sculpting techniques (your choice)
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Lifting and contouring for instant definition and sculpted features.
+                  Targeted sculpting work to contour and define facial features.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Cryo finish for a snatched, refreshed look
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Cooling treatment to tighten and refresh skin instantly.
                 </AccordionContent>
               </AccordionItem>
 
@@ -226,13 +224,13 @@ const ExpressSculpt = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Hydration Infusion
+                      Hydration + glow finish
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Deep penetrating serums deliver instant plumpness and lasting glow.
+                  Final hydration to lock in results and restore radiance.
                 </AccordionContent>
               </AccordionItem>
             </AccordionPrimitive.Root>
@@ -241,7 +239,7 @@ const ExpressSculpt = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"></div>
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent"></div>
               <p className="relative text-xl font-medium text-center leading-relaxed text-foreground">
-                You'll see the glow immediately — perfect for busy schedules and last-minute events.
+                Efficient. Effective. Instantly lifting.
               </p>
             </div>
           </div>
@@ -262,94 +260,88 @@ const ExpressSculpt = () => {
         </div>
       </section>
 
-      {/* Why It Works Section */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Gradient Background Effect */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
-        
-        <div className="container px-6 relative z-10">
+      {/* Boosters Section */}
+      <section className="py-20 bg-background">
+        <div className="container px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-16 text-primary">
-              WHY IT WORKS
-            </h2>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-12 text-primary text-center">BOOSTERS FOR EXPRESS SCULPT™</h2>
+            <p className="text-base text-foreground/70 mb-12 italic text-center">(All boosters chosen because they do NOT overlap — express sculpt does not include exfoliation or tech.)</p>
             
-            <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
-              <AccordionItem value="item-1" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Streamlined Efficiency
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Focused protocol delivers maximum results in minimum time without compromising quality.
-                </AccordionContent>
-              </AccordionItem>
+            <div className="space-y-12">
+              {/* Brighten & Hydrate */}
+              <div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">+ Brighten & Hydrate</h3>
+                
+                <div className="space-y-6">
+                  <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="font-semibold text-lg text-foreground">Oxygen Glow Boost</span>
+                      <span className="text-2xl font-bold text-primary">$55</span>
+                    </div>
+                  </div>
 
-              <AccordionItem value="item-2" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Targeted Techniques
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Each step addresses specific concerns for visible, immediate transformation.
-                </AccordionContent>
-              </AccordionItem>
+                  <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="font-semibold text-lg text-foreground">Hydra Infusion</span>
+                      <span className="text-2xl font-bold text-primary">$55</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <AccordionItem value="item-3" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Instant Hydration
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Fast-absorbing serums deliver immediate plumpness and lasting radiance.
-                </AccordionContent>
-              </AccordionItem>
+              {/* Smooth & Refine */}
+              <div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">+ Smooth & Refine</h3>
+                
+                <div className="space-y-6">
+                  <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="font-semibold text-lg text-foreground">Dermaplaning Add-On</span>
+                      <span className="text-2xl font-bold text-primary">$55</span>
+                    </div>
+                  </div>
 
-              <AccordionItem value="item-4" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Quick Sculpting
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Gua sha and drainage reduce puffiness for instantly defined contours.
-                </AccordionContent>
-              </AccordionItem>
+                  <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="font-semibold text-lg text-foreground">Microderm Polish</span>
+                      <span className="text-2xl font-bold text-primary">$55</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <AccordionItem value="item-5" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      The Rolora Method™
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Our expertise ensures rapid, effective results that respect your time without cutting corners.
-                </AccordionContent>
-              </AccordionItem>
-            </AccordionPrimitive.Root>
-            
-            <div className="flex justify-center mt-12">
-              <BookingButton variant="cta" size="lg">
-                BOOK NOW
-              </BookingButton>
+              {/* Calm & Energize */}
+              <div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">+ Calm & Energize</h3>
+                
+                <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                  <div className="flex justify-between items-start mb-3">
+                    <span className="font-semibold text-lg text-foreground">Red Light Therapy</span>
+                    <span className="text-2xl font-bold text-primary">$50</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Extra Sculpting */}
+              <div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 text-primary">+ Extra Sculpting</h3>
+                
+                <div className="space-y-6">
+                  <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="font-semibold text-lg text-foreground">Neck Lifting Upgrade</span>
+                      <span className="text-2xl font-bold text-primary">$45</span>
+                    </div>
+                  </div>
+
+                  <div className="p-6 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="font-semibold text-lg text-foreground">Gua Sha Sculpt Boost</span>
+                      <span className="text-2xl font-bold text-primary">$45</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -376,7 +368,7 @@ const ExpressSculpt = () => {
               className="w-full mb-12"
             >
               <CarouselContent>
-                {["Instant radiance", "Refreshed appearance", "Hydrated, plump skin", "Reduced puffiness", "Sculpted contours", "Quick results", "Time-efficient glow", "Pre-event ready", "Renewed confidence"].map((benefit, index) => (
+                {["Reduced puffiness", "Enhanced definition", "Boosted circulation", "Refreshed features", "Lifted appearance", "Sculpted contours", "Immediate glow", "Zero downtime", "Quick fix"].map((benefit, index) => (
                   <CarouselItem key={benefit} className="md:basis-1/3">
                     <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
                       animationDelay: `${index * 0.1}s`
@@ -395,7 +387,7 @@ const ExpressSculpt = () => {
             <p className="text-2xl font-bold text-center animate-fade-in" style={{
               animationDelay: "0.9s"
             }}>
-              Your glow appears — your time is respected.
+              Visible definition. Immediate glow.
             </p>
           </div>
         </div>
@@ -425,10 +417,10 @@ const ExpressSculpt = () => {
               WHO IT'S FOR
             </h2>
             
-            <p className="text-xl mb-12 text-foreground/80">Perfect for anyone who wants to:</p>
+            <p className="text-xl mb-12 text-foreground/80">Perfect if you want:</p>
             
             <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
-              {["Pre-event quick glow", "Midweek refresh", "Busy schedule maintenance", "Last-minute radiance", "Time-efficient results", "Lunch break beauty", "Instant confidence boost"].map((item, index) => (
+              {["A pre-event lift", "A mid-week reset", "Quick contour + glow", "A sculpted finish without a full treatment"].map((item, index) => (
                 <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
                   animationDelay: `${index * 0.1}s`
                 }}>
@@ -445,7 +437,7 @@ const ExpressSculpt = () => {
               <div className="inline-flex items-center gap-3 px-8 py-5 rounded-full border border-primary/20 bg-background/50 backdrop-blur-sm">
                 <span className="text-primary text-xl">✦</span>
                 <p className="text-lg font-medium text-foreground">
-                  Fast, effective, and results-driven — perfect for busy lifestyles
+                  Ideal for clients who want fast results and consistency.
                 </p>
               </div>
               <BookingButton variant="cta" size="lg">
@@ -464,17 +456,17 @@ const ExpressSculpt = () => {
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
             <h3 className="font-display text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.9] mb-4 md:mb-6 text-primary">
-              THE ROLORA DIFFERENCE
+              LIFT. REFRESH. GO.
             </h3>
             <p className="text-lg md:text-xl mb-6 md:mb-8">
-              Express Sculpt is time-efficient, results-focused, and elevated — delivering instant radiance without compromising quality.
+              EXPRESS SCULPT™ delivers visible definition and immediate glow in under 40 minutes — the perfect solution when you need fast, focused results.
             </p>
             <p className="text-lg md:text-xl font-bold mb-6 md:mb-8">
-              This is efficient excellence. Instant glow.<br />
-              This is Express Sculpt.
+              Book your Express Sculpt today.<br />
+              Your quickest path to a lifted, sculpted glow.
             </p>
             <BookingButton size="lg" className="w-full px-8 md:px-12 py-6 md:py-7 text-sm md:text-base uppercase font-black tracking-widest rounded-none">
-              Book Express Sculpt
+              Book EXPRESS SCULPT™
             </BookingButton>
           </div>
         </div>
