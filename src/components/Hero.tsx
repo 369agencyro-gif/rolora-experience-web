@@ -29,9 +29,9 @@ const Hero = () => {
               <img 
                 src={heroImage} 
                 alt="Glowing skin treatment" 
-                className="w-full h-full object-cover object-center md:object-center"
+                className="w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-background/20" />
+              <div className="absolute inset-0 bg-black/60" />
             </div>
             
             <div className="container relative z-10 px-6 py-32">
@@ -67,7 +67,7 @@ const Hero = () => {
                 alt="First Glow Offer" 
                 className="w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-background/20" />
+              <div className="absolute inset-0 bg-black/60" />
             </div>
             
             <div className="container relative z-10 px-6 py-32">
@@ -129,7 +129,7 @@ const Hero = () => {
                 alt="Glow + Flow Duo Offer" 
                 className="w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-background/20" />
+              <div className="absolute inset-0 bg-black/60" />
             </div>
             
             <div className="container relative z-10 px-6 py-32">
