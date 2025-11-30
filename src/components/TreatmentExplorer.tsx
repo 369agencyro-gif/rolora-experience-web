@@ -9,34 +9,34 @@ import treatment4 from "@/assets/treatment-4.jpg";
 
 const TreatmentExplorer = () => {
   const treatments = [
-    "CRYO GLOBES",
-    "FACIAL FORM",
-    "ENZYME EXFOLIATION",
+    "GUA SHA SCULPTING",
     "LED LIGHT THERAPY",
-    "DEEP CLEANSE",
-    "SKIN ANALYSIS"
+    "MICROCURRENT",
+    "LYMPHATIC DRAINAGE",
+    "CUSTOM SERUMS",
+    "CRYO THERAPY"
   ];
 
   const exploreCards = [
     {
       image: treatment1,
-      title: "CHEMICAL PEEL",
-      link: "/services/reset"
+      title: "ROLORA FACIAL GLOW™",
+      link: "/services/facial-glow"
     },
     {
       image: treatment2,
-      title: "MICRONEEDLING",
-      link: "/services/timeless-lift"
-    },
-    {
-      image: treatment3,
-      title: "FACE FORM",
+      title: "ROLORA SCULPT™",
       link: "/services/sculpt"
     },
     {
+      image: treatment3,
+      title: "ROLORA RESET™",
+      link: "/services/reset"
+    },
+    {
       image: treatment4,
-      title: "THE MINI",
-      link: "/services/express-sculpt"
+      title: "TIMELESS LIFT™",
+      link: "/services/timeless-lift"
     }
   ];
 
