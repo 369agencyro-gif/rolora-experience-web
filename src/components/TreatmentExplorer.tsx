@@ -62,8 +62,8 @@ const TreatmentExplorer = () => {
           EXPLORE OUR TREATMENTS
         </h2>
 
-        {/* Mobile Carousel */}
-        <div className="md:hidden mb-12">
+        {/* Treatment Cards Carousel - All Screens */}
+        <div className="mb-12">
           <Carousel
             opts={{
               align: "start",
@@ -74,14 +74,14 @@ const TreatmentExplorer = () => {
               Autoplay({
                 delay: 3000,
                 stopOnInteraction: false,
-                stopOnMouseEnter: false,
+                stopOnMouseEnter: true,
               }),
             ]}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
               {exploreCards.map((card, idx) => (
-                <CarouselItem key={idx} className="pl-4 basis-[85%]">
+                <CarouselItem key={idx} className="pl-4 basis-[85%] sm:basis-[70%] md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                   <Link to={card.link} className="group block">
                     <div className="relative aspect-[3/4] mb-4 overflow-hidden rounded-2xl">
                       <img 
@@ -101,31 +101,6 @@ const TreatmentExplorer = () => {
               ))}
             </CarouselContent>
           </Carousel>
-        </div>
-
-        {/* Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
-          {exploreCards.map((card, idx) => (
-            <Link
-              key={idx}
-              to={card.link}
-              className="group"
-            >
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
-                <img 
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent transition-opacity duration-300 group-hover:opacity-70" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-2xl font-display font-bold text-primary transition-transform duration-300 group-hover:translate-y-[-4px]">
-                    {card.title}
-                  </h3>
-                </div>
-              </div>
-            </Link>
-          ))}
         </div>
 
         {/* Feature Pills */}
