@@ -3,10 +3,8 @@ import BookingButton from "@/components/BookingButton";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import { Plus } from "lucide-react";
-
 const WhyRolora = () => {
-  return (
-    <section className="py-24 relative overflow-hidden">
+  return <section className="py-24 relative overflow-hidden">
       {/* Gradient Background Effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
@@ -81,25 +79,16 @@ const WhyRolora = () => {
 
           {/* Studio Image */}
           <div className="relative overflow-hidden rounded-2xl mb-12">
-            <img 
-              src={studioInterior} 
-              alt="Rolora Studio" 
-              className="w-full h-[500px] object-cover"
-            />
+            
           </div>
 
           <div className="text-center">
-            <BookingButton 
-              size="lg"
-              className="px-12 py-6 text-sm uppercase font-bold tracking-wider"
-            >
+            <BookingButton size="lg" className="px-12 py-6 text-sm uppercase font-bold tracking-wider">
               EXPERIENCE ROLORA
             </BookingButton>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhyRolora;
