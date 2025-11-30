@@ -12,28 +12,20 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-
 const RoloraSculpt = () => {
-  return (
-    <ServiceLayout>
+  return <ServiceLayout>
       {/* Hero Section - Full Width Slider */}
       <section className="pb-12 md:pb-20">
         <div className="container px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
             {/* Left: Image Slider - Full Width */}
             <div className="relative lg:sticky lg:top-24 -mx-6 lg:mx-0">
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                plugins={[
-                  Autoplay({
-                    delay: 3000,
-                  }),
-                ]}
-                className="w-full"
-              >
+              <Carousel opts={{
+              align: "start",
+              loop: true
+            }} plugins={[Autoplay({
+              delay: 3000
+            })]} className="w-full">
                 <CarouselContent>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
@@ -68,9 +60,7 @@ const RoloraSculpt = () => {
               {/* Title & Rating */}
               <div className="space-y-6">
                 <div>
-                  <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight leading-[1.1] text-foreground">
-                    FACE SCULPT · $205
-                  </h1>
+                  <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight leading-[1.1] text-foreground">FACE SCULPT</h1>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="flex items-center gap-1">
                       {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
@@ -269,21 +259,12 @@ const RoloraSculpt = () => {
             
             <div className="space-y-6 mb-8">
               <div className="grid gap-4">
-                {[
-                  "Sharper jawline + cheekbones",
-                  "Reduced puffiness",
-                  "Improved circulation",
-                  "Lifted, toned facial muscles",
-                  "A naturally defined, snatched look",
-                  "Energized flow and glow"
-                ].map((result, i) => (
-                  <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                {["Sharper jawline + cheekbones", "Reduced puffiness", "Improved circulation", "Lifted, toned facial muscles", "A naturally defined, snatched look", "Energized flow and glow"].map((result, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <span className="text-primary text-xs font-bold">✓</span>
                     </div>
                     <span className="text-base text-foreground/80 font-light tracking-wide">{result}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
               <p className="text-lg text-center text-foreground/70 font-light italic mt-8">
                 Results are visible after one session — optimal with consistency.
@@ -301,38 +282,30 @@ const RoloraSculpt = () => {
               BENEFITS YOU'LL FEEL IMMEDIATELY
             </h2>
             
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 1200,
-                }),
-              ]}
-              className="w-full mb-12"
-            >
+            <Carousel opts={{
+            align: "start",
+            loop: true
+          }} plugins={[Autoplay({
+            delay: 1200
+          })]} className="w-full mb-12">
               <CarouselContent>
-                {["Sharper jawline", "Reduced puffiness", "Improved circulation", "Lifted muscles", "Snatched look", "Energized glow", "Camera-ready results", "Defined contours", "Instant lift"].map((benefit, index) => (
-                  <CarouselItem key={benefit} className="md:basis-1/3">
+                {["Sharper jawline", "Reduced puffiness", "Improved circulation", "Lifted muscles", "Snatched look", "Energized glow", "Camera-ready results", "Defined contours", "Instant lift"].map((benefit, index) => <CarouselItem key={benefit} className="md:basis-1/3">
                     <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                      animationDelay: `${index * 0.1}s`
-                    }}>
+                  animationDelay: `${index * 0.1}s`
+                }}>
                       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="relative flex items-center justify-center gap-3">
                         <span className="text-primary text-lg">✦</span>
                         <span className="font-semibold text-center">{benefit}</span>
                       </div>
                     </div>
-                  </CarouselItem>
-                ))}
+                  </CarouselItem>)}
               </CarouselContent>
             </Carousel>
 
             <p className="text-2xl font-bold text-center animate-fade-in" style={{
-              animationDelay: "0.9s"
-            }}>
+            animationDelay: "0.9s"
+          }}>
               Visible lift. Sculpted contours. Your signature snatch.
             </p>
           </div>
@@ -350,22 +323,31 @@ const RoloraSculpt = () => {
               Pair your sculpt with targeted Rolora intensifiers for even more definition:
             </p>
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { name: "Oxygen Glow Boost", price: "$55" },
-                { name: "Hydra Infusion", price: "$55" },
-                { name: "Dermaplaning Add-On", price: "$55" },
-                { name: "Microderm Polish", price: "$55" },
-                { name: "Red Light Therapy", price: "$50" },
-                { name: "Glow Peel", price: "$65" }
-              ].map((boost, index) => (
-                <div key={boost.name} className="group relative flex items-center justify-between px-8 py-5 rounded-2xl bg-background/80 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-[1.02] animate-fade-in shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]" style={{
-                  animationDelay: `${index * 0.1}s`
-                }}>
+              {[{
+              name: "Oxygen Glow Boost",
+              price: "$55"
+            }, {
+              name: "Hydra Infusion",
+              price: "$55"
+            }, {
+              name: "Dermaplaning Add-On",
+              price: "$55"
+            }, {
+              name: "Microderm Polish",
+              price: "$55"
+            }, {
+              name: "Red Light Therapy",
+              price: "$50"
+            }, {
+              name: "Glow Peel",
+              price: "$65"
+            }].map((boost, index) => <div key={boost.name} className="group relative flex items-center justify-between px-8 py-5 rounded-2xl bg-background/80 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-[1.02] animate-fade-in shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <span className="relative font-semibold text-foreground">{boost.name}</span>
                   <span className="relative text-xl font-bold text-primary">{boost.price}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -396,24 +378,15 @@ const RoloraSculpt = () => {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
-              {[
-                "Clients wanting natural lift + contour",
-                "Persistent puffiness",
-                "Jawline + cheekbone definition",
-                "Sculpting before an event",
-                "Strengthening facial muscle tone",
-                "A snatched, refreshed look — instantly"
-              ].map((item, index) => (
-                <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                  animationDelay: `${index * 0.1}s`
-                }}>
+              {["Clients wanting natural lift + contour", "Persistent puffiness", "Jawline + cheekbone definition", "Sculpting before an event", "Strengthening facial muscle tone", "A snatched, refreshed look — instantly"].map((item, index) => <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative flex items-center gap-4">
                     <span className="text-primary text-xl flex-shrink-0">✔</span>
                     <p className="font-semibold text-foreground">{item}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="flex flex-col items-center gap-4 mb-8">
@@ -455,8 +428,6 @@ const RoloraSculpt = () => {
       </section>
 
       <Contact />
-    </ServiceLayout>
-  );
+    </ServiceLayout>;
 };
-
 export default RoloraSculpt;
