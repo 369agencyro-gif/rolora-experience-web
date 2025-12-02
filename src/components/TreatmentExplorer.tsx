@@ -46,7 +46,7 @@ const TreatmentExplorer = () => {
     {
       image: treatment2,
       title: "ROLORA FLOW™",
-      link: "/body-rolling"
+      link: "/services/body-rolling"
     },
     {
       image: treatment3,
