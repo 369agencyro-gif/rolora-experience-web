@@ -91,7 +91,7 @@ const TreatmentExplorer = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#3B2414]/90 via-[#3B2414]/20 to-transparent transition-opacity duration-300 group-hover:opacity-70" />
                       <div className="absolute bottom-6 left-6 right-6">
-                        <h3 className="text-2xl font-display font-bold text-[#3B2414] transition-transform duration-300 group-hover:translate-y-[-4px]">
+                        <h3 className="text-2xl font-display font-bold text-white transition-transform duration-300 group-hover:translate-y-[-4px]">
                           {card.title}
                         </h3>
                       </div>
