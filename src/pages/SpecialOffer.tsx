@@ -94,7 +94,7 @@ const SpecialOffer = () => {
               <div className="bg-background rounded-2xl overflow-hidden border border-border/50 hover:shadow-lg transition-all duration-300">
                 <div className="relative h-64 overflow-hidden">
                   <img src={bodyRollingImage} alt="Glow + Flow Duo" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#3B2414]/90 via-[#3B2414]/20 to-transparent"></div>
                   <div className="absolute bottom-4 left-6 right-6">
                     <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-1">GLOW + FLOW DUO™</h3>
                     <p className="text-white/90 text-sm">One Visit. Full Reset.</p>
@@ -119,7 +119,7 @@ const SpecialOffer = () => {
               <div className="bg-background rounded-2xl overflow-hidden border border-border/50 hover:shadow-lg transition-all duration-300">
                 <div className="relative h-64 overflow-hidden">
                   <img src={facialRoom} alt="View All Treatments" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#3B2414]/90 via-[#3B2414]/20 to-transparent"></div>
                   <div className="absolute bottom-4 left-6 right-6">
                     <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-1">ALL SERVICES</h3>
                     <p className="text-white/90 text-sm">Explore Our Full Menu</p>
