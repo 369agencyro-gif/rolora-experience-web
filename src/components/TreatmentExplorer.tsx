@@ -51,7 +51,7 @@ const TreatmentExplorer = () => {
     {
       image: treatment3,
       title: "ROLORA HEAD SPA",
-      link: "/head-spa"
+      link: "/services/head-spa"
     }
   ];
 
