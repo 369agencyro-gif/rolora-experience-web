@@ -14,6 +14,7 @@ import facialRoom from "@/assets/facial-room.jpg";
 import glowingSkin from "@/assets/glowing-skin.jpg";
 import glowingFace from "@/assets/glowing-face.jpg";
 import skincareProducts from "@/assets/skincare-products.jpg";
+import skincareApply from "@/assets/skincare-apply.png";
 
 const SpecialOffer = () => {
   return (
@@ -146,7 +147,7 @@ const SpecialOffer = () => {
 
       {/* Image Break */}
       <section className="relative h-[50vh] overflow-hidden">
-        <img alt="Glowing Skin" className="w-full h-full object-cover" src={glowingSkin} />
+        <img alt="Glowing Skin" className="w-full h-full object-cover" src={skincareApply} />
       </section>
 
       {/* Why This $99 Intro Glow Is a Big Deal */}
