@@ -1,5 +1,5 @@
 import BookingButton from "@/components/BookingButton";
-import heroImage from "@/assets/facial-skincare.jpg";
+import facialTreatment3 from "@/assets/facial-treatment-3.png";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 const SignatureFacialSection = () => {
@@ -52,7 +52,7 @@ const SignatureFacialSection = () => {
           {/* Image and CTA */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mt-16">
             <div className="relative overflow-hidden rounded-2xl">
-              <img src={heroImage} alt="Facial treatment with specialized tools" className="w-full aspect-[4/3] object-cover" />
+              <img src={facialTreatment3} alt="Facial treatment with specialized tools" className="w-full aspect-[4/3] object-cover" />
             </div>
 
             <div className="space-y-8">
