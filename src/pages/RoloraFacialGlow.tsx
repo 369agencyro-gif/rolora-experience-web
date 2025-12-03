@@ -1,11 +1,10 @@
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
-import facialImage from "@/assets/service-facial.jpg";
-import facialRoom from "@/assets/facial-room.jpg";
-import glowingSkin from "@/assets/glowing-skin.jpg";
-import facialSculpting from "@/assets/facial-sculpting.jpg";
-import skincareProducts from "@/assets/skincare-products.jpg";
-import diverseSkin from "@/assets/diverse-skin.jpg";
+import facialTreatment1 from "@/assets/facial-treatment-1.png";
+import facialTreatment2 from "@/assets/facial-treatment-2.png";
+import facialTreatment3 from "@/assets/facial-treatment-3.png";
+import facialTreatment4 from "@/assets/facial-treatment-4.png";
+import facialTreatment5 from "@/assets/facial-treatment-5.png";
 import Contact from "@/components/Contact";
 import { Star, Plus } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
@@ -37,7 +36,7 @@ const RoloraFacialGlow = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={facialImage} alt="Rolora Facial Glow treatment" className="w-full h-full object-cover" />
+                      <img src={facialTreatment1} alt="Rolora Facial Glow treatment" className="w-full h-full object-cover" />
                       <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -48,7 +47,7 @@ const RoloraFacialGlow = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={glowingSkin} alt="Glowing skin results" className="w-full h-full object-cover" />
+                      <img src={facialTreatment4} alt="Glowing skin results" className="w-full h-full object-cover" />
                       <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -306,10 +305,10 @@ const RoloraFacialGlow = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={facialSculpting} alt="Facial Treatment" className="w-full h-full object-cover" />
+              <img src={facialTreatment2} alt="Facial Treatment" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={skincareProducts} alt="Skincare Products" className="w-full h-full object-cover" />
+              <img src={facialTreatment5} alt="Skincare Products" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -411,7 +410,7 @@ const RoloraFacialGlow = () => {
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
         <img 
-          src={glowingSkin} 
+          src={facialTreatment4} 
           alt="Glowing Results"
           className="w-full h-full object-cover"
         />
@@ -508,7 +507,7 @@ const RoloraFacialGlow = () => {
       {/* Two Column CTA Section */}
       <section className="grid md:grid-cols-2">
         <div className="relative h-[300px] md:h-[500px] overflow-hidden">
-          <img src={facialRoom} alt="Facial Glow Experience" className="w-full h-full object-cover" />
+          <img src={facialTreatment3} alt="Facial Glow Experience" className="w-full h-full object-cover" />
         </div>
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
