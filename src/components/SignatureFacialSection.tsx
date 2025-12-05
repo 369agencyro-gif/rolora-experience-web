@@ -52,7 +52,7 @@ const SignatureFacialSection = () => {
           {/* Image and CTA */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mt-16">
             <div className="relative overflow-hidden rounded-2xl">
-              <img src={serumCloseup1} alt="Facial treatment with specialized tools" className="w-full aspect-[4/3] object-cover" />
+              <img alt="Facial treatment with specialized tools" className="w-full aspect-[4/3] object-cover" src="/lovable-uploads/f8f136cb-a8de-4ad1-ac1f-507b8fa6cd71.jpg" />
             </div>
 
             <div className="space-y-8">
