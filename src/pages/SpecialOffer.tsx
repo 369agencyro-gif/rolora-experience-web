@@ -8,13 +8,13 @@ import {
   AccordionItem,
 } from "@/components/ui/accordion";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import facialImage from "@/assets/facial-sculpting.jpg";
+import review5 from "@/assets/review-5.png";
 import bodyRollingImage from "@/assets/body-rolling-hero.webp";
-import facialRoom from "@/assets/facial-room.jpg";
-import glowingSkin from "@/assets/glowing-skin.jpg";
-import glowingFace from "@/assets/glowing-face.jpg";
-import skincareProducts from "@/assets/skincare-products.jpg";
-import skincareApply from "@/assets/skincare-apply.png";
+import review2 from "@/assets/review-2.jpg";
+import review1 from "@/assets/review-1.png";
+import review3 from "@/assets/review-3.jpg";
+import review6 from "@/assets/review-6.png";
+import review4 from "@/assets/review-4.jpg";
 
 const SpecialOffer = () => {
   return (
@@ -22,7 +22,7 @@ const SpecialOffer = () => {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <img 
-          src={facialImage}
+          src={review5}
           alt="ROLORA Facial Glow Treatment"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -119,7 +119,7 @@ const SpecialOffer = () => {
               {/* Lift Renew Card */}
               <div className="bg-background rounded-2xl overflow-hidden border border-border/50 hover:shadow-lg transition-all duration-300">
                 <div className="relative h-64 overflow-hidden">
-                  <img src={facialRoom} alt="View All Treatments" className="w-full h-full object-cover" />
+                  <img src={review2} alt="View All Treatments" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3B2414]/90 via-[#3B2414]/20 to-transparent"></div>
                   <div className="absolute bottom-4 left-6 right-6">
                     <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-1">ALL SERVICES</h3>
@@ -147,7 +147,7 @@ const SpecialOffer = () => {
 
       {/* Image Break */}
       <section className="relative h-[50vh] overflow-hidden">
-        <img alt="Glowing Skin" className="w-full h-full object-cover" src={skincareApply} />
+        <img alt="Glowing Skin" className="w-full h-full object-cover" src={review4} />
       </section>
 
       {/* Why This $99 Intro Glow Is a Big Deal */}
@@ -256,10 +256,10 @@ const SpecialOffer = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={facialRoom} alt="Rolora Treatment Room" className="w-full h-full object-cover" />
+              <img src={review1} alt="Rolora Treatment Room" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={skincareProducts} alt="Custom Serum Blends" className="w-full h-full object-cover" />
+              <img src={review3} alt="Custom Serum Blends" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -319,13 +319,13 @@ const SpecialOffer = () => {
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                <img src={glowingFace} alt="Glowing skin results" className="w-full h-full object-cover" />
+                <img src={review6} alt="Glowing skin results" className="w-full h-full object-cover" />
                 <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg">
                   <p className="text-sm font-medium text-foreground">Results after 1 ROLORA Facial Glow™</p>
                 </div>
               </div>
               <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                <img src={glowingSkin} alt="Clear radiant skin" className="w-full h-full object-cover" />
+                <img src={review2} alt="Clear radiant skin" className="w-full h-full object-cover" />
                 <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg">
                   <p className="text-sm font-medium text-foreground">Series of 3 sessions, 4 weeks apart</p>
                 </div>
