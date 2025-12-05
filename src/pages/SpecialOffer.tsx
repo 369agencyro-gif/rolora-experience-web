@@ -15,6 +15,7 @@ import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
 import serumCloseup1 from "@/assets/serum-closeup-1.jpg";
 import serumCloseup2 from "@/assets/serum-closeup-2.jpg";
 import skincareApply from "@/assets/skincare-apply-new.jpg";
+import SocialMediaGrid from "@/components/SocialMediaGrid";
 
 const SpecialOffer = () => {
   return (
@@ -200,6 +201,9 @@ const SpecialOffer = () => {
           </div>
         </div>
       </section>
+
+      {/* Social Media Video Carousel */}
+      <SocialMediaGrid />
 
       {/* What to Expect During Your Visit */}
       <section className="py-20 relative overflow-hidden">
