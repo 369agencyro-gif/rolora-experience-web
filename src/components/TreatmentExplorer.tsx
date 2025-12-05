@@ -5,7 +5,7 @@ import Autoplay from "embla-carousel-autoplay";
 import facialGlowCard from "@/assets/facial-glow-card.jpg";
 import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
 import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
-import serumCloseup1 from "@/assets/serum-closeup-1.jpg";
+import timelessLiftTreatment from "@/assets/timeless-lift-treatment.jpg";
 import serumCloseup2 from "@/assets/serum-closeup-2.jpg";
 import roloraFlowNew from "@/assets/rolora-flow-new.png";
 import facialFoam from "@/assets/facial-foam.jpg";
@@ -37,7 +37,7 @@ const TreatmentExplorer = () => {
       link: "/services/reset"
     },
     {
-      image: serumCloseup1,
+      image: timelessLiftTreatment,
       title: "TIMELESS LIFT™",
       link: "/services/timeless-lift"
     },
