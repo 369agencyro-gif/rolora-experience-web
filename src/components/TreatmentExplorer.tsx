@@ -7,7 +7,7 @@ import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
 import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
 import serumCloseup1 from "@/assets/serum-closeup-1.jpg";
 import serumCloseup2 from "@/assets/serum-closeup-2.jpg";
-import bodyRollingTreatment from "@/assets/body-rolling-treatment.webp";
+import roloraFlowImage from "@/assets/rolora-flow-image.png";
 import facialFoam from "@/assets/facial-foam.jpg";
 
 const TreatmentExplorer = () => {
@@ -48,7 +48,7 @@ const TreatmentExplorer = () => {
       link: "/services/express-sculpt"
     },
     {
-      image: bodyRollingTreatment,
+      image: roloraFlowImage,
       title: "ROLORA FLOW™",
       link: "/services/body-rolling",
       cropBottom: true
