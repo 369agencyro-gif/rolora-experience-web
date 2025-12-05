@@ -11,11 +11,7 @@ const About = () => {
       <section className="relative min-h-[95vh] flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            alt="Rolora Studio Corona del Mar" 
-            className="w-full h-full object-cover" 
-            src="/lovable-uploads/cee7b05f-d680-4ef4-87e5-4da529cfb90d.jpg" 
-          />
+          <img alt="Rolora Studio Corona del Mar" className="w-full h-full object-cover" src="/lovable-uploads/cee7b05f-d680-4ef4-87e5-4da529cfb90d.jpg" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#2A1810] via-[#2A1810]/95 to-[#2A1810]/70" />
         </div>
         
@@ -81,10 +77,10 @@ const About = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src={glowingFace} alt="Glowing skin results" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img alt="Glowing skin results" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="/lovable-uploads/44b2ed18-9e25-4495-94c4-1ee48ad4e78c.jpg" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src={facialSculpting} alt="Rolora facial treatment" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img alt="Rolora facial treatment" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="/lovable-uploads/fa861872-8377-428e-9adf-d23b744fd7e4.jpg" />
             </div>
           </div>
         </div>
