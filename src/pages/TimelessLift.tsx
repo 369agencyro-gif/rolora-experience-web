@@ -1,7 +1,6 @@
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
-import glowCloseup1 from "@/assets/glow-closeup-1.jpg";
-import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
+import facialGlowTreatment from "@/assets/facial-glow-treatment.jpg";
 import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
 import serumCloseup1 from "@/assets/serum-closeup-1.jpg";
 import serumCloseup2 from "@/assets/serum-closeup-2.jpg";
@@ -36,7 +35,7 @@ const TimelessLift = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={glowCloseup1} alt="Timeless Lift treatment" className="w-full h-full object-cover" />
+                      <img src="/lovable-uploads/78b4698f-9ca8-4b54-b999-afb10088c2f9.jpg" alt="Timeless Lift treatment" className="w-full h-full object-cover" />
                       <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -47,7 +46,7 @@ const TimelessLift = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={glowCloseup2} alt="Anti-aging results" className="w-full h-full object-cover" />
+                      <img src={facialGlowTreatment} alt="Anti-aging results" className="w-full h-full object-cover" />
                       <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -471,7 +470,7 @@ const TimelessLift = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img alt="Anti-aging Results" className="w-full h-full object-cover" src={glowCloseup2} />
+        <img alt="Anti-aging Results" className="w-full h-full object-cover" src={facialGlowTreatment} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
