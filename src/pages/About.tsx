@@ -8,59 +8,59 @@ import { Link } from "react-router-dom";
 const About = () => {
   return <ServiceLayout>
       {/* Hero Section - INTRO */}
-      <section className="relative min-h-[95vh] flex items-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img 
-            alt="Rolora Studio Corona del Mar" 
-            className="w-full h-full object-cover" 
-            src="/lovable-uploads/cee7b05f-d680-4ef4-87e5-4da529cfb90d.jpg" 
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#2A1810] via-[#2A1810]/95 to-[#2A1810]/70" />
-        </div>
-        
-        {/* Content */}
-        <div className="container px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-10">
-              <div className="w-2 h-2 rounded-full bg-primary" />
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Corona del Mar</span>
+      <section className="py-16 md:py-24">
+        <div className="container px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
+            {/* Left: Content */}
+            <div className="space-y-8 order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+                <span className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">About Rolora</span>
+              </div>
+
+              <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-[0.95] text-foreground">
+                Modern Beauty.<br />
+                <span className="text-primary">Elevated Energy.</span>
+              </h1>
+              
+              <p className="text-lg leading-relaxed text-foreground/70 max-w-lg">
+                A curated space for advanced facials, body sculpting, and scalp treatments — where precision, technology, and energy converge.
+              </p>
+              
+              <div className="border-l-2 border-primary pl-6 py-2">
+                <p className="text-base leading-relaxed text-foreground/80">
+                  Built on the belief that <span className="font-semibold text-primary">glow is energy</span>, and <span className="font-semibold text-primary">energy is beauty</span>.
+                </p>
+              </div>
+
+              <p className="text-xl md:text-2xl font-display font-bold text-foreground/90 tracking-tight">
+                Results that speak. Energy you feel.
+              </p>
+
+              <BookingButton size="lg" className="px-10 py-5 text-sm uppercase font-bold tracking-wider">
+                Book Your Experience
+              </BookingButton>
             </div>
 
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[1] text-white mb-8">
-              Modern Beauty.<br />
-              Elevated Energy.
-            </h1>
-            
-            <p className="text-lg md:text-xl leading-relaxed text-white/70 font-light max-w-2xl mx-auto mb-8">
-              A curated space for advanced facials, body sculpting, and scalp treatments — where precision, technology, and energy converge.
-            </p>
-            
-            <p className="text-base leading-relaxed text-white/60 max-w-xl mx-auto mb-10 border-t border-b border-white/10 py-6">
-              Built on the belief that <span className="text-primary font-medium">glow is energy</span>, and <span className="text-primary font-medium">energy is beauty</span>.
-            </p>
-
-            <p className="text-2xl md:text-3xl font-display font-bold text-primary tracking-tight mb-10">
-              Results that speak. Energy you feel.
-            </p>
-
-            <BookingButton size="lg" className="px-12 py-6 text-sm uppercase font-bold tracking-wider">
-              Book Your Experience
-            </BookingButton>
+            {/* Right: Image */}
+            <div className="relative order-1 lg:order-2">
+              <div className="relative overflow-hidden rounded-2xl aspect-[3/4]">
+                <img 
+                  alt="Rolora Studio Corona del Mar" 
+                  className="w-full h-full object-cover" 
+                  src="/lovable-uploads/cee7b05f-d680-4ef4-87e5-4da529cfb90d.jpg" 
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
+              <div className="absolute -top-4 -right-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+            </div>
           </div>
-        </div>
-        
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-xs uppercase tracking-[0.2em] text-white/40">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-primary/50 to-transparent" />
         </div>
       </section>
 
       {/* Section 2 — THE PHILOSOPHY */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#2A1810] via-[#3B2414]/50 via-30% to-background to-60%"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent"></div>
         
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
