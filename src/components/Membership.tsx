@@ -1,7 +1,7 @@
 import BookingButton from "@/components/BookingButton";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
-import facialTreatment4 from "@/assets/facial-treatment-4.png";
+import review3 from "@/assets/review-3.jpg";
 import bodyRollingImage from "@/assets/body-rolling-hero.webp";
 
 const Membership = () => {
@@ -23,7 +23,7 @@ const Membership = () => {
           {/* First Glow - $99 */}
           <div className="bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl">
             <div className="relative h-48 overflow-hidden">
-              <img src={facialTreatment4} alt="Rolora Facial Glow" className="w-full h-full object-cover" />
+              <img src={review3} alt="Rolora Facial Glow" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
               <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold uppercase">
                 Most Popular

@@ -1,7 +1,7 @@
 import BookingButton from "@/components/BookingButton";
-import facialTreatment1 from "@/assets/facial-treatment-1.png";
-import facialTreatment2 from "@/assets/facial-treatment-2.png";
-import facialTreatment5 from "@/assets/facial-treatment-5.png";
+import review5 from "@/assets/review-5.png";
+import review6 from "@/assets/review-6.png";
+import review7 from "@/assets/review-7.png";
 
 const StatsSection = () => {
 
@@ -39,7 +39,7 @@ const StatsSection = () => {
             <div className="grid grid-cols-3 gap-6">
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
                 <img 
-                  src={facialTreatment1} 
+                  src={review5} 
                   alt="Facial treatment in progress" 
                   className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -47,7 +47,7 @@ const StatsSection = () => {
               </div>
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
                 <img 
-                  src={facialTreatment2} 
+                  src={review6} 
                   alt="Second cleanse facial treatment" 
                   className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -55,7 +55,7 @@ const StatsSection = () => {
               </div>
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
                 <img 
-                  src={facialTreatment5} 
+                  src={review7} 
                   alt="Glowing skin results" 
                   className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
                 />

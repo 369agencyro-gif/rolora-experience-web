@@ -7,11 +7,11 @@ import {
   AccordionItem,
 } from "@/components/ui/accordion";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import facialImage from "@/assets/facial-sculpting.jpg";
+import review5 from "@/assets/review-5.png";
 import bodyRollingImage from "@/assets/body-rolling-hero.webp";
-import glowingSkin from "@/assets/glowing-skin.jpg";
-import facialRoom from "@/assets/facial-room.jpg";
-import studioInterior from "@/assets/studio-interior.jpg";
+import review2 from "@/assets/review-2.jpg";
+import review3 from "@/assets/review-3.jpg";
+import review4 from "@/assets/review-4.jpg";
 
 const GlowFlowOffer = () => {
   return (
@@ -106,7 +106,7 @@ const GlowFlowOffer = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={facialImage} alt="Facial Sculpting" className="w-full h-full object-cover" />
+              <img src={review5} alt="Facial Sculpting" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <img src={bodyRollingImage} alt="Body Rolling" className="w-full h-full object-cover" />
@@ -152,7 +152,7 @@ const GlowFlowOffer = () => {
 
       {/* Image Break */}
       <section className="relative h-[50vh] overflow-hidden">
-        <img alt="Glowing Results" className="w-full h-full object-cover" src={glowingSkin} />
+        <img alt="Glowing Results" className="w-full h-full object-cover" src={review4} />
       </section>
 
       {/* Upgrade Your Experience */}
@@ -233,10 +233,10 @@ const GlowFlowOffer = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={facialRoom} alt="Rolora Treatment Room" className="w-full h-full object-cover" />
+              <img src={review2} alt="Rolora Treatment Room" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={studioInterior} alt="Rolora Studio" className="w-full h-full object-cover" />
+              <img src={review3} alt="Rolora Studio" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

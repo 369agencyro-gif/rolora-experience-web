@@ -1,9 +1,9 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import facialTreatment1 from "@/assets/facial-treatment-1.png";
-import facialTreatment2 from "@/assets/facial-treatment-2.png";
-import facialTreatment3 from "@/assets/facial-treatment-3.png";
-import facialTreatment4 from "@/assets/facial-treatment-4.png";
+import review1 from "@/assets/review-1.png";
+import review2 from "@/assets/review-2.jpg";
+import review3 from "@/assets/review-3.jpg";
+import review4 from "@/assets/review-4.jpg";
 
 const testimonials = [
   {
@@ -11,28 +11,28 @@ const testimonials = [
     treatment: "after The Really Good Facial™, Microdermabrasion",
     text: "They helped me build a plan for fading my dark spots over time. It finally feels like a difference!",
     rating: 5,
-    image: facialTreatment1
+    image: review1
   },
   {
     name: "Jaycyll",
     treatment: "after The Really Good Facial™",
     text: "Every treatment feels like a reset for my dry, dull skin. My esthetician knows exactly what I need.",
     rating: 5,
-    image: facialTreatment2
+    image: review2
   },
   {
     name: "Sarah",
     treatment: "after The Really Good Facial™",
     text: "The personalized approach and luxurious atmosphere make every visit special. My skin has never looked better.",
     rating: 5,
-    image: facialTreatment4
+    image: review3
   },
   {
     name: "Paola",
     treatment: "after The Really Good Facial™",
     text: "My skin used to feel tight and flaky no matter what I used. Now it feels balanced and glowy.",
     rating: 5,
-    image: facialTreatment3
+    image: review4
   },
 ];
 
