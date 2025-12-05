@@ -12,7 +12,7 @@ import bodyRollingImage from "@/assets/body-rolling-hero.webp";
 import review2 from "@/assets/review-2.jpg";
 import review3 from "@/assets/review-3.jpg";
 import review4 from "@/assets/review-4.jpg";
-import bodyRollingStudio from "@/assets/body-rolling-machine-studio.jpg";
+import bodyRollingOrange from "@/assets/body-rolling-orange.png";
 
 const GlowFlowOffer = () => {
   return (
@@ -153,7 +153,7 @@ const GlowFlowOffer = () => {
 
       {/* Image Break */}
       <section className="relative h-[50vh] overflow-hidden">
-        <img alt="Body Rolling Studio" className="w-full h-full object-cover" src={bodyRollingStudio} />
+        <img alt="Body Rolling Studio" className="w-full h-full object-cover" src={bodyRollingOrange} />
       </section>
 
       {/* Upgrade Your Experience */}
