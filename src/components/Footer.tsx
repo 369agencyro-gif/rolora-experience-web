@@ -13,27 +13,27 @@ const Footer = () => {
             <h4 className="font-display font-bold uppercase tracking-wide mb-6 text-lg text-primary">SERVICES</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/rolora-facial-glow" className="text-foreground/70 hover:text-primary transition-colors text-sm">
+                <Link to="/services/facial-glow" className="text-foreground/70 hover:text-primary transition-colors text-sm">
                   Rolora Facial Glow™
                 </Link>
               </li>
               <li>
-                <Link to="/rolora-sculpt" className="text-foreground/70 hover:text-primary transition-colors text-sm">
+                <Link to="/services/sculpt" className="text-foreground/70 hover:text-primary transition-colors text-sm">
                   Rolora Sculpt™
                 </Link>
               </li>
               <li>
-                <Link to="/body-rolling" className="text-foreground/70 hover:text-primary transition-colors text-sm">
+                <Link to="/services/body-rolling" className="text-foreground/70 hover:text-primary transition-colors text-sm">
                   Rolora Flow™
                 </Link>
               </li>
               <li>
-                <Link to="/head-spa" className="text-foreground/70 hover:text-primary transition-colors text-sm">
+                <Link to="/services/head-spa" className="text-foreground/70 hover:text-primary transition-colors text-sm">
                   Rolora Head Spa™
                 </Link>
               </li>
               <li>
-                <Link to="/enhancements" className="text-foreground/70 hover:text-primary transition-colors text-sm">
+                <Link to="/services/enhancements" className="text-foreground/70 hover:text-primary transition-colors text-sm">
                   Enhancements
                 </Link>
               </li>
@@ -50,7 +50,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/new-client-offers" className="text-foreground/70 hover:text-primary transition-colors text-sm">
+                <Link to="/intro-offers" className="text-foreground/70 hover:text-primary transition-colors text-sm">
                   New Client Offers
                 </Link>
               </li>
