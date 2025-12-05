@@ -7,7 +7,7 @@ import TreatmentExplorer from "@/components/TreatmentExplorer";
 import SignatureExperience from "@/components/SignatureExperience";
 import WhyRolora from "@/components/WhyRolora";
 import WhatToExpect from "@/components/WhatToExpect";
-import About from "@/components/About";
+import SocialMediaGrid from "@/components/SocialMediaGrid";
 import Services from "@/components/Services";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
@@ -60,11 +60,9 @@ const IndexContent = () => {
         <AnimatedSection delay={100}>
           <SignatureExperience />
         </AnimatedSection>
-        {/* Hidden for now
         <AnimatedSection delay={100}>
-          <About />
+          <SocialMediaGrid />
         </AnimatedSection>
-        */}
         <AnimatedSection delay={100}>
           <WhyRolora />
         </AnimatedSection>
