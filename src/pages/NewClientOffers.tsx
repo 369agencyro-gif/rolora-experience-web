@@ -5,6 +5,10 @@ import BookingButton from "@/components/BookingButton";
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import facialImage from "@/assets/facial-sculpting.jpg";
+import review1 from "@/assets/review-1.png";
+import review2 from "@/assets/review-2.jpg";
+import review3 from "@/assets/review-3.jpg";
+import review4 from "@/assets/review-4.jpg";
 const NewClientOffers = () => {
   return <ServiceLayout>
       {/* Hero Section */}
@@ -140,25 +144,10 @@ const NewClientOffers = () => {
               What our clients are saying
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              {[{
-                name: "K.M.",
-                text: "My skin has never looked this good. The glow lasted for days!"
-              }, {
-                name: "L.P.",
-                text: "I was skeptical but after one session I'm a believer. Absolutely transformative."
-              }, {
-                name: "R.H.",
-                text: "The sculpting is incredible. My jawline looks more defined than ever."
-              }].map((review, i) => (
-                <div key={i} className="p-6 rounded-xl bg-muted/20 border border-border/50 hover:shadow-lg transition-all duration-300">
-                  <div className="flex gap-1 mb-3">
-                    {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-primary text-primary" />)}
-                  </div>
-                  <p className="text-base text-foreground/90 mb-3 leading-relaxed italic">
-                    "{review.text}"
-                  </p>
-                  <p className="text-sm font-semibold text-foreground">— {review.name}</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[review1, review2, review3, review4].map((img, i) => (
+                <div key={i} className="relative aspect-[3/4] overflow-hidden rounded-lg hover:scale-[1.02] transition-transform duration-300">
+                  <img src={img} alt={`Client review ${i + 1}`} className="w-full h-full object-cover" />
                 </div>
               ))}
             </div>
