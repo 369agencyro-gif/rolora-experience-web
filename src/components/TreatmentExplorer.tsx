@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import BookingButton from "@/components/BookingButton";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import bodyRollingMachineNew from "@/assets/body-rolling-machine-new.webp";
+import facialGlowCard from "@/assets/facial-glow-card.jpg";
 import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
 import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
 import serumCloseup1 from "@/assets/serum-closeup-1.jpg";
@@ -22,10 +22,9 @@ const TreatmentExplorer = () => {
 
   const exploreCards = [
     {
-      image: bodyRollingMachineNew,
+      image: facialGlowCard,
       title: "ROLORA FACIAL GLOW™",
-      link: "/services/facial-glow",
-      cropBottom: true
+      link: "/services/facial-glow"
     },
     {
       image: glowCloseup2,
