@@ -15,6 +15,7 @@ import review1 from "@/assets/review-1.png";
 import review3 from "@/assets/review-3.jpg";
 import review6 from "@/assets/review-6.png";
 import review4 from "@/assets/review-4.jpg";
+import serumDropper from "@/assets/serum-dropper.jpg";
 
 const SpecialOffer = () => {
   return (
@@ -147,7 +148,7 @@ const SpecialOffer = () => {
 
       {/* Image Break */}
       <section className="relative h-[50vh] overflow-hidden">
-        <img alt="Glowing Skin" className="w-full h-full object-cover" src={review4} />
+        <img alt="Glowing Skin" className="w-full h-full object-cover" src={serumDropper} />
       </section>
 
       {/* Why This $99 Intro Glow Is a Big Deal */}
