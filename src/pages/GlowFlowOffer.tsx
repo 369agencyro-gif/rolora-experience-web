@@ -81,10 +81,24 @@ const GlowFlowOffer = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img alt="Facial Sculpting" className="w-full h-full object-cover" src={glowCloseup2} />
+              <video
+                src="/videos/glow-flow-video-1.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={glowCloseup3} alt="Body Rolling" className="w-full h-full object-cover" />
+              <video
+                src="/videos/glow-flow-video-2.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
