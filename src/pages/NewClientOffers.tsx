@@ -5,10 +5,6 @@ import BookingButton from "@/components/BookingButton";
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import facialImage from "@/assets/facial-sculpting.jpg";
-import glowingSkin from "@/assets/glowing-skin.jpg";
-import glowingFace from "@/assets/glowing-face.jpg";
-import facialRoom from "@/assets/facial-room.jpg";
-import studioInterior from "@/assets/studio-interior.jpg";
 const NewClientOffers = () => {
   return <ServiceLayout>
       {/* Hero Section */}
@@ -141,27 +137,31 @@ const NewClientOffers = () => {
             </h2>
             
             <p className="text-lg text-foreground/70 mb-12 text-center">
-              See the transformation from ROLORA treatments
+              What our clients are saying
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                <img src={glowingFace} alt="Glowing skin results" className="w-full h-full object-cover" />
-                <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <p className="text-sm font-medium text-foreground">After 1 session</p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[{
+                name: "K.M.",
+                text: "My skin has never looked this good. The glow lasted for days!"
+              }, {
+                name: "L.P.",
+                text: "I was skeptical but after one session I'm a believer. Absolutely transformative."
+              }, {
+                name: "R.H.",
+                text: "The sculpting is incredible. My jawline looks more defined than ever."
+              }].map((review, i) => (
+                <div key={i} className="p-6 rounded-xl bg-muted/20 border border-border/50 hover:shadow-lg transition-all duration-300">
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-primary text-primary" />)}
+                  </div>
+                  <p className="text-base text-foreground/90 mb-3 leading-relaxed italic">
+                    "{review.text}"
+                  </p>
+                  <p className="text-sm font-semibold text-foreground">— {review.name}</p>
                 </div>
-              </div>
-              <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                <img src={glowingSkin} alt="Clear radiant skin" className="w-full h-full object-cover" />
-                <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <p className="text-sm font-medium text-foreground">Series of 3 sessions</p>
-                </div>
-              </div>
+              ))}
             </div>
-
-            <p className="text-xs text-foreground/60 text-center italic">
-              Individual results vary. Photos show real outcomes from consistent treatments.
-            </p>
           </div>
         </div>
       </section>
