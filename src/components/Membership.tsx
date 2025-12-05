@@ -1,8 +1,6 @@
 import BookingButton from "@/components/BookingButton";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
-import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
-import skinTexture from "@/assets/skin-texture-1.jpg";
 
 const Membership = () => {
 
@@ -23,7 +21,7 @@ const Membership = () => {
           {/* First Glow - $99 */}
           <div className="bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl">
             <div className="relative h-48 overflow-hidden">
-              <img src={glowCloseup2} alt="Rolora Facial Glow" className="w-full h-full object-cover" />
+              <video src="/videos/first-glow-offer.mp4" className="w-full h-full object-cover" autoPlay loop muted playsInline />
               <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
               <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold uppercase">
                 Most Popular
@@ -62,7 +60,7 @@ const Membership = () => {
           {/* Glow + Flow Duo - $139 */}
           <div className="bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl">
             <div className="relative h-48 overflow-hidden">
-              <img src={skinTexture} alt="Glow + Flow Duo" className="w-full h-full object-cover" />
+              <video src="/videos/glow-flow-offer.mp4" className="w-full h-full object-cover" autoPlay loop muted playsInline />
               <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
               <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
                 Full Reset
