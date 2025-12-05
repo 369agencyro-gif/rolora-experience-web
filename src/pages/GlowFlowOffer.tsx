@@ -13,7 +13,7 @@ const GlowFlowOffer = () => {
   return <ServiceLayout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <img src={skinTexture} alt="Rolora Glow + Flow Duo" className="absolute inset-0 w-full h-full object-cover" />
+        <img alt="Rolora Glow + Flow Duo" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/ffb50ba2-e3bc-407b-ad0d-c3cb95cd7a66.jpg" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/90"></div>
         
         <div className="relative container max-w-4xl mx-auto text-center px-6 py-20 animate-fade-in">
@@ -81,24 +81,10 @@ const GlowFlowOffer = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <video
-                src="/videos/glow-flow-video-1.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              />
+              <video src="/videos/glow-flow-video-1.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <video
-                src="/videos/glow-flow-video-2.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              />
+              <video src="/videos/glow-flow-video-2.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
