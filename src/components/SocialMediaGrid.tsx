@@ -50,8 +50,8 @@ const SocialMediaGrid = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-4 bg-background/80 backdrop-blur-sm border-border hover:bg-background" />
-            <CarouselNext className="hidden md:flex -right-4 bg-background/80 backdrop-blur-sm border-border hover:bg-background" />
+            <CarouselPrevious className="flex -left-2 md:-left-4 bg-background/80 backdrop-blur-sm border-border hover:bg-background h-8 w-8 md:h-10 md:w-10" />
+            <CarouselNext className="flex -right-2 md:-right-4 bg-background/80 backdrop-blur-sm border-border hover:bg-background h-8 w-8 md:h-10 md:w-10" />
           </Carousel>
         </div>
       </div>
