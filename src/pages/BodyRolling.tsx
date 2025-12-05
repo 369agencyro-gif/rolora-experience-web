@@ -2,11 +2,9 @@ import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
 import bodyImage from "@/assets/body-rolling-hero.webp";
 import bodyRollingMachine from "@/assets/body-rolling-machine-new.webp";
-import glowingSkin from "@/assets/glowing-skin.jpg";
 import bodyRollingTreatment from "@/assets/body-rolling-treatment.webp";
-import bodyRollingTools from "@/assets/body-rolling-tools.webp";
 import Contact from "@/components/Contact";
-import { Star, Plus, Minus, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, Plus } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -21,39 +19,22 @@ const BodyRolling = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
             {/* Left: Image Slider - Full Width */}
             <div className="relative lg:sticky lg:top-24 -mx-6 lg:mx-0">
-              <Carousel opts={{
-              align: "start",
-              loop: true
-            }} plugins={[Autoplay({
-              delay: 3000
-            })]} className="w-full">
-                <CarouselContent>
-                  <CarouselItem>
-                    <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={bodyImage} alt="Rolora Flow body rolling treatment" className="w-full h-full object-cover" />
-                      <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
-                        <div className="flex items-center gap-1.5">
-                          {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
-                          <span className="text-xs font-medium text-foreground/80 ml-1">Sarah M.</span>
-                        </div>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                  <CarouselItem>
-                    <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={bodyRollingTools} alt="Body rolling wooden tools" className="w-full h-full object-cover" />
-                      <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
-                        <div className="flex items-center gap-1.5">
-                          {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
-                          <span className="text-xs font-medium text-foreground/80 ml-1">Jessica T.</span>
-                        </div>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                </CarouselContent>
-                <CarouselPrevious className="left-4 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground" />
-                <CarouselNext className="right-4 bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary hover:text-primary-foreground" />
-              </Carousel>
+              <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
+                <video
+                  src="/videos/body-rolling-hero.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
+                  <div className="flex items-center gap-1.5">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
+                    <span className="text-xs font-medium text-foreground/80 ml-1">Sarah M.</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right: Content */}
