@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import BookingButton from "@/components/BookingButton";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import glowCloseup1 from "@/assets/glow-closeup-1.jpg";
+import bodyRollingMachineNew from "@/assets/body-rolling-machine-new.webp";
 import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
 import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
 import serumCloseup1 from "@/assets/serum-closeup-1.jpg";
@@ -22,9 +22,10 @@ const TreatmentExplorer = () => {
 
   const exploreCards = [
     {
-      image: glowCloseup1,
+      image: bodyRollingMachineNew,
       title: "ROLORA FACIAL GLOW™",
-      link: "/services/facial-glow"
+      link: "/services/facial-glow",
+      cropBottom: true
     },
     {
       image: glowCloseup2,
@@ -90,7 +91,7 @@ const TreatmentExplorer = () => {
                       <img 
                         src={card.image}
                         alt={card.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${card.cropBottom ? 'object-top' : ''}`}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#3B2414]/90 via-[#3B2414]/20 to-transparent transition-opacity duration-300 group-hover:opacity-70" />
                       <div className="absolute bottom-6 left-6 right-6">
