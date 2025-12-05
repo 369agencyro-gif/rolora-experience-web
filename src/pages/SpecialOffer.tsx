@@ -8,14 +8,13 @@ import {
   AccordionItem,
 } from "@/components/ui/accordion";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import review5 from "@/assets/review-5.png";
-import bodyRollingImage from "@/assets/body-rolling-hero.webp";
-import review2 from "@/assets/review-2.jpg";
-import review1 from "@/assets/review-1.png";
-import review3 from "@/assets/review-3.jpg";
-import review6 from "@/assets/review-6.png";
-import review4 from "@/assets/review-4.jpg";
-import serumDropper from "@/assets/serum-dropper.jpg";
+import glowCloseup1 from "@/assets/glow-closeup-1.jpg";
+import skinTexture from "@/assets/skin-texture-1.jpg";
+import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
+import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
+import serumCloseup1 from "@/assets/serum-closeup-1.jpg";
+import serumCloseup2 from "@/assets/serum-closeup-2.jpg";
+import skincareApply from "@/assets/skincare-apply-new.jpg";
 
 const SpecialOffer = () => {
   return (
@@ -23,7 +22,7 @@ const SpecialOffer = () => {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <img 
-          src={review5}
+          src={glowCloseup1}
           alt="ROLORA Facial Glow Treatment"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -95,7 +94,7 @@ const SpecialOffer = () => {
               {/* Glow + Flow Duo Card */}
               <div className="bg-background rounded-2xl overflow-hidden border border-border/50 hover:shadow-lg transition-all duration-300">
                 <div className="relative h-64 overflow-hidden">
-                  <img src={bodyRollingImage} alt="Glow + Flow Duo" className="w-full h-full object-cover" />
+                  <img src={skinTexture} alt="Glow + Flow Duo" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3B2414]/90 via-[#3B2414]/20 to-transparent"></div>
                   <div className="absolute bottom-4 left-6 right-6">
                     <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-1">GLOW + FLOW DUO™</h3>
@@ -120,7 +119,7 @@ const SpecialOffer = () => {
               {/* Lift Renew Card */}
               <div className="bg-background rounded-2xl overflow-hidden border border-border/50 hover:shadow-lg transition-all duration-300">
                 <div className="relative h-64 overflow-hidden">
-                  <img src={review2} alt="View All Treatments" className="w-full h-full object-cover" />
+                  <img src={glowCloseup2} alt="View All Treatments" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3B2414]/90 via-[#3B2414]/20 to-transparent"></div>
                   <div className="absolute bottom-4 left-6 right-6">
                     <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-1">ALL SERVICES</h3>
@@ -148,7 +147,7 @@ const SpecialOffer = () => {
 
       {/* Image Break */}
       <section className="relative h-[50vh] overflow-hidden">
-        <img alt="Glowing Skin" className="w-full h-full object-cover" src={serumDropper} />
+        <img alt="Glowing Skin" className="w-full h-full object-cover" src={serumCloseup1} />
       </section>
 
       {/* Why This $99 Intro Glow Is a Big Deal */}
@@ -257,10 +256,10 @@ const SpecialOffer = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={review1} alt="Rolora Treatment Room" className="w-full h-full object-cover" />
+              <img src={glowCloseup3} alt="Rolora Treatment Room" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={review3} alt="Custom Serum Blends" className="w-full h-full object-cover" />
+              <img src={serumCloseup2} alt="Custom Serum Blends" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -320,14 +319,14 @@ const SpecialOffer = () => {
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                <img src={review6} alt="Happy client after facial" className="w-full h-full object-cover" />
+                <img src={skincareApply} alt="Happy client after facial" className="w-full h-full object-cover" />
                 <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-3 rounded-lg">
                   <p className="text-sm text-foreground/80 italic mb-1">"My skin has never looked this glowy!"</p>
                   <p className="text-xs font-semibold text-primary">— Sarah M.</p>
                 </div>
               </div>
               <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                <img src={review2} alt="Radiant skin client" className="w-full h-full object-cover" />
+                <img src={glowCloseup2} alt="Radiant skin client" className="w-full h-full object-cover" />
                 <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-3 rounded-lg">
                   <p className="text-sm text-foreground/80 italic mb-1">"Finally found my go-to facial spot."</p>
                   <p className="text-xs font-semibold text-primary">— Jessica T.</p>

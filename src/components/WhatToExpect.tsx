@@ -1,5 +1,5 @@
 import BookingButton from "@/components/BookingButton";
-import diverseSkin from "@/assets/facial-mask.jpg";
+import diverseSkin from "@/assets/skin-closeup-dark.jpg";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 

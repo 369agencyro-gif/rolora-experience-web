@@ -1,7 +1,7 @@
 import BookingButton from "@/components/BookingButton";
-import review5 from "@/assets/review-5.png";
-import review6 from "@/assets/review-6.png";
-import review7 from "@/assets/review-7.png";
+import glowCloseup1 from "@/assets/glow-closeup-1.jpg";
+import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
+import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
 
 const StatsSection = () => {
 
@@ -39,7 +39,7 @@ const StatsSection = () => {
             <div className="grid grid-cols-3 gap-6">
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
                 <img 
-                  src={review5} 
+                  src={glowCloseup1} 
                   alt="Facial treatment in progress" 
                   className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -47,7 +47,7 @@ const StatsSection = () => {
               </div>
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
                 <img 
-                  src={review6} 
+                  src={glowCloseup2} 
                   alt="Second cleanse facial treatment" 
                   className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -55,7 +55,7 @@ const StatsSection = () => {
               </div>
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
                 <img 
-                  src={review7} 
+                  src={glowCloseup3} 
                   alt="Glowing skin results" 
                   className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110"
                 />
