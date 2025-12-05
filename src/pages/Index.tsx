@@ -60,9 +60,11 @@ const IndexContent = () => {
         <AnimatedSection delay={100}>
           <SignatureExperience />
         </AnimatedSection>
+        {/* Hidden for now
         <AnimatedSection delay={100}>
           <About />
         </AnimatedSection>
+        */}
         <AnimatedSection delay={100}>
           <WhyRolora />
         </AnimatedSection>
