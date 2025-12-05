@@ -358,7 +358,7 @@ const RoloraReset = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img alt="Clear Radiant Skin" className="w-full h-full object-cover" src={facialGlowTreatment} />
+        <img alt="Clear Radiant Skin" className="w-full h-full object-cover" src="/lovable-uploads/4e227446-7945-4d8c-bdb3-d06599546022.jpg" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
