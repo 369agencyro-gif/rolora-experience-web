@@ -21,18 +21,12 @@ const BodyRolling = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
             {/* Left: Image Slider - Full Width */}
             <div className="relative lg:sticky lg:top-24 -mx-6 lg:mx-0">
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                plugins={[
-                  Autoplay({
-                    delay: 3000,
-                  }),
-                ]}
-                className="w-full"
-              >
+              <Carousel opts={{
+              align: "start",
+              loop: true
+            }} plugins={[Autoplay({
+              delay: 3000
+            })]} className="w-full">
                 <CarouselContent>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
@@ -373,32 +367,24 @@ const BodyRolling = () => {
               BENEFITS YOU'LL FEEL IMMEDIATELY
             </h2>
             
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 1200,
-                }),
-              ]}
-              className="w-full mb-12"
-            >
+            <Carousel opts={{
+            align: "start",
+            loop: true
+          }} plugins={[Autoplay({
+            delay: 1200
+          })]} className="w-full mb-12">
               <CarouselContent>
-                {["Reduced bloat", "Slimmer waist appearance", "Defined legs + arms", "Smoother skin", "Better digestion", "Boosted energy", "Less swelling + water retention", "Muscle relaxation", "Stress relief"].map((benefit, index) => (
-                  <CarouselItem key={benefit} className="md:basis-1/3">
+                {["Reduced bloat", "Slimmer waist appearance", "Defined legs + arms", "Smoother skin", "Better digestion", "Boosted energy", "Less swelling + water retention", "Muscle relaxation", "Stress relief"].map((benefit, index) => <CarouselItem key={benefit} className="md:basis-1/3">
                     <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                      animationDelay: `${index * 0.1}s`
-                    }}>
+                  animationDelay: `${index * 0.1}s`
+                }}>
                       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="relative flex items-center justify-center gap-3">
                         <span className="text-primary text-lg">✦</span>
                         <span className="font-semibold text-center">{benefit}</span>
                       </div>
                     </div>
-                  </CarouselItem>
-                ))}
+                  </CarouselItem>)}
               </CarouselContent>
             </Carousel>
 
@@ -413,7 +399,7 @@ const BodyRolling = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img alt="Body Rolling Results" className="w-full h-full object-cover" src="/lovable-uploads/cc839568-51ce-44e5-a3bd-23003dc4a5e0.jpg" />
+        <img alt="Body Rolling Results" className="w-full h-full object-cover" src="/lovable-uploads/ba9a02ac-f668-4e05-999c-4464918bf2f6.png" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
@@ -438,17 +424,15 @@ const BodyRolling = () => {
             <p className="text-xl mb-12 text-foreground/80">Perfect for anyone who wants to:</p>
             
             <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
-              {["De-bloat", "Sculpt + tighten", "Improve lymphatic flow", "Feel lighter and more energized", "Recover from workouts", "Smooth the appearance of cellulite", "Maintain overall wellness"].map((item, index) => (
-                <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                  animationDelay: `${index * 0.1}s`
-                }}>
+              {["De-bloat", "Sculpt + tighten", "Improve lymphatic flow", "Feel lighter and more energized", "Recover from workouts", "Smooth the appearance of cellulite", "Maintain overall wellness"].map((item, index) => <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative flex items-center gap-4">
                     <span className="text-primary text-xl flex-shrink-0">✔</span>
                     <p className="font-semibold text-foreground">{item}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="flex flex-col items-center gap-4">
