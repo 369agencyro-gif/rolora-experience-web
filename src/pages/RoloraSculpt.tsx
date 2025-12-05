@@ -237,7 +237,7 @@ const RoloraSculpt = () => {
               <img src={serumCloseup1} alt="Sculpting Tools" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={serumCloseup2} alt="Sculpting Results" className="w-full h-full object-cover" />
+              <img alt="Sculpting Results" className="w-full h-full object-cover" src="/lovable-uploads/68e930dd-65ce-442e-9e08-3d19cb1bae75.jpg" />
             </div>
           </div>
         </div>
