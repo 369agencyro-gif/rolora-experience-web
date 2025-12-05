@@ -59,7 +59,7 @@ const SignatureFacialSection = () => {
               <div className="space-y-4">
                 <div className="text-2xl font-bold">
                   <span className="text-primary">Starting at $99</span>
-                  <span className="text-muted-foreground line-through ml-3 text-lg">$140</span>
+                  <span className="text-muted-foreground line-through ml-3 text-lg">$235</span>
                 </div>
                 
                 <p className="text-lg text-foreground/70 leading-relaxed">
