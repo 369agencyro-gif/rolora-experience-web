@@ -10,28 +10,20 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-
 const TimelessLift = () => {
-  return (
-    <ServiceLayout>
+  return <ServiceLayout>
       {/* Hero Section - Full Width Slider */}
       <section className="pb-12 md:pb-20">
         <div className="container px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
             {/* Left: Image Slider - Full Width */}
             <div className="relative lg:sticky lg:top-24 -mx-6 lg:mx-0">
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                plugins={[
-                  Autoplay({
-                    delay: 3000,
-                  }),
-                ]}
-                className="w-full"
-              >
+              <Carousel opts={{
+              align: "start",
+              loop: true
+            }} plugins={[Autoplay({
+              delay: 3000
+            })]} className="w-full">
                 <CarouselContent>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
@@ -108,20 +100,12 @@ const TimelessLift = () => {
 
                 <div className="mt-8 pt-6 space-y-6">
                   <div className="grid gap-4">
-                    {[
-                      "Firm and tighten laxity",
-                      "Lift cheeks, jawline, and facial contours",
-                      "Smooth fine lines and early signs of aging",
-                      "Brighten dull or fatigued skin",
-                      "Support long-term skin health and collagen"
-                    ].map((benefit, i) => (
-                      <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                    {["Firm and tighten laxity", "Lift cheeks, jawline, and facial contours", "Smooth fine lines and early signs of aging", "Brighten dull or fatigued skin", "Support long-term skin health and collagen"].map((benefit, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                           <span className="text-primary text-xs font-bold">✓</span>
                         </div>
                         <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                   <p className="text-base leading-relaxed text-foreground/70 font-light italic pt-4">
                     If they want youthful definition without downtime — this is it.
@@ -325,21 +309,12 @@ const TimelessLift = () => {
                 Clients leave with:
               </p>
               <div className="grid gap-4">
-                {[
-                  "A firmer, more lifted appearance",
-                  "Smoother texture and improved elasticity",
-                  "Reduced puffiness around jawline + cheeks",
-                  "Brighter, more even tone",
-                  "A refreshed, youthful glow",
-                  "Results that compound with consistency"
-                ].map((result, i) => (
-                  <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                {["A firmer, more lifted appearance", "Smoother texture and improved elasticity", "Reduced puffiness around jawline + cheeks", "Brighter, more even tone", "A refreshed, youthful glow", "Results that compound with consistency"].map((result, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <span className="text-primary text-xs font-bold">✓</span>
                     </div>
                     <span className="text-base text-foreground/80 font-light tracking-wide">{result}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
             
@@ -360,38 +335,30 @@ const TimelessLift = () => {
               BENEFITS YOU'LL FEEL IMMEDIATELY
             </h2>
             
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 1200,
-                }),
-              ]}
-              className="w-full mb-12"
-            >
+            <Carousel opts={{
+            align: "start",
+            loop: true
+          }} plugins={[Autoplay({
+            delay: 1200
+          })]} className="w-full mb-12">
               <CarouselContent>
-                {["Firmer appearance", "Lifted skin", "Smoother texture", "Improved elasticity", "Reduced puffiness", "Brighter tone", "Youthful glow", "Enhanced radiance", "Contoured jawline"].map((benefit, index) => (
-                  <CarouselItem key={benefit} className="md:basis-1/3">
+                {["Firmer appearance", "Lifted skin", "Smoother texture", "Improved elasticity", "Reduced puffiness", "Brighter tone", "Youthful glow", "Enhanced radiance", "Contoured jawline"].map((benefit, index) => <CarouselItem key={benefit} className="md:basis-1/3">
                     <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                      animationDelay: `${index * 0.1}s`
-                    }}>
+                  animationDelay: `${index * 0.1}s`
+                }}>
                       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="relative flex items-center justify-center gap-3">
                         <span className="text-primary text-lg">✦</span>
                         <span className="font-semibold text-center">{benefit}</span>
                       </div>
                     </div>
-                  </CarouselItem>
-                ))}
+                  </CarouselItem>)}
               </CarouselContent>
             </Carousel>
 
             <p className="text-2xl font-bold text-center animate-fade-in" style={{
-              animationDelay: "0.9s"
-            }}>
+            animationDelay: "0.9s"
+          }}>
               Your skin lifts — time reverses.
             </p>
           </div>
@@ -470,7 +437,7 @@ const TimelessLift = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img alt="Anti-aging Results" className="w-full h-full object-cover" src={facialGlowTreatment} />
+        <img alt="Anti-aging Results" className="w-full h-full object-cover" src="/lovable-uploads/1b28c85c-8af0-471d-9f71-dd6ad0545856.jpg" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
@@ -495,24 +462,15 @@ const TimelessLift = () => {
             <p className="text-xl mb-12 text-foreground/80">LIFT RENEW™ is ideal for clients who want to:</p>
             
             <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
-              {[
-                "Firm and tighten laxity",
-                "Lift cheeks, jawline, and facial contours",
-                "Smooth fine lines and early signs of aging",
-                "Brighten dull or fatigued skin",
-                "Support long-term skin health and collagen",
-                "Youthful definition without downtime"
-              ].map((item, index) => (
-                <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                  animationDelay: `${index * 0.1}s`
-                }}>
+              {["Firm and tighten laxity", "Lift cheeks, jawline, and facial contours", "Smooth fine lines and early signs of aging", "Brighten dull or fatigued skin", "Support long-term skin health and collagen", "Youthful definition without downtime"].map((item, index) => <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative flex items-center gap-4">
                     <span className="text-primary text-xl flex-shrink-0">✔</span>
                     <p className="font-semibold text-foreground">{item}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="flex flex-col items-center gap-4">
@@ -555,8 +513,6 @@ const TimelessLift = () => {
       </section>
 
       <Contact />
-    </ServiceLayout>
-  );
+    </ServiceLayout>;
 };
-
 export default TimelessLift;
