@@ -12,7 +12,6 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
 const HeadSpa = () => {
   return <ServiceLayout>
       {/* Hero Section - Full Width Slider */}
@@ -21,18 +20,12 @@ const HeadSpa = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
             {/* Left: Image Slider - Full Width */}
             <div className="relative lg:sticky lg:top-24 -mx-6 lg:mx-0">
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                plugins={[
-                  Autoplay({
-                    delay: 3000,
-                  }),
-                ]}
-                className="w-full"
-              >
+              <Carousel opts={{
+              align: "start",
+              loop: true
+            }} plugins={[Autoplay({
+              delay: 3000
+            })]} className="w-full">
                 <CarouselContent>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
@@ -263,10 +256,10 @@ const HeadSpa = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={gridImage1} alt="Head Spa Treatment Room" className="w-full h-full object-cover" />
+              <img alt="Head Spa Treatment Room" className="w-full h-full object-cover" src="/lovable-uploads/1d10dd95-45d4-465a-911f-ea523c723373.jpg" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={gridImage2} alt="Head Spa Treatment" className="w-full h-full object-cover" />
+              <img alt="Head Spa Treatment" className="w-full h-full object-cover" src="/lovable-uploads/b8d9f0be-ab9e-4ae2-ae8e-82ba679c1a8f.png" />
             </div>
           </div>
         </div>
@@ -373,32 +366,24 @@ const HeadSpa = () => {
               BENEFITS YOU'LL FEEL IMMEDIATELY
             </h2>
             
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 1200,
-                }),
-              ]}
-              className="w-full mb-12"
-            >
+            <Carousel opts={{
+            align: "start",
+            loop: true
+          }} plugins={[Autoplay({
+            delay: 1200
+          })]} className="w-full mb-12">
               <CarouselContent>
-                {["Reduced tension headaches", "Deep relaxation", "Improved scalp health", "Softer, shinier hair", "Stress relief", "Better sleep", "Mental clarity", "Renewed energy", "Healthier hair growth"].map((benefit, index) => (
-                  <CarouselItem key={benefit} className="md:basis-1/3">
+                {["Reduced tension headaches", "Deep relaxation", "Improved scalp health", "Softer, shinier hair", "Stress relief", "Better sleep", "Mental clarity", "Renewed energy", "Healthier hair growth"].map((benefit, index) => <CarouselItem key={benefit} className="md:basis-1/3">
                     <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                      animationDelay: `${index * 0.1}s`
-                    }}>
+                  animationDelay: `${index * 0.1}s`
+                }}>
                       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="relative flex items-center justify-center gap-3">
                         <span className="text-primary text-lg">✦</span>
                         <span className="font-semibold text-center">{benefit}</span>
                       </div>
                     </div>
-                  </CarouselItem>
-                ))}
+                  </CarouselItem>)}
               </CarouselContent>
             </Carousel>
 
@@ -413,7 +398,7 @@ const HeadSpa = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img alt="Head Spa Results" className="w-full h-full object-cover" src="/lovable-uploads/cc839568-51ce-44e5-a3bd-23003dc4a5e0.jpg" />
+        <img alt="Head Spa Results" className="w-full h-full object-cover" src="/lovable-uploads/69065a8d-070b-4c42-82e5-781985c72628.jpg" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
@@ -438,17 +423,15 @@ const HeadSpa = () => {
             <p className="text-xl mb-12 text-foreground/80">Perfect for anyone who wants to:</p>
             
             <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
-              {["Release stress and tension", "Improve scalp health", "Promote hair growth", "Experience deep relaxation", "Relief from headaches", "Better sleep quality", "Mental clarity and focus"].map((item, index) => (
-                <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                  animationDelay: `${index * 0.1}s`
-                }}>
+              {["Release stress and tension", "Improve scalp health", "Promote hair growth", "Experience deep relaxation", "Relief from headaches", "Better sleep quality", "Mental clarity and focus"].map((item, index) => <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative flex items-center gap-4">
                     <span className="text-primary text-xl flex-shrink-0">✔</span>
                     <p className="font-semibold text-foreground">{item}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="flex flex-col items-center gap-4">
@@ -469,7 +452,7 @@ const HeadSpa = () => {
       {/* Two Column CTA Section */}
       <section className="grid md:grid-cols-2">
         <div className="relative h-[300px] md:h-[500px] overflow-hidden">
-          <img src={heroImage1} alt="Head Spa Experience" className="w-full h-full object-cover" />
+          <img alt="Head Spa Experience" className="w-full h-full object-cover" src="/lovable-uploads/24691110-707d-4eb6-8bee-d7f7a64bc241.jpg" />
         </div>
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
@@ -493,5 +476,4 @@ const HeadSpa = () => {
       
     </ServiceLayout>;
 };
-
 export default HeadSpa;
