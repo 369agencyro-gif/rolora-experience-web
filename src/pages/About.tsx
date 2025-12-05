@@ -8,64 +8,48 @@ import { Link } from "react-router-dom";
 const About = () => {
   return <ServiceLayout>
       {/* Hero Section - INTRO */}
-      <section className="relative min-h-[95vh] flex items-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img 
-            alt="Rolora Studio Corona del Mar" 
-            className="w-full h-full object-cover" 
-            src="/lovable-uploads/cee7b05f-d680-4ef4-87e5-4da529cfb90d.jpg" 
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
-        </div>
-        
-        {/* Decorative Elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
-        
-        {/* Content */}
-        <div className="container px-6 relative z-10">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 backdrop-blur-sm border border-primary/30 rounded-full mb-8 animate-fade-in">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Corona del Mar</span>
-            </div>
-
-            <h1 className="font-display text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight leading-[0.9] text-foreground mb-8">
-              Modern<br />
-              <span className="text-primary">Beauty.</span><br />
-              <span className="text-foreground/60">Elevated</span><br />
-              <span className="text-primary">Energy.</span>
-            </h1>
-            
-            <div className="space-y-6 max-w-xl mb-10">
-              <p className="text-lg md:text-xl leading-relaxed text-foreground/70 font-light">
-                A curated space for advanced facials, body sculpting, and scalp treatments — where precision, technology, and energy converge.
-              </p>
-              
-              <div className="flex items-start gap-4 p-5 bg-foreground/5 backdrop-blur-sm border-l-2 border-primary rounded-r-xl">
-                <p className="text-base leading-relaxed text-foreground/80">
-                  Built on the belief that <span className="font-semibold text-primary">glow is energy</span>, and <span className="font-semibold text-primary">energy is beauty</span>.
-                </p>
+      <section className="pb-12 md:pb-20">
+        <div className="container px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
+            {/* Left: Image */}
+            <div className="relative lg:sticky lg:top-24 -mx-6 lg:mx-0">
+              <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
+                <img alt="Rolora Studio Corona del Mar" className="w-full h-full object-cover" src="/lovable-uploads/cee7b05f-d680-4ef4-87e5-4da529cfb90d.jpg" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
               </div>
             </div>
 
-            <p className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-foreground tracking-tight mb-10">
-              Results that speak.<br />
-              <span className="text-primary">Energy you feel.</span>
-            </p>
+            {/* Right: Content */}
+            <div className="space-y-12">
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">About Rolora</span>
+                </div>
 
-            <BookingButton size="lg" className="px-12 py-6 text-sm uppercase font-bold tracking-wider">
-              Book Your Experience
-            </BookingButton>
+                <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[0.95] text-foreground">
+                  Modern Beauty.<br />Elevated Energy.
+                </h1>
+                
+                <div className="space-y-4 pt-4">
+                  <p className="text-lg leading-relaxed text-foreground/80 font-light">
+                    ROLORA is a curated space for advanced facials, body sculpting, and scalp treatments — where precision, technology, and energy converge.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed font-medium text-foreground border-l-2 border-primary pl-6">
+                    Built on the belief that glow is energy, and energy is beauty, ROLORA redefines the modern treatment experience in Corona del Mar.
+                  </p>
+                </div>
+
+                <p className="text-2xl md:text-3xl font-display font-bold text-primary tracking-tight">
+                  Results that speak. Energy you feel.
+                </p>
+
+                <BookingButton size="lg" className="w-full md:w-auto px-12 py-6 text-sm uppercase font-bold tracking-wider">
+                  Book Your Experience
+                </BookingButton>
+              </div>
+            </div>
           </div>
-        </div>
-        
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-xs uppercase tracking-[0.2em] text-foreground/40">Discover</span>
-          <div className="w-px h-8 bg-gradient-to-b from-primary/50 to-transparent" />
         </div>
       </section>
 
