@@ -306,36 +306,35 @@ const SpecialOffer = () => {
         </div>
       </section>
 
-      {/* Real Results Section */}
+      {/* Client Reviews Section */}
       <section className="py-20 bg-background">
         <div className="container px-6">
           <div className="max-w-5xl mx-auto">
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary text-center">
-              See the Glow
+              Client Love
             </h2>
             
             <p className="text-lg text-foreground/70 mb-12 text-center">
-              Results after ROLORA Facial Glow™ treatments
+              Real experiences from our ROLORA community
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                <img src={review6} alt="Glowing skin results" className="w-full h-full object-cover" />
-                <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <p className="text-sm font-medium text-foreground">Results after 1 ROLORA Facial Glow™</p>
+                <img src={review6} alt="Happy client after facial" className="w-full h-full object-cover" />
+                <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-3 rounded-lg">
+                  <p className="text-sm text-foreground/80 italic mb-1">"My skin has never looked this glowy!"</p>
+                  <p className="text-xs font-semibold text-primary">— Sarah M.</p>
                 </div>
               </div>
               <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                <img src={review2} alt="Clear radiant skin" className="w-full h-full object-cover" />
-                <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <p className="text-sm font-medium text-foreground">Series of 3 sessions, 4 weeks apart</p>
+                <img src={review2} alt="Radiant skin client" className="w-full h-full object-cover" />
+                <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-sm px-4 py-3 rounded-lg">
+                  <p className="text-sm text-foreground/80 italic mb-1">"Finally found my go-to facial spot."</p>
+                  <p className="text-xs font-semibold text-primary">— Jessica T.</p>
                 </div>
               </div>
             </div>
 
-            <p className="text-xs text-foreground/60 text-center italic">
-              Individual results vary. Photos are for educational purposes and show real outcomes from consistent treatments.
-            </p>
           </div>
         </div>
       </section>
