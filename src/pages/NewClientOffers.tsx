@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/accordion";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import facialImage from "@/assets/facial-sculpting.jpg";
-import bodyRollingImage from "@/assets/body-rolling-hero.webp";
 import glowingSkin from "@/assets/glowing-skin.jpg";
 import glowingFace from "@/assets/glowing-face.jpg";
 import facialRoom from "@/assets/facial-room.jpg";
@@ -40,7 +39,14 @@ const NewClientOffers = () => {
             {/* First Glow - $99 */}
             <div className="bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl">
               <div className="relative h-48 overflow-hidden">
-                <img src={glowingFace} alt="Rolora Facial Glow" className="w-full h-full object-cover" />
+                <video 
+                  src="/videos/first-glow-offer.mp4" 
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
                 <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold uppercase">
                   Most Popular
@@ -79,7 +85,14 @@ const NewClientOffers = () => {
             {/* Glow + Flow Duo - $139 */}
             <div className="bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl">
               <div className="relative h-48 overflow-hidden">
-                <img src={bodyRollingImage} alt="Glow + Flow Duo" className="w-full h-full object-cover" />
+                <video 
+                  src="/videos/glow-flow-offer.mp4" 
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
                 <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
                   Full Reset
