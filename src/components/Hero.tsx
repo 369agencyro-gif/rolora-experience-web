@@ -68,7 +68,7 @@ const Hero = () => {
                 </h1>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <BookingButton variant="cta" size="lg" className="text-lg">
+                  <BookingButton variant="brown" size="lg" className="text-lg">
                     BOOK YOUR APPOINTMENT
                   </BookingButton>
                 </div>

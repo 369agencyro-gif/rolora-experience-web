@@ -47,7 +47,7 @@ const Membership = () => {
                 ))}
               </div>
 
-              <BookingButton size="lg" className="w-full px-6 py-4 text-xs uppercase font-bold tracking-wide mb-4">
+              <BookingButton variant="brown" size="lg" className="w-full px-6 py-4 text-xs uppercase font-bold tracking-wide mb-4">
                 BOOK FIRST GLOW — $99
               </BookingButton>
               
@@ -86,7 +86,7 @@ const Membership = () => {
                 ))}
               </div>
 
-              <BookingButton size="lg" className="w-full px-6 py-4 text-xs uppercase font-bold tracking-wide mb-4">
+              <BookingButton variant="brown" size="lg" className="w-full px-6 py-4 text-xs uppercase font-bold tracking-wide mb-4">
                 BOOK THE DUO — $139
               </BookingButton>
               
