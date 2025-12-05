@@ -58,9 +58,9 @@ const About = () => {
       </section>
 
       {/* Section 2 — THE PHILOSOPHY */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+      <section className="pt-32 pb-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#2A1810] via-[#3B2414]/50 via-30% to-background to-60%"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
         
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
