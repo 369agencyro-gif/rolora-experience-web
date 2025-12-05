@@ -22,10 +22,7 @@ const About = () => {
         {/* Content */}
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-10">
-              <div className="w-2 h-2 rounded-full bg-primary" />
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Corona del Mar</span>
-            </div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60 mb-4 md:mb-6">Corona del Mar</p>
 
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[1] text-white mb-8">
               Modern Beauty.<br />
@@ -40,20 +37,10 @@ const About = () => {
               Built on the belief that <span className="text-primary font-medium">glow is energy</span>, and <span className="text-primary font-medium">energy is beauty</span>.
             </p>
 
-            <p className="text-2xl md:text-3xl font-display font-bold text-primary tracking-tight mb-10">
+            <p className="text-2xl md:text-3xl font-display font-bold text-primary tracking-tight">
               Results that speak. Energy you feel.
             </p>
-
-            <BookingButton size="lg" className="px-12 py-6 text-sm uppercase font-bold tracking-wider">
-              Book Your Experience
-            </BookingButton>
           </div>
-        </div>
-        
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-xs uppercase tracking-[0.2em] text-white/40">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-primary/50 to-transparent" />
         </div>
       </section>
 
