@@ -1,7 +1,6 @@
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
-import glowCloseup1 from "@/assets/glow-closeup-1.jpg";
-import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
+import facialGlowTreatment from "@/assets/facial-glow-treatment.jpg";
 import facialFoam from "@/assets/facial-foam.jpg";
 import skincareApply from "@/assets/skincare-apply-new.jpg";
 import skinCloseupDark from "@/assets/skin-closeup-dark.jpg";
@@ -28,7 +27,7 @@ const RoloraReset = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={glowCloseup1} alt="Rolora Reset chemical peel" className="w-full h-full object-cover" />
+                      <img src="/lovable-uploads/78b4698f-9ca8-4b54-b999-afb10088c2f9.jpg" alt="Rolora Reset chemical peel" className="w-full h-full object-cover" />
                       <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -39,7 +38,7 @@ const RoloraReset = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={glowCloseup2} alt="Clear radiant skin" className="w-full h-full object-cover" />
+                      <img src={facialGlowTreatment} alt="Clear radiant skin" className="w-full h-full object-cover" />
                       <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -359,7 +358,7 @@ const RoloraReset = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img alt="Clear Radiant Skin" className="w-full h-full object-cover" src={glowCloseup2} />
+        <img alt="Clear Radiant Skin" className="w-full h-full object-cover" src={facialGlowTreatment} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
