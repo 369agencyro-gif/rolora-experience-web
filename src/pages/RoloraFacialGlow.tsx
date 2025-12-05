@@ -1,7 +1,7 @@
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
 import glowCloseup1 from "@/assets/glow-closeup-1.jpg";
-import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
+import facialGlowTreatment from "@/assets/facial-glow-treatment.jpg";
 import serumCloseup1 from "@/assets/serum-closeup-1.jpg";
 import serumCloseup2 from "@/assets/serum-closeup-2.jpg";
 import skincareApply from "@/assets/skincare-apply-new.jpg";
@@ -39,7 +39,7 @@ const RoloraFacialGlow = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={glowCloseup2} alt="Glowing skin results" className="w-full h-full object-cover" />
+                      <img src={facialGlowTreatment} alt="Glowing skin results" className="w-full h-full object-cover" />
                       <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -410,7 +410,7 @@ const RoloraFacialGlow = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img src={glowCloseup2} alt="Glowing Results" className="w-full h-full object-cover" />
+        <img src={facialGlowTreatment} alt="Glowing Results" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter">
