@@ -64,14 +64,14 @@ const WhatToExpect = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
               <div className="max-w-2xl">
-                <p className="text-xs uppercase tracking-widest mb-3 text-primary font-bold">
-                  NEWPORT BEACH
-                </p>
                 <h3 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 uppercase tracking-tight leading-tight text-white">
-                  Where Great Skin Meets Good Vibes
+                  WHERE SKIN TRANSFORMATION MEETS ENERGY RESET
                 </h3>
-                <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed">
-                  Our open-concept studio brings your vibe up and helps your skin thrive.
+                <p className="text-base md:text-lg text-white/90 mb-2 leading-relaxed">
+                  Transform your skin. Reset your energy.
+                </p>
+                <p className="text-sm uppercase tracking-widest mb-6 text-primary font-bold">
+                  The Rolora experience, elevated.
                 </p>
                 <BookingButton size="lg" className="px-12 py-6 text-sm uppercase font-bold tracking-wider">
                   BOOK YOUR VISIT
