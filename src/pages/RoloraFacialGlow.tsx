@@ -11,32 +11,24 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-
 const RoloraFacialGlow = () => {
-  return (
-    <ServiceLayout>
+  return <ServiceLayout>
       {/* Hero Section - Full Width Slider */}
       <section className="pb-12 md:pb-20">
         <div className="container px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
             {/* Left: Image Slider - Full Width */}
             <div className="relative lg:sticky lg:top-24 -mx-6 lg:mx-0">
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                plugins={[
-                  Autoplay({
-                    delay: 3000,
-                  }),
-                ]}
-                className="w-full"
-              >
+              <Carousel opts={{
+              align: "start",
+              loop: true
+            }} plugins={[Autoplay({
+              delay: 3000
+            })]} className="w-full">
                 <CarouselContent>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={glowCloseup1} alt="Rolora Facial Glow treatment" className="w-full h-full object-cover" />
+                      <img alt="Rolora Facial Glow treatment" className="w-full h-full object-cover" src="/lovable-uploads/78b4698f-9ca8-4b54-b999-afb10088c2f9.jpg" />
                       <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -162,19 +154,28 @@ const RoloraFacialGlow = () => {
                   <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-6 text-center">BOOST YOUR GLOW (OPTIONAL)</h3>
                   <p className="text-center text-foreground/70 mb-6">Pair your Rolora Glow with boosters for even more radiance:</p>
                   <div className="space-y-3">
-                    {[
-                      { name: "Hydra Infusion", price: "$55" },
-                      { name: "Red Light Therapy", price: "$50" },
-                      { name: "Microderm Polish", price: "$55" },
-                      { name: "Glow Peel", price: "$65" },
-                      { name: "Microcurrent Lift", price: "$55" },
-                      { name: "Cryo Lift Boost", price: "$45" }
-                    ].map((booster, i) => (
-                      <div key={i} className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors">
+                    {[{
+                    name: "Hydra Infusion",
+                    price: "$55"
+                  }, {
+                    name: "Red Light Therapy",
+                    price: "$50"
+                  }, {
+                    name: "Microderm Polish",
+                    price: "$55"
+                  }, {
+                    name: "Glow Peel",
+                    price: "$65"
+                  }, {
+                    name: "Microcurrent Lift",
+                    price: "$55"
+                  }, {
+                    name: "Cryo Lift Boost",
+                    price: "$45"
+                  }].map((booster, i) => <div key={i} className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors">
                         <span className="font-medium text-foreground">{booster.name}</span>
                         <span className="text-lg font-bold text-primary">{booster.price}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
               </div>
@@ -409,11 +410,7 @@ const RoloraFacialGlow = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img 
-          src={glowCloseup2} 
-          alt="Glowing Results"
-          className="w-full h-full object-cover"
-        />
+        <img src={glowCloseup2} alt="Glowing Results" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter">
@@ -431,38 +428,30 @@ const RoloraFacialGlow = () => {
               BENEFITS YOU'LL FEEL IMMEDIATELY
             </h2>
             
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 1200,
-                }),
-              ]}
-              className="w-full mb-12"
-            >
+            <Carousel opts={{
+            align: "start",
+            loop: true
+          }} plugins={[Autoplay({
+            delay: 1200
+          })]} className="w-full mb-12">
               <CarouselContent>
-                {["Instantly smoother, brighter, softer skin", "Glass-skin luminosity", "Reduced texture + refined pores", "Hydrated, juicy, dewy finish", "Better product absorption", "Makeup sits flawlessly"].map((benefit, index) => (
-                  <CarouselItem key={benefit} className="md:basis-1/3">
+                {["Instantly smoother, brighter, softer skin", "Glass-skin luminosity", "Reduced texture + refined pores", "Hydrated, juicy, dewy finish", "Better product absorption", "Makeup sits flawlessly"].map((benefit, index) => <CarouselItem key={benefit} className="md:basis-1/3">
                     <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                      animationDelay: `${index * 0.1}s`
-                    }}>
+                  animationDelay: `${index * 0.1}s`
+                }}>
                       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="relative flex items-center justify-center gap-3">
                         <span className="text-primary text-lg">✦</span>
                         <span className="font-semibold text-center">{benefit}</span>
                       </div>
                     </div>
-                  </CarouselItem>
-                ))}
+                  </CarouselItem>)}
               </CarouselContent>
             </Carousel>
 
             <p className="text-2xl font-bold text-center animate-fade-in" style={{
-              animationDelay: "0.9s"
-            }}>
+            animationDelay: "0.9s"
+          }}>
               Your signature Rolora glow — brighter, smoother, and undeniably fresh.
             </p>
           </div>
@@ -482,17 +471,15 @@ const RoloraFacialGlow = () => {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
-              {["First-time clients", "Pre-event glow", "Monthly maintenance", "Brides", "Clients wanting smooth, even, fresh skin fast"].map((item, index) => (
-                <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
-                  animationDelay: `${index * 0.1}s`
-                }}>
+              {["First-time clients", "Pre-event glow", "Monthly maintenance", "Brides", "Clients wanting smooth, even, fresh skin fast"].map((item, index) => <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative flex items-center gap-4">
                     <span className="text-primary text-xl flex-shrink-0">✔</span>
                     <p className="font-semibold text-foreground">{item}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="flex flex-col items-center gap-4">
@@ -533,8 +520,6 @@ const RoloraFacialGlow = () => {
       </section>
 
       <Contact />
-    </ServiceLayout>
-  );
+    </ServiceLayout>;
 };
-
 export default RoloraFacialGlow;
