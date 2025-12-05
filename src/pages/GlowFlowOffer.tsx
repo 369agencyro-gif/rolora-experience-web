@@ -2,10 +2,7 @@ import { Link } from "react-router-dom";
 import { Check, MapPin, Plus, Star } from "lucide-react";
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
-import {
-  AccordionContent,
-  AccordionItem,
-} from "@/components/ui/accordion";
+import { AccordionContent, AccordionItem } from "@/components/ui/accordion";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import review5 from "@/assets/review-5.png";
 import bodyRollingImage from "@/assets/body-rolling-hero.webp";
@@ -13,17 +10,11 @@ import review2 from "@/assets/review-2.jpg";
 import review3 from "@/assets/review-3.jpg";
 import review4 from "@/assets/review-4.jpg";
 import bodyRollingOrange from "@/assets/body-rolling-orange.png";
-
 const GlowFlowOffer = () => {
-  return (
-    <ServiceLayout>
+  return <ServiceLayout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <img 
-          src={bodyRollingImage}
-          alt="Rolora Glow + Flow Duo"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src={bodyRollingImage} alt="Rolora Glow + Flow Duo" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/90"></div>
         
         <div className="relative container max-w-4xl mx-auto text-center px-6 py-20 animate-fade-in">
@@ -42,18 +33,10 @@ const GlowFlowOffer = () => {
           </p>
 
           <div className="mb-10 space-y-3 max-w-xl mx-auto">
-            {[
-              "Sculpting facial to snatch + brighten",
-              "Detoxifying body rolling session",
-              "Lymphatic contouring for face + body",
-              "Enhanced circulation + reduced puffiness",
-              "The full Rolora \"reset\" effect"
-            ].map((item, i) => (
-              <div key={i} className="flex items-center justify-center gap-3">
+            {["Sculpting facial to snatch + brighten", "Detoxifying body rolling session", "Lymphatic contouring for face + body", "Enhanced circulation + reduced puffiness", "The full Rolora \"reset\" effect"].map((item, i) => <div key={i} className="flex items-center justify-center gap-3">
                 <Check className="w-5 h-5 text-primary flex-shrink-0" />
                 <span className="text-base text-foreground/70">{item}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <BookingButton size="lg" className="w-full max-w-md mx-auto md:w-auto px-6 md:px-12 py-4 md:py-6 text-xs md:text-sm uppercase font-bold tracking-wide mb-6">
@@ -77,20 +60,12 @@ const GlowFlowOffer = () => {
             </h2>
             
             <div className="space-y-6">
-              {[
-                "Results you see and feel instantly",
-                "Modern protocols, no fluff, no shortcuts",
-                "Sculpting techniques inspired by European lymphatic methods",
-                "Facial + body integration for full-system glow",
-                "Clean, elevated, minimal environment designed for clarity + reset"
-              ].map((item, i) => (
-                <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+              {["Results you see and feel instantly", "Modern protocols, no fluff, no shortcuts", "Sculpting techniques inspired by European lymphatic methods", "Facial + body integration for full-system glow", "Clean, elevated, minimal environment designed for clarity + reset"].map((item, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <span className="text-primary text-xs font-bold">✓</span>
                   </div>
                   <span className="text-base text-foreground/80 font-light tracking-wide">{item}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="text-center mt-12">
@@ -107,7 +82,7 @@ const GlowFlowOffer = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={review5} alt="Facial Sculpting" className="w-full h-full object-cover" />
+              <img alt="Facial Sculpting" className="w-full h-full object-cover" src="/lovable-uploads/28d7803c-ce78-4533-b26d-e756fcde67b1.jpg" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <img src={bodyRollingImage} alt="Body Rolling" className="w-full h-full object-cover" />
@@ -125,21 +100,12 @@ const GlowFlowOffer = () => {
             </h2>
             
             <div className="space-y-6">
-              {[
-                "A warm welcome + quick intake",
-                "Guided treatment breakdown",
-                "Personalized enhancements available",
-                "Results-focused protocols",
-                "A seamless booking + payment experience",
-                "Post-treatment guidance tailored to your goals"
-              ].map((item, i) => (
-                <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+              {["A warm welcome + quick intake", "Guided treatment breakdown", "Personalized enhancements available", "Results-focused protocols", "A seamless booking + payment experience", "Post-treatment guidance tailored to your goals"].map((item, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <span className="text-primary text-xs font-bold">✓</span>
                   </div>
                   <span className="text-base text-foreground/80 font-light tracking-wide">{item}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="text-center mt-12">
@@ -170,18 +136,25 @@ const GlowFlowOffer = () => {
             </p>
             
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { title: "Cryo Sculpting", desc: "Depuff + define" },
-                { title: "Red Light Therapy", desc: "Soothe + brighten" },
-                { title: "Neck Sculpting", desc: "Lift jawline + neck" },
-                { title: "Oxygen Glow Boost", desc: "Hydration surge" },
-                { title: "Microderm Polish", desc: "Smooth + refine" }
-              ].map((item, i) => (
-                <div key={i} className="p-6 rounded-xl bg-background/50 border border-primary/20 hover:bg-background/80 transition-colors">
+              {[{
+              title: "Cryo Sculpting",
+              desc: "Depuff + define"
+            }, {
+              title: "Red Light Therapy",
+              desc: "Soothe + brighten"
+            }, {
+              title: "Neck Sculpting",
+              desc: "Lift jawline + neck"
+            }, {
+              title: "Oxygen Glow Boost",
+              desc: "Hydration surge"
+            }, {
+              title: "Microderm Polish",
+              desc: "Smooth + refine"
+            }].map((item, i) => <div key={i} className="p-6 rounded-xl bg-background/50 border border-primary/20 hover:bg-background/80 transition-colors">
                   <h3 className="font-display text-xl font-bold mb-2 text-foreground">{item.title}</h3>
                   <p className="text-foreground/70">{item.desc}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="text-center mt-12">
@@ -202,22 +175,21 @@ const GlowFlowOffer = () => {
             </h2>
             
             <div className="space-y-8">
-              {[
-                { name: "M.C.", text: "Rolora gave me the best facial I've ever had. Sculpted, glowing, and truly lifted." },
-                { name: "A.L.", text: "The Glow + Flow combo is unreal. I left feeling snatched AND lighter." }
-              ].map((review, i) => (
-                <div key={i} className="p-8 rounded-xl bg-muted/20 border border-border/50 hover:shadow-lg transition-all duration-300">
+              {[{
+              name: "M.C.",
+              text: "Rolora gave me the best facial I've ever had. Sculpted, glowing, and truly lifted."
+            }, {
+              name: "A.L.",
+              text: "The Glow + Flow combo is unreal. I left feeling snatched AND lighter."
+            }].map((review, i) => <div key={i} className="p-8 rounded-xl bg-muted/20 border border-border/50 hover:shadow-lg transition-all duration-300">
                   <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, j) => (
-                      <Star key={j} className="w-5 h-5 fill-primary text-primary" />
-                    ))}
+                    {[...Array(5)].map((_, j) => <Star key={j} className="w-5 h-5 fill-primary text-primary" />)}
                   </div>
                   <p className="text-lg text-foreground/90 mb-4 leading-relaxed italic">
                     "{review.text}"
                   </p>
                   <p className="text-sm font-semibold text-foreground">— {review.name}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="text-center mt-12">
@@ -352,8 +324,6 @@ const GlowFlowOffer = () => {
           </div>
         </div>
       </section>
-    </ServiceLayout>
-  );
+    </ServiceLayout>;
 };
-
 export default GlowFlowOffer;
