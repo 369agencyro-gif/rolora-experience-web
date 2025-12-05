@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ButtonHTMLAttributes, useEffect } from "react";
 
 interface BookingButtonProps extends Omit<ButtonHTMLAttributes<HTMLAnchorElement>, 'href' | 'target' | 'rel'> {
-  variant?: "default" | "cta" | "outline" | "secondary" | "ghost" | "link";
+  variant?: "default" | "cta" | "outline" | "secondary" | "ghost" | "link" | "brown";
   size?: "default" | "sm" | "lg" | "icon";
   children: React.ReactNode;
 }
@@ -40,6 +40,7 @@ const BookingButton = ({ children, variant = "cta", size = "lg", className = "",
         variant === "secondary" ? "bg-primary/90 text-primary-foreground hover:bg-primary" :
         variant === "ghost" ? "hover:bg-primary/10 hover:text-primary" :
         variant === "link" ? "text-primary underline-offset-4 hover:underline" :
+        variant === "brown" ? "bg-[#3B2414] text-white hover:bg-[#4a2d1a] shadow-lg hover:shadow-xl hover:scale-[1.02]" :
         "bg-primary text-primary-foreground hover:bg-primary/80 shadow-sm hover:shadow-md"
       } ${
         size === "lg" ? "h-14 px-10 py-4 text-base" :
@@ -50,8 +51,8 @@ const BookingButton = ({ children, variant = "cta", size = "lg", className = "",
       style={{ 
         textDecoration: 'none', 
         display: 'inline-flex',
-        background: 'hsl(var(--primary))',
-        color: 'hsl(var(--primary-foreground))',
+        background: variant === "brown" ? '#3B2414' : 'hsl(var(--primary))',
+        color: variant === "brown" ? '#ffffff' : 'hsl(var(--primary-foreground))',
         border: '0px',
         borderRadius: '0rem'
       }}
