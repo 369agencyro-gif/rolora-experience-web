@@ -2,10 +2,13 @@ import { Link } from "react-router-dom";
 import BookingButton from "@/components/BookingButton";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import treatment1 from "@/assets/treatment-1.jpg";
-import treatment2 from "@/assets/treatment-2.jpg";
-import treatment3 from "@/assets/treatment-3.jpg";
-import treatment4 from "@/assets/treatment-4.jpg";
+import glowCloseup1 from "@/assets/glow-closeup-1.jpg";
+import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
+import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
+import serumCloseup1 from "@/assets/serum-closeup-1.jpg";
+import serumCloseup2 from "@/assets/serum-closeup-2.jpg";
+import skincareApply from "@/assets/skincare-apply-new.jpg";
+import facialFoam from "@/assets/facial-foam.jpg";
 
 const TreatmentExplorer = () => {
   const treatments = [
@@ -19,37 +22,37 @@ const TreatmentExplorer = () => {
 
   const exploreCards = [
     {
-      image: treatment1,
+      image: glowCloseup1,
       title: "ROLORA FACIAL GLOW™",
       link: "/services/facial-glow"
     },
     {
-      image: treatment2,
+      image: glowCloseup2,
       title: "ROLORA SCULPT™",
       link: "/services/sculpt"
     },
     {
-      image: treatment3,
+      image: glowCloseup3,
       title: "ROLORA RESET™",
       link: "/services/reset"
     },
     {
-      image: treatment4,
+      image: serumCloseup1,
       title: "TIMELESS LIFT™",
       link: "/services/timeless-lift"
     },
     {
-      image: treatment1,
+      image: serumCloseup2,
       title: "EXPRESS SCULPT™",
       link: "/services/express-sculpt"
     },
     {
-      image: treatment2,
+      image: skincareApply,
       title: "ROLORA FLOW™",
       link: "/services/body-rolling"
     },
     {
-      image: treatment3,
+      image: facialFoam,
       title: "ROLORA HEAD SPA",
       link: "/services/head-spa"
     }

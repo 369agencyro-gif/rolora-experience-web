@@ -1,6 +1,6 @@
-import facialRoom from "@/assets/facial-room.jpg";
-import glowingSkin from "@/assets/glowing-skin.jpg";
-import facialSculpting from "@/assets/facial-sculpting.jpg";
+import glowCloseup1 from "@/assets/glow-closeup-1.jpg";
+import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
+import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
@@ -15,18 +15,18 @@ const About = () => {
 
   const transformations = [
     {
-      beforeImage: facialRoom,
-      afterImage: glowingSkin,
+      beforeImage: glowCloseup1,
+      afterImage: glowCloseup2,
       caption: "Emma after Chemical Peel"
     },
     {
-      beforeImage: facialSculpting,
-      afterImage: glowingSkin,
+      beforeImage: glowCloseup3,
+      afterImage: glowCloseup2,
       caption: "Jennifer after The Really Good Facial™, Radio Frequency"
     },
     {
-      beforeImage: facialRoom,
-      afterImage: facialSculpting,
+      beforeImage: glowCloseup1,
+      afterImage: glowCloseup3,
       caption: "Thi Thi after The Really Good Facial™"
     }
   ];

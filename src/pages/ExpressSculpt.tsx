@@ -1,10 +1,10 @@
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
-import facialTreatment1 from "@/assets/facial-treatment-1.png";
-import facialTreatment2 from "@/assets/facial-treatment-2.png";
-import facialTreatment3 from "@/assets/facial-treatment-3.png";
-import facialTreatment4 from "@/assets/facial-treatment-4.png";
-import facialTreatment5 from "@/assets/facial-treatment-5.png";
+import glowCloseup1 from "@/assets/glow-closeup-1.jpg";
+import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
+import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
+import serumCloseup1 from "@/assets/serum-closeup-1.jpg";
+import serumCloseup2 from "@/assets/serum-closeup-2.jpg";
 import Contact from "@/components/Contact";
 import { Clock, Sparkles, Zap, Award, Star, Plus } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
@@ -36,7 +36,7 @@ const ExpressSculpt = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={facialTreatment1} alt="Express Sculpt treatment" className="w-full h-full object-cover" />
+                      <img src={glowCloseup1} alt="Express Sculpt treatment" className="w-full h-full object-cover" />
                       <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -47,7 +47,7 @@ const ExpressSculpt = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={facialTreatment4} alt="Quick glow results" className="w-full h-full object-cover" />
+                      <img src={glowCloseup2} alt="Quick glow results" className="w-full h-full object-cover" />
                       <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -250,10 +250,10 @@ const ExpressSculpt = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={facialTreatment2} alt="Express Treatment Products" className="w-full h-full object-cover" />
+              <img src={serumCloseup1} alt="Express Treatment Products" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={facialTreatment5} alt="Quick Glow Results" className="w-full h-full object-cover" />
+              <img src={serumCloseup2} alt="Quick Glow Results" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -394,7 +394,7 @@ const ExpressSculpt = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img alt="Instant Glow Results" className="w-full h-full object-cover" src={facialTreatment4} />
+        <img alt="Instant Glow Results" className="w-full h-full object-cover" src={glowCloseup2} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
@@ -450,7 +450,7 @@ const ExpressSculpt = () => {
       {/* Two Column CTA Section */}
       <section className="grid md:grid-cols-2">
         <div className="relative h-[300px] md:h-[500px] overflow-hidden">
-          <img src={facialTreatment3} alt="Express Sculpt Experience" className="w-full h-full object-cover" />
+          <img src={glowCloseup3} alt="Express Sculpt Experience" className="w-full h-full object-cover" />
         </div>
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
