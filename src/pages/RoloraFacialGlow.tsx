@@ -410,7 +410,7 @@ const RoloraFacialGlow = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img src={facialGlowTreatment} alt="Glowing Results" className="w-full h-full object-cover" />
+        <img alt="Glowing Results" className="w-full h-full object-cover" src="/lovable-uploads/960b01f1-fe16-4910-8d46-a5f0f93fcdf0.jpg" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter">
