@@ -8,59 +8,71 @@ import { Link } from "react-router-dom";
 const About = () => {
   return <ServiceLayout>
       {/* Hero Section - INTRO */}
-      <section className="py-16 md:py-24">
-        <div className="container px-6">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
-            {/* Left: Content */}
-            <div className="space-y-8 order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-                <span className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">About Rolora</span>
-              </div>
+      <section className="relative min-h-[95vh] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            alt="Rolora Studio Corona del Mar" 
+            className="w-full h-full object-cover" 
+            src="/lovable-uploads/cee7b05f-d680-4ef4-87e5-4da529cfb90d.jpg" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+        </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
+        
+        {/* Content */}
+        <div className="container px-6 relative z-10">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 backdrop-blur-sm border border-primary/30 rounded-full mb-8 animate-fade-in">
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Corona del Mar</span>
+            </div>
 
-              <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-[0.95] text-foreground">
-                Modern Beauty.<br />
-                <span className="text-primary">Elevated Energy.</span>
-              </h1>
-              
-              <p className="text-lg leading-relaxed text-foreground/70 max-w-lg">
+            <h1 className="font-display text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight leading-[0.9] text-foreground mb-8">
+              Modern<br />
+              <span className="text-primary">Beauty.</span><br />
+              <span className="text-foreground/60">Elevated</span><br />
+              <span className="text-primary">Energy.</span>
+            </h1>
+            
+            <div className="space-y-6 max-w-xl mb-10">
+              <p className="text-lg md:text-xl leading-relaxed text-foreground/70 font-light">
                 A curated space for advanced facials, body sculpting, and scalp treatments — where precision, technology, and energy converge.
               </p>
               
-              <div className="border-l-2 border-primary pl-6 py-2">
+              <div className="flex items-start gap-4 p-5 bg-foreground/5 backdrop-blur-sm border-l-2 border-primary rounded-r-xl">
                 <p className="text-base leading-relaxed text-foreground/80">
                   Built on the belief that <span className="font-semibold text-primary">glow is energy</span>, and <span className="font-semibold text-primary">energy is beauty</span>.
                 </p>
               </div>
-
-              <p className="text-xl md:text-2xl font-display font-bold text-foreground/90 tracking-tight">
-                Results that speak. Energy you feel.
-              </p>
-
-              <BookingButton size="lg" className="px-10 py-5 text-sm uppercase font-bold tracking-wider">
-                Book Your Experience
-              </BookingButton>
             </div>
 
-            {/* Right: Image */}
-            <div className="relative order-1 lg:order-2">
-              <div className="relative overflow-hidden rounded-2xl aspect-[3/4]">
-                <img 
-                  alt="Rolora Studio Corona del Mar" 
-                  className="w-full h-full object-cover" 
-                  src="/lovable-uploads/cee7b05f-d680-4ef4-87e5-4da529cfb90d.jpg" 
-                />
-              </div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-              <div className="absolute -top-4 -right-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
-            </div>
+            <p className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-foreground tracking-tight mb-10">
+              Results that speak.<br />
+              <span className="text-primary">Energy you feel.</span>
+            </p>
+
+            <BookingButton size="lg" className="px-12 py-6 text-sm uppercase font-bold tracking-wider">
+              Book Your Experience
+            </BookingButton>
           </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+          <span className="text-xs uppercase tracking-[0.2em] text-foreground/40">Discover</span>
+          <div className="w-px h-8 bg-gradient-to-b from-primary/50 to-transparent" />
         </div>
       </section>
 
       {/* Section 2 — THE PHILOSOPHY */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
         
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
