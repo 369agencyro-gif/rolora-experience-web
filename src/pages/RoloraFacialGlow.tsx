@@ -306,7 +306,7 @@ const RoloraFacialGlow = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={serumCloseup1} alt="Facial Treatment" className="w-full h-full object-cover" />
+              <img alt="Facial Treatment" className="w-full h-full object-cover" src="/lovable-uploads/696d8cd4-b12c-4712-abf5-6616bc526186.jpg" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <img src={serumCloseup2} alt="Skincare Products" className="w-full h-full object-cover" />
