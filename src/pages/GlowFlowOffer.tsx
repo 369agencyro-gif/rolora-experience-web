@@ -298,21 +298,57 @@ const GlowFlowOffer = () => {
               Choose your first Rolora experience.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
-              <div className="p-6 rounded-xl bg-muted/20 border border-primary/20">
-                <h3 className="font-display text-2xl font-bold mb-4 text-foreground">THE FIRST GLOW</h3>
-                <p className="text-3xl font-bold text-primary mb-4">$99</p>
-                <BookingButton size="sm" className="w-full px-4 py-3 text-xs uppercase font-bold">
-                  BOOK THE FIRST GLOW
-                </BookingButton>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+              {/* First Glow Card */}
+              <div className="bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl">
+                <div className="relative h-48 overflow-hidden">
+                  <video src="/videos/first-glow-offer.mp4" className="w-full h-full object-cover" autoPlay loop muted playsInline />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold uppercase">
+                    Most Popular
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-2xl font-bold mb-2 text-foreground">THE FIRST GLOW</h3>
+                  <p className="text-4xl font-bold text-primary mb-4">$99</p>
+                  <div className="space-y-2 mb-6 text-left">
+                    {["Signature glass-skin facial", "Custom serum blends", "50 minutes"].map((item, i) => (
+                      <div key={i} className="flex items-center gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                        <span className="text-sm text-foreground/70">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <BookingButton size="sm" className="w-full px-4 py-3 text-xs uppercase font-bold">
+                    BOOK THE FIRST GLOW
+                  </BookingButton>
+                </div>
               </div>
 
-              <div className="p-6 rounded-xl bg-primary/10 border-2 border-primary">
-                <h3 className="font-display text-2xl font-bold mb-4 text-foreground">GLOW + FLOW DUO</h3>
-                <p className="text-3xl font-bold text-primary mb-4">$139</p>
-                <BookingButton size="sm" className="w-full px-4 py-3 text-xs uppercase font-bold">
-                  BOOK THE DUO
-                </BookingButton>
+              {/* Glow + Flow Card */}
+              <div className="bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl">
+                <div className="relative h-48 overflow-hidden">
+                  <video src="/videos/glow-flow-offer.mp4" className="w-full h-full object-cover" autoPlay loop muted playsInline />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                  <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
+                    Full Reset
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-2xl font-bold mb-2 text-foreground">GLOW + FLOW DUO</h3>
+                  <p className="text-4xl font-bold text-primary mb-4">$139</p>
+                  <div className="space-y-2 mb-6 text-left">
+                    {["Sculpting facial + body rolling", "Full lymphatic reset", "75-90 minutes"].map((item, i) => (
+                      <div key={i} className="flex items-center gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                        <span className="text-sm text-foreground/70">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <BookingButton size="sm" className="w-full px-4 py-3 text-xs uppercase font-bold">
+                    BOOK THE DUO
+                  </BookingButton>
+                </div>
               </div>
             </div>
 
