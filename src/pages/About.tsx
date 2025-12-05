@@ -5,10 +5,8 @@ import facialSculpting from "@/assets/facial-sculpting.jpg";
 import glowingFace from "@/assets/glowing-face.jpg";
 import bodyRollingTreatment from "@/assets/body-rolling-treatment.webp";
 import { Link } from "react-router-dom";
-
 const About = () => {
-  return (
-    <ServiceLayout>
+  return <ServiceLayout>
       {/* Hero Section - INTRO */}
       <section className="pb-12 md:pb-20">
         <div className="container px-6">
@@ -16,11 +14,7 @@ const About = () => {
             {/* Left: Image */}
             <div className="relative lg:sticky lg:top-24 -mx-6 lg:mx-0">
               <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                <img 
-                  src={studioInterior}
-                  alt="Rolora Studio Corona del Mar"
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Rolora Studio Corona del Mar" className="w-full h-full object-cover" src="/lovable-uploads/cee7b05f-d680-4ef4-87e5-4da529cfb90d.jpg" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
               </div>
             </div>
@@ -98,18 +92,10 @@ const About = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img 
-                src={glowingFace}
-                alt="Glowing skin results" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
-              />
+              <img src={glowingFace} alt="Glowing skin results" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img 
-                src={facialSculpting}
-                alt="Rolora facial treatment" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
-              />
+              <img src={facialSculpting} alt="Rolora facial treatment" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
         </div>
@@ -176,11 +162,7 @@ const About = () => {
 
       {/* Full Width Image */}
       <section className="relative h-[50vh] overflow-hidden">
-        <img 
-          src={bodyRollingTreatment}
-          alt="Body rolling treatment"
-          className="w-full h-full object-cover"
-        />
+        <img src={bodyRollingTreatment} alt="Body rolling treatment" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </section>
 
@@ -200,8 +182,6 @@ const About = () => {
           </div>
         </div>
       </section>
-    </ServiceLayout>
-  );
+    </ServiceLayout>;
 };
-
 export default About;
