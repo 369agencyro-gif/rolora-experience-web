@@ -146,9 +146,7 @@ const RoloraReset = () => {
         
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-8 text-primary">
-              ✧ WHAT TO EXPECT
-            </h2>
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-8 text-primary"> WHAT TO EXPECT</h2>
             
             <p className="text-xl leading-relaxed mb-16 text-center">
               A precise, results-first approach:
