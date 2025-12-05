@@ -1,80 +1,120 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { useState } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useRef } from "react";
+import { X, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import heroImage from "@/assets/hero-image.jpg";
-import aboutImage from "@/assets/about-image.jpg";
-import facialImage from "@/assets/service-facial.jpg";
-import massageImage from "@/assets/service-massage.jpg";
-import bodyImage from "@/assets/service-body.jpg";
-import facialRoomImage from "@/assets/facial-room.jpg";
-import glowingSkinImage from "@/assets/glowing-skin.jpg";
-import facialSculptingImage from "@/assets/facial-sculpting.jpg";
-import skincareProductsImage from "@/assets/skincare-products.jpg";
 
-const galleryCategories = {
+// New gallery images
+import galleryFacialMassage from "@/assets/gallery-facial-massage.jpg";
+import galleryBodyRolling1 from "@/assets/gallery-body-rolling-1.png";
+import galleryBodyRolling2 from "@/assets/gallery-body-rolling-2.png";
+import galleryGlow1 from "@/assets/gallery-glow-1.jpg";
+import galleryGlow2 from "@/assets/gallery-glow-2.jpg";
+import galleryGlow3 from "@/assets/gallery-glow-3.jpg";
+
+type MediaItem = {
+  src: string;
+  alt: string;
+  category: string;
+  type: "image" | "video";
+};
+
+const galleryCategories: Record<string, MediaItem[]> = {
   all: [
-    { src: heroImage, alt: "Rolora luxury spa interior", category: "Spa" },
-    { src: facialRoomImage, alt: "Premium facial treatment room", category: "Facial" },
-    { src: glowingSkinImage, alt: "Radiant glowing skin results", category: "Results" },
-    { src: facialSculptingImage, alt: "Expert facial sculpting technique", category: "Facial" },
-    { src: skincareProductsImage, alt: "Luxury skincare products", category: "Products" },
-    { src: aboutImage, alt: "Premium skincare products display", category: "Products" },
-    { src: facialImage, alt: "Signature facial treatment experience", category: "Facial" },
-    { src: massageImage, alt: "Therapeutic massage session", category: "Body" },
-    { src: bodyImage, alt: "Body treatment ritual", category: "Body" },
+    { src: "/videos/gallery-facial-1.mp4", alt: "Facial massage technique", category: "Facial", type: "video" },
+    { src: galleryFacialMassage, alt: "Expert facial massage", category: "Facial", type: "image" },
+    { src: galleryBodyRolling1, alt: "Body rolling session", category: "Body", type: "image" },
+    { src: "/videos/gallery-facial-2.mp4", alt: "Face massage transformation", category: "Facial", type: "video" },
+    { src: galleryGlow1, alt: "Glowing skin results", category: "Results", type: "image" },
+    { src: galleryBodyRolling2, alt: "Rolora Flow treatment", category: "Body", type: "image" },
+    { src: galleryGlow2, alt: "Post-treatment glow", category: "Results", type: "image" },
+    { src: galleryGlow3, alt: "Radiant skin", category: "Results", type: "image" },
   ],
   facial: [
-    { src: facialRoomImage, alt: "Premium facial treatment room", category: "Facial" },
-    { src: facialSculptingImage, alt: "Expert facial sculpting technique", category: "Facial" },
-    { src: facialImage, alt: "Signature facial treatment experience", category: "Facial" },
+    { src: "/videos/gallery-facial-1.mp4", alt: "Facial massage technique", category: "Facial", type: "video" },
+    { src: galleryFacialMassage, alt: "Expert facial massage", category: "Facial", type: "image" },
+    { src: "/videos/gallery-facial-2.mp4", alt: "Face massage transformation", category: "Facial", type: "video" },
   ],
   body: [
-    { src: massageImage, alt: "Therapeutic massage session", category: "Body" },
-    { src: bodyImage, alt: "Body treatment ritual", category: "Body" },
-  ],
-  products: [
-    { src: skincareProductsImage, alt: "Luxury skincare products", category: "Products" },
-    { src: aboutImage, alt: "Premium skincare products display", category: "Products" },
-  ],
-  spa: [
-    { src: heroImage, alt: "Rolora luxury spa interior", category: "Spa" },
-    { src: facialRoomImage, alt: "Premium facial treatment room", category: "Spa" },
+    { src: galleryBodyRolling1, alt: "Body rolling session", category: "Body", type: "image" },
+    { src: galleryBodyRolling2, alt: "Rolora Flow treatment", category: "Body", type: "image" },
   ],
   results: [
-    { src: glowingSkinImage, alt: "Radiant glowing skin results", category: "Results" },
+    { src: galleryGlow1, alt: "Glowing skin results", category: "Results", type: "image" },
+    { src: galleryGlow2, alt: "Post-treatment glow", category: "Results", type: "image" },
+    { src: galleryGlow3, alt: "Radiant skin", category: "Results", type: "image" },
   ],
 };
 
 type CategoryKey = keyof typeof galleryCategories;
 
+const VideoCard = ({ src, alt }: { src: string; alt: string }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  return (
+    <div className="relative w-full h-full" onClick={togglePlay}>
+      <video
+        ref={videoRef}
+        src={src}
+        className="w-full h-full object-cover"
+        loop
+        muted
+        playsInline
+      />
+      {!isPlaying && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+          <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center">
+            <Play className="w-8 h-8 text-foreground ml-1" fill="currentColor" />
+          </div>
+        </div>
+      )}
+      {isPlaying && (
+        <div className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+          <Pause className="w-5 h-5 text-white" fill="currentColor" />
+        </div>
+      )}
+    </div>
+  );
+};
+
 const FullGallery = () => {
   const [activeFilter, setActiveFilter] = useState<CategoryKey>("all");
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
-  const currentGalleryImages = galleryCategories[activeFilter];
+  const currentGalleryItems = galleryCategories[activeFilter];
 
   const openLightbox = (index: number) => {
-    setSelectedImageIndex(index);
+    setSelectedIndex(index);
     setIsLightboxOpen(true);
   };
 
   const closeLightbox = () => {
     setIsLightboxOpen(false);
-    setSelectedImageIndex(null);
+    setSelectedIndex(null);
   };
 
   const goToPrevious = () => {
-    if (selectedImageIndex !== null) {
-      setSelectedImageIndex((selectedImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length);
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex - 1 + currentGalleryItems.length) % currentGalleryItems.length);
     }
   };
 
   const goToNext = () => {
-    if (selectedImageIndex !== null) {
-      setSelectedImageIndex((selectedImageIndex + 1) % currentGalleryImages.length);
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex + 1) % currentGalleryItems.length);
     }
   };
 
@@ -82,8 +122,6 @@ const FullGallery = () => {
     { key: "all", label: "All" },
     { key: "facial", label: "Facial Treatments" },
     { key: "body", label: "Body Treatments" },
-    { key: "products", label: "Products" },
-    { key: "spa", label: "Spa Interior" },
     { key: "results", label: "Results" },
   ];
 
@@ -132,25 +170,31 @@ const FullGallery = () => {
         <section className="py-20 bg-background">
           <div className="container px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-              {currentGalleryImages.map((image, index) => (
+              {currentGalleryItems.map((item, index) => (
                 <button
                   key={index}
-                  onClick={() => openLightbox(index)}
-                  className="group relative overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in shadow-soft hover:shadow-elegant transition-elegant cursor-pointer"
+                  onClick={() => item.type === "image" && openLightbox(index)}
+                  className="group relative overflow-hidden rounded-2xl aspect-[4/5] animate-fade-in shadow-soft hover:shadow-elegant transition-elegant cursor-pointer"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover transition-elegant group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-elegant" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-elegant">
-                    <p className="text-sm font-semibold uppercase tracking-wider mb-1 text-accent-foreground">
-                      {image.category}
-                    </p>
-                    <p className="text-base">{image.alt}</p>
-                  </div>
+                  {item.type === "video" ? (
+                    <VideoCard src={item.src} alt={item.alt} />
+                  ) : (
+                    <>
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        className="w-full h-full object-cover transition-elegant group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-elegant" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-elegant">
+                        <p className="text-sm font-semibold uppercase tracking-wider mb-1 text-primary">
+                          {item.category}
+                        </p>
+                        <p className="text-base">{item.alt}</p>
+                      </div>
+                    </>
+                  )}
                 </button>
               ))}
             </div>
@@ -160,9 +204,8 @@ const FullGallery = () => {
         {/* Lightbox Modal */}
         <Dialog open={isLightboxOpen} onOpenChange={setIsLightboxOpen}>
           <DialogContent className="max-w-[95vw] w-full h-[95vh] p-0 bg-black/95 border-none">
-            {selectedImageIndex !== null && (
+            {selectedIndex !== null && currentGalleryItems[selectedIndex]?.type === "image" && (
               <div className="relative w-full h-full flex items-center justify-center">
-                {/* Close Button */}
                 <button
                   onClick={closeLightbox}
                   className="absolute top-4 right-4 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-smooth"
@@ -170,7 +213,6 @@ const FullGallery = () => {
                   <X className="w-6 h-6" />
                 </button>
 
-                {/* Previous Button */}
                 <button
                   onClick={goToPrevious}
                   className="absolute left-4 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-smooth"
@@ -178,26 +220,23 @@ const FullGallery = () => {
                   <ChevronLeft className="w-8 h-8" />
                 </button>
 
-                {/* Image */}
                 <div className="w-full h-full flex flex-col items-center justify-center p-12">
                   <img
-                    src={currentGalleryImages[selectedImageIndex].src}
-                    alt={currentGalleryImages[selectedImageIndex].alt}
+                    src={currentGalleryItems[selectedIndex].src}
+                    alt={currentGalleryItems[selectedIndex].alt}
                     className="max-w-full max-h-[80vh] object-contain"
                   />
                   
-                  {/* Image Info */}
                   <div className="mt-6 text-center">
-                    <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-2">
-                      {currentGalleryImages[selectedImageIndex].category}
+                    <p className="text-primary font-semibold uppercase tracking-wider text-sm mb-2">
+                      {currentGalleryItems[selectedIndex].category}
                     </p>
                     <p className="text-white text-lg">
-                      {currentGalleryImages[selectedImageIndex].alt}
+                      {currentGalleryItems[selectedIndex].alt}
                     </p>
                   </div>
                 </div>
 
-                {/* Next Button */}
                 <button
                   onClick={goToNext}
                   className="absolute right-4 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-smooth"
@@ -205,9 +244,8 @@ const FullGallery = () => {
                   <ChevronRight className="w-8 h-8" />
                 </button>
 
-                {/* Image Counter */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/10 px-4 py-2 rounded-full text-white text-sm">
-                  {selectedImageIndex + 1} / {currentGalleryImages.length}
+                  {selectedIndex + 1} / {currentGalleryItems.length}
                 </div>
               </div>
             )}
