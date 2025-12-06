@@ -20,7 +20,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60 mb-4 md:mb-6">Corona del Mar</p>
 
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-[0.15em] leading-[1] text-white mb-8">
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[1] text-white mb-8">
               Modern Beauty.<br />
               Elevated Energy.
             </h1>
