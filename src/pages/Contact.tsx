@@ -1,11 +1,13 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/Contact";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 
 const ContactPage = () => {
   return (
     <>
+      <AnnouncementBar />
       <Navigation />
       <main className="min-h-screen">
         <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-secondary/30 to-background">
