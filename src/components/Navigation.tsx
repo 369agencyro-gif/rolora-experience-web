@@ -11,11 +11,13 @@ const Navigation = () => {
   const offers = [{
     name: "First Glow · $99",
     path: "/special-offer",
-    description: "New client exclusive facial"
+    description: "New client exclusive facial",
+    savings: "Save $80"
   }, {
     name: "Glow + Flow Duo · $139",
     path: "/glow-flow-offer",
-    description: "Facial + body rolling combo"
+    description: "Facial + body rolling combo",
+    savings: "Save $40"
   }];
   const facialServices = [{
     name: "Rolora Facial Glow™",
@@ -198,10 +200,11 @@ const Navigation = () => {
                         <Link 
                           key={idx} 
                           to={offer.path} 
-                          className="block py-1.5 text-sm text-foreground/80 hover:text-accent transition-smooth" 
+                          className="flex items-center justify-between py-1.5 text-sm text-foreground/80 hover:text-accent transition-smooth" 
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                          {offer.name}
+                          <span>{offer.name}</span>
+                          <span className="text-xs font-semibold text-accent">{offer.savings}</span>
                         </Link>
                       ))}
                     </div>
