@@ -80,90 +80,6 @@ const SpecialOffer = () => {
         </div>
       </section>
 
-      {/* Other Offers Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center text-foreground">
-              Or Explore Our Other New Client Offers
-            </h2>
-            <p className="text-lg text-foreground/70 mb-12 text-center">
-              Not sure which offer is right for you? Check out these exclusive new client experiences.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Glow + Flow Duo Card */}
-              <div className="bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl">
-                <div className="relative h-48 overflow-hidden">
-                  <video src="/videos/glow-flow-offer.mp4" className="w-full h-full object-cover" autoPlay loop muted playsInline />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-                  <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
-                    Full Reset
-                  </div>
-                </div>
-                <div className="p-8">
-                  <h3 className="font-display text-3xl font-bold mb-2 text-foreground">GLOW + FLOW DUO</h3>
-                  <div className="text-5xl font-bold text-primary mb-4">$139</div>
-                  <p className="text-sm text-foreground/60 mb-6">Face + Body Combo</p>
-                  
-                  <div className="space-y-3 mb-8 text-left">
-                    {["Sculpting facial", "Body rolling session", "Full lymphatic reset", "Enhanced circulation", "75-90 minutes"].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3">
-                        <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                        <span className="text-sm text-foreground/70">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <BookingButton size="lg" className="w-full px-6 py-4 text-xs uppercase font-bold tracking-wide mb-4">
-                    BOOK THE DUO — $139
-                  </BookingButton>
-                  
-                  <Link to="/glow-flow-offer" className="block text-sm text-primary hover:text-primary/80 font-semibold underline text-center">
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-
-              {/* All Services Card */}
-              <div className="bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl">
-                <div className="relative h-48 overflow-hidden">
-                  <video src="/videos/facial-massage-1.mp4" className="w-full h-full object-cover" autoPlay loop muted playsInline />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
-                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold uppercase">
-                    Full Menu
-                  </div>
-                </div>
-                <div className="p-8">
-                  <h3 className="font-display text-3xl font-bold mb-2 text-foreground">ALL SERVICES</h3>
-                  <div className="text-5xl font-bold text-primary mb-4">$115+</div>
-                  <p className="text-sm text-foreground/60 mb-6">Explore Our Full Menu</p>
-                  
-                  <div className="space-y-3 mb-8 text-left">
-                    {["Signature facials", "Body rolling treatments", "Premium experiences", "Express services", "Custom packages"].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3">
-                        <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                        <span className="text-sm text-foreground/70">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <Link to="/">
-                    <BookingButton size="lg" className="w-full px-6 py-4 text-xs uppercase font-bold tracking-wide mb-4">
-                      VIEW ALL SERVICES
-                    </BookingButton>
-                  </Link>
-                  
-                  <Link to="/intro-offers" className="block text-sm text-primary hover:text-primary/80 font-semibold underline text-center">
-                    See All Offers
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Image Break */}
       <section className="relative h-[50vh] overflow-hidden">
         <img alt="Glowing Skin" className="w-full h-full object-cover" src={serumCloseup1} />
@@ -428,6 +344,90 @@ const SpecialOffer = () => {
               <BookingButton size="lg" className="w-full max-w-md mx-auto md:w-auto px-6 md:px-12 py-4 md:py-6 text-xs md:text-sm uppercase font-bold tracking-wide">
                 BOOK MY $99 GLOW
               </BookingButton>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Other Offers Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center text-foreground">
+              Or Explore Our Other New Client Offers
+            </h2>
+            <p className="text-lg text-foreground/70 mb-12 text-center">
+              Not sure which offer is right for you? Check out these exclusive new client experiences.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Glow + Flow Duo Card */}
+              <div className="bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl">
+                <div className="relative h-48 overflow-hidden">
+                  <video src="/videos/glow-flow-offer.mp4" className="w-full h-full object-cover" autoPlay loop muted playsInline />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                  <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
+                    Full Reset
+                  </div>
+                </div>
+                <div className="p-8">
+                  <h3 className="font-display text-3xl font-bold mb-2 text-foreground">GLOW + FLOW DUO</h3>
+                  <div className="text-5xl font-bold text-primary mb-4">$139</div>
+                  <p className="text-sm text-foreground/60 mb-6">Face + Body Combo</p>
+                  
+                  <div className="space-y-3 mb-8 text-left">
+                    {["Sculpting facial", "Body rolling session", "Full lymphatic reset", "Enhanced circulation", "75-90 minutes"].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                        <span className="text-sm text-foreground/70">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <BookingButton size="lg" className="w-full px-6 py-4 text-xs uppercase font-bold tracking-wide mb-4">
+                    BOOK THE DUO — $139
+                  </BookingButton>
+                  
+                  <Link to="/glow-flow-offer" className="block text-sm text-primary hover:text-primary/80 font-semibold underline text-center">
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+
+              {/* All Services Card */}
+              <div className="bg-background/95 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] shadow-xl">
+                <div className="relative h-48 overflow-hidden">
+                  <video src="/videos/facial-massage-1.mp4" className="w-full h-full object-cover" autoPlay loop muted playsInline />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold uppercase">
+                    Full Menu
+                  </div>
+                </div>
+                <div className="p-8">
+                  <h3 className="font-display text-3xl font-bold mb-2 text-foreground">ALL SERVICES</h3>
+                  <div className="text-5xl font-bold text-primary mb-4">$115+</div>
+                  <p className="text-sm text-foreground/60 mb-6">Explore Our Full Menu</p>
+                  
+                  <div className="space-y-3 mb-8 text-left">
+                    {["Signature facials", "Body rolling treatments", "Premium experiences", "Express services", "Custom packages"].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                        <span className="text-sm text-foreground/70">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link to="/">
+                    <BookingButton size="lg" className="w-full px-6 py-4 text-xs uppercase font-bold tracking-wide mb-4">
+                      VIEW ALL SERVICES
+                    </BookingButton>
+                  </Link>
+                  
+                  <Link to="/intro-offers" className="block text-sm text-primary hover:text-primary/80 font-semibold underline text-center">
+                    See All Offers
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
