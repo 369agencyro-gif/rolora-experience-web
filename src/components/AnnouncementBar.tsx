@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,6 @@ const announcements = [
 ];
 
 const AnnouncementBar = () => {
-  const [isVisible, setIsVisible] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -27,10 +26,8 @@ const AnnouncementBar = () => {
     return () => clearInterval(interval);
   }, []);
 
-  if (!isVisible) return null;
-
   return (
-    <div className="bg-primary text-primary-foreground py-2.5 px-4 relative overflow-hidden">
+    <div className="bg-primary text-primary-foreground py-2.5 px-4 overflow-hidden">
       <div className="flex items-center justify-center">
         <Link 
           to={announcements[currentIndex].link}
@@ -41,14 +38,6 @@ const AnnouncementBar = () => {
           {announcements[currentIndex].text}
         </Link>
       </div>
-      
-      <button
-        onClick={() => setIsVisible(false)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 hover:opacity-70 transition-opacity"
-        aria-label="Close announcement"
-      >
-        <X className="w-4 h-4" />
-      </button>
     </div>
   );
 };
