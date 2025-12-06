@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const announcements = [
-  { text: "✨ First Glow Treatment — Only $99", link: "/special-offer" },
+  { text: "✨ First Glow Treatment — $99 (Save $136)", link: "/special-offer" },
   { text: "🔥 Limited Spots Left This Week — Book Now", link: "/special-offer" },
   { text: "💎 Sculpt + Scalp Duo — The Ultimate Reset", link: "/glow-flow-offer" },
-  { text: "⚡ Glow + Flow Combo — $139 (Save $40)", link: "/glow-flow-offer" },
+  { text: "⚡ Glow + Flow Combo — $139 (Save $176)", link: "/glow-flow-offer" },
   { text: "🌟 Join 110,000+ Glowing Clients", link: "/special-offer" },
 ];
 
