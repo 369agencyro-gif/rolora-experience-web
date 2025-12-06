@@ -8,7 +8,8 @@ import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
 import timelessLiftTreatment from "@/assets/timeless-lift-treatment.jpg";
 import serumCloseup2 from "@/assets/serum-closeup-2.jpg";
 import roloraFlowNew from "@/assets/rolora-flow-new.png";
-import facialFoam from "@/assets/facial-foam.jpg";
+import headSpaOilTreatment from "@/assets/head-spa-oil-treatment.jpg";
+import headSpaScalpMassage from "@/assets/head-spa-scalp-massage.jpg";
 
 const TreatmentExplorer = () => {
   const treatments = [
@@ -53,9 +54,14 @@ const TreatmentExplorer = () => {
       cropBottom: true
     },
     {
-      image: facialFoam,
-      title: "ROLORA HEAD SPA",
+      image: headSpaOilTreatment,
+      title: "ROLORA HEAD SPA™",
       link: "/services/head-spa"
+    },
+    {
+      image: headSpaScalpMassage,
+      title: "SCULPT + SCALP RESET™",
+      link: "/services/sculpt-scalp-reset"
     }
   ];
 
