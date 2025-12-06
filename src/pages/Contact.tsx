@@ -72,7 +72,7 @@ const ContactPage = () => {
               <h3 className="font-display font-semibold text-2xl mb-6">Follow Our Journey</h3>
               <div className="flex items-center justify-center gap-4">
                 <a 
-                  href="https://instagram.com" 
+                  href="https://instagram.com/roloraspa" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent/20 hover:scale-110 transition-all duration-300"
@@ -80,7 +80,7 @@ const ContactPage = () => {
                   <Instagram className="w-5 h-5 text-accent" />
                 </a>
                 <a 
-                  href="https://facebook.com" 
+                  href="https://facebook.com/roloraspa" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent/20 hover:scale-110 transition-all duration-300"

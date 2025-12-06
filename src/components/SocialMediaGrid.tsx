@@ -21,11 +21,11 @@ const SocialMediaGrid = () => {
                 FOLLOW ALONG
               </h2>
               <p className="text-2xl md:text-3xl font-display font-extrabold tracking-wide text-foreground">
-                @ROLORASKIN
+                @ROLORASPA
               </p>
             </div>
             <a 
-              href="https://instagram.com/roloraskin" 
+              href="https://instagram.com/roloraspa" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
