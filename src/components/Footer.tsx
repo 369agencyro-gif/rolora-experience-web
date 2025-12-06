@@ -74,19 +74,20 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-foreground/70 text-sm">
-                  Newport Beach, CA
+                  2744 E Coast Hwy Suite 5<br />
+                  Corona Del Mar, CA 92625
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <a href="tel:949-555-0123" className="text-foreground/70 hover:text-primary transition-colors text-sm">
-                  (949) 555-0123
+                <a href="tel:+19492913808" className="text-foreground/70 hover:text-primary transition-colors text-sm">
+                  (949) 291-3808
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <a href="mailto:hello@rolora.com" className="text-foreground/70 hover:text-primary transition-colors text-sm">
-                  hello@rolora.com
+                <a href="mailto:info@roloraspa.com" className="text-foreground/70 hover:text-primary transition-colors text-sm">
+                  info@roloraspa.com
                 </a>
               </li>
             </ul>
