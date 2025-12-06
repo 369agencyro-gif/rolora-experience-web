@@ -1,9 +1,9 @@
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
-import heroImage1 from "@/assets/facial-treatment-1.png";
-import heroImage2 from "@/assets/facial-treatment-2.png";
-import gridImage1 from "@/assets/facial-room.jpg";
-import gridImage2 from "@/assets/service-massage.jpg";
+import heroImage1 from "@/assets/head-spa-comb.jpg";
+import heroImage2 from "@/assets/head-spa-wash.jpg";
+import gridImage1 from "@/assets/head-spa-comb.jpg";
+import gridImage2 from "@/assets/head-spa-wash.jpg";
 import Contact from "@/components/Contact";
 import { Star, Plus, Minus, ChevronLeft, ChevronRight } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
@@ -256,10 +256,10 @@ const HeadSpa = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img alt="Head Spa Treatment Room" className="w-full h-full object-cover" src="/lovable-uploads/1d10dd95-45d4-465a-911f-ea523c723373.jpg" />
+              <img alt="Head Spa Treatment Room" className="w-full h-full object-cover" src={gridImage1} />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img alt="Head Spa Treatment" className="w-full h-full object-cover" src="/lovable-uploads/b8d9f0be-ab9e-4ae2-ae8e-82ba679c1a8f.png" />
+              <img alt="Head Spa Treatment" className="w-full h-full object-cover" src={gridImage2} />
             </div>
           </div>
         </div>
