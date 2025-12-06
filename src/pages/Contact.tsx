@@ -30,8 +30,8 @@ const ContactPage = () => {
                 </div>
                 <h3 className="font-display font-semibold text-lg mb-2">Visit Us</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  123 Serenity Lane<br />
-                  Beverly Hills, CA 90210
+                  2744 E Coast Hwy Suite 5<br />
+                  Corona Del Mar, CA 92625
                 </p>
               </div>
 
@@ -40,8 +40,8 @@ const ContactPage = () => {
                   <Phone className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="font-display font-semibold text-lg mb-2">Call Us</h3>
-                <a href="tel:+13105551234" className="text-muted-foreground text-sm hover:text-accent transition-colors">
-                  (310) 555-1234
+                <a href="tel:+19492913808" className="text-muted-foreground text-sm hover:text-accent transition-colors">
+                  (949) 291-3808
                 </a>
               </div>
 
@@ -50,8 +50,8 @@ const ContactPage = () => {
                   <Mail className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="font-display font-semibold text-lg mb-2">Email Us</h3>
-                <a href="mailto:hello@rolora.com" className="text-muted-foreground text-sm hover:text-accent transition-colors">
-                  hello@rolora.com
+                <a href="mailto:info@roloraspa.com" className="text-muted-foreground text-sm hover:text-accent transition-colors">
+                  info@roloraspa.com
                 </a>
               </div>
 
