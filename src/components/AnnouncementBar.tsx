@@ -42,18 +42,6 @@ const AnnouncementBar = () => {
         </Link>
       </div>
       
-      {/* Progress dots */}
-      <div className="absolute bottom-0.5 left-1/2 -translate-x-1/2 flex gap-1">
-        {announcements.map((_, index) => (
-          <div
-            key={index}
-            className={`w-1 h-1 rounded-full transition-all duration-300 ${
-              index === currentIndex ? "bg-primary-foreground" : "bg-primary-foreground/30"
-            }`}
-          />
-        ))}
-      </div>
-      
       <button
         onClick={() => setIsVisible(false)}
         className="absolute right-4 top-1/2 -translate-y-1/2 hover:opacity-70 transition-opacity"
