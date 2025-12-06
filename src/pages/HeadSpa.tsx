@@ -12,6 +12,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+
 const HeadSpa = () => {
   return <ServiceLayout>
       {/* Hero Section - Full Width Slider */}
@@ -29,7 +30,7 @@ const HeadSpa = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                      <img src={heroImage1} alt="Rolora Head Spa treatment" className="w-full h-full object-cover" />
+                      <img src={heroImage1} alt="Headspa by Rolora treatment" className="w-full h-full object-cover" />
                       <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -61,8 +62,11 @@ const HeadSpa = () => {
               <div className="space-y-6">
                 <div>
                   <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight leading-[1.1] text-foreground">
-                    Rolora Head Spa
+                    HEADSPA BY ROLORA
                   </h1>
+                  <p className="text-xl md:text-2xl font-medium text-primary mb-4">
+                    Purify. Stimulate. Rebalance.
+                  </p>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="flex items-center gap-1">
                       {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
@@ -77,42 +81,26 @@ const HeadSpa = () => {
 
                 <div className="space-y-4 pt-4">
                   <p className="text-lg leading-relaxed text-foreground/80 font-light">
-                    Rolora Head Spa is our signature scalp and relaxation ritual — a transformative experience designed to release tension, stimulate circulation, promote hair health, and leave you feeling completely restored from head to soul.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed font-medium text-foreground border-l-2 border-primary pl-6">
-                    This isn't just a massage. This is precision therapy, intentional touch, and deep relaxation — crafted the Rolora way.
+                    Scalp therapy that restores clarity, energy, and visible glow — starting at the root.
                   </p>
                 </div>
 
                 <BookingButton size="lg" className="w-full md:w-auto px-12 py-6 text-sm uppercase font-bold tracking-wider">
-                  Book Your Session
+                  Book Headspa
                 </BookingButton>
               </div>
 
-              {/* What Is Rolora Head Spa */}
+              {/* What Is It */}
               <div className="pt-8 border-t border-border/50 space-y-6">
-                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">What Is Rolora Head Spa?</h2>
+                <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground">What Is It?</h2>
                 
                 <div className="space-y-4">
                   <p className="text-base leading-relaxed text-foreground/70 font-light">
-                    Rolora Head Spa combines traditional Japanese scalp massage techniques with modern therapeutic technology to revitalize your scalp, stimulate hair follicles, and create a profound sense of relaxation.
+                    Your scalp is where circulation begins. Stress, buildup, and tightness can interrupt your skin's glow and your body's energy flow.
                   </p>
                   <p className="text-base leading-relaxed text-foreground/70 font-light">
-                    Each treatment uses specialized tools and techniques that target pressure points, improve blood flow, and release deep-seated tension in the scalp, neck, and shoulders.
+                    Headspa by Rolora is a structured ritual combining deep scalp exfoliation, clarifying wash, steam infusion, and tension release. Designed to reset: roots, mood, and glow.
                   </p>
-                </div>
-
-                <div className="mt-8 pt-6 space-y-6">
-                  <p className="font-display text-lg font-semibold text-foreground/90">The Result</p>
-                  <div className="grid gap-4">
-                    {["Reduced stress and tension", "Improved scalp circulation", "Enhanced hair growth potential", "Deep relaxation", "Relief from headaches", "Softer, healthier hair"].map((benefit, i) => <div key={i} className="group relative flex items-center gap-4 px-6 py-4 rounded-full border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 hover:to-primary/5 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                          <span className="text-primary text-xs font-bold">✓</span>
-                        </div>
-                        <span className="text-base text-foreground/80 font-light tracking-wide">{benefit}</span>
-                      </div>)}
-                  </div>
                 </div>
               </div>
 
@@ -120,39 +108,26 @@ const HeadSpa = () => {
               <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-gradient-to-br from-background to-muted/30 p-8 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
                 <div className="relative">
-                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-8 text-center">Head Spa Pricing</h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors">
-                      <span className="font-medium text-foreground">Single Session</span>
-                      <span className="text-2xl font-bold text-primary">$85</span>
-                    </div>
-                    <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors">
-                      <div>
-                        <span className="font-medium text-foreground">5-Pack</span>
-                        <span className="text-xs text-foreground/50 ml-2">Save $30</span>
-                      </div>
-                      <span className="text-2xl font-bold text-primary">$395</span>
-                    </div>
-                    <div className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border-2 border-primary/30">
-                      <div>
-                        <span className="font-medium text-foreground">10-Pack</span>
-                        <span className="text-xs text-primary font-semibold ml-2">Best Value</span>
-                      </div>
-                      <span className="text-2xl font-bold text-primary">$750</span>
-                    </div>
+                  <h3 className="font-display text-2xl font-bold tracking-tight text-foreground mb-4 text-center">Headspa by Rolora</h3>
+                  <div className="text-center mb-4">
+                    <span className="text-4xl font-bold text-primary">$155</span>
                   </div>
+                  <p className="text-center text-foreground/70 mb-4">Time: 60 minutes</p>
+                  <p className="text-center text-foreground/70 text-sm">
+                    Includes steam therapy, exfoliation, serum infusion + deep cleanse
+                  </p>
                 </div>
               </div>
 
               <BookingButton size="lg" className="w-full px-12 py-6 text-sm uppercase font-bold tracking-wider">
-                Book Your Session
+                Book Now
               </BookingButton>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Treatment Sequence Section */}
+      {/* How It Works Section */}
       <section className="py-20 relative overflow-hidden">
         {/* Gradient Background Effect */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
@@ -161,25 +136,32 @@ const HeadSpa = () => {
         <div className="container px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-8 text-primary">
-              THE HEAD SPA RITUAL
+              HOW IT WORKS
             </h2>
             
-            <p className="text-xl leading-relaxed mb-16 text-center">
-              Every Head Spa session follows a carefully structured sequence focused on deep relaxation, scalp stimulation, and holistic wellness.
+            <p className="text-xl leading-relaxed mb-16 text-center text-foreground/80">
+              Hydro-exfoliation clears the scalp → steam opens pores → cleansing + nourishing serums reset root health. Meanwhile, circulation + pressure points help your entire energy system unwind.
             </p>
+
+            <div className="relative p-8 rounded-2xl overflow-hidden mb-12">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"></div>
+              <p className="relative text-xl font-medium text-center leading-relaxed text-foreground">
+                Glow starts inside — and starts at the scalp.
+              </p>
+            </div>
 
             <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
               <AccordionItem value="item-1" className="border-none">
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Scalp Analysis & Cleansing
+                      Hydro-Exfoliation
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Deep cleansing of the scalp using therapeutic products to remove buildup and prepare for treatment.
+                  Deep cleansing and exfoliation of the scalp to remove buildup and excess oil.
                 </AccordionContent>
               </AccordionItem>
 
@@ -187,13 +169,13 @@ const HeadSpa = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Pressure Point Massage
+                      Steam Therapy
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Targeted massage of acupressure points to release tension and stimulate circulation.
+                  Gentle steam opens pores and prepares the scalp for deep nourishment.
                 </AccordionContent>
               </AccordionItem>
 
@@ -201,13 +183,13 @@ const HeadSpa = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Scalp Treatment
+                      Serum Infusion
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Application of nourishing treatments customized to your scalp's needs.
+                  Nourishing serums are applied to reset root health and balance scalp environment.
                 </AccordionContent>
               </AccordionItem>
 
@@ -215,38 +197,16 @@ const HeadSpa = () => {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
                     <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Neck & Shoulder Release
+                      Circulation & Pressure Points
                     </h3>
                     <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Extended massage of neck and shoulders to release accumulated stress.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-5" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Steam & Conditioning
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Gentle steam and deep conditioning to lock in moisture and enhance treatment benefits.
+                  Targeted massage stimulates blood flow and helps your entire energy system unwind.
                 </AccordionContent>
               </AccordionItem>
             </AccordionPrimitive.Root>
-
-            <div className="relative mt-16 p-8 rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent"></div>
-              <p className="relative text-xl font-medium text-center leading-relaxed text-foreground">
-                You'll feel deeply relaxed after one session — and see visible improvements with regular treatments.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -265,105 +225,12 @@ const HeadSpa = () => {
         </div>
       </section>
 
-      {/* Why It Works Section */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Gradient Background Effect */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
-        
-        <div className="container px-6 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-16 text-primary">
-              WHY IT WORKS
-            </h2>
-            
-            <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
-              <AccordionItem value="item-1" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Expert Touch Therapy
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Delivers deep relaxation and therapeutic benefits through specialized massage techniques.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-2" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Circulation Boost
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Stimulates blood flow to the scalp, promoting hair health and follicle nourishment.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-3" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Tension Release
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Releases accumulated stress in the scalp, neck, and shoulders where tension commonly builds.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-4" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      Therapeutic Products
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Premium formulations designed to nourish, cleanse, and restore scalp health.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-5" className="border-none">
-                <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
-                    <h3 className="font-display font-semibold text-2xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
-                      The Rolora Method™
-                    </h3>
-                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
-                  Our signature approach combining ancient wisdom with modern technique.
-                </AccordionContent>
-              </AccordionItem>
-            </AccordionPrimitive.Root>
-            
-            <div className="flex justify-center mt-12">
-              <BookingButton variant="cta" size="lg">
-                BOOK NOW
-              </BookingButton>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-background border-t-4 border-foreground">
         <div className="container px-6">
           <div className="max-w-7xl mx-auto">
             <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] animate-fade-in mb-12 text-primary">
-              BENEFITS YOU'LL FEEL IMMEDIATELY
+              BENEFITS
             </h2>
             
             <Carousel opts={{
@@ -373,7 +240,14 @@ const HeadSpa = () => {
             delay: 1200
           })]} className="w-full mb-12">
               <CarouselContent>
-                {["Reduced tension headaches", "Deep relaxation", "Improved scalp health", "Softer, shinier hair", "Stress relief", "Better sleep", "Mental clarity", "Renewed energy", "Healthier hair growth"].map((benefit, index) => <CarouselItem key={benefit} className="md:basis-1/3">
+                {[
+                  "Removes buildup + excess oil",
+                  "Boosts blood flow to nourish roots",
+                  "Relieves scalp tightness + headaches",
+                  "Promotes healthier-looking hair growth",
+                  "Deep relaxation for the nervous system",
+                  "Leaves scalp clean, hair light, mind calm"
+                ].map((benefit, index) => <CarouselItem key={benefit} className="md:basis-1/3">
                     <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
                   animationDelay: `${index * 0.1}s`
                 }}>
@@ -386,12 +260,6 @@ const HeadSpa = () => {
                   </CarouselItem>)}
               </CarouselContent>
             </Carousel>
-
-            <p className="text-2xl font-bold text-center animate-fade-in" style={{
-            animationDelay: "0.9s"
-          }}>
-              Your mind calms — your spirit lifts.
-            </p>
           </div>
         </div>
       </section>
@@ -402,13 +270,13 @@ const HeadSpa = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
-              Relax. Restore. Renew.
+              Reset the scalp. Reset the mind.
             </h3>
           </div>
         </div>
       </section>
 
-      {/* Perfect For Section */}
+      {/* Who Is It For Section */}
       <section className="py-20 relative overflow-hidden bg-background border-t-4 border-foreground">
         {/* Gradient Background Effect */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
@@ -417,13 +285,19 @@ const HeadSpa = () => {
         <div className="container px-6 relative z-10">
           <div className="max-w-5xl mx-auto">
             <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-primary mb-8">
-              WHO IT'S FOR
+              WHO IS IT FOR?
             </h2>
             
-            <p className="text-xl mb-12 text-foreground/80">Perfect for anyone who wants to:</p>
+            <p className="text-xl mb-12 text-foreground/80">Anyone who experiences:</p>
             
             <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
-              {["Release stress and tension", "Improve scalp health", "Promote hair growth", "Experience deep relaxation", "Relief from headaches", "Better sleep quality", "Mental clarity and focus"].map((item, index) => <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
+              {[
+                "Oiliness or buildup at the scalp",
+                "Product residue",
+                "Itchiness or flaking",
+                "Stress + tension in head/neck",
+                "Dull hair lacking vitality"
+              ].map((item, index) => <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
               animationDelay: `${index * 0.1}s`
             }}>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -434,17 +308,78 @@ const HeadSpa = () => {
                 </div>)}
             </div>
 
-            <div className="flex flex-col items-center gap-4">
-              <div className="inline-flex items-center gap-3 px-8 py-5 rounded-full border border-primary/20 bg-background/50 backdrop-blur-sm">
-                <span className="text-primary text-xl">✦</span>
-                <p className="text-lg font-medium text-foreground">
-                  Pairs perfectly with facials for a complete head-to-toe Rolora experience
-                </p>
-              </div>
-              <BookingButton variant="cta" size="lg">
-                BOOK NOW
-              </BookingButton>
+            <div className="relative p-8 rounded-2xl overflow-hidden mb-8">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"></div>
+              <p className="relative text-xl font-medium text-center leading-relaxed text-foreground">
+                If you want cleaner roots and a calmer mind — this is your ritual.
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhance Your Headspa Section */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+        
+        <div className="container px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-8 text-primary">
+              ENHANCE YOUR HEADSPA
+            </h2>
+            
+            <p className="text-xl leading-relaxed mb-16 text-center text-foreground/80">
+              Upgrade your glow
+            </p>
+
+            <div className="space-y-4 mb-12">
+              {[
+                { name: "Red Light Therapy", price: "$50" },
+                { name: "Radio Frequency Lift", price: "$40" },
+                { name: "Deep Nourishing Mask", price: "$30" },
+                { name: "Hot Stone Ritual", price: "$20" }
+              ].map((enhancement, index) => (
+                <div key={enhancement.name} className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+                  <span className="font-medium text-foreground">{enhancement.name}</span>
+                  <span className="text-xl font-bold text-primary">{enhancement.price}</span>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-center text-foreground/70 mb-8">Add any upgrade at checkout.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pairs Well With Section */}
+      <section className="py-20 bg-background border-t-4 border-foreground">
+        <div className="container px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-display text-4xl md:text-5xl font-black uppercase tracking-tight leading-[0.9] text-primary mb-8">
+              PAIRS WELL WITH
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <Link to="/services/rolora-facial-glow" className="group relative px-8 py-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative">
+                  <h3 className="font-display text-xl font-bold text-foreground mb-2">Rolora Facial Glow™</h3>
+                  <p className="text-foreground/70">Complete face + scalp ritual</p>
+                </div>
+              </Link>
+              <Link to="/services/body-rolling" className="group relative px-8 py-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative">
+                  <h3 className="font-display text-xl font-bold text-foreground mb-2">Rolora Flow™</h3>
+                  <p className="text-foreground/70">Body rolling lymphatic reset</p>
+                </div>
+              </Link>
+            </div>
+
+            <p className="text-lg text-foreground/80 mb-8">
+              Scalp + face + body → full energy alignment.
+            </p>
           </div>
         </div>
       </section>
@@ -457,23 +392,105 @@ const HeadSpa = () => {
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
             <h3 className="font-display text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.9] mb-4 md:mb-6 text-primary">
-              THE ROLORA DIFFERENCE
+              RESET THE SCALP. RESET THE MIND.
             </h3>
-            <p className="text-lg md:text-xl mb-6 md:mb-8">
-              Rolora Head Spa is wellness-focused, therapeutic, and elevated — blending ancient techniques with modern expertise to restore your mind and nourish your scalp.
-            </p>
-            <p className="text-lg md:text-xl font-bold mb-6 md:mb-8">
-              This is intentional care. Complete restoration.<br />
-              This is Rolora Head Spa.
+            <p className="text-lg md:text-xl mb-6 md:mb-8 text-foreground/80">
+              Book your Headspa by Rolora™
             </p>
             <BookingButton size="lg" className="w-full px-8 md:px-12 py-6 md:py-7 text-sm md:text-base uppercase font-black tracking-widest rounded-none">
-              Book Head Spa
+              Book Headspa
             </BookingButton>
           </div>
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+        
+        <div className="container px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.9] text-center mb-16 text-primary">
+              FAQ
+            </h2>
+
+            <AccordionPrimitive.Root type="single" collapsible className="w-full space-y-6">
+              <AccordionItem value="faq-1" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Will my hair get wet?
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Yes — the scalp is fully cleansed using water-based exfoliation and targeted serums. Your roots will feel fresh and renewed. We finish you neat and polished enough to continue your day — but this is not a blowout service.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-2" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Can I come with extensions or color-treated hair?
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Absolutely. We tailor pressure, tools, and product placement around extensions, keratin, and recent color so everything remains protected while your scalp gets the reset it needs.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-3" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      How often should I book Headspa?
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  For best maintenance: every 3–4 weeks. For stress relief or buildup concerns: even one session makes a noticeable difference. For events: book within the week to look and feel refreshed.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-4" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Is this the same as a salon hair wash?
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  No — this is a treatment-driven ritual, not hairstyling. It targets scalp health, circulation, and nervous system calm, leaving your hair refreshed — but the true transformation happens beneath the surface.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="faq-5" className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-6 text-left group transition-all">
+                    <h3 className="font-display font-semibold text-xl tracking-wide text-primary group-hover:text-primary/80 transition-colors">
+                      Can it help with flaking, oiliness, or shedding?
+                    </h3>
+                    <Plus className="h-6 w-6 text-primary shrink-0 transition-all duration-200 group-data-[state=open]:rotate-45" />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+                <AccordionContent className="text-foreground/70 text-lg pb-6 leading-relaxed">
+                  Yes. By clearing buildup, stimulating blood flow, and rebalancing the scalp environment, Headspa supports healthier roots over time.
+                </AccordionContent>
+              </AccordionItem>
+            </AccordionPrimitive.Root>
+          </div>
+        </div>
+      </section>
       
     </ServiceLayout>;
 };
+
 export default HeadSpa;
