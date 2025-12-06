@@ -4,6 +4,7 @@ import BookingButton from "@/components/BookingButton";
 import { Menu, X, ChevronDown } from "lucide-react";
 import roloraLogo from "@/assets/rolora-logo.png";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -174,68 +175,109 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {mobileMenuOpen && <div className="lg:hidden pb-4 animate-fade-in max-h-[calc(100vh-4rem)] overflow-y-auto">
             <div className="space-y-1">
-              <Link to="/" className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
+              <Link to="/" className="block py-2 text-sm font-medium text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
                 Home
               </Link>
               
-              <Link to="/about" className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
+              <Link to="/about" className="block py-2 text-sm font-medium text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
                 About
               </Link>
               
-              {/* Offers Section */}
-              <div className="pt-2">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide flex items-center gap-2">
-                  Offers
-                  <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></span>
-                </p>
-                <div className="grid grid-cols-2 gap-1 mt-1">
-                  {offers.map((offer, idx) => <Link key={idx} to={offer.path} className="block pl-2 py-1 text-xs text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
-                      {offer.name}
-                    </Link>)}
-                </div>
-              </div>
-              
-              {/* Facial Services Section */}
-              <div className="pt-2">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                  Facial Services
-                </p>
-                <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 mt-1">
-                  {facialServices.map((service, idx) => <Link key={idx} to={service.path} className="block pl-2 py-0.5 text-xs text-foreground hover:text-accent transition-smooth truncate" onClick={() => setMobileMenuOpen(false)}>
-                      {service.name}
-                    </Link>)}
-                </div>
-              </div>
+              <Accordion type="multiple" className="w-full">
+                {/* Offers Section */}
+                <AccordionItem value="offers" className="border-b-0">
+                  <AccordionTrigger className="py-2 text-sm font-medium hover:no-underline hover:text-accent">
+                    <span className="flex items-center gap-2">
+                      Offers
+                      <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-2">
+                    <div className="space-y-1 pl-3">
+                      {offers.map((offer, idx) => (
+                        <Link 
+                          key={idx} 
+                          to={offer.path} 
+                          className="block py-1.5 text-sm text-foreground/80 hover:text-accent transition-smooth" 
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {offer.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
 
-              {/* Body & Head Spa Row */}
-              <div className="grid grid-cols-2 gap-4 pt-2">
-                <div>
-                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                {/* Facial Services Section */}
+                <AccordionItem value="facial" className="border-b-0">
+                  <AccordionTrigger className="py-2 text-sm font-medium hover:no-underline hover:text-accent">
+                    Facial Services
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-2">
+                    <div className="space-y-1 pl-3">
+                      {facialServices.map((service, idx) => (
+                        <Link 
+                          key={idx} 
+                          to={service.path} 
+                          className="block py-1.5 text-sm text-foreground/80 hover:text-accent transition-smooth" 
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                {/* Body Rollers Section */}
+                <AccordionItem value="body" className="border-b-0">
+                  <AccordionTrigger className="py-2 text-sm font-medium hover:no-underline hover:text-accent">
                     Body Rollers
-                  </p>
-                  {bodyRollers.map((service, idx) => <Link key={idx} to={service.path} className="block pl-2 py-0.5 text-xs text-foreground hover:text-accent transition-smooth mt-1" onClick={() => setMobileMenuOpen(false)}>
-                      {service.name}
-                    </Link>)}
-                </div>
-                <div>
-                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                    Head Spa
-                  </p>
-                  {headSpa.map((service, idx) => <Link key={idx} to={service.path} className="block pl-2 py-0.5 text-xs text-foreground hover:text-accent transition-smooth mt-1" onClick={() => setMobileMenuOpen(false)}>
-                      {service.name}
-                    </Link>)}
-                </div>
-              </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-2">
+                    <div className="space-y-1 pl-3">
+                      {bodyRollers.map((service, idx) => (
+                        <Link 
+                          key={idx} 
+                          to={service.path} 
+                          className="block py-1.5 text-sm text-foreground/80 hover:text-accent transition-smooth" 
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
 
-              {/* Bottom Links */}
-              <div className="flex gap-4 pt-2">
-                <Link to="/gallery" className="text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
-                  Gallery
-                </Link>
-                <Link to="/contact" className="text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
-                  Contact
-                </Link>
-              </div>
+                {/* Head Spa Section */}
+                <AccordionItem value="headspa" className="border-b-0">
+                  <AccordionTrigger className="py-2 text-sm font-medium hover:no-underline hover:text-accent">
+                    Head Spa
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-2">
+                    <div className="space-y-1 pl-3">
+                      {headSpa.map((service, idx) => (
+                        <Link 
+                          key={idx} 
+                          to={service.path} 
+                          className="block py-1.5 text-sm text-foreground/80 hover:text-accent transition-smooth" 
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+
+              <Link to="/gallery" className="block py-2 text-sm font-medium text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
+                Gallery
+              </Link>
+              <Link to="/contact" className="block py-2 text-sm font-medium text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
+                Contact
+              </Link>
               
               <div className="pt-3 pb-1">
                 <BookingButton className="w-full" size="sm">
