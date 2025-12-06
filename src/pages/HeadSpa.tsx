@@ -2,6 +2,7 @@ import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
 import heroImage1 from "@/assets/head-spa-comb.jpg";
 import heroImage2 from "@/assets/head-spa-wash.jpg";
+import heroImage3 from "@/assets/head-spa-scalp-massage.jpg";
 import gridImage1 from "@/assets/head-spa-comb.jpg";
 import gridImage2 from "@/assets/head-spa-wash.jpg";
 import headSpaTreatment from "@/assets/head-spa-treatment.jpg";
@@ -46,6 +47,17 @@ const HeadSpa = () => {
                         <div className="flex items-center gap-1.5">
                           {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
                           <span className="text-xs font-medium text-foreground/80 ml-1">Sophia L.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
+                      <img src={heroImage3} alt="Head spa scalp massage" className="w-full h-full object-cover" />
+                      <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
+                        <div className="flex items-center gap-1.5">
+                          {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
+                          <span className="text-xs font-medium text-foreground/80 ml-1">Rachel M.</span>
                         </div>
                       </div>
                     </div>
