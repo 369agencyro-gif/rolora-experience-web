@@ -64,9 +64,6 @@ const HeadSpa = () => {
                   <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight leading-[1.1] text-foreground">
                     HEADSPA BY ROLORA
                   </h1>
-                  <p className="text-xl md:text-2xl font-medium text-primary mb-4">
-                    Purify. Stimulate. Rebalance.
-                  </p>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="flex items-center gap-1">
                       {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
