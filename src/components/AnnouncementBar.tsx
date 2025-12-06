@@ -27,7 +27,7 @@ const AnnouncementBar = () => {
   }, []);
 
   return (
-    <div className="bg-primary text-primary-foreground py-2.5 px-4 overflow-hidden">
+    <div className="bg-[#3B2414] text-white py-2.5 px-4 overflow-hidden">
       <div className="flex items-center justify-center">
         <Link 
           to={announcements[currentIndex].link}
