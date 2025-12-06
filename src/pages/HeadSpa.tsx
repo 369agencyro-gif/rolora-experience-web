@@ -376,7 +376,7 @@ const HeadSpa = () => {
       {/* Two Column CTA Section */}
       <section className="grid md:grid-cols-2">
         <div className="relative h-[300px] md:h-[500px] overflow-hidden">
-          <img alt="Head Spa Experience" className="w-full h-full object-cover" src="/lovable-uploads/e68e5eb0-6238-4e49-84ac-d924b692c78b.jpg" />
+          <img alt="Head Spa Experience" className="w-full h-full object-cover" src={heroImage2} />
         </div>
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
