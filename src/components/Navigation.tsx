@@ -200,11 +200,13 @@ const Navigation = () => {
                         <Link 
                           key={idx} 
                           to={offer.path} 
-                          className="flex items-center justify-between py-1.5 text-sm text-foreground/80 hover:text-accent transition-smooth" 
+                          className="flex items-center gap-2 py-1.5 text-sm text-foreground/80 hover:text-accent transition-smooth" 
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           <span>{offer.name}</span>
-                          <span className="text-xs font-semibold text-accent">{offer.savings}</span>
+                          <span className="text-[10px] font-bold text-white bg-accent px-1.5 py-0.5 rounded-full animate-pulse">
+                            {offer.savings}
+                          </span>
                         </Link>
                       ))}
                     </div>
