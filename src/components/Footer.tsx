@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
 import BookingButton from "./BookingButton";
-
 const Footer = () => {
-  return (
-    <footer className="bg-background border-t-2 border-primary/20">
+  return <footer className="bg-background border-t-2 border-primary/20">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -32,11 +30,7 @@ const Footer = () => {
                   Rolora Head Spa™
                 </Link>
               </li>
-              <li>
-                <Link to="/services/enhancements" className="text-foreground/70 hover:text-primary transition-colors text-sm">
-                  Enhancements
-                </Link>
-              </li>
+              
             </ul>
           </div>
 
@@ -94,20 +88,10 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex gap-4 mt-6">
-              <a 
-                href="https://instagram.com/roloraspa" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border-2 border-primary/30 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group"
-              >
+              <a href="https://instagram.com/roloraspa" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border-2 border-primary/30 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
                 <Instagram className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
               </a>
-              <a 
-                href="https://facebook.com/roloraspa" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border-2 border-primary/30 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group"
-              >
+              <a href="https://facebook.com/roloraspa" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border-2 border-primary/30 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
                 <Facebook className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
               </a>
             </div>
@@ -119,10 +103,7 @@ const Footer = () => {
             <p className="text-foreground/80 mb-6 text-sm leading-relaxed">
               Ready to experience the Rolora difference? Book your first treatment today.
             </p>
-            <BookingButton 
-              size="lg" 
-              className="w-full mb-4"
-            >
+            <BookingButton size="lg" className="w-full mb-4">
               BOOK NOW
             </BookingButton>
             <p className="text-xs text-foreground/60 italic">
@@ -144,8 +125,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
