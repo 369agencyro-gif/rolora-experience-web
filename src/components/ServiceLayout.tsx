@@ -1,5 +1,6 @@
 import Navigation from "./Navigation";
 import Footer from "./Footer";
+import AnnouncementBar from "./AnnouncementBar";
 
 interface ServiceLayoutProps {
   children: React.ReactNode;
@@ -8,6 +9,7 @@ interface ServiceLayoutProps {
 const ServiceLayout = ({ children }: ServiceLayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
+      <AnnouncementBar />
       <Navigation />
       
       <main className="flex-1">

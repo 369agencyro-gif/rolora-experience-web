@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import { useState, useRef } from "react";
 import { X, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -127,6 +128,7 @@ const FullGallery = () => {
 
   return (
     <>
+      <AnnouncementBar />
       <Navigation />
       <main className="min-h-screen">
         {/* Hero Section */}
