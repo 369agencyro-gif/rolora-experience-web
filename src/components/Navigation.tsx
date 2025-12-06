@@ -204,7 +204,7 @@ const Navigation = () => {
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           <span>{offer.name}</span>
-                          <span className="text-[10px] font-bold text-white bg-accent px-1.5 py-0.5 rounded-full animate-pulse">
+                          <span className="text-[10px] font-bold text-white bg-accent px-1.5 py-0.5 rounded-full">
                             {offer.savings}
                           </span>
                         </Link>
