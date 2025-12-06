@@ -39,10 +39,6 @@ const Navigation = () => {
     name: "Express Sculpt",
     path: "/services/express-sculpt",
     description: "Glow + go"
-  }, {
-    name: "Enhancements",
-    path: "/services/enhancements",
-    description: "Perfect your glow"
   }];
   const bodyRollers = [{
     name: "Rolora Flow™",
