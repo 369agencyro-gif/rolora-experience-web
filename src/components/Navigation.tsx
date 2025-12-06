@@ -172,8 +172,8 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && <div className="lg:hidden pb-4 animate-fade-in">
-            <div className="space-y-2">
+        {mobileMenuOpen && <div className="lg:hidden pb-4 animate-fade-in max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <div className="space-y-1">
               <Link to="/" className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
                 Home
               </Link>
@@ -182,51 +182,62 @@ const Navigation = () => {
                 About
               </Link>
               
-              <div className="space-y-1.5">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2 flex items-center gap-2">
+              {/* Offers Section */}
+              <div className="pt-2">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide flex items-center gap-2">
                   Offers
-                  <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+                  <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></span>
                 </p>
-                {offers.map((offer, idx) => <Link key={idx} to={offer.path} className="block pl-3 py-1 text-xs text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
-                    {offer.name}
-                  </Link>)}
+                <div className="grid grid-cols-2 gap-1 mt-1">
+                  {offers.map((offer, idx) => <Link key={idx} to={offer.path} className="block pl-2 py-1 text-xs text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
+                      {offer.name}
+                    </Link>)}
+                </div>
               </div>
               
-              <div className="space-y-1.5">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">
+              {/* Facial Services Section */}
+              <div className="pt-2">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
                   Facial Services
                 </p>
-                {facialServices.map((service, idx) => <Link key={idx} to={service.path} className="block pl-3 py-1 text-xs text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
-                    {service.name}
-                  </Link>)}
+                <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 mt-1">
+                  {facialServices.map((service, idx) => <Link key={idx} to={service.path} className="block pl-2 py-0.5 text-xs text-foreground hover:text-accent transition-smooth truncate" onClick={() => setMobileMenuOpen(false)}>
+                      {service.name}
+                    </Link>)}
+                </div>
               </div>
 
-              <div className="space-y-1.5">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">
-                  Body Rollers
-                </p>
-                {bodyRollers.map((service, idx) => <Link key={idx} to={service.path} className="block pl-3 py-1 text-xs text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
-                    {service.name}
-                  </Link>)}
+              {/* Body & Head Spa Row */}
+              <div className="grid grid-cols-2 gap-4 pt-2">
+                <div>
+                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                    Body Rollers
+                  </p>
+                  {bodyRollers.map((service, idx) => <Link key={idx} to={service.path} className="block pl-2 py-0.5 text-xs text-foreground hover:text-accent transition-smooth mt-1" onClick={() => setMobileMenuOpen(false)}>
+                      {service.name}
+                    </Link>)}
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                    Head Spa
+                  </p>
+                  {headSpa.map((service, idx) => <Link key={idx} to={service.path} className="block pl-2 py-0.5 text-xs text-foreground hover:text-accent transition-smooth mt-1" onClick={() => setMobileMenuOpen(false)}>
+                      {service.name}
+                    </Link>)}
+                </div>
               </div>
 
-              <div className="space-y-1.5">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide pt-2">
-                  Head Spa
-                </p>
-                {headSpa.map((service, idx) => <Link key={idx} to={service.path} className="block pl-3 py-1 text-xs text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
-                    {service.name}
-                  </Link>)}
+              {/* Bottom Links */}
+              <div className="flex gap-4 pt-2">
+                <Link to="/gallery" className="text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
+                  Gallery
+                </Link>
+                <Link to="/contact" className="text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
+                  Contact
+                </Link>
               </div>
-
-              <Link to="/gallery" className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
-                Gallery
-              </Link>
-              <Link to="/contact" className="block py-1.5 text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setMobileMenuOpen(false)}>
-                Contact
-              </Link>
               
-              <div className="pt-3 pb-2">
+              <div className="pt-3 pb-1">
                 <BookingButton className="w-full" size="sm">
                   Book Now
                 </BookingButton>
