@@ -13,7 +13,6 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
 const HeadSpa = () => {
   return <ServiceLayout>
       {/* Hero Section - Full Width Slider */}
@@ -238,14 +237,7 @@ const HeadSpa = () => {
             delay: 1200
           })]} className="w-full mb-12">
               <CarouselContent>
-                {[
-                  "Removes buildup + excess oil",
-                  "Boosts blood flow to nourish roots",
-                  "Relieves scalp tightness + headaches",
-                  "Promotes healthier-looking hair growth",
-                  "Deep relaxation for the nervous system",
-                  "Leaves scalp clean, hair light, mind calm"
-                ].map((benefit, index) => <CarouselItem key={benefit} className="md:basis-1/3">
+                {["Removes buildup + excess oil", "Boosts blood flow to nourish roots", "Relieves scalp tightness + headaches", "Promotes healthier-looking hair growth", "Deep relaxation for the nervous system", "Leaves scalp clean, hair light, mind calm"].map((benefit, index) => <CarouselItem key={benefit} className="md:basis-1/3">
                     <div className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
                   animationDelay: `${index * 0.1}s`
                 }}>
@@ -289,13 +281,7 @@ const HeadSpa = () => {
             <p className="text-xl mb-12 text-foreground/80">Anyone who experiences:</p>
             
             <div className="grid md:grid-cols-2 gap-6 text-lg mb-12">
-              {[
-                "Oiliness or buildup at the scalp",
-                "Product residue",
-                "Itchiness or flaking",
-                "Stress + tension in head/neck",
-                "Dull hair lacking vitality"
-              ].map((item, index) => <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
+              {["Oiliness or buildup at the scalp", "Product residue", "Itchiness or flaking", "Stress + tension in head/neck", "Dull hair lacking vitality"].map((item, index) => <div key={item} className="group relative px-8 py-5 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:scale-105 animate-fade-in" style={{
               animationDelay: `${index * 0.1}s`
             }}>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -332,17 +318,22 @@ const HeadSpa = () => {
             </p>
 
             <div className="space-y-4 mb-12">
-              {[
-                { name: "Red Light Therapy", price: "$50" },
-                { name: "Radio Frequency Lift", price: "$40" },
-                { name: "Deep Nourishing Mask", price: "$30" },
-                { name: "Hot Stone Ritual", price: "$20" }
-              ].map((enhancement, index) => (
-                <div key={enhancement.name} className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
+              {[{
+              name: "Red Light Therapy",
+              price: "$50"
+            }, {
+              name: "Radio Frequency Lift",
+              price: "$40"
+            }, {
+              name: "Deep Nourishing Mask",
+              price: "$30"
+            }, {
+              name: "Hot Stone Ritual",
+              price: "$20"
+            }].map((enhancement, index) => <div key={enhancement.name} className="flex justify-between items-center p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors border border-primary/20">
                   <span className="font-medium text-foreground">{enhancement.name}</span>
                   <span className="text-xl font-bold text-primary">{enhancement.price}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <p className="text-center text-foreground/70 mb-8">Add any upgrade at checkout.</p>
@@ -385,7 +376,7 @@ const HeadSpa = () => {
       {/* Two Column CTA Section */}
       <section className="grid md:grid-cols-2">
         <div className="relative h-[300px] md:h-[500px] overflow-hidden">
-          <img alt="Head Spa Experience" className="w-full h-full object-cover" src="/lovable-uploads/24691110-707d-4eb6-8bee-d7f7a64bc241.jpg" />
+          <img alt="Head Spa Experience" className="w-full h-full object-cover" src="/lovable-uploads/e68e5eb0-6238-4e49-84ac-d924b692c78b.jpg" />
         </div>
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
@@ -490,5 +481,4 @@ const HeadSpa = () => {
       
     </ServiceLayout>;
 };
-
 export default HeadSpa;
