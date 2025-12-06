@@ -4,6 +4,7 @@ import heroImage1 from "@/assets/head-spa-comb.jpg";
 import heroImage2 from "@/assets/head-spa-wash.jpg";
 import gridImage1 from "@/assets/head-spa-comb.jpg";
 import gridImage2 from "@/assets/head-spa-wash.jpg";
+import headSpaTreatment from "@/assets/head-spa-treatment.jpg";
 import Contact from "@/components/Contact";
 import { Star, Plus, Minus, ChevronLeft, ChevronRight } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
@@ -263,7 +264,7 @@ const HeadSpa = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img alt="Head Spa Results" className="w-full h-full object-cover" src="/lovable-uploads/69065a8d-070b-4c42-82e5-781985c72628.jpg" />
+        <img alt="Head Spa Results" className="w-full h-full object-cover" src={headSpaTreatment} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
