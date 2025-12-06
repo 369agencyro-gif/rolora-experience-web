@@ -183,8 +183,8 @@ const Navigation = () => {
                 About
               </Link>
               
-              <Accordion type="multiple" className="w-full">
-                {/* Offers Section */}
+              <Accordion type="multiple" defaultValue={["offers"]} className="w-full">
+                {/* Offers Section - Always open */}
                 <AccordionItem value="offers" className="border-b-0">
                   <AccordionTrigger className="py-2 text-sm font-medium hover:no-underline hover:text-accent">
                     <span className="flex items-center gap-2">
