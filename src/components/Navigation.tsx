@@ -12,12 +12,12 @@ const Navigation = () => {
     name: "First Glow · $99",
     path: "/special-offer",
     description: "New client exclusive facial",
-    savings: "Save $80"
+    savings: "Save $136"
   }, {
     name: "Glow + Flow Duo · $139",
     path: "/glow-flow-offer",
     description: "Facial + body rolling combo",
-    savings: "Save $40"
+    savings: "Save $176"
   }];
   const facialServices = [{
     name: "Rolora Facial Glow™",
