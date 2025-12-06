@@ -36,6 +36,7 @@ const Navigation = () => {
 
   const headSpa = [
     { name: "Rolora Head Spa", path: "/services/head-spa", description: "Scalp & relaxation ritual" },
+    { name: "Sculpt + Scalp Reset™", path: "/services/sculpt-scalp-reset", description: "Lift. Stimulate. Reset." },
   ];
 
   const scrollToSection = (id: string) => {

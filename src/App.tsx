@@ -15,6 +15,7 @@ import ExpressSculpt from "./pages/ExpressSculpt";
 import Enhancements from "./pages/Enhancements";
 import BodyRolling from "./pages/BodyRolling";
 import HeadSpa from "./pages/HeadSpa";
+import SculptScalpReset from "./pages/SculptScalpReset";
 import FullGallery from "./pages/FullGallery";
 import SpecialOffer from "./pages/SpecialOffer";
 import GlowFlowOffer from "./pages/GlowFlowOffer";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/services/enhancements" element={<Enhancements />} />
           <Route path="/services/body-rolling" element={<BodyRolling />} />
           <Route path="/services/head-spa" element={<HeadSpa />} />
+          <Route path="/services/sculpt-scalp-reset" element={<SculptScalpReset />} />
           <Route path="/gallery" element={<FullGallery />} />
           <Route path="/special-offer" element={<SpecialOffer />} />
           <Route path="/glow-flow-offer" element={<GlowFlowOffer />} />
