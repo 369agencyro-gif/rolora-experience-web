@@ -428,7 +428,7 @@ const BodyRolling = () => {
       {/* Two Column CTA Section */}
       <section className="grid md:grid-cols-2">
         <div className="relative h-[300px] md:h-[500px] overflow-hidden">
-          <img src={bodyImage} alt="Body Rolling Experience" className="w-full h-full object-cover" />
+          <img alt="Body Rolling Experience" className="w-full h-full object-cover" src="/lovable-uploads/1285dac6-4814-4b22-bcc8-7beaf86f067b.jpg" />
         </div>
         <div className="relative bg-muted flex items-center justify-center p-6 md:p-12 py-12 md:py-0 md:h-[500px]">
           <div className="max-w-md">
