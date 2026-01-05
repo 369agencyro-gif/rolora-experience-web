@@ -3,7 +3,7 @@ import BookingButton from "@/components/BookingButton";
 import studioInterior from "@/assets/studio-interior.jpg";
 import facialSculpting from "@/assets/facial-sculpting.jpg";
 import glowingFace from "@/assets/glowing-face.jpg";
-import bodyRollingTreatment from "@/assets/body-rolling-treatment.webp";
+import bodyRollingTreatment from "@/assets/body-rolling-treatment.jpg";
 import { Link } from "react-router-dom";
 const About = () => {
   return <ServiceLayout>
