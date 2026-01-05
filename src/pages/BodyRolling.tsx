@@ -3,7 +3,7 @@ import BookingButton from "@/components/BookingButton";
 import bodyImage from "@/assets/body-rolling-hero.webp";
 import bodyRollingMachine from "@/assets/body-rolling-machine-new.webp";
 import bodyRollingTreatment from "@/assets/body-rolling-treatment.webp";
-import bodyRollingLegsSession from "@/assets/body-rolling-legs-session.jpg";
+import bodyRollingArmsSession from "@/assets/body-rolling-arms-session.jpg";
 import Contact from "@/components/Contact";
 import { Star, Plus } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
@@ -374,7 +374,7 @@ const BodyRolling = () => {
 
       {/* Large Image Break */}
       <section className="relative h-[60vh] overflow-hidden">
-        <img alt="Body Rolling Results" className="w-full h-full object-cover" src={bodyRollingLegsSession} />
+        <img alt="Body Rolling Results" className="w-full h-full object-cover" src={bodyRollingArmsSession} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="container px-6 pb-12">
             <h3 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
