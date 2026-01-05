@@ -2,7 +2,7 @@ import BookingButton from "@/components/BookingButton";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-main.jpg";
 import facialGlowImage from "@/assets/hero-first-glow.jpg";
-import bodyRollingImage from "@/assets/hero-glow-flow.png";
+import bodyRollingImage from "@/assets/hero-glow-flow.jpg";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { Check, ChevronLeft, ChevronRight } from "lucide-react";
