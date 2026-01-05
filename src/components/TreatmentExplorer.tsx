@@ -7,7 +7,7 @@ import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
 import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
 import timelessLiftTreatment from "@/assets/timeless-lift-treatment.jpg";
 import serumCloseup2 from "@/assets/serum-closeup-2.jpg";
-import roloraFlowNew from "@/assets/rolora-flow-new.png";
+import roloraFlowSession from "@/assets/rolora-flow-session.jpg";
 import headSpaOilTreatment from "@/assets/head-spa-oil-treatment.jpg";
 import headSpaScalpMassage from "@/assets/head-spa-scalp-massage.jpg";
 
@@ -48,10 +48,9 @@ const TreatmentExplorer = () => {
       link: "/services/express-sculpt"
     },
     {
-      image: roloraFlowNew,
+      image: roloraFlowSession,
       title: "ROLORA FLOW™",
-      link: "/services/body-rolling",
-      cropBottom: true
+      link: "/services/body-rolling"
     },
     {
       image: headSpaOilTreatment,
@@ -97,7 +96,7 @@ const TreatmentExplorer = () => {
                       <img 
                         src={card.image}
                         alt={card.title}
-                        className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${card.cropBottom ? 'object-top' : ''}`}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#3B2414]/90 via-[#3B2414]/20 to-transparent transition-opacity duration-300 group-hover:opacity-70" />
                       <div className="absolute bottom-6 left-6 right-6">
