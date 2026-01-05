@@ -20,14 +20,7 @@ const BodyRolling = () => {
             {/* Left: Image Slider - Full Width */}
             <div className="relative lg:sticky lg:top-24 -mx-6 lg:mx-0">
               <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
-                <video
-                  src="/videos/body-rolling-hero.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
+                <video src="/videos/body-rolling-hero.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" />
                 <div className="absolute top-6 right-6 bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg border border-primary/10 shadow-sm">
                   <div className="flex items-center gap-1.5">
                     {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
@@ -238,10 +231,10 @@ const BodyRolling = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={bodyRollingMachine} alt="Body Rolling Machine" className="w-full h-full object-cover" />
+              <img alt="Body Rolling Machine" className="w-full h-full object-cover" src="/lovable-uploads/e4d4a29e-8779-4853-8e0b-964111aceb73.jpg" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={bodyRollingTreatment} alt="Body Rolling Treatment" className="w-full h-full object-cover" />
+              <img alt="Body Rolling Treatment" className="w-full h-full object-cover" src="/lovable-uploads/00a4cf7a-7204-4f8f-ae1f-e709a636411f.jpg" />
             </div>
           </div>
         </div>
