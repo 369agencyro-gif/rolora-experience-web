@@ -118,7 +118,7 @@ const GlowFlowOffer = () => {
 
       {/* Image Break */}
       <section className="relative h-[50vh] overflow-hidden">
-        <img alt="Body Rolling Studio" className="w-full h-full object-cover" src={bodyRollingOrange} />
+        <img alt="Body Rolling Studio" className="w-full h-full object-cover" src="/lovable-uploads/97f16e24-b6c0-48e6-8e65-dec324fdded6.jpg" />
       </section>
 
       {/* Upgrade Your Experience */}
@@ -312,12 +312,10 @@ const GlowFlowOffer = () => {
                   <h3 className="font-display text-2xl font-bold mb-2 text-foreground">THE FIRST GLOW</h3>
                   <p className="text-4xl font-bold text-primary mb-4">$99</p>
                   <div className="space-y-2 mb-6 text-left">
-                    {["Signature glass-skin facial", "Custom serum blends", "50 minutes"].map((item, i) => (
-                      <div key={i} className="flex items-center gap-2">
+                    {["Signature glass-skin facial", "Custom serum blends", "50 minutes"].map((item, i) => <div key={i} className="flex items-center gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0" />
                         <span className="text-sm text-foreground/70">{item}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                   <BookingButton size="sm" className="w-full px-4 py-3 text-xs uppercase font-bold">
                     BOOK THE FIRST GLOW
@@ -338,12 +336,10 @@ const GlowFlowOffer = () => {
                   <h3 className="font-display text-2xl font-bold mb-2 text-foreground">GLOW + FLOW DUO</h3>
                   <p className="text-4xl font-bold text-primary mb-4">$139</p>
                   <div className="space-y-2 mb-6 text-left">
-                    {["Sculpting facial + body rolling", "Full lymphatic reset", "75-90 minutes"].map((item, i) => (
-                      <div key={i} className="flex items-center gap-2">
+                    {["Sculpting facial + body rolling", "Full lymphatic reset", "75-90 minutes"].map((item, i) => <div key={i} className="flex items-center gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0" />
                         <span className="text-sm text-foreground/70">{item}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                   <BookingButton size="sm" className="w-full px-4 py-3 text-xs uppercase font-bold">
                     BOOK THE DUO
