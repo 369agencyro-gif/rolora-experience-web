@@ -118,7 +118,7 @@ const GlowFlowOffer = () => {
 
       {/* Image Break */}
       <section className="relative h-[50vh] overflow-hidden">
-        <img alt="Body Rolling Studio" className="w-full h-full object-cover" src="/lovable-uploads/97f16e24-b6c0-48e6-8e65-dec324fdded6.jpg" />
+        <img alt="Body Rolling Studio" className="w-full h-full object-cover" src={bodyRollingOrange} />
       </section>
 
       {/* Upgrade Your Experience */}
@@ -205,7 +205,7 @@ const GlowFlowOffer = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={glowCloseup1} alt="Rolora Treatment Room" className="w-full h-full object-cover" />
+              <img alt="Rolora Treatment Room" className="w-full h-full object-cover" src="/lovable-uploads/4c9081bb-58b9-4154-a597-fb6b0d6573cd.jpg" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
               <img src={glowCloseup3} alt="Rolora Studio" className="w-full h-full object-cover" />
