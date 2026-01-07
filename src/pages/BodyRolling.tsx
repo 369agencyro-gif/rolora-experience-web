@@ -232,10 +232,10 @@ const BodyRolling = () => {
         <div className="container px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img alt="Body Rolling Machine" className="w-full h-full object-cover" src="/lovable-uploads/e4d4a29e-8779-4853-8e0b-964111aceb73.jpg" />
+              <img alt="Body Rolling Machine" className="w-full h-full object-cover" src="/lovable-uploads/6cf41bfd-dd17-4ee8-840c-d26d2a20bd61.jpg" />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden">
-              <img alt="Body Rolling Treatment" className="w-full h-full object-cover" src="/lovable-uploads/00a4cf7a-7204-4f8f-ae1f-e709a636411f.jpg" />
+              <img alt="Body Rolling Treatment" className="w-full h-full object-cover" src="/lovable-uploads/6c27fa06-f199-43fe-a174-876dcaf8b4f8.jpg" />
             </div>
           </div>
         </div>
