@@ -118,7 +118,7 @@ const GlowFlowOffer = () => {
 
       {/* Image Break */}
       <section className="relative h-[50vh] overflow-hidden">
-        <img alt="Body Rolling Studio" className="w-full h-full object-cover" src={bodyRollingOrange} />
+        <img alt="Body Rolling Studio" className="w-full h-full object-cover" src="/lovable-uploads/583f4b15-76e9-407c-9c0f-08a3cda369ff.jpg" />
       </section>
 
       {/* Upgrade Your Experience */}
