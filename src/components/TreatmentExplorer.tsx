@@ -4,7 +4,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import facialGlowCard from "@/assets/facial-glow-card.jpg";
 import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
-import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
+import treatmentRoloraReset from "@/assets/treatment-rolora-reset.jpg";
 import timelessLiftTreatment from "@/assets/timeless-lift-treatment.jpg";
 import serumCloseup2 from "@/assets/serum-closeup-2.jpg";
 import roloraFlowSession from "@/assets/rolora-flow-session.jpg";
@@ -33,7 +33,7 @@ const TreatmentExplorer = () => {
       link: "/services/sculpt"
     },
     {
-      image: glowCloseup3,
+      image: treatmentRoloraReset,
       title: "ROLORA RESET™",
       link: "/services/reset"
     },
