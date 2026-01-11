@@ -1,5 +1,5 @@
 import BookingButton from "@/components/BookingButton";
-import statsBodyRolling from "@/assets/stats-body-rolling.jpg";
+import statsGoldMask from "@/assets/stats-gold-mask.jpg";
 import statsFacialBed from "@/assets/stats-facial-bed.jpg";
 import statsTreatmentRoom from "@/assets/stats-treatment-room.jpg";
 const StatsSection = () => {
@@ -29,7 +29,7 @@ const StatsSection = () => {
           <div className="space-y-8">
             <div className="grid grid-cols-3 gap-6">
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
-                <img src={statsBodyRolling} alt="Body rolling treatment session" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={statsGoldMask} alt="Gold mask facial treatment" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
               </div>
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
