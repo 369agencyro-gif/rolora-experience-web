@@ -1,7 +1,7 @@
 import BookingButton from "@/components/BookingButton";
-import glowCloseup1 from "@/assets/glow-closeup-1.jpg";
-import glowCloseup2 from "@/assets/glow-closeup-2.jpg";
-import glowCloseup3 from "@/assets/glow-closeup-3.jpg";
+import statsBodyRolling from "@/assets/stats-body-rolling.jpg";
+import statsFacialBed from "@/assets/stats-facial-bed.jpg";
+import statsTreatmentRoom from "@/assets/stats-treatment-room.jpg";
 const StatsSection = () => {
   const stats = [{
     value: "4/5",
@@ -29,15 +29,15 @@ const StatsSection = () => {
           <div className="space-y-8">
             <div className="grid grid-cols-3 gap-6">
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
-                <img alt="Facial treatment in progress" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="/lovable-uploads/be5688a9-4c50-4a4f-8836-b7ecf573ef0d.jpg" />
+                <img src={statsBodyRolling} alt="Body rolling treatment session" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
               </div>
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
-                <img src={glowCloseup2} alt="Second cleanse facial treatment" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={statsFacialBed} alt="Rolora facial treatment bed" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
               </div>
               <div className="group relative overflow-hidden rounded-sm cursor-pointer">
-                <img src={glowCloseup3} alt="Glowing skin results" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={statsTreatmentRoom} alt="Treatment room with client" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-all duration-500" />
               </div>
             </div>
