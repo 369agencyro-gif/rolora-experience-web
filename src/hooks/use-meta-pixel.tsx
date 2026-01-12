@@ -7,11 +7,17 @@ declare global {
   }
 }
 
+const hasConsentedToCookies = (): boolean => {
+  const consent = localStorage.getItem("cookie-consent");
+  return consent === "accepted";
+};
+
 export const useMetaPixel = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (typeof window.fbq === "function") {
+    // Only track if user has accepted cookies
+    if (hasConsentedToCookies() && typeof window.fbq === "function") {
       window.fbq("track", "PageView");
     }
   }, [location.pathname]);
