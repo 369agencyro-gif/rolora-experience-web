@@ -1,3 +1,4 @@
+// Footer component with legal links
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
 import BookingButton from "./BookingButton";
