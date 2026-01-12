@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import { useMetaPixel } from "./hooks/use-meta-pixel";
 import Index from "./pages/Index";
+import CookieConsent from "./components/CookieConsent";
 import About from "./pages/About";
 import ContactPage from "./pages/Contact";
 import RoloraFacialGlow from "./pages/RoloraFacialGlow";
@@ -40,6 +41,7 @@ const App = () => (
       <BrowserRouter>
         <MetaPixelTracker />
         <ScrollToTop />
+        <CookieConsent />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
