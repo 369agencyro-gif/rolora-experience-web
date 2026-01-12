@@ -21,6 +21,8 @@ import FullGallery from "./pages/FullGallery";
 import SpecialOffer from "./pages/SpecialOffer";
 import GlowFlowOffer from "./pages/GlowFlowOffer";
 import NewClientOffers from "./pages/NewClientOffers";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -55,6 +57,8 @@ const App = () => (
           <Route path="/special-offer" element={<SpecialOffer />} />
           <Route path="/glow-flow-offer" element={<GlowFlowOffer />} />
           <Route path="/intro-offers" element={<NewClientOffers />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
