@@ -1,5 +1,6 @@
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
+import CherryWidget from "@/components/CherryWidget";
 import heroImage1 from "@/assets/head-spa-comb.jpg";
 import heroImage2 from "@/assets/head-spa-wash.jpg";
 import gridImage1 from "@/assets/head-spa-comb.jpg";
@@ -155,6 +156,9 @@ const SculptScalpReset = () => {
               <BookingButton size="lg" className="w-full px-12 py-6 text-sm uppercase font-bold tracking-wider">
                 Book Your Session
               </BookingButton>
+
+              {/* Cherry Financing Widget */}
+              <CherryWidget />
             </div>
           </div>
         </div>
