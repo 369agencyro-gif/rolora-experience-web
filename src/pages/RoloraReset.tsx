@@ -124,7 +124,7 @@ const RoloraReset = () => {
                       <div>
                         <span className="font-medium text-foreground">Single Session</span>
                       </div>
-                      <span className="text-2xl font-bold text-primary">$245</span>
+                      <span className="text-2xl font-bold text-primary">$285</span>
                     </div>
                   </div>
                 </div>
