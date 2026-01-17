@@ -1,59 +1,64 @@
-import { useEffect } from "react";
-
-declare global {
-  interface Window {
-    _hw: {
-      (action: string, config: object, widgets: string[]): void;
-      q?: unknown[][];
-    };
-  }
-}
+import { useEffect, useRef } from "react";
 
 const CherryWidget = () => {
+  const initialized = useRef(false);
+
   useEffect(() => {
-    // Setup the queue function first (before script loads)
-    window._hw = window._hw || function (...args: unknown[]) {
-      (window._hw.q = window._hw.q || []).push(args);
-    };
+    // Prevent double initialization in React Strict Mode
+    if (initialized.current) return;
+    initialized.current = true;
 
-    // Initialize with config - this gets queued
-    window._hw(
-      "init",
-      {
-        debug: false,
-        variables: {
-          slug: "rolora-spa-llc",
-          name: "Rolora Spa LLC",
-          images: [44],
-          customLogo: "",
-          defaultPurchaseAmount: 750,
-          customImage: "",
-          imageCategory: "medspa",
-          language: "en",
-        },
-        styles: {
-          primaryColor: "#7a6f9b",
-          secondaryColor: "#7a6f9b10",
-          fontFamily: "Montserrat",
-          headerFontFamily: "Montserrat",
-        },
-      },
-      ["hero", "calculator", "howitworks", "faq"]
-    );
-
-    // Load the script if not already loaded
-    if (!document.getElementById("cherry-widget-script")) {
-      const script = document.createElement("script");
-      script.id = "cherry-widget-script";
-      script.src = "https://files.withcherry.com/widgets/widget.js";
-      script.async = true;
-      const firstScript = document.getElementsByTagName("script")[0];
-      if (firstScript && firstScript.parentNode) {
-        firstScript.parentNode.insertBefore(script, firstScript);
-      } else {
-        document.head.appendChild(script);
+    // Execute the original Cherry widget IIFE pattern exactly
+    (function (w: typeof window, d: Document, s: string, o: string, f: string) {
+      // Create queue function if not exists
+      const existingHw = (w as unknown as Record<string, unknown>)[o];
+      if (typeof existingHw !== 'function') {
+        const hw = function (...args: unknown[]) {
+          ((hw as { q?: unknown[][] }).q = (hw as { q?: unknown[][] }).q || []).push(args);
+        };
+        (w as unknown as Record<string, unknown>)[o] = hw;
       }
-    }
+
+      // Get the _hw function and call init
+      const hwFn = (w as unknown as Record<string, unknown>)[o] as (...args: unknown[]) => void;
+      hwFn(
+        "init",
+        {
+          debug: false,
+          variables: {
+            slug: "rolora-spa-llc",
+            name: "Rolora Spa LLC",
+            images: [44],
+            customLogo: "",
+            defaultPurchaseAmount: 750,
+            customImage: "",
+            imageCategory: "medspa",
+            language: "en",
+          },
+          styles: {
+            primaryColor: "#7a6f9b",
+            secondaryColor: "#7a6f9b10",
+            fontFamily: "Montserrat",
+            headerFontFamily: "Montserrat",
+          },
+        },
+        ["hero", "calculator", "howitworks", "faq"]
+      );
+
+      // Load script if not already present
+      if (!d.getElementById(o)) {
+        const js = d.createElement(s) as HTMLScriptElement;
+        js.id = o;
+        js.src = f;
+        js.async = true;
+        const fjs = d.getElementsByTagName(s)[0];
+        if (fjs && fjs.parentNode) {
+          fjs.parentNode.insertBefore(js, fjs);
+        } else {
+          d.head.appendChild(js);
+        }
+      }
+    })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
   }, []);
 
   return (
