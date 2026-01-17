@@ -1,5 +1,6 @@
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
+import CherryWidget from "@/components/CherryWidget";
 import aboutImage from "@/assets/about-image.jpg";
 import facialRoom from "@/assets/facial-room.jpg";
 import facialSculpting from "@/assets/facial-sculpting.jpg";
@@ -161,6 +162,9 @@ const Enhancements = () => {
               <BookingButton size="lg" className="w-full px-12 py-6 text-sm uppercase font-bold tracking-wider">
                 Book Now
               </BookingButton>
+
+              {/* Cherry Financing Widget */}
+              <CherryWidget />
             </div>
           </div>
         </div>

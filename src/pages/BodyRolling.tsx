@@ -1,5 +1,6 @@
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
+import CherryWidget from "@/components/CherryWidget";
 import bodyImage from "@/assets/body-rolling-hero.webp";
 import bodyRollingMachine from "@/assets/body-rolling-machine-new.webp";
 import bodyRollingTreatment from "@/assets/body-rolling-treatment.webp";
@@ -123,6 +124,9 @@ const BodyRolling = () => {
               <BookingButton size="lg" className="w-full px-12 py-6 text-sm uppercase font-bold tracking-wider">
                 Book Your Session
               </BookingButton>
+
+              {/* Cherry Financing Widget */}
+              <CherryWidget />
             </div>
           </div>
         </div>

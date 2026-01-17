@@ -1,5 +1,6 @@
 import ServiceLayout from "@/components/ServiceLayout";
 import BookingButton from "@/components/BookingButton";
+import CherryWidget from "@/components/CherryWidget";
 import glowCloseup1 from "@/assets/glow-closeup-1.jpg";
 import facialGlowTreatment from "@/assets/facial-glow-treatment.jpg";
 import serumCloseup1 from "@/assets/serum-closeup-1.jpg";
@@ -183,6 +184,9 @@ const RoloraFacialGlow = () => {
               <BookingButton size="lg" className="w-full px-12 py-6 text-sm uppercase font-bold tracking-wider">
                 Book Your Session
               </BookingButton>
+
+              {/* Cherry Financing Widget */}
+              <CherryWidget />
             </div>
           </div>
         </div>
