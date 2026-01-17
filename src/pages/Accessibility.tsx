@@ -125,7 +125,7 @@ const Accessibility = () => {
                 <p>2744 E Coast Hwy Suite 5</p>
                 <p>Corona Del Mar, CA 92625</p>
                 <p className="mt-2">Email: info@roloraspa.com</p>
-                <p>Phone: (949) 291-3808</p>
+                <p>Phone: (949) 742-5110</p>
               </div>
               <p className="mt-4">
                 When contacting us, please include:
