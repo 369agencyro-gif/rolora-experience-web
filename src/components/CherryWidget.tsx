@@ -46,9 +46,10 @@ const CherryWidget = () => {
       );
 
       // Load script if not already present
-      if (!d.getElementById(o)) {
+      const scriptId = "cherry-widget-script";
+      if (!d.getElementById(scriptId)) {
         const js = d.createElement(s) as HTMLScriptElement;
-        js.id = o;
+        js.id = scriptId;
         js.src = f;
         js.async = true;
         const fjs = d.getElementsByTagName(s)[0];
