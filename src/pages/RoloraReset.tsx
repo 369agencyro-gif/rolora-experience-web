@@ -75,9 +75,7 @@ const RoloraReset = () => {
                 </div>
 
                 <div className="space-y-4 pt-4">
-                  <p className="text-lg leading-relaxed text-foreground/80 font-light">
-                    A low-downtime resurfacing peel that gently smooths texture, brightens uneven tone, and reveals fresh, radiant skin with every session. Designed for clarity, glow, and a clean reset — without harsh peeling or irritation.
-                  </p>
+                  <p className="text-lg leading-relaxed text-foreground/80 font-light">A no downtime resurfacing peel powered by BioRePeel technology to smooth texture, brighten uneven tone, soften fine lines, and support collagen renewal — revealing visibly refreshed, youthful skin without harsh peeling.</p>
                   
                   <p className="text-lg leading-relaxed font-medium text-foreground border-l-2 border-primary pl-6">
                     Best in a series of 3–6 for visible, lasting transformation.
